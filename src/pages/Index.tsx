@@ -76,15 +76,16 @@ const Index = () => {
 
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Hero Section - Wees Zot! */}
-        <div
-          className="flex-1 flex items-center justify-center px-4 py-20"
+        <a
+          href="https://zottewebsite.be/weeszot"
+          className="flex-1 flex items-center justify-center px-4 py-20 group"
           style={{
             transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
             transition: 'transform 0.1s ease-out',
           }}
         >
           <div className={`text-center max-w-4xl ${isGlitching ? 'animate-glitch' : ''}`}>
-            <h1 className="text-6xl md:text-8xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 animate-pulse">
+            <h1 className="text-6xl md:text-8xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 animate-pulse group-hover:scale-110 transition-transform duration-300">
               WEES ZOT!
             </h1>
             <div className="space-y-6 text-white">
@@ -96,35 +97,32 @@ const Index = () => {
               </p>
             </div>
           </div>
-        </div>
+        </a>
 
         {/* L E V E N Section */}
-        <div className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm">
+        <a href="https://zottewebsite.be/leven" className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm block group">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-5xl md:text-7xl font-black text-center mb-12 text-white tracking-wider">
+            <h2 className="text-5xl md:text-7xl font-black text-center mb-12 text-white tracking-wider group-hover:scale-110 transition-transform duration-300">
               L E V E N ?
             </h2>
             <div className="grid md:grid-cols-3 gap-8 text-center">
-              {[
-                "Waarom leef je?",
-                "Wat is belangrijk in je leven?",
-                "Hoe kan je beter leven?"
-              ].map((question, index) => (
-                <div
-                  key={index}
-                  className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 transform hover:rotate-3 hover:scale-105 transition-all duration-500 border border-white border-opacity-20"
-                >
-                  <p className="text-xl md:text-2xl text-white font-medium">{question}</p>
-                </div>
-              ))}
+              <a href="https://zottewebsite.be/leven" className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 transform hover:rotate-3 hover:scale-105 transition-all duration-500 border border-white border-opacity-20 group">
+                <p className="text-xl md:text-2xl text-white font-medium">Waarom leef je?</p>
+              </a>
+              <a href="https://zottewebsite.be/leven" className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 transform hover:rotate-3 hover:scale-105 transition-all duration-500 border border-white border-opacity-20 group">
+                <p className="text-xl md:text-2xl text-white font-medium">Wat is belangrijk in je leven?</p>
+              </a>
+              <a href="https://zottewebsite.be/weeszot" className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 transform hover:rotate-3 hover:scale-105 transition-all duration-500 border border-white border-opacity-20 group">
+                <p className="text-xl md:text-2xl text-white font-medium">Hoe kan je beter leven?</p>
+              </a>
             </div>
           </div>
-        </div>
+        </a>
 
         {/* ENERGIE Section */}
-        <div className="py-20 px-4">
+        <a href="https://zottewebsite.be/energie" className="py-20 px-4 block group">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-6xl md:text-8xl font-black text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-600">
+            <h2 className="text-6xl md:text-8xl font-black text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-600 group-hover:scale-110 transition-transform duration-300">
               ENERGIE
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
@@ -146,12 +144,12 @@ const Index = () => {
               ))}
             </div>
           </div>
-        </div>
+        </a>
 
         {/* Ziek Zot Section */}
-        <div className="py-20 px-4 bg-gradient-to-r from-red-600 to-pink-600">
+        <a href="https://zottewebsite.be/Ziekzot" className="py-20 px-4 bg-gradient-to-r from-red-600 to-pink-600 block group">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-5xl md:text-7xl font-black mb-8 text-white">
+            <h2 className="text-5xl md:text-7xl font-black mb-8 text-white group-hover:scale-110 transition-transform duration-300">
               Ziek Zot!
             </h2>
             <div className="space-y-6">
@@ -163,12 +161,12 @@ const Index = () => {
               </p>
             </div>
           </div>
-        </div>
+        </a>
 
         {/* Wat? Section */}
-        <div className="py-20 px-4 bg-black bg-opacity-50">
+        <a href="https://zottewebsite.be/openjegeest" className="py-20 px-4 bg-black bg-opacity-50 block group">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-6xl font-black mb-8 text-white">
+            <h2 className="text-4xl md:text-6xl font-black mb-8 text-white group-hover:scale-110 transition-transform duration-300">
               Wat?
             </h2>
             <div className="transform hover:scale-110 transition-transform duration-500">
@@ -177,25 +175,25 @@ const Index = () => {
               </p>
             </div>
           </div>
-        </div>
+        </a>
 
         {/* Big Statement */}
         <div className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
-            <p className="text-4xl md:text-6xl font-black text-white leading-tight transform hover:scale-105 transition-transform duration-300">
-              ALLES IS VEIL ZOTTER DAN JE DENKT!
-            </p>
+            <a href="https://zottewebsite.be/openjegeest" className="text-4xl md:text-6xl font-black text-white leading-tight transform hover:scale-105 transition-transform duration-300 inline-block">
+              alles is veel zotter dan je denkt!
+            </a>
           </div>
         </div>
 
         {/* Open Geest Section */}
-        <div className="py-20 px-4 bg-gradient-to-r from-purple-600 to-indigo-800">
+        <a href="https://zottewebsite.be/openjegeest" className="py-20 px-4 bg-gradient-to-r from-purple-600 to-indigo-800 block group">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-2xl md:text-4xl font-bold text-white leading-relaxed transform hover:rotate-1 hover:scale-105 transition-all duration-500">
+            <p className="text-2xl md:text-4xl font-bold text-white leading-relaxed transform hover:rotate-1 hover:scale-105 transition-all duration-500 group-hover:scale-110">
               HEB EEN OPEN GEEST, ALLEEN ZO KAN JE JE OUDE IDEEEN OPBLAZEN!
             </p>
           </div>
-        </div>
+        </a>
 
         {/* FAQ Section */}
         <div className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm">
