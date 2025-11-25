@@ -27,11 +27,11 @@ const Index = () => {
     };
   }, []);
 
-  const calculateRotation = (x: number, y: number) => {
+  const calculateRotation = (x: number, y: number, intensity: number = 10) => {
     const centerX = window.innerWidth / 2;
     const centerY = window.innerHeight / 2;
-    const rotateX = ((y - centerY) / centerY) * 10;
-    const rotateY = ((x - centerX) / centerX) * -10;
+    const rotateX = ((y - centerY) / centerY) * intensity;
+    const rotateY = ((x - centerX) / centerX) * -intensity;
     return { rotateX, rotateY };
   };
 
@@ -39,36 +39,20 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-800 to-orange-600 overflow-hidden relative">
-      {/* Animated background elements */}
+      {/* Tilt-able background elements */}
       <div className="absolute inset-0">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(15)].map((_, i) => (
           <div
             key={i}
-            className="absolute rounded-full mix-blend-screen opacity-20 animate-pulse"
+            className="absolute rounded-full mix-blend-screen opacity-20"
             style={{
-              width: `${Math.random() * 300 + 50}px`,
-              height: `${Math.random() * 300 + 50}px`,
+              width: `${Math.random() * 400 + 100}px`,
+              height: `${Math.random() * 400 + 100}px`,
               background: `hsl(${Math.random() * 360}, 70%, 60%)`,
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
-              animationDuration: `${Math.random() * 5 + 3}s`,
-              animationDelay: `${Math.random() * 2}s`,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Floating particles */}
-      <div className="absolute inset-0">
-        {[...Array(50)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-white rounded-full animate-float"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDuration: `${Math.random() * 10 + 5}s`,
-              animationDelay: `${Math.random() * 5}s`,
+              transform: `perspective(1000px) rotateX(${calculateRotation(mousePosition.x, mousePosition.y, 5).rotateX}deg) rotateY(${calculateRotation(mousePosition.x, mousePosition.y, 5).rotateY}deg)`,
+              transition: 'transform 0.3s ease-out',
             }}
           />
         ))}
@@ -101,7 +85,13 @@ const Index = () => {
 
         {/* L E V E N Section */}
         <a href="https://zottewebsite.be/leven" className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm block group">
-          <div className="max-w-6xl mx-auto">
+          <div
+            className="max-w-6xl mx-auto"
+            style={{
+              transform: `perspective(1000px) rotateX(${calculateRotation(mousePosition.x, mousePosition.y, 3).rotateX}deg) rotateY(${calculateRotation(mousePosition.x, mousePosition.y, 3).rotateY}deg)`,
+              transition: 'transform 0.2s ease-out',
+            }}
+          >
             <h2 className="text-5xl md:text-7xl font-black text-center mb-12 text-white tracking-wider group-hover:scale-110 transition-transform duration-300">
               L E V E N ?
             </h2>
@@ -121,7 +111,13 @@ const Index = () => {
 
         {/* ENERGIE Section */}
         <a href="https://zottewebsite.be/energie" className="py-20 px-4 block group">
-          <div className="max-w-6xl mx-auto">
+          <div
+            className="max-w-6xl mx-auto"
+            style={{
+              transform: `perspective(1000px) rotateX(${calculateRotation(mousePosition.x, mousePosition.y, 4).rotateX}deg) rotateY(${calculateRotation(mousePosition.x, mousePosition.y, 4).rotateY}deg)`,
+              transition: 'transform 0.2s ease-out',
+            }}
+          >
             <h2 className="text-6xl md:text-8xl font-black text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-600 group-hover:scale-110 transition-transform duration-300">
               ENERGIE
             </h2>
@@ -132,12 +128,14 @@ const Index = () => {
               ].map((word, index) => (
                 <div
                   key={index}
-                  className="text-center p-4 transform hover:scale-125 hover:rotate-12 transition-all duration-500"
+                  className="text-center p-4 transition-all duration-500"
                   style={{
                     animation: `bounce 2s infinite ${index * 0.1}s`,
+                    transform: `perspective(1000px) rotateX(${calculateRotation(mousePosition.x, mousePosition.y, 8).rotateX}deg) rotateY(${calculateRotation(mousePosition.x, mousePosition.y, 8).rotateY}deg)`,
+                    transition: 'transform 0.2s ease-out',
                   }}
                 >
-                  <span className="text-2xl md:text-3xl font-bold text-white inline-block transform hover:skew-y-12 transition-transform duration-300">
+                  <span className="text-2xl md:text-3xl font-bold text-white inline-block hover:scale-125 hover:rotate-12 hover:skew-y-12 transition-transform duration-300">
                     {word}
                   </span>
                 </div>
@@ -148,7 +146,13 @@ const Index = () => {
 
         {/* Ziek Zot Section */}
         <a href="https://zottewebsite.be/Ziekzot" className="py-20 px-4 bg-gradient-to-r from-red-600 to-pink-600 block group">
-          <div className="max-w-4xl mx-auto text-center">
+          <div
+            className="max-w-4xl mx-auto text-center"
+            style={{
+              transform: `perspective(1000px) rotateX(${calculateRotation(mousePosition.x, mousePosition.y, 5).rotateX}deg) rotateY(${calculateRotation(mousePosition.x, mousePosition.y, 5).rotateY}deg)`,
+              transition: 'transform 0.2s ease-out',
+            }}
+          >
             <h2 className="text-5xl md:text-7xl font-black mb-8 text-white group-hover:scale-110 transition-transform duration-300">
               Ziek Zot!
             </h2>
@@ -165,7 +169,13 @@ const Index = () => {
 
         {/* Wat? Section */}
         <a href="https://zottewebsite.be/openjegeest" className="py-20 px-4 bg-black bg-opacity-50 block group">
-          <div className="max-w-4xl mx-auto text-center">
+          <div
+            className="max-w-4xl mx-auto text-center"
+            style={{
+              transform: `perspective(1000px) rotateX(${calculateRotation(mousePosition.x, mousePosition.y, 6).rotateX}deg) rotateY(${calculateRotation(mousePosition.x, mousePosition.y, 6).rotateY}deg)`,
+              transition: 'transform 0.2s ease-out',
+            }}
+          >
             <h2 className="text-4xl md:text-6xl font-black mb-8 text-white group-hover:scale-110 transition-transform duration-300">
               Wat?
             </h2>
