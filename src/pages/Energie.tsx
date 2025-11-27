@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
+import PracticalTip from '@/components/PracticalTip';
 
 const Energie = () => {
   const [activeWord, setActiveWord] = useState(0);
@@ -20,13 +21,13 @@ const Energie = () => {
   }, []);
 
   const energyWords = [
-    { word: "ECHT", description: "Authentieke energie die van binnenuit komt", color: "from-green-400 to-emerald-600" },
-    { word: "NIENORMAAL", description: "Energie die alle grenzen doorbreekt", color: "from-purple-400 to-pink-600" },
-    { word: "Helemaal", description: "Volledige, ongedeelde energie", color: "from-blue-400 to-cyan-600" },
-    { word: "Rekbaar", description: "Energie die meebeweegt en aanpast", color: "from-orange-400 to-red-600" },
-    { word: "Groeibaar", description: "Energie die zich constant ontwikkelt", color: "from-teal-400 to-green-600" },
-    { word: "Immens", description: "Energie zonder grenzen of limieten", color: "from-indigo-400 to-purple-600" },
-    { word: "EPIC", description: "Energie die legendarisch is", color: "from-yellow-400 to-orange-600" }
+    { word: "ZONNE-ENERGIE", description: "Vitaliteit en kracht van de zon", color: "from-yellow-400 to-orange-600" },
+    { word: "MAANE-ENERGIE", description: "Intuïtieve en mysterieuze kracht", color: "from-purple-400 to-indigo-600" },
+    { word: "AARDE-ENERGIE", description: "Grondende en stabiliserende kracht", color: "from-green-400 to-emerald-600" },
+    { word: "WATER-ENERGIE", description: "Vloeiende en zuiverende kracht", color: "from-blue-400 to-cyan-600" },
+    { word: "VUUR-ENERGIE", description: "Transformerende en creatieve kracht", color: "from-red-400 to-orange-600" },
+    { word: "LUCHT-ENERGIE", description: "Verfrissende en inspirerende kracht", color: "from-teal-400 to-sky-600" },
+    { word: "LEVENSDENERGIE", description: "De allesomvattende kracht van bestaan", color: "from-pink-400 to-rose-600" }
   ];
 
   return (
@@ -118,58 +119,26 @@ const Energie = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
-                  Energie is niet zomaar een woord. Het is de essentie van het leven zelf.
-                  Het is wat je voelt wanneer je iets doet waar je gepassioneerd over bent.
-                  Het is de vonk die ideëen tot leven wekt.
+                  Energie is overal om ons heen, in vele vormen en manifestaties.
+                  Het is de levenskracht die door de natuur stroomt, van de zon tot de diepste oceaan.
+                  Het is wat ons in beweging houdt en laat groeien.
                 </p>
                 <p className="hover:text-blue-200 transition-colors duration-300 cursor-pointer">
-                  ECHT energie is authentiek. Het komt niet van buitenaf, maar van binnenuit.
-                  Het is de energie van wie je werkelijk bent, zonder maskers, zonder pretenties.
+                  ZONNE-ENERGIE geeft ons vitaliteit en warmte, de bron van al het leven op aarde.
+                  Het is de kracht die planten laat groeien en ons lichaam voedt met vitamine D.
                 </p>
                 <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
-                  NIENORMAAL energie doorbreekt alle conventies. Het is de energie van vernieuwing,
-                  van revolutie, van het onmogelijke mogelijk maken.
+                  MAANE-ENERGIE werkt subtiele, beïnvloedt de getijden en onze intuïtie.
+                  Het is de mysterieuze kracht die ons dromen laat stromen en onze emoties in balans brengt.
                 </p>
                 <p className="hover:text-indigo-200 transition-colors duration-300 cursor-pointer">
-                  En EPIC energie? Dat is de energie die verhalen schrijft.
-                  Die herinneringen creëert die een leven lang meegaan.
-                  Die anderen inspireert om ook groot te dromen.
+                  En LEVENSDENERGIE? Dat is de allesomvattende kracht die door alle levende wezens stroomt.
+                  Het is de verbinding tussen alles wat bestaat, de onzichtbare draad die het universum samenweeft.
                 </p>
               </div>
             </div>
 
-            {/* Practical Tip */}
-            <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-3xl p-8 md:p-12 mb-12">
-              <h2 className="text-3xl md:text-4xl font-black text-white mb-6 transform hover:scale-105 hover:rotate-2 transition-all duration-300 cursor-pointer active:scale-95">
-                🎯 Praktische Tip
-              </h2>
-              <div className="space-y-4 text-white text-lg md:text-xl">
-                <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
-                  <strong>Geld is een vorm van energie.</strong> Het is opgesloten levensenergie,
-                  tijd, en creativiteit. Wanneer je geld geeft of ontvangt, vindt er een energietransfer plaats.
-                </p>
-                <p className="hover:text-emerald-200 transition-colors duration-300 cursor-pointer">
-                  Het huidige financiële systeem <strong>steelt constant je energie.</strong>
-                  Inflatie, rente, belastingen - het zijn manieren om jouw energie langzaam af te tappen
-                  zonder dat je het doorhebt.
-                </p>
-                <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
-                  <strong>Bitcoin is het alternatieve geldsysteem.</strong> Het is decentraal,
-                  geen centrale autoriteit kan het manipuleren of devalueerden. Met Bitcoin behoud je
-                  volledige controle over je eigen energie.
-                </p>
-                <p className="hover:text-emerald-200 transition-colors duration-300 cursor-pointer">
-                  Begin klein, leer, en ontdek hoe Bitcoin financiële vrijheid kan bieden.
-                  Het is niet zomaar geld - het is een escape route uit een systeem dat jouw energie leent.
-                </p>
-                <div className="mt-6 p-4 bg-emerald-600 bg-opacity-20 rounded-2xl border border-emerald-400 border-opacity-30">
-                  <p className="text-sm text-emerald-200 mb-2">🌿 Je gezondheid is je belangrijkste energie</p>
-                  <Link to="/ziekzot" className="text-emerald-300 hover:text-emerald-100 underline font-bold transition-colors duration-300">
-                    Ontdek hoe je je gezondheid kunt beschermen →
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <PracticalTip pageType="energie" />
 
             {/* Energy Flow */}
             <div className="grid md:grid-cols-2 gap-8">

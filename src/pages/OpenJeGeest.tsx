@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
+import PracticalTip from '@/components/PracticalTip';
 
 const OpenJeGeest = () => {
   const [explosion, setExplosion] = useState(false);
@@ -189,40 +190,7 @@ const OpenJeGeest = () => {
               ))}
             </div>
 
-            {/* Practical Tip */}
-            <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-3xl p-8 md:p-12 mb-12">
-              <h2 className="text-3xl md:text-4xl font-black text-white mb-6 transform hover:scale-105 hover:rotate-2 transition-all duration-300 cursor-pointer active:scale-95">
-                🎯 Praktische Tip
-              </h2>
-              <div className="space-y-4 text-white text-lg md:text-xl">
-                <p className="hover:text-purple-200 transition-colors duration-300 cursor-pointer">
-                  <strong>Je leven is de spiegel van je onderbewustzijn.</strong>
-                  Alles wat je ervaart - problemen, successen, relaties, gebeurtenissen -
-                  is een reflectie van wat diep vanbinnen in je leeft.
-                </p>
-                <p className="hover:text-indigo-200 transition-colors duration-300 cursor-pointer">
-                  Wanneer je herhaaldelijk dezelfde problemen tegenkomt, kijk dan niet
-                  naar buiten, maar naar binnen. <strong>Elk probleem kan je inwendig oplossen.</strong>
-                  De oplossing zit nooit in de buitenwereld, maar in jouw bewustzijn.
-                </p>
-                <p className="hover:text-purple-200 transition-colors duration-300 cursor-pointer">
-                  Dit is de meest krachtige kennis die je kunt bezitten. Je hoeft niet
-                  te wachten op externe veranderingen. Verander je innerlijke wereld,
-                  en de buitenwereld volgt automatisch.
-                </p>
-                <p className="hover:text-indigo-200 transition-colors duration-300 cursor-pointer">
-                  Werk met je onderbewustzijn: visualisatie, affirmaties, meditatie.
-                  Herprogrammeer de diepe lagen die je realiteit creëren.
-                  De resultaten zullen je verbazen - het is bijna magisch.
-                </p>
-                <div className="mt-6 p-4 bg-indigo-600 bg-opacity-20 rounded-2xl border border-indigo-400 border-opacity-30">
-                  <p className="text-sm text-indigo-200 mb-2">💫 Alles is energie</p>
-                  <Link to="/energie" className="text-indigo-300 hover:text-indigo-100 underline font-bold transition-colors duration-300">
-                    Ontdek de verschillende vormen van energie →
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <PracticalTip pageType="openjegeest" />
 
             {/* Final Call to Action */}
             <div className="text-center py-12">

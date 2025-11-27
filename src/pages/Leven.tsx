@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
+import PracticalTip from '@/components/PracticalTip';
 
 const Leven = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -140,35 +141,7 @@ const Leven = () => {
               </div>
             </div>
 
-            {/* Practical Tip */}
-            <div className="bg-gradient-to-r from-cyan-600 to-teal-600 rounded-3xl p-8 md:p-12 mb-12">
-              <h2 className="text-3xl md:text-4xl font-black text-white mb-6 transform hover:scale-105 hover:rotate-2 transition-all duration-300 cursor-pointer active:scale-95">
-                🎯 Praktische Tip
-              </h2>
-              <div className="space-y-4 text-white text-lg md:text-xl">
-                <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
-                  <strong>Karma bestaat echt.</strong> Alles wat je uitstraalt, komt terug.
-                  Liefde, vriendelijkheid, compassie - het universeel kent geen grenzen en
-                  werkt door iedereen en alles heen.
-                </p>
-                <p className="hover:text-teal-200 transition-colors duration-300 cursor-pointer">
-                  Je hoeft niet te geloven in karma om het te ervaren. Probeer het:
-                  wees liefdevol naar vreemden, help iemand zonder iets terug te verwachten,
-                  en observeer wat er in je leven gebeurt.
-                </p>
-                <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
-                  De liefde die je geeft is de liefde die je ontvangt. Niet per se van
-                  dezelfde persoon, maar het universum regelt dit op mysterieuze wijzen.
-                  Houd elkaar lief - het is de meest praktische vorm van spiritualiteit.
-                </p>
-                <div className="mt-6 p-4 bg-teal-600 bg-opacity-20 rounded-2xl border border-teal-400 border-opacity-30">
-                  <p className="text-sm text-teal-200 mb-2">🧠 Je geest bepaalt je realiteit</p>
-                  <Link to="/openjegeest" className="text-teal-300 hover:text-teal-100 underline font-bold transition-colors duration-300">
-                    Ontdek hoe je je innerlijke wereld kunt sturen →
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <PracticalTip pageType="leven" />
 
             {/* Integration Section */}
             <div className="text-center py-12">

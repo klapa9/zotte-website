@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
+import PracticalTip from '@/components/PracticalTip';
 
 const WeesZot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -139,32 +140,7 @@ const WeesZot = () => {
                 </div>
               </div>
 
-              {/* Practical Tip */}
-              <div className="bg-gradient-to-r from-orange-600 to-yellow-600 rounded-3xl p-8 md:p-12 mb-12">
-                <h2 className="text-3xl md:text-4xl font-black text-white mb-6">
-                  🎯 Praktische Tip
-                </h2>
-                <div className="space-y-4 text-white text-lg md:text-xl">
-                  <p>
-                    <strong>Bekijk elke tegenslag als een les.</strong> Het universum probeert je iets te leren.
-                    Wanneer je vaak dezelfde tegenslag ervaart, betekent dit dat je de les nog niet hebt begrepen.
-                  </p>
-                  <p>
-                    Stop met vechten tegen tegenslag. Vraag jezelf af: "Wat probeert het leven me hier te leren?"
-                    Soms is de les simpel: meer geduld hebben, beter luisteren, of loslaten wat je niet kunt controleren.
-                  </p>
-                  <p>
-                    Wanneer je de les eindelijk begrijpt, verdwijnt de tegenslag als vanzelf.
-                    Het is geen straf, maar een uitnodiging om te groeien en wijzer te worden.
-                  </p>
-                  <div className="mt-6 p-4 bg-yellow-600 bg-opacity-20 rounded-2xl border border-yellow-400 border-opacity-30">
-                    <p className="text-sm text-yellow-200 mb-2">⚡ Heb je behoefte aan meer kracht?</p>
-                    <Link to="/energie" className="text-yellow-300 hover:text-yellow-100 underline font-bold transition-colors duration-300">
-                      Ontdek de verschillende energieën die je helpen →
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              <PracticalTip pageType="weeszot" />
 
               {/* Call to Action */}
               <div className="text-center py-12">
