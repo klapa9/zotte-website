@@ -6,8 +6,8 @@ const OpenJeGeest = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useSeoMeta({
-    title: 'Open Je Geest - Blaas je Oude Ideeën Op',
-    description: 'Alles is veel zotter dan je denkt! Ontdek hoe een open geest je oude ideeën kan opblazen.',
+    title: 'Open Je Geest - Blaas je Oude Ideëen Op',
+    description: 'Alles is veel zotter dan je denkt! Ontdek hoe een open geest je oude ideëen kan opblazen.',
   });
 
   useEffect(() => {
@@ -120,7 +120,7 @@ const OpenJeGeest = () => {
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
                   Een open geest is niet hetzelfde als een leeg hoofd.
-                  Het is een hoofd dat ruimte maakt voor nieuwe ideeën,
+                  Het is een hoofd dat ruimte maakt voor nieuwe ideëen,
                   nieuwe perspectieven, nieuwe mogelijkheden.
                 </p>
                 <p>
@@ -136,14 +136,14 @@ const OpenJeGeest = () => {
               </div>
             </div>
 
-            {/* Oude Ideeën Opblazen */}
+            {/* Oude Ideëen Opblazen */}
             <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-pink-400 border-opacity-30">
               <h2 className="text-4xl md:text-5xl font-black text-pink-400 mb-6">
                 ALLEEN ZO KAN JE JE OUDE IDEEËN OPBLAZEN!
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Je oude ideeën zijn als een kooi. Ze houden je gevangen,
+                  Je oude ideëen zijn als een kooi. Ze houden je gevangen,
                   beperken je mogelijkheden, bepalen je realiteit.
                   Om echt vrij te zijn, moet je die kooi opblazen.
                 </p>
@@ -182,6 +182,35 @@ const OpenJeGeest = () => {
                   </p>
                 </div>
               ))}
+            </div>
+
+            {/* Practical Tip */}
+            <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-3xl p-8 md:p-12 mb-12">
+              <h2 className="text-3xl md:text-4xl font-black text-white mb-6 transform hover:scale-105 hover:rotate-2 transition-all duration-300 cursor-pointer active:scale-95">
+                🎯 Praktische Tip
+              </h2>
+              <div className="space-y-4 text-white text-lg md:text-xl">
+                <p className="hover:text-purple-200 transition-colors duration-300 cursor-pointer">
+                  <strong>Je leven is de spiegel van je onderbewustzijn.</strong>
+                  Alles wat je ervaart - problemen, successen, relaties, gebeurtenissen -
+                  is een reflectie van wat diep vanbinnen in je leeft.
+                </p>
+                <p className="hover:text-indigo-200 transition-colors duration-300 cursor-pointer">
+                  Wanneer je herhaaldelijk dezelfde problemen tegenkomt, kijk dan niet
+                  naar buiten, maar naar binnen. <strong>Elk probleem kan je inwendig oplossen.</strong>
+                  De oplossing zit nooit in de buitenwereld, maar in jouw bewustzijn.
+                </p>
+                <p className="hover:text-purple-200 transition-colors duration-300 cursor-pointer">
+                  Dit is de meest krachtige kennis die je kunt bezitten. Je hoeft niet
+                  te wachten op externe veranderingen. Verander je innerlijke wereld,
+                  en de buitenwereld volgt automatisch.
+                </p>
+                <p className="hover:text-indigo-200 transition-colors duration-300 cursor-pointer">
+                  Werk met je onderbewustzijn: visualisatie, affirmaties, meditatie.
+                  Herprogrammeer de diepe lagen die je realiteit creëren.
+                  De resultaten zullen je verbazen - het is bijna magisch.
+                </p>
+              </div>
             </div>
 
             {/* Final Call to Action */}

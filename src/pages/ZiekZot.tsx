@@ -161,6 +161,38 @@ const ZiekZot = () => {
               </div>
             </div>
 
+            {/* Practical Tip */}
+            <div className="bg-gradient-to-r from-red-600 to-rose-600 rounded-3xl p-8 md:p-12 mb-12">
+              <h2 className="text-3xl md:text-4xl font-black text-white mb-6 transform hover:scale-105 hover:rotate-2 transition-all duration-300 cursor-pointer active:scale-95">
+                🎯 Praktische Tip
+              </h2>
+              <div className="space-y-4 text-white text-lg md:text-xl">
+                <p className="hover:text-red-200 transition-colors duration-300 cursor-pointer">
+                  <strong>De natuur kan je genezen.</strong> Je lichaam is een prachtige zelfgenezende machine
+                  wanneer je het de juiste omstandigheden geeft. De natuur biedt alles wat je nodig hebt.
+                </p>
+                <p className="hover:text-rose-200 transition-colors duration-300 cursor-pointer">
+                  <strong>Onze natuurlijke staat is geen voeding, water of slaap.</strong>
+                  Wie ooit heeft gelezen dat dieren in het wild tellen hoeveel calorieën ze eten,
+                  hoeveel glazen water ze drinken, of hoeveel uur ze slapen?
+                </p>
+                <p className="hover:text-red-200 transition-colors duration-300 cursor-pointer">
+                  <strong>Vasten is onze natuurlijke staat van zijn.</strong> Vroeger aten we niet elke dag,
+                  en ons lichaam is perfect ontworpen om periodes zonder voeding te overleven en zelfs te floreren.
+                </p>
+                <p className="hover:text-rose-200 transition-colors duration-300 cursor-pointer">
+                  <strong>De voordelen van vasten zijn enorm:</strong> celvernieuwing (autophagy),
+                  verbeterde insulinegevoeligheid, mentale helderheid, meer energie, en zelfs langere levensduur.
+                  Start met 16:8 intermittent fasting en voel hoe je lichaam tot leven komt.
+                </p>
+                <p className="hover:text-rose-200 transition-colors duration-300 cursor-pointer">
+                  Vertrouw op je lichaam en de natuur. Ze weten wat goed voor je is.
+                  Luister naar je hongersignalen, eet wanneer je echt honger hebt, en
+                  geef je spijsvertering rust om te herstellen.
+                </p>
+              </div>
+            </div>
+
             {/* Call to Action */}
             <div className="text-center py-12">
               <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-2 transition-all duration-500 cursor-pointer active:scale-95">

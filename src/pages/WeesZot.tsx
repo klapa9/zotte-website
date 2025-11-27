@@ -122,13 +122,34 @@ const WeesZot = () => {
               </div>
             </div>
 
+            {/* Practical Tip */}
+            <div className="bg-gradient-to-r from-orange-600 to-yellow-600 rounded-3xl p-8 md:p-12 mb-12">
+              <h2 className="text-3xl md:text-4xl font-black text-white mb-6 transform hover:scale-105 hover:rotate-2 transition-all duration-300 cursor-pointer active:scale-95">
+                🎯 Praktische Tip
+              </h2>
+              <div className="space-y-4 text-white text-lg md:text-xl">
+                <p className="hover:text-yellow-200 transition-colors duration-300 cursor-pointer">
+                  <strong>Bekijk elke tegenslag als een les.</strong> Het universum probeert je iets te leren.
+                  Wanneer je vaak dezelfde tegenslag ervaart, betekent dit dat je de les nog niet hebt begrepen.
+                </p>
+                <p className="hover:text-orange-200 transition-colors duration-300 cursor-pointer">
+                  Stop met vechten tegen tegenslag. Vraag jezelf af: "Wat probeert het leven me hier te leren?"
+                  Soms is de les simpel: meer geduld hebben, beter luisteren, of loslaten wat je niet kunt controleren.
+                </p>
+                <p className="hover:text-yellow-200 transition-colors duration-300 cursor-pointer">
+                  Wanneer je de les eindelijk begrijpt, verdwijnt de tegenslag als vanzelf.
+                  Het is geen straf, maar een uitnodiging om te groeien en wijzer te worden.
+                </p>
+              </div>
+            </div>
+
             {/* Call to Action */}
             <div className="text-center py-12">
               <h2 className="text-3xl md:text-4xl font-black text-white mb-6 transform hover:scale-110 hover:rotate-3 transition-all duration-300 cursor-pointer active:scale-95">
                 Dus... wees zot!
               </h2>
               <p className="text-xl md:text-2xl text-white font-light mb-8 transform hover:scale-105 hover:rotate-2 transition-all duration-300 cursor-pointer active:scale-95">
-                De wereld wacht op jouw gekke ideeën
+                De wereld wacht op jouw gekke ideëen
               </p>
               <div className="inline-block transform hover:scale-110 hover:rotate-6 transition-all duration-300 cursor-pointer active:scale-95">
                 <p className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 transition-all duration-300">

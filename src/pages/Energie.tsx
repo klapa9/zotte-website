@@ -115,7 +115,7 @@ const Energie = () => {
                 <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
                   Energie is niet zomaar een woord. Het is de essentie van het leven zelf.
                   Het is wat je voelt wanneer je iets doet waar je gepassioneerd over bent.
-                  Het is de vonk die ideeën tot leven wekt.
+                  Het is de vonk die ideëen tot leven wekt.
                 </p>
                 <p className="hover:text-blue-200 transition-colors duration-300 cursor-pointer">
                   ECHT energie is authentiek. Het komt niet van buitenaf, maar van binnenuit.
@@ -129,6 +129,33 @@ const Energie = () => {
                   En EPIC energie? Dat is de energie die verhalen schrijft.
                   Die herinneringen creëert die een leven lang meegaan.
                   Die anderen inspireert om ook groot te dromen.
+                </p>
+              </div>
+            </div>
+
+            {/* Practical Tip */}
+            <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-3xl p-8 md:p-12 mb-12">
+              <h2 className="text-3xl md:text-4xl font-black text-white mb-6 transform hover:scale-105 hover:rotate-2 transition-all duration-300 cursor-pointer active:scale-95">
+                🎯 Praktische Tip
+              </h2>
+              <div className="space-y-4 text-white text-lg md:text-xl">
+                <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
+                  <strong>Geld is een vorm van energie.</strong> Het is opgesloten levensenergie,
+                  tijd, en creativiteit. Wanneer je geld geeft of ontvangt, vindt er een energietransfer plaats.
+                </p>
+                <p className="hover:text-emerald-200 transition-colors duration-300 cursor-pointer">
+                  Het huidige financiële systeem <strong>steelt constant je energie.</strong>
+                  Inflatie, rente, belastingen - het zijn manieren om jouw energie langzaam af te tappen
+                  zonder dat je het doorhebt.
+                </p>
+                <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
+                  <strong>Bitcoin is het alternatieve geldsysteem.</strong> Het is decentraal,
+                  geen centrale autoriteit kan het manipuleren of devalueerden. Met Bitcoin behoud je
+                  volledige controle over je eigen energie.
+                </p>
+                <p className="hover:text-emerald-200 transition-colors duration-300 cursor-pointer">
+                  Begin klein, leer, en ontdek hoe Bitcoin financiële vrijheid kan bieden.
+                  Het is niet zomaar geld - het is een escape route uit een systeem dat jouw energie leent.
                 </p>
               </div>
             </div>

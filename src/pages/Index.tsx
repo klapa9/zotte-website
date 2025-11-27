@@ -7,7 +7,7 @@ const Index = () => {
 
   useSeoMeta({
     title: 'Wees Zot! - Mindblowing Ideas',
-    description: 'Een gekke website voor het inspireren en uitdagen van mensen om mindblowing ideeën te leren.',
+    description: 'Een gekke website voor het inspireren en uitdagen van mensen om mindblowing ideëen te leren.',
   });
 
   // Pre-calculate background elements to prevent flickering
@@ -201,7 +201,7 @@ const Index = () => {
         <div className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <a href="https://zottewebsite.be/openjegeest" className="text-4xl md:text-6xl font-black text-white leading-tight transform hover:scale-105 transition-transform duration-300 inline-block">
-              alles is veel zotter dan je denkt!
+              Alles is veel zotter dan je denkt!
             </a>
           </div>
         </div>
@@ -210,7 +210,7 @@ const Index = () => {
         <a href="https://zottewebsite.be/openjegeest" className="py-20 px-4 bg-gradient-to-r from-purple-600 to-indigo-800 block group">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-2xl md:text-4xl font-bold text-white leading-relaxed transform hover:rotate-1 hover:scale-105 transition-all duration-500 group-hover:scale-110">
-              HEB EEN OPEN GEEST, ALLEEN ZO KAN JE JE OUDE IDEEEN OPBLAZEN!
+              HEB EEN OPEN GEEST, ALLEEN ZO KAN JE JE OUDE IDEEËN OPBLAZEN!
             </p>
           </div>
         </a>
