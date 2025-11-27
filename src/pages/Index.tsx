@@ -83,10 +83,10 @@ const Index = () => {
               WEES ZOT!
             </h1>
             <div className="space-y-6 text-white">
-              <p className="text-2xl md:text-3xl font-bold transform hover:scale-110 transition-transform duration-300 inline-block">
+              <p className="text-2xl md:text-3xl font-bold transform hover:scale-110 hover:rotate-6 transition-all duration-300 inline-block cursor-pointer active:scale-95">
                 Volg je enthousiasme
               </p>
-              <p className="text-xl md:text-2xl font-light italic opacity-90 transform hover:scale-105 transition-transform duration-300 inline-block">
+              <p className="text-xl md:text-2xl font-light italic opacity-90 transform hover:scale-105 hover:rotate-3 transition-all duration-300 inline-block cursor-pointer active:scale-95">
                 Volg je intuïtie en ga dieper in op wat je enthousiasmeert!
               </p>
             </div>
@@ -218,11 +218,11 @@ const Index = () => {
         {/* FAQ Section */}
         <div className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-6xl font-black mb-12 text-white">FAQ</h2>
-            <p className="text-xl md:text-2xl text-white mb-4">Veelgestelde vragen</p>
-            <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 border border-white border-opacity-20">
-              <p className="text-lg text-white mb-4">Stel hier je vragen</p>
-              <p className="text-lg text-pink-400 font-bold">Werkt nog niet</p>
+            <h2 className="text-4xl md:text-6xl font-black mb-12 text-white transform hover:scale-110 hover:rotate-3 transition-all duration-300 cursor-pointer active:scale-95">FAQ</h2>
+            <p className="text-xl md:text-2xl text-white mb-4 transform hover:scale-105 hover:rotate-2 transition-all duration-300 cursor-pointer active:scale-95">Veelgestelde vragen</p>
+            <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-2 transition-all duration-300 cursor-pointer active:scale-95">
+              <p className="text-lg text-white mb-4 hover:text-yellow-300 transition-colors duration-300 cursor-pointer active:scale-95">Stel hier je vragen</p>
+              <p className="text-lg text-pink-400 font-bold hover:text-pink-300 transition-colors duration-300 cursor-pointer active:scale-95">Werkt nog niet</p>
             </div>
           </div>
         </div>
@@ -230,11 +230,11 @@ const Index = () => {
         {/* Footer */}
         <div className="py-12 px-4 bg-black bg-opacity-50 text-center">
           <div className="max-w-4xl mx-auto space-y-4">
-            <p className="text-white text-lg">
-              Contacteer mij: <span className="text-pink-400 font-bold">puurleven@protonmail.com</span>
+            <p className="text-white text-lg transform hover:scale-105 hover:rotate-2 transition-all duration-300 cursor-pointer active:scale-95">
+              Contacteer mij: <span className="text-pink-400 font-bold hover:text-pink-300 transition-colors duration-300 cursor-pointer active:scale-95">puurleven@protonmail.com</span>
             </p>
-            <p className="text-gray-300">© 2025 Alles mag gekopieerd worden! Laat je gaan!</p>
-            <p className="text-red-400 font-bold text-lg">Geen cookies! Cookies</p>
+            <p className="text-gray-300 transform hover:scale-105 hover:rotate-1 transition-all duration-300 cursor-pointer active:scale-95">© 2025 Alles mag gekopieerd worden! Laat je gaan!</p>
+            <p className="text-red-400 font-bold text-lg transform hover:scale-110 hover:rotate-3 hover:text-red-300 transition-all duration-300 cursor-pointer active:scale-95">Geen cookies! Cookies</p>
           </div>
         </div>
       </div>

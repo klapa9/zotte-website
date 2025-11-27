@@ -93,18 +93,18 @@ const ZiekZot = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Stel je voor: je lichaam, die perfecte machine die normaal zo soepel functioneert, 
-                  besluit opeens een eigen feestje te geven. En niet een leuk feestje, 
+                  Stel je voor: je lichaam, die perfecte machine die normaal zo soepel functioneert,
+                  besluit opeens een eigen feestje te geven. En niet een leuk feestje,
                   maar een van die feesten waar alles uit de hand loopt.
                 </p>
                 <p>
-                  Koorts? Je lichaam verhit zichzelf alsof het in een sauna zit die te warm is. 
-                  Hoest? Je longen denken dat het een goed idee is om constant te schreeuwen. 
+                  Koorts? Je lichaam verhit zichzelf alsof het in een sauna zit die te warm is.
+                  Hoest? Je longen denken dat het een goed idee is om constant te schreeuwen.
                   Neusverstopping? Alsof iemand je neus heeft volgepropt met watten.
                 </p>
                 <p>
-                  En het gekste van alles? Je moet betalen om dit te laten gebeuren. 
-                  Je betaalt de dokter, je betaalt de medicijnen, je betaalt voor het privilege 
+                  En het gekste van alles? Je moet betalen om dit te laten gebeuren.
+                  Je betaalt de dokter, je betaalt de medicijnen, je betaalt voor het privilege
                   om je ellendig te voelen. Dat is pas echt zot!
                 </p>
               </div>
@@ -117,18 +117,18 @@ const ZiekZot = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Klinkt logisch, toch? Niet ziek zijn. Simpel. Effectief. 
-                  Waarom zou je kiezen voor hoesten, koorts en ellende als je ook 
+                  Klinkt logisch, toch? Niet ziek zijn. Simpel. Effectief.
+                  Waarom zou je kiezen voor hoesten, koorts en ellende als je ook
                   kunt kiezen voor... nou ja, voor niets van dat alles?
                 </p>
                 <p>
-                  Niet ziek zijn betekent: energie. Vrolijkheid. Het vermogen om 
-                  te doen wat je wilt, wanneer je het wilt. Geen "nee, ik kan niet, 
+                  Niet ziek zijn betekent: energie. Vrolijkheid. Het vermogen om
+                  te doen wat je wilt, wanneer je het wilt. Geen "nee, ik kan niet,
                   ik ben ziek" maar "ja, laten we gaan!"
                 </p>
                 <p>
-                  Het is de ultieme vorm van vrijheid. Vrijheid van pijn, 
-                  vrijheid van beperkingen, vrijheid van het constant moeten 
+                  Het is de ultieme vorm van vrijheid. Vrijheid van pijn,
+                  vrijheid van beperkingen, vrijheid van het constant moeten
                   denken aan je gezondheid.
                 </p>
               </div>
@@ -141,9 +141,9 @@ const ZiekZot = () => {
                   Preventie is de sleutel
                 </h3>
                 <p className="text-white text-lg">
-                  In plaats van wachten tot je ziek wordt en dan proberen het op te lossen, 
-                  waarom niet voorkomen dat het überhaupt gebeurt? 
-                  Gezond eten, bewegen, rusten, ontspannen. 
+                  In plaats van wachten tot je ziek wordt en dan proberen het op te lossen,
+                  waarom niet voorkomen dat het überhaupt gebeurt?
+                  Gezond eten, bewegen, rusten, ontspannen.
                   Het klinkt saai, maar het is eigenlijk best geniaal.
                 </p>
               </div>
@@ -153,9 +153,9 @@ const ZiekZot = () => {
                   Luister naar je lichaam
                 </h3>
                 <p className="text-white text-lg">
-                  Je lichaam is eigenlijk best slim. Het geeft signalen wanneer 
-                  iets niet goed is. Vermoeid? Rust uit. Honger? Eet. 
-                  Stress? Ontspan. Het is niet rocket science, 
+                  Je lichaam is eigenlijk best slim. Het geeft signalen wanneer
+                  iets niet goed is. Vermoeid? Rust uit. Honger? Eet.
+                  Stress? Ontspan. Het is niet rocket science,
                   maar het werkt wel beter dan de meeste rocket science.
                 </p>
               </div>
@@ -163,15 +163,15 @@ const ZiekZot = () => {
 
             {/* Call to Action */}
             <div className="text-center py-12">
-              <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20">
-                <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+              <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-2 transition-all duration-500 cursor-pointer active:scale-95">
+                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
                   Dus... wees niet zot!
                 </h2>
-                <p className="text-xl md:text-2xl text-white mb-6">
+                <p className="text-xl md:text-2xl text-white mb-6 hover:text-pink-200 transition-colors duration-300">
                   Zorg goed voor jezelf, want niemand anders doet het voor je
                 </p>
-                <div className="inline-block transform hover:scale-110 transition-transform duration-300">
-                  <p className="text-3xl md:text-5xl font-black text-red-400">
+                <div className="inline-block transform hover:scale-110 hover:rotate-6 transition-all duration-300 cursor-pointer active:scale-95">
+                  <p className="text-3xl md:text-5xl font-black text-red-400 hover:text-red-300 transition-colors duration-300">
                     BLIJF GEZOND!
                   </p>
                 </div>
@@ -182,7 +182,7 @@ const ZiekZot = () => {
 
         {/* Back to Home */}
         <div className="py-8 px-4 text-center">
-          <a href="https://zottewebsite.be" className="text-white text-lg hover:text-pink-400 transition-colors duration-300">
+          <a href="https://zottewebsite.be" className="text-white text-lg hover:text-pink-400 transition-colors duration-300 transform hover:scale-110 hover:rotate-2 active:scale-95 inline-block">
             ← Terug naar de gekke homepage
           </a>
         </div>
@@ -193,7 +193,7 @@ const ZiekZot = () => {
           0% { transform: translateX(-100%); }
           100% { transform: translateX(100%); }
         }
-        
+
         @keyframes glitch {
           0%, 100% { transform: translate(0); }
           20% { transform: translate(-5px, 5px); }
@@ -201,7 +201,7 @@ const ZiekZot = () => {
           60% { transform: translate(5px, 5px); }
           80% { transform: translate(5px, -5px); }
         }
-        
+
         .animate-glitch {
           animation: glitch 0.3s ease-in-out;
         }

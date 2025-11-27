@@ -61,16 +61,16 @@ const Leven = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Dit is misschien wel de meest fundamentele vraag die je jezelf kunt stellen. 
+                  Dit is misschien wel de meest fundamentele vraag die je jezelf kunt stellen.
                   Het antwoord bepaalt alles: je keuzes, je prioriteiten, je geluk.
                 </p>
                 <p>
-                  Misschien leef je om lief te hebben. Om te leren. Om te creëren. 
-                  Om anderen te helpen. Om de wereld een beetje beter te maken. 
+                  Misschien leef je om lief te hebben. Om te leren. Om te creëren.
+                  Om anderen te helpen. Om de wereld een beetje beter te maken.
                   Of misschien is het simpelweg: omdat het leuk is.
                 </p>
                 <p>
-                  Het mooie is: er is geen juist antwoord. Jouw antwoord is het juiste antwoord. 
+                  Het mooie is: er is geen juist antwoord. Jouw antwoord is het juiste antwoord.
                   Maar de vraag stellen? Dat is de eerste stap naar een bewust leven.
                 </p>
               </div>
@@ -83,17 +83,17 @@ const Leven = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Tijd, aandacht, energie. Dat zijn je meest waardevolle bezittingen. 
+                  Tijd, aandacht, energie. Dat zijn je meest waardevolle bezittingen.
                   Waar geef je ze aan? Dat zegt alles over wat echt belangrijk voor je is.
                 </p>
                 <p>
-                  Is het geld? Status? Relaties? Persoonlijke groei? Vrijheid? 
-                  Of misschien iets heel anders? Iets wat niemand anders begrijpt, 
+                  Is het geld? Status? Relaties? Persoonlijke groei? Vrijheid?
+                  Of misschien iets heel anders? Iets wat niemand anders begrijpt,
                   maar voor jou alles betekent.
                 </p>
                 <p>
-                  De kunst is om te leven in overeenstemming met wat belangrijk is. 
-                  Niet praten over wat belangrijk is, maar er ook echt naar handelen. 
+                  De kunst is om te leven in overeenstemming met wat belangrijk is.
+                  Niet praten over wat belangrijk is, maar er ook echt naar handelen.
                   Dat is de uitdaging. En de beloning.
                 </p>
               </div>
@@ -106,18 +106,18 @@ const Leven = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Beter leven begint met bewustwording. Weten wie je bent, wat je wilt, 
-                  en waarom je het wilt. Zonder bewustwording is elke verandering slechts 
+                  Beter leven begint met bewustwording. Weten wie je bent, wat je wilt,
+                  en waarom je het wilt. Zonder bewustwording is elke verandering slechts
                   een oppervlakkige cosmetische ingreep.
                 </p>
                 <p>
-                  Daarna komt actie. Kleine stappen, consequent uitgevoerd. 
-                  Niet wachten op motivatie, maar discipline ontwikkelen. 
+                  Daarna komt actie. Kleine stappen, consequent uitgevoerd.
+                  Niet wachten op motivatie, maar discipline ontwikkelen.
                   Niet perfectionisme nastreven, maar vooruitgang.
                 </p>
                 <p>
-                  En misschien wel het belangrijkste: mildheid voor jezelf. 
-                  Accepteren dat je fouten maakt, dat je niet perfect bent, 
+                  En misschien wel het belangrijkste: mildheid voor jezelf.
+                  Accepteren dat je fouten maakt, dat je niet perfect bent,
                   maar dat je wel elke dag een beetje beter probeert te worden.
                 </p>
               </div>
@@ -125,16 +125,16 @@ const Leven = () => {
 
             {/* Integration Section */}
             <div className="text-center py-12">
-              <div className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-3xl p-8 md:p-12 transform hover:scale-105 transition-all duration-500">
-                <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+              <div className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-3xl p-8 md:p-12 transform hover:scale-105 hover:rotate-3 transition-all duration-500 cursor-pointer active:scale-95">
+                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
                   Het leven is een reis
                 </h2>
-                <p className="text-xl md:text-2xl text-white mb-6">
+                <p className="text-xl md:text-2xl text-white mb-6 hover:scale-105 hover:rotate-1 transition-all duration-300">
                   Geen bestemming, maar een constante ontdekkingstocht
                 </p>
-                <p className="text-lg md:text-xl text-white opacity-90">
-                  Elke vraag leidt naar nieuwe inzichten. 
-                  Elk inzicht leidt naar nieuwe vragen. 
+                <p className="text-lg md:text-xl text-white opacity-90 hover:opacity-100 transition-opacity duration-300">
+                  Elke vraag leidt naar nieuwe inzichten.
+                  Elk inzicht leidt naar nieuwe vragen.
                   En zo groei je, stap voor stap, dag na dag.
                 </p>
               </div>
@@ -144,7 +144,7 @@ const Leven = () => {
 
         {/* Back to Home */}
         <div className="py-8 px-4 text-center">
-          <a href="https://zottewebsite.be" className="text-white text-lg hover:text-cyan-400 transition-colors duration-300">
+          <a href="https://zottewebsite.be" className="text-white text-lg hover:text-cyan-400 transition-colors duration-300 transform hover:scale-110 hover:rotate-2 active:scale-95 inline-block">
             ← Terug naar de gekke homepage
           </a>
         </div>

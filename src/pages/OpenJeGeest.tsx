@@ -94,19 +94,19 @@ const OpenJeGeest = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Je denkt dat je de wereld begrijpt. Je hebt je theorieën, je overtuigingen, 
-                  je zekerheden. Maar wat als alles wat je denkt te weten, 
+                  Je denkt dat je de wereld begrijpt. Je hebt je theorieën, je overtuigingen,
+                  je zekerheden. Maar wat als alles wat je denkt te weten,
                   slechts een klein stukje van de realiteit is?
                 </p>
                 <p>
-                  De werkelijkheid is veel vreemder, complexer, en wonderlijker 
-                  dan ons beperkte brein kan bevatten. Quantumfysica, bewustzijn, 
-                  de aard van tijd en ruimte - het zijn allemaal concepten 
+                  De werkelijkheid is veel vreemder, complexer, en wonderlijker
+                  dan ons beperkte brein kan bevatten. Quantumfysica, bewustzijn,
+                  de aard van tijd en ruimte - het zijn allemaal concepten
                   die onze intuïtie tarten.
                 </p>
                 <p>
-                  En dat is nog maar het begin. Wat als er nog veel meer is? 
-                  Dingen die we ons nog niet eens kunnen voorstellen? 
+                  En dat is nog maar het begin. Wat als er nog veel meer is?
+                  Dingen die we ons nog niet eens kunnen voorstellen?
                   Dat is waar het echt zot wordt.
                 </p>
               </div>
@@ -119,18 +119,18 @@ const OpenJeGeest = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Een open geest is niet hetzelfde als een leeg hoofd. 
-                  Het is een hoofd dat ruimte maakt voor nieuwe ideeën, 
+                  Een open geest is niet hetzelfde als een leeg hoofd.
+                  Het is een hoofd dat ruimte maakt voor nieuwe ideeën,
                   nieuwe perspectieven, nieuwe mogelijkheden.
                 </p>
                 <p>
-                  Het betekent dat je bereid bent om je oude overtuigingen 
-                  ter discussie te stellen. Dat je durft te zeggen: 
+                  Het betekent dat je bereid bent om je oude overtuigingen
+                  ter discussie te stellen. Dat je durft te zeggen:
                   "Misschien heb ik het fout. Misschien is er meer."
                 </p>
                 <p>
-                  Een open geest is de sleutel tot groei. Zonder openheid 
-                  blijf je vastzitten in dezelfde denkkaders, 
+                  Een open geest is de sleutel tot groei. Zonder openheid
+                  blijf je vastzitten in dezelfde denkkaders,
                   dezelfde beperkingen, dezelfde realiteit.
                 </p>
               </div>
@@ -143,18 +143,18 @@ const OpenJeGeest = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Je oude ideeën zijn als een kooi. Ze houden je gevangen, 
-                  beperken je mogelijkheden, bepalen je realiteit. 
+                  Je oude ideeën zijn als een kooi. Ze houden je gevangen,
+                  beperken je mogelijkheden, bepalen je realiteit.
                   Om echt vrij te zijn, moet je die kooi opblazen.
                 </p>
                 <p>
-                  En dat is precies wat een open geest doet. Het stelt vragen. 
-                  Het twijfelt. Het onderzoekt. Het durft te denken 
+                  En dat is precies wat een open geest doet. Het stelt vragen.
+                  Het twijfelt. Het onderzoekt. Het durft te denken
                   wat nog nooit gedacht is.
                 </p>
                 <p>
-                  Het resultaat? Een explosie van nieuwe mogelijkheden. 
-                  Een wereld die plotseling veel groter, kleurrijker, 
+                  Het resultaat? Een explosie van nieuwe mogelijkheden.
+                  Een wereld die plotseling veel groter, kleurrijker,
                   en interessanter is dan je ooit had kunnen bedenken.
                 </p>
               </div>
@@ -186,16 +186,16 @@ const OpenJeGeest = () => {
 
             {/* Final Call to Action */}
             <div className="text-center py-12">
-              <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-3xl p-8 md:p-12 transform hover:scale-105 transition-all duration-500">
-                <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+              <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-3xl p-8 md:p-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 cursor-pointer active:scale-95">
+                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-110 hover:rotate-3 transition-all duration-300">
                   DURF TE DENKEN
                 </h2>
-                <p className="text-xl md:text-2xl text-white mb-6">
+                <p className="text-xl md:text-2xl text-white mb-6 hover:text-yellow-200 transition-colors duration-300">
                   De grenzen van de werkelijkheid zijn er om doorbroken te worden
                 </p>
-                <p className="text-lg md:text-xl text-white opacity-90">
-                  Je geest is de krachtigste tool die je hebt. 
-                  Gebruik haar. Daag haar uit. 
+                <p className="text-lg md:text-xl text-white opacity-90 hover:opacity-100 transition-opacity duration-300">
+                  Je geest is de krachtigste tool die je hebt.
+                  Gebruik haar. Daag haar uit.
                   Blaas haar op tot ongekende hoogten.
                 </p>
               </div>
@@ -205,7 +205,7 @@ const OpenJeGeest = () => {
 
         {/* Back to Home */}
         <div className="py-8 px-4 text-center">
-          <a href="https://zottewebsite.be" className="text-white text-lg hover:text-yellow-400 transition-colors duration-300">
+          <a href="https://zottewebsite.be" className="text-white text-lg hover:text-yellow-400 transition-colors duration-300 transform hover:scale-110 hover:rotate-2 active:scale-95 inline-block">
             ← Terug naar de gekke homepage
           </a>
         </div>
@@ -218,13 +218,13 @@ const OpenJeGeest = () => {
           90% { opacity: 1; }
           100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
         }
-        
+
         @keyframes explosion {
           0% { transform: scale(0) rotate(0deg); opacity: 1; }
           50% { transform: scale(3) rotate(180deg); opacity: 0.8; }
           100% { transform: scale(0) rotate(360deg); opacity: 0; }
         }
-        
+
         @keyframes expand {
           0% { transform: scale(0.8); opacity: 0.3; }
           100% { transform: scale(1.2); opacity: 0; }

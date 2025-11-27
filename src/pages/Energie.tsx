@@ -107,27 +107,27 @@ const Energie = () => {
             </div>
 
             {/* Energy Explanation */}
-            <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-8 md:p-12 mb-12">
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+            <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 cursor-pointer active:scale-95">
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
                 Wat is Energie?
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
-                <p>
-                  Energie is niet zomaar een woord. Het is de essentie van het leven zelf. 
-                  Het is wat je voelt wanneer je iets doet waar je gepassioneerd over bent. 
+                <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
+                  Energie is niet zomaar een woord. Het is de essentie van het leven zelf.
+                  Het is wat je voelt wanneer je iets doet waar je gepassioneerd over bent.
                   Het is de vonk die ideeën tot leven wekt.
                 </p>
-                <p>
-                  ECHT energie is authentiek. Het komt niet van buitenaf, maar van binnenuit. 
+                <p className="hover:text-blue-200 transition-colors duration-300 cursor-pointer">
+                  ECHT energie is authentiek. Het komt niet van buitenaf, maar van binnenuit.
                   Het is de energie van wie je werkelijk bent, zonder maskers, zonder pretenties.
                 </p>
-                <p>
-                  NIENORMAAL energie doorbreekt alle conventies. Het is de energie van vernieuwing, 
+                <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
+                  NIENORMAAL energie doorbreekt alle conventies. Het is de energie van vernieuwing,
                   van revolutie, van het onmogelijke mogelijk maken.
                 </p>
-                <p>
-                  En EPIC energie? Dat is de energie die verhalen schrijft. 
-                  Die herinneringen creëert die een leven lang meegaan. 
+                <p className="hover:text-indigo-200 transition-colors duration-300 cursor-pointer">
+                  En EPIC energie? Dat is de energie die verhalen schrijft.
+                  Die herinneringen creëert die een leven lang meegaan.
                   Die anderen inspireert om ook groot te dromen.
                 </p>
               </div>
@@ -140,8 +140,8 @@ const Energie = () => {
                   Energie Stroomt
                 </h3>
                 <p className="text-white text-lg">
-                  Energie is nooit statisch. Het beweegt, het stroomt, het transformeert. 
-                  Vandaag ben je vol van de ene energie, morgen van een andere. 
+                  Energie is nooit statisch. Het beweegt, het stroomt, het transformeert.
+                  Vandaag ben je vol van de ene energie, morgen van een andere.
                   En dat is oké. Dat is het leven.
                 </p>
               </div>
@@ -151,8 +151,8 @@ const Energie = () => {
                   Energie Verbindt
                 </h3>
                 <p className="text-white text-lg">
-                  Wanneer je jouw energie deelt met anderen, gebeurt er magie. 
-                  Energie vermenigvuldigt zichzelf. Het creëert iets groters dan de som der delen. 
+                  Wanneer je jouw energie deelt met anderen, gebeurt er magie.
+                  Energie vermenigvuldigt zichzelf. Het creëert iets groters dan de som der delen.
                   Dat is de kracht van gemeenschap.
                 </p>
               </div>
@@ -162,7 +162,7 @@ const Energie = () => {
 
         {/* Back to Home */}
         <div className="py-8 px-4 text-center">
-          <a href="https://zottewebsite.be" className="text-white text-lg hover:text-green-400 transition-colors duration-300">
+          <a href="https://zottewebsite.be" className="text-white text-lg hover:text-green-400 transition-colors duration-300 transform hover:scale-110 hover:rotate-2 active:scale-95 inline-block">
             ← Terug naar de gekke homepage
           </a>
         </div>
@@ -173,7 +173,7 @@ const Energie = () => {
           0%, 100% { opacity: 0.2; transform: scale(1); }
           50% { opacity: 0.8; transform: scale(1.5); }
         }
-        
+
         @keyframes expand {
           0% { transform: scale(0.8); opacity: 0.3; }
           100% { transform: scale(1.2); opacity: 0; }
