@@ -66,17 +66,17 @@ const WeesZot = () => {
         <div className="flex-1 px-4 pb-16">
           <div className="max-w-6xl mx-auto space-y-16">
             {/* Enthousiasme Section */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-3 transition-all duration-500 cursor-pointer active:scale-95">
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
+            <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20">
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
                 Volg je Enthousiasme
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
-                <p className="hover:text-purple-200 transition-colors duration-300 cursor-pointer">
+                <p>
                   Enthousiasme is de brandstof van de ziel. Wanneer je iets doet met passie,
                   verdwijnt de tijd en ontstaat er magie. Je enthousiasme is je innerlijke kompas
                   dat je naar je bestemming leidt.
                 </p>
-                <p className="hover:text-pink-200 transition-colors duration-300 cursor-pointer">
+                <p>
                   Stel je voor: een wereld waarin iedereen doet waar ze echt van houden.
                   Een wereld waarin enthousiasme de norm is, niet de uitzondering.
                   Dat is de wereld die we kunnen creëren.
@@ -91,16 +91,16 @@ const WeesZot = () => {
             </div>
 
             {/* Intuïtie Section */}
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 md:p-12 transform hover:rotate-2 hover:scale-105 transition-all duration-500 cursor-pointer active:scale-95">
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 md:p-12">
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
                 Vertrouw je Intuïtie
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
-                <p className="hover:text-purple-200 transition-colors duration-300 cursor-pointer">
+                <p>
                   Je intuïtie is slimmer dan je denkt. Het is de stem van je onderbewustzijn,
                   de som van al je ervaringen, je diepste wijsheid. Luister ernaar.
                 </p>
-                <p className="hover:text-pink-200 transition-colors duration-300 cursor-pointer">
+                <p>
                   Soms weet je iets zonder te weten hoe je het weet. Dat is geen toeval.
                   Dat is je intuïtie die je een seintje geeft. De uitdaging is om te leren
                   onderscheid te maken tussen angst en ware intuïtie.
@@ -139,19 +139,19 @@ const WeesZot = () => {
 
             {/* Practical Tip */}
             <div className="bg-gradient-to-r from-orange-600 to-yellow-600 rounded-3xl p-8 md:p-12 mb-12">
-              <h2 className="text-3xl md:text-4xl font-black text-white mb-6 transform hover:scale-105 hover:rotate-2 transition-all duration-300 cursor-pointer active:scale-95">
+              <h2 className="text-3xl md:text-4xl font-black text-white mb-6">
                 🎯 Praktische Tip
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
-                <p className="hover:text-yellow-200 transition-colors duration-300 cursor-pointer">
+                <p>
                   <strong>Bekijk elke tegenslag als een les.</strong> Het universum probeert je iets te leren.
                   Wanneer je vaak dezelfde tegenslag ervaart, betekent dit dat je de les nog niet hebt begrepen.
                 </p>
-                <p className="hover:text-orange-200 transition-colors duration-300 cursor-pointer">
+                <p>
                   Stop met vechten tegen tegenslag. Vraag jezelf af: "Wat probeert het leven me hier te leren?"
                   Soms is de les simpel: meer geduld hebben, beter luisteren, of loslaten wat je niet kunt controleren.
                 </p>
-                <p className="hover:text-yellow-200 transition-colors duration-300 cursor-pointer">
+                <p>
                   Wanneer je de les eindelijk begrijpt, verdwijnt de tegenslag als vanzelf.
                   Het is geen straf, maar een uitnodiging om te groeien en wijzer te worden.
                 </p>
@@ -166,14 +166,14 @@ const WeesZot = () => {
 
             {/* Call to Action */}
             <div className="text-center py-12">
-              <h2 className="text-3xl md:text-4xl font-black text-white mb-6 transform hover:scale-110 hover:rotate-3 transition-all duration-300 cursor-pointer active:scale-95">
+              <h2 className="text-3xl md:text-4xl font-black text-white mb-6">
                 Dus... wees zot!
               </h2>
-              <p className="text-xl md:text-2xl text-white font-light mb-8 transform hover:scale-105 hover:rotate-2 transition-all duration-300 cursor-pointer active:scale-95">
+              <p className="text-xl md:text-2xl text-white font-light mb-8">
                 De wereld wacht op jouw gekke ideëen
               </p>
-              <div className="inline-block transform hover:scale-110 hover:rotate-6 transition-all duration-300 cursor-pointer active:scale-95">
-                <p className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 transition-all duration-300">
+              <div className="inline-block">
+                <p className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
                   DOE HET NU!
                 </p>
               </div>
@@ -191,32 +191,8 @@ const WeesZot = () => {
                   <div className="text-3xl mb-1">🏠</div>
                   Home
                 </a>
-                <a href="https://zottewebsite.be/leven" className="text-purple-300 hover:text-purple-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">❓</div>
-                  Leven
-                </a>
-                <a href="https://zottewebsite.be/energie" className="text-green-300 hover:text-green-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">⚡</div>
-                  Energie
-                </a>
-                <a href="https://zottewebsite.be/Ziekzot" className="text-pink-300 hover:text-pink-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">🤪</div>
-                  Ziek Zot
-                </a>
-                <a href="https://zottewebsite.be/openjegeest" className="text-indigo-300 hover:text-indigo-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">🧠</div>
-                  Open Geest
-                </a>
-              </div>
-            </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 mt-4">
-              <h3 className="text-2xl font-black text-white mb-4 text-center">🔗 Actieve Pagina</h3>
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
-                <a href="https://zottewebsite.be" className="text-yellow-300 hover:text-yellow-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">🏠</div>
-                  Home
-                </a>
-                <div className="bg-yellow-600 bg-opacity-30 rounded-xl p-3 border-2 border-yellow-400">
+                <div className="bg-yellow-600 bg-opacity-30 rounded-xl p-3 border-2 border-yellow-400 relative">
+                  <div className="absolute -right-2 -top-2 w-4 h-4 bg-green-400 rounded-full flex items-center justify-center text-white text-xs font-bold">✓</div>
                   <div className="text-3xl mb-1">🌟</div>
                   <div className="text-yellow-100 font-bold">Wees Zot</div>
                 </div>
