@@ -1,5 +1,6 @@
 import { useSeoMeta } from '@unhead/react';
 import { useState, useEffect, useMemo } from 'react';
+import CursorStyles from '@/components/CursorStyles';
 
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -50,7 +51,9 @@ const Index = () => {
   const { rotateX, rotateY } = calculateRotation(mousePosition.x, mousePosition.y);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-800 to-orange-600 overflow-hidden relative">
+    <>
+      <CursorStyles />
+      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-800 to-orange-600 overflow-hidden relative">
       {/* Static background elements - no more flickering! */}
       <div className="absolute inset-0">
         {backgroundElements.map((element) => (
@@ -271,6 +274,7 @@ const Index = () => {
         }
       `}</style>
     </div>
+    </>
   );
 };
 

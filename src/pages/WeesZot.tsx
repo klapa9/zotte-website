@@ -1,5 +1,6 @@
 import { useSeoMeta } from '@unhead/react';
 import { useState, useEffect } from 'react';
+import CursorStyles from '@/components/CursorStyles';
 
 const WeesZot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -27,7 +28,9 @@ const WeesZot = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 overflow-hidden relative">
+    <>
+      <CursorStyles />
+      <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 overflow-hidden relative">
       {/* Animated background */}
       <div className="absolute inset-0">
         {[...Array(15)].map((_, i) => (
@@ -206,17 +209,38 @@ const WeesZot = () => {
                 </a>
               </div>
             </div>
+            <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 mt-4">
+              <h3 className="text-2xl font-black text-white mb-4 text-center">🔗 Actieve Pagina</h3>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                <a href="https://zottewebsite.be" className="text-yellow-300 hover:text-yellow-200 font-bold transition-colors duration-300">
+                  <div className="text-3xl mb-1">🏠</div>
+                  Home
+                </a>
+                <div className="bg-yellow-600 bg-opacity-30 rounded-xl p-3 border-2 border-yellow-400">
+                  <div className="text-3xl mb-1">🌟</div>
+                  <div className="text-yellow-100 font-bold">Wees Zot</div>
+                </div>
+                <a href="https://zottewebsite.be/leven" className="text-purple-300 hover:text-purple-200 font-bold transition-colors duration-300">
+                  <div className="text-3xl mb-1">❓</div>
+                  Leven
+                </a>
+                <a href="https://zottewebsite.be/energie" className="text-green-300 hover:text-green-200 font-bold transition-colors duration-300">
+                  <div className="text-3xl mb-1">⚡</div>
+                  Energie
+                </a>
+                <a href="https://zottewebsite.be/openjegeest" className="text-indigo-300 hover:text-indigo-200 font-bold transition-colors duration-300">
+                  <div className="text-3xl mb-1">🧠</div>
+                  Open Geest
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Back to Home */}
-        <div className="py-8 px-4 text-center">
-          <a href="https://zottewebsite.be" className="text-white text-lg hover:text-yellow-400 transition-colors duration-300 transform hover:scale-110 hover:rotate-2 active:scale-95 inline-block">
-            ← Terug naar de gekke homepage
-          </a>
-        </div>
+
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

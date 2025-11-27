@@ -1,5 +1,6 @@
 import { useSeoMeta } from '@unhead/react';
 import { useState, useEffect } from 'react';
+import CursorStyles from '@/components/CursorStyles';
 
 const OpenJeGeest = () => {
   const [explosion, setExplosion] = useState(false);
@@ -28,7 +29,9 @@ const OpenJeGeest = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-800 to-pink-900 overflow-hidden relative">
+    <>
+      <CursorStyles />
+      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-800 to-pink-900 overflow-hidden relative">
       {/* Explosive background particles */}
       <div className="absolute inset-0">
         {[...Array(50)].map((_, i) => (
@@ -266,15 +269,35 @@ const OpenJeGeest = () => {
                 </a>
               </div>
             </div>
+            <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 mt-4">
+              <h3 className="text-2xl font-black text-white mb-4 text-center">🔗 Actieve Pagina</h3>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                <a href="https://zottewebsite.be" className="text-indigo-300 hover:text-indigo-200 font-bold transition-colors duration-300">
+                  <div className="text-3xl mb-1">🏠</div>
+                  Home
+                </a>
+                <a href="https://zottewebsite.be/weeszot" className="text-yellow-300 hover:text-yellow-200 font-bold transition-colors duration-300">
+                  <div className="text-3xl mb-1">🌟</div>
+                  Wees Zot
+                </a>
+                <a href="https://zottewebsite.be/leven" className="text-cyan-300 hover:text-cyan-200 font-bold transition-colors duration-300">
+                  <div className="text-3xl mb-1">❓</div>
+                  Leven
+                </a>
+                <a href="https://zottewebsite.be/energie" className="text-green-300 hover:text-green-200 font-bold transition-colors duration-300">
+                  <div className="text-3xl mb-1">⚡</div>
+                  Energie
+                </a>
+                <div className="bg-indigo-600 bg-opacity-30 rounded-xl p-3 border-2 border-indigo-400">
+                  <div className="text-3xl mb-1">🧠</div>
+                  <div className="text-indigo-100 font-bold">Open Geest</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Back to Home */}
-        <div className="py-8 px-4 text-center">
-          <a href="https://zottewebsite.be" className="text-white text-lg hover:text-yellow-400 transition-colors duration-300 transform hover:scale-110 hover:rotate-2 active:scale-95 inline-block">
-            ← Terug naar de gekke homepage
-          </a>
-        </div>
+
       </div>
 
       <style jsx>{`
@@ -296,7 +319,8 @@ const OpenJeGeest = () => {
           100% { transform: scale(1.2); opacity: 0; }
         }
       `}</style>
-    </div>
+      </div>
+    </>
   );
 };
 
