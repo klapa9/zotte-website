@@ -1,5 +1,5 @@
 import { useSeoMeta } from '@unhead/react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -9,6 +9,18 @@ const Index = () => {
     title: 'Wees Zot! - Mindblowing Ideas',
     description: 'Een gekke website voor het inspireren en uitdagen van mensen om mindblowing ideeën te leren.',
   });
+
+  // Pre-calculate background elements to prevent flickering
+  const backgroundElements = useMemo(() => {
+    return [...Array(15)].map((_, i) => ({
+      id: i,
+      width: Math.random() * 400 + 100,
+      height: Math.random() * 400 + 100,
+      color: `hsl(${Math.random() * 360}, 70%, 60%)`,
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+    }));
+  }, []);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -39,20 +51,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-800 to-orange-600 overflow-hidden relative">
-      {/* Tilt-able background elements */}
+      {/* Static background elements - no more flickering! */}
       <div className="absolute inset-0">
-        {[...Array(15)].map((_, i) => (
+        {backgroundElements.map((element) => (
           <div
-            key={i}
+            key={element.id}
             className="absolute rounded-full mix-blend-screen opacity-20"
             style={{
-              width: `${Math.random() * 400 + 100}px`,
-              height: `${Math.random() * 400 + 100}px`,
-              background: `hsl(${Math.random() * 360}, 70%, 60%)`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              transform: `perspective(1000px) rotateX(${calculateRotation(mousePosition.x, mousePosition.y, 5).rotateX}deg) rotateY(${calculateRotation(mousePosition.x, mousePosition.y, 5).rotateY}deg)`,
-              transition: 'transform 0.3s ease-out',
+              width: `${element.width}px`,
+              height: `${element.height}px`,
+              background: element.color,
+              top: `${element.top}%`,
+              left: `${element.left}%`,
             }}
           />
         ))}
