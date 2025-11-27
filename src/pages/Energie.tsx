@@ -21,13 +21,13 @@ const Energie = () => {
   }, []);
 
   const energyWords = [
-    { word: "ZONNE-ENERGIE", description: "Vitaliteit en kracht van de zon", color: "from-yellow-400 to-orange-600" },
-    { word: "MAANE-ENERGIE", description: "Intuïtieve en mysterieuze kracht", color: "from-purple-400 to-indigo-600" },
-    { word: "AARDE-ENERGIE", description: "Grondende en stabiliserende kracht", color: "from-green-400 to-emerald-600" },
-    { word: "WATER-ENERGIE", description: "Vloeiende en zuiverende kracht", color: "from-blue-400 to-cyan-600" },
-    { word: "VUUR-ENERGIE", description: "Transformerende en creatieve kracht", color: "from-red-400 to-orange-600" },
-    { word: "LUCHT-ENERGIE", description: "Verfrissende en inspirerende kracht", color: "from-teal-400 to-sky-600" },
-    { word: "LEVENSDENERGIE", description: "De allesomvattende kracht van bestaan", color: "from-pink-400 to-rose-600" }
+    { word: "Elektriciteit", description: "Stroomende kracht die alles aandrijft", color: "from-yellow-400 to-blue-600" },
+    { word: "Nucleair", description: "Immens kracht uit het hart van de materie", color: "from-green-400 to-emerald-600" },
+    { word: "Efficiëntie", description: "Minimale inzet, maximale output", color: "from-cyan-400 to-teal-600" },
+    { word: "Rendement", description: "De verhouding tussen input en resultaat", color: "from-purple-400 to-pink-600" },
+    { word: "Generator", description: "Creëert kracht uit beweging en bronnen", color: "from-orange-400 to-red-600" },
+    { word: "Immens", description: "Onbegrensde mogelijkheden en potentieel", color: "from-indigo-400 to-purple-600" },
+    { word: "Epic", description: "Legendarische kracht die geschiedenis schrijft", color: "from-pink-400 to-rose-600" }
   ];
 
   return (
@@ -119,21 +119,24 @@ const Energie = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
-                  Energie is overal om ons heen, in vele vormen en manifestaties.
-                  Het is de levenskracht die door de natuur stroomt, van de zon tot de diepste oceaan.
-                  Het is wat ons in beweging houdt en laat groeien.
+                  Energie is de fundamentele kracht die alles in beweging zet en in stand houdt.
+                  Het is niet zomaar een concept, maar de concrete kracht achter elke actie, elke gedachte,
+                  elke transformatie in het universum.
                 </p>
                 <p className="hover:text-blue-200 transition-colors duration-300 cursor-pointer">
-                  ZONNE-ENERGIE geeft ons vitaliteit en warmte, de bron van al het leven op aarde.
-                  Het is de kracht die planten laat groeien en ons lichaam voedt met vitamine D.
+                  Elektriciteit is de meest zichtbare vorm van energie - de stroom die onze lichten laat branden,
+                  onze apparaten laat draaien, onze samenleving laat functioneren. Zonder elektriciteit
+                  stopt de moderne wereld.
                 </p>
                 <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
-                  MAANE-ENERGIE werkt subtiele, beïnvloedt de getijden en onze intuïtie.
-                  Het is de mysterieuze kracht die ons dromen laat stromen en onze emoties in balans brengt.
+                  Efficiëntie en Rendement bepalen hoe effectief we energie gebruiken.
+                  Het is niet alleen hoeveel kracht je hebt, maar hoe slim je die inzet.
+                  Maximale output met minimale input - dat is de kunst van energiebeheer.
                 </p>
                 <p className="hover:text-indigo-200 transition-colors duration-300 cursor-pointer">
-                  En LEVENSDENERGIE? Dat is de allesomvattende kracht die door alle levende wezens stroomt.
-                  Het is de verbinding tussen alles wat bestaat, de onzichtbare draad die het universum samenweeft.
+                  En Nucleair en Generatoren? Dat zijn de krachtbronnen die onze beschaving aandrijven.
+                  Van de immens kracht van atomen tot de slimme generatoren die beweging omzetten in bruikbare energie.
+                  Dat zijn de motoren van vooruitgang.
                 </p>
               </div>
             </div>
