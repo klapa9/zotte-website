@@ -1,6 +1,8 @@
 import { useSeoMeta } from '@unhead/react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import CursorStyles from '@/components/CursorStyles';
+import Navigation from '@/components/Navigation';
 
 const WeesZot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -83,9 +85,9 @@ const WeesZot = () => {
                 </p>
                 <div className="mt-6 p-4 bg-purple-600 bg-opacity-20 rounded-2xl border border-purple-400 border-opacity-30">
                   <p className="text-sm text-purple-200 mb-2">💡 Wil je weten waarom dit belangrijk is?</p>
-                  <a href="https://zottewebsite.be/leven" className="text-purple-300 hover:text-purple-100 underline font-bold transition-colors duration-300">
+                  <Link to="/leven" className="text-purple-300 hover:text-purple-100 underline font-bold transition-colors duration-300">
                     Ontdek de fundamentele levensvragen →
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -107,9 +109,9 @@ const WeesZot = () => {
                 </p>
                 <div className="mt-6 p-4 bg-pink-600 bg-opacity-20 rounded-2xl border border-pink-400 border-opacity-30">
                   <p className="text-sm text-pink-200 mb-2">🔮 Je intuïtie heeft oneindig veel potentieel</p>
-                  <a href="https://zottewebsite.be/openjegeest" className="text-pink-300 hover:text-pink-100 underline font-bold transition-colors duration-300">
+                  <Link to="/openjegeest" className="text-pink-300 hover:text-pink-100 underline font-bold transition-colors duration-300">
                     Ontdek hoe je je geest kunt openblazen →
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -157,9 +159,9 @@ const WeesZot = () => {
                 </p>
                 <div className="mt-6 p-4 bg-yellow-600 bg-opacity-20 rounded-2xl border border-yellow-400 border-opacity-30">
                   <p className="text-sm text-yellow-200 mb-2">⚡ Heb je behoefte aan meer kracht?</p>
-                  <a href="https://zottewebsite.be/energie" className="text-yellow-300 hover:text-yellow-100 underline font-bold transition-colors duration-300">
+                  <Link to="/energie" className="text-yellow-300 hover:text-yellow-100 underline font-bold transition-colors duration-300">
                     Ontdek de verschillende energieën die je helpen →
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -181,37 +183,7 @@ const WeesZot = () => {
           </div>
         </div>
 
-        {/* Quick Navigation */}
-        <div className="py-8 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20">
-              <h3 className="text-2xl font-black text-white mb-4 text-center">🔗 Verder Ontdekken</h3>
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
-                <a href="https://zottewebsite.be" className="text-yellow-300 hover:text-yellow-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">🏠</div>
-                  Home
-                </a>
-                <div className="bg-yellow-600 bg-opacity-30 rounded-xl p-3 border-2 border-yellow-400 relative">
-                  <div className="absolute -right-2 -top-2 w-4 h-4 bg-green-400 rounded-full flex items-center justify-center text-white text-xs font-bold">✓</div>
-                  <div className="text-3xl mb-1">🌟</div>
-                  <div className="text-yellow-100 font-bold">Wees Zot</div>
-                </div>
-                <a href="https://zottewebsite.be/leven" className="text-purple-300 hover:text-purple-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">❓</div>
-                  Leven
-                </a>
-                <a href="https://zottewebsite.be/energie" className="text-green-300 hover:text-green-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">⚡</div>
-                  Energie
-                </a>
-                <a href="https://zottewebsite.be/openjegeest" className="text-indigo-300 hover:text-indigo-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">🧠</div>
-                  Open Geest
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Navigation />
 
 
       </div>

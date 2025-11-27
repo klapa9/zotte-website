@@ -1,6 +1,8 @@
 import { useSeoMeta } from '@unhead/react';
 import { useState, useEffect, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CursorStyles from '@/components/CursorStyles';
+import Navigation from '@/components/Navigation';
 
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -73,8 +75,8 @@ const Index = () => {
 
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Hero Section - Wees Zot! */}
-        <a
-          href="https://zottewebsite.be/weeszot"
+        <Link
+          to="/weeszot"
           className="flex-1 flex items-center justify-center px-4 py-20 group"
           style={{
             transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
@@ -94,10 +96,10 @@ const Index = () => {
               </p>
             </div>
           </div>
-        </a>
+        </Link>
 
         {/* L E V E N Section */}
-        <a href="https://zottewebsite.be/leven" className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm block group">
+        <Link to="/leven" className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm block group">
           <div
             className="max-w-6xl mx-auto"
             style={{
@@ -109,21 +111,21 @@ const Index = () => {
               L E V E N ?
             </h2>
             <div className="grid md:grid-cols-3 gap-8 text-center">
-              <a href="https://zottewebsite.be/leven" className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 transform hover:rotate-3 hover:scale-105 transition-all duration-500 border border-white border-opacity-20 group">
+              <Link to="/leven" className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 transform hover:rotate-3 hover:scale-105 transition-all duration-500 border border-white border-opacity-20 group">
                 <p className="text-xl md:text-2xl text-white font-medium">Waarom leef je?</p>
-              </a>
-              <a href="https://zottewebsite.be/leven" className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 transform hover:rotate-3 hover:scale-105 transition-all duration-500 border border-white border-opacity-20 group">
+              </Link>
+              <Link to="/leven" className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 transform hover:rotate-3 hover:scale-105 transition-all duration-500 border border-white border-opacity-20 group">
                 <p className="text-xl md:text-2xl text-white font-medium">Wat is belangrijk in je leven?</p>
-              </a>
-              <a href="https://zottewebsite.be/weeszot" className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 transform hover:rotate-3 hover:scale-105 transition-all duration-500 border border-white border-opacity-20 group">
+              </Link>
+              <Link to="/weeszot" className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 transform hover:rotate-3 hover:scale-105 transition-all duration-500 border border-white border-opacity-20 group">
                 <p className="text-xl md:text-2xl text-white font-medium">Hoe kan je beter leven?</p>
-              </a>
+              </Link>
             </div>
           </div>
-        </a>
+        </Link>
 
         {/* ENERGIE Section */}
-        <a href="https://zottewebsite.be/energie" className="py-20 px-4 block group">
+        <Link to="/energie" className="py-20 px-4 block group">
           <div
             className="max-w-6xl mx-auto"
             style={{
@@ -155,10 +157,10 @@ const Index = () => {
               ))}
             </div>
           </div>
-        </a>
+        </Link>
 
         {/* Ziek Zot Section */}
-        <a href="https://zottewebsite.be/Ziekzot" className="py-20 px-4 bg-gradient-to-r from-red-600 to-pink-600 block group">
+        <Link to="/ziekzot" className="py-20 px-4 bg-gradient-to-r from-red-600 to-pink-600 block group">
           <div
             className="max-w-4xl mx-auto text-center"
             style={{
@@ -178,10 +180,10 @@ const Index = () => {
               </p>
             </div>
           </div>
-        </a>
+        </Link>
 
         {/* Wat? Section */}
-        <a href="https://zottewebsite.be/openjegeest" className="py-20 px-4 bg-black bg-opacity-50 block group">
+        <Link to="/openjegeest" className="py-20 px-4 bg-black bg-opacity-50 block group">
           <div
             className="max-w-4xl mx-auto text-center"
             style={{
@@ -198,25 +200,25 @@ const Index = () => {
               </p>
             </div>
           </div>
-        </a>
+        </Link>
 
         {/* Big Statement */}
         <div className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
-            <a href="https://zottewebsite.be/openjegeest" className="text-4xl md:text-6xl font-black text-white leading-tight transform hover:scale-105 transition-transform duration-300 inline-block">
+            <Link to="/openjegeest" className="text-4xl md:text-6xl font-black text-white leading-tight transform hover:scale-105 transition-transform duration-300 inline-block">
               Alles is veel zotter dan je denkt!
-            </a>
+            </Link>
           </div>
         </div>
 
         {/* Open Geest Section */}
-        <a href="https://zottewebsite.be/openjegeest" className="py-20 px-4 bg-gradient-to-r from-purple-600 to-indigo-800 block group">
+        <Link to="/openjegeest" className="py-20 px-4 bg-gradient-to-r from-purple-600 to-indigo-800 block group">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-2xl md:text-4xl font-bold text-white leading-relaxed transform hover:rotate-1 hover:scale-105 transition-all duration-500 group-hover:scale-110">
               HEB EEN OPEN GEEST, ALLEEN ZO KAN JE JE OUDE IDEEËN OPBLAZEN!
             </p>
           </div>
-        </a>
+        </Link>
 
         {/* FAQ Section */}
         <div className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm">
@@ -240,6 +242,8 @@ const Index = () => {
             <p className="text-red-400 font-bold text-lg transform hover:scale-110 hover:rotate-3 hover:text-red-300 transition-all duration-300 cursor-pointer active:scale-95">Geen cookies! Cookies</p>
           </div>
         </div>
+
+        <Navigation />
       </div>
 
       {/* Custom animations */}

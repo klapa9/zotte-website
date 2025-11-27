@@ -1,6 +1,8 @@
 import { useSeoMeta } from '@unhead/react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import CursorStyles from '@/components/CursorStyles';
+import Navigation from '@/components/Navigation';
 
 const ZiekZot = () => {
   const [glitchMode, setGlitchMode] = useState(false);
@@ -195,9 +197,9 @@ const ZiekZot = () => {
                 </p>
                 <div className="mt-6 p-4 bg-rose-600 bg-opacity-20 rounded-2xl border border-rose-400 border-opacity-30">
                   <p className="text-sm text-rose-200 mb-2">🧘 Je geest beïnvloedt je gezondheid</p>
-                  <a href="https://zottewebsite.be/openjegeest" className="text-rose-300 hover:text-rose-100 underline font-bold transition-colors duration-300">
+                  <Link to="/openjegeest" className="text-rose-300 hover:text-rose-100 underline font-bold transition-colors duration-300">
                     Ontdek hoe je denken je genezing beïnvloedt →
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -221,65 +223,7 @@ const ZiekZot = () => {
           </div>
         </div>
 
-        {/* Quick Navigation */}
-        <div className="py-8 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20">
-              <h3 className="text-2xl font-black text-white mb-4 text-center">🔗 Verder Ontdekken</h3>
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
-                <a href="https://zottewebsite.be" className="text-pink-300 hover:text-pink-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">🏠</div>
-                  Home
-                </a>
-                <a href="https://zottewebsite.be/weeszot" className="text-yellow-300 hover:text-yellow-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">🌟</div>
-                  Wees Zot
-                </a>
-                <a href="https://zottewebsite.be/leven" className="text-cyan-300 hover:text-cyan-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">❓</div>
-                  Leven
-                </a>
-                <a href="https://zottewebsite.be/energie" className="text-green-300 hover:text-green-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">⚡</div>
-                  Energie
-                </a>
-                <a href="https://zottewebsite.be/openjegeest" className="text-indigo-300 hover:text-indigo-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">🧠</div>
-                  Open Geest
-                </a>
-              </div>
-            </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 mt-4">
-              <h3 className="text-2xl font-black text-white mb-4 text-center">🔗 Actieve Pagina</h3>
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
-                <a href="https://zottewebsite.be" className="text-pink-300 hover:text-pink-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">🏠</div>
-                  Home
-                </a>
-                <a href="https://zottewebsite.be/weeszot" className="text-yellow-300 hover:text-yellow-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">🌟</div>
-                  Wees Zot
-                </a>
-                <a href="https://zottewebsite.be/leven" className="text-cyan-300 hover:text-cyan-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">❓</div>
-                  Leven
-                </a>
-                <a href="https://zottewebsite.be/energie" className="text-green-300 hover:text-green-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">⚡</div>
-                  Energie
-                </a>
-                <div className="bg-pink-600 bg-opacity-30 rounded-xl p-3 border-2 border-pink-400">
-                  <div className="text-3xl mb-1">🤪</div>
-                  <div className="text-pink-100 font-bold">Ziek Zot</div>
-                </div>
-                <a href="https://zottewebsite.be/openjegeest" className="text-indigo-300 hover:text-indigo-200 font-bold transition-colors duration-300">
-                  <div className="text-3xl mb-1">🧠</div>
-                  Open Geest
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Navigation />
 
 
       </div>

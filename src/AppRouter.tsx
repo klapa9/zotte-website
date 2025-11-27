@@ -19,7 +19,7 @@ export function AppRouter() {
         <Route path="/weeszot" element={<WeesZot />} />
         <Route path="/leven" element={<Leven />} />
         <Route path="/energie" element={<Energie />} />
-        <Route path="/Ziekzot" element={<ZiekZot />} />
+        <Route path="/ziekzot" element={<ZiekZot />} />
         <Route path="/openjegeest" element={<OpenJeGeest />} />
         {/* NIP-19 route for npub1, note1, naddr1, nevent1, nprofile1 */}
         <Route path="/:nip19" element={<NIP19Page />} />
