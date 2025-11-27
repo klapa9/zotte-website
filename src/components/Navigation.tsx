@@ -73,7 +73,7 @@ const Navigation = ({ className = '' }: NavigationProps) => {
     <nav className={`py-8 px-4 ${className}`}>
       <div className="max-w-6xl mx-auto">
         <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20">
-          <h3 className="text-2xl font-black text-white mb-4 text-center">🔗 Navigatie</h3>
+          <h3 className="text-2xl font-black text-white mb-4 text-center">🔗 Verder Ontdekken</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
             {navigationItems.map((item) => (
               <Link
