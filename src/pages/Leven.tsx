@@ -73,6 +73,12 @@ const Leven = () => {
                   Het mooie is: er is geen juist antwoord. Jouw antwoord is het juiste antwoord.
                   Maar de vraag stellen? Dat is de eerste stap naar een bewust leven.
                 </p>
+                <div className="mt-6 p-4 bg-cyan-600 bg-opacity-20 rounded-2xl border border-cyan-400 border-opacity-30">
+                  <p className="text-sm text-cyan-200 mb-2">🔥 Wat drijft jou?</p>
+                  <a href="https://zottewebsite.be/weeszot" className="text-cyan-300 hover:text-cyan-100 underline font-bold transition-colors duration-300">
+                    Volg je enthousiasme en ontdek je passie →
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -96,6 +102,12 @@ const Leven = () => {
                   Niet praten over wat belangrijk is, maar er ook echt naar handelen.
                   Dat is de uitdaging. En de beloning.
                 </p>
+                <div className="mt-6 p-4 bg-indigo-600 bg-opacity-20 rounded-2xl border border-indigo-400 border-opacity-30">
+                  <p className="text-sm text-indigo-200 mb-2">💰 Energie heeft vele vormen</p>
+                  <a href="https://zottewebsite.be/energie" className="text-indigo-300 hover:text-indigo-100 underline font-bold transition-colors duration-300">
+                    Ontdek de kracht van verschillende energieën →
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -144,6 +156,12 @@ const Leven = () => {
                   dezelfde persoon, maar het universum regelt dit op mysterieuze wijzen.
                   Houd elkaar lief - het is de meest praktische vorm van spiritualiteit.
                 </p>
+                <div className="mt-6 p-4 bg-teal-600 bg-opacity-20 rounded-2xl border border-teal-400 border-opacity-30">
+                  <p className="text-sm text-teal-200 mb-2">🧠 Je geest bepaalt je realiteit</p>
+                  <a href="https://zottewebsite.be/openjegeest" className="text-teal-300 hover:text-teal-100 underline font-bold transition-colors duration-300">
+                    Ontdek hoe je je innerlijke wereld kunt sturen →
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -161,6 +179,37 @@ const Leven = () => {
                   Elk inzicht leidt naar nieuwe vragen.
                   En zo groei je, stap voor stap, dag na dag.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Quick Navigation */}
+        <div className="py-8 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20">
+              <h3 className="text-2xl font-black text-white mb-4 text-center">🔗 Verder Ontdekken</h3>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                <a href="https://zottewebsite.be" className="text-cyan-300 hover:text-cyan-200 font-bold transition-colors duration-300">
+                  <div className="text-3xl mb-1">🏠</div>
+                  Home
+                </a>
+                <a href="https://zottewebsite.be/weeszot" className="text-yellow-300 hover:text-yellow-200 font-bold transition-colors duration-300">
+                  <div className="text-3xl mb-1">🌟</div>
+                  Wees Zot
+                </a>
+                <a href="https://zottewebsite.be/energie" className="text-green-300 hover:text-green-200 font-bold transition-colors duration-300">
+                  <div className="text-3xl mb-1">⚡</div>
+                  Energie
+                </a>
+                <a href="https://zottewebsite.be/Ziekzot" className="text-pink-300 hover:text-pink-200 font-bold transition-colors duration-300">
+                  <div className="text-3xl mb-1">🤪</div>
+                  Ziek Zot
+                </a>
+                <a href="https://zottewebsite.be/openjegeest" className="text-indigo-300 hover:text-indigo-200 font-bold transition-colors duration-300">
+                  <div className="text-3xl mb-1">🧠</div>
+                  Open Geest
+                </a>
               </div>
             </div>
           </div>
