@@ -181,6 +181,7 @@ const Energie = () => {
           </div>
         </div>
 
+        <AudioPlayer pageType="energie" />
         <Navigation />
 
 

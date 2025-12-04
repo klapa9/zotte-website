@@ -1,11 +1,23 @@
 import { useState, useEffect, useRef } from 'react';
 
-const AudioPlayer = () => {
+interface AudioPlayerProps {
+  pageType?: string;
+  audioFile?: string;
+}
+
+const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [volume, setVolume] = useState(0.3);
   const [isLoaded, setIsLoaded] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
+
+  // Determine which audio file to use
+  const getAudioFile = () => {
+    if (audioFile) return audioFile;
+    if (pageType === 'energie') return '/Energy.mp3';
+    return '/Rise_and_Shine.mp3';
+  };
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -18,8 +30,8 @@ const AudioPlayer = () => {
     const playAudio = async () => {
       try {
         // Set audio source
-        audio.src = '/Rise_and_Shine.mp3';
-        
+        audio.src = getAudioFile();
+
         audio.addEventListener('canplaythrough', () => {
           setIsLoaded(true);
         });
@@ -38,7 +50,7 @@ const AudioPlayer = () => {
 
         // Attempt to play (may be blocked by browser autoplay policy)
         const playPromise = audio.play();
-        
+
         if (playPromise !== undefined) {
           playPromise.then(() => {
             setIsPlaying(true);
@@ -105,7 +117,7 @@ const AudioPlayer = () => {
         loop
         preload="auto"
       />
-      
+
       {/* Floating Audio Controls */}
       <div className="fixed top-4 right-4 z-50 bg-black bg-opacity-80 backdrop-blur-md rounded-full p-3 flex items-center gap-2 shadow-lg border border-white border-opacity-20">
         {/* Play/Pause Button */}
