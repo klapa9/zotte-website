@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
+import AudioPlayer from '@/components/AudioPlayer';
 
 const ZiekZot = () => {
   const [glitchMode, setGlitchMode] = useState(false);
@@ -25,6 +26,7 @@ const ZiekZot = () => {
   return (
     <>
       <CursorStyles />
+      <AudioPlayer />
       <div className="min-h-screen bg-gradient-to-br from-red-900 via-pink-800 to-purple-900 overflow-hidden relative">
       {/* Distorted background elements */}
       <div className="absolute inset-0">

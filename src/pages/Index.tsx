@@ -3,6 +3,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
+import AudioPlayer from '@/components/AudioPlayer';
 
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -55,6 +56,7 @@ const Index = () => {
   return (
     <>
       <CursorStyles />
+      <AudioPlayer />
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-800 to-orange-600 overflow-hidden relative">
       {/* Static background elements - no more flickering! */}
       <div className="absolute inset-0">

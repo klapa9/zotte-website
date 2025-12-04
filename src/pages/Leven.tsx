@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
+import AudioPlayer from '@/components/AudioPlayer';
 
 const Leven = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -25,6 +26,7 @@ const Leven = () => {
   return (
     <>
       <CursorStyles />
+      <AudioPlayer />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-800 overflow-hidden relative">
       {/* Floating geometric shapes */}
       <div className="absolute inset-0">

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
+import AudioPlayer from '@/components/AudioPlayer';
 
 const OpenJeGeest = () => {
   const [explosion, setExplosion] = useState(false);
@@ -34,6 +35,7 @@ const OpenJeGeest = () => {
   return (
     <>
       <CursorStyles />
+      <AudioPlayer />
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-800 to-pink-900 overflow-hidden relative">
       {/* Explosive background particles */}
       <div className="absolute inset-0">

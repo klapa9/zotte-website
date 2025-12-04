@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
+import AudioPlayer from '@/components/AudioPlayer';
 
 const Energie = () => {
   const [activeWord, setActiveWord] = useState(0);
@@ -33,6 +34,7 @@ const Energie = () => {
   return (
     <>
       <CursorStyles />
+      <AudioPlayer />
       <div className="min-h-screen bg-gradient-to-br from-green-900 via-teal-800 to-blue-900 overflow-hidden relative">
       {/* Energy particles */}
       <div className="absolute inset-0">
