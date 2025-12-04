@@ -22,13 +22,13 @@ const Energie = () => {
   }, []);
 
   const energyWords = [
-    { word: "Elektriciteit", description: "Stroomende kracht die alles aandrijft", color: "from-yellow-400 to-blue-600" },
-    { word: "Nucleair", description: "Immens kracht uit het hart van de materie", color: "from-green-400 to-emerald-600" },
-    { word: "Efficiëntie", description: "Minimale inzet, maximale output", color: "from-cyan-400 to-teal-600" },
-    { word: "Rendement", description: "De verhouding tussen input en resultaat", color: "from-purple-400 to-pink-600" },
-    { word: "Generator", description: "Creëert kracht uit beweging en bronnen", color: "from-orange-400 to-red-600" },
-    { word: "Immens", description: "Onbegrensde mogelijkheden en potentieel", color: "from-indigo-400 to-purple-600" },
-    { word: "Epic", description: "Legendarische kracht die geschiedenis schrijft", color: "from-pink-400 to-rose-600" }
+    { word: "Elektriciteit", description: "De stroom die ons zenuwstelsel aandrijft", color: "from-yellow-400 to-blue-600" },
+    { word: "Hartslag", description: "De biologische generator van ons bestaan", color: "from-red-400 to-pink-600" },
+    { word: "Efficiëntie", description: "Hoe slim ons lichaam energie gebruikt", color: "from-cyan-400 to-teal-600" },
+    { word: "Metabolisme", description: "De verbranding die ons in leven houdt", color: "from-green-400 to-emerald-600" },
+    { word: "Ademhaling", description: "De constante energie-uitwisseling", color: "from-purple-400 to-indigo-600" },
+    { word: "Celkracht", description: "De fundamentele energiebron van leven", color: "from-orange-400 to-amber-600" },
+    { word: "Levenskracht", description: "De allesomvattende kracht van bestaan", color: "from-pink-400 to-rose-600" }
   ];
 
   return (
@@ -87,11 +87,16 @@ const Energie = () => {
             {/* Featured Word */}
             <div className="text-center mb-20">
               <div className="inline-block">
-                <h2 className={`text-6xl md:text-8xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-r ${energyWords[activeWord].color} transition-all duration-1000`}>
+                <h2 className={`text-6xl md:text-8xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-r ${energyWords[activeWord].color} transition-all duration-1000 hover:scale-105 cursor-pointer transition-transform duration-300`}
+                    onClick={() => window.open('https://nl.wikipedia.org/wiki/Menselijk_lichaam', '_blank')}
+                >
                   {energyWords[activeWord].word}
                 </h2>
                 <p className="text-xl md:text-2xl text-white opacity-90">
                   {energyWords[activeWord].description}
+                </p>
+                <p className="text-sm text-gray-300 mt-2">
+                  👆 Klik voor meer informatie over het menselijk lichaam
                 </p>
               </div>
             </div>
@@ -101,14 +106,18 @@ const Energie = () => {
               {energyWords.map((energy, index) => (
                 <div
                   key={index}
-                  className={`bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 transform hover:scale-105 transition-all duration-500 cursor-pointer ${index === activeWord ? 'ring-4 ring-white ring-opacity-50' : ''}`}
+                  className={`bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-3 transition-all duration-500 cursor-pointer ${index === activeWord ? 'ring-4 ring-white ring-opacity-50' : ''}`}
                   onMouseEnter={() => setActiveWord(index)}
+                  onClick={() => window.open('https://nl.wikipedia.org/wiki/Menselijk_lichaam', '_blank')}
                 >
                   <h3 className={`text-3xl md:text-4xl font-black mb-3 text-transparent bg-clip-text bg-gradient-to-r ${energy.color}`}>
                     {energy.word}
                   </h3>
                   <p className="text-white text-lg">
                     {energy.description}
+                  </p>
+                  <p className="text-xs text-gray-300 mt-2">
+                    👆 Klik voor informatie over het lichaam
                   </p>
                 </div>
               ))}
@@ -117,28 +126,28 @@ const Energie = () => {
             {/* Energy Explanation */}
             <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 cursor-pointer active:scale-95">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
-                Wat is Energie?
+                We hebben een Elektrisch Lichaam
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
-                  Energie is de fundamentele kracht die alles in beweging zet en in stand houdt.
-                  Het is niet zomaar een concept, maar de concrete kracht achter elke actie, elke gedachte,
-                  elke transformatie in het universum.
+                  <strong>Wij zijn epische generatoren van energie.</strong> Ons lichaam is geen biologische machine,
+                  maar een elektro-chemisch systeem dat constant elektriciteit genereert en gebruikt.
+                  Elke hartslag, elke gedachte, elke beweging - het zijn allemaal elektrische signalen.
                 </p>
                 <p className="hover:text-blue-200 transition-colors duration-300 cursor-pointer">
-                  Elektriciteit is de meest zichtbare vorm van energie - de stroom die onze lichten laat branden,
-                  onze apparaten laat draaien, onze samenleving laat functioneren. Zonder elektriciteit
-                  stopt de moderne wereld.
+                  Elektriciteit is de <strong>communicatietaal van ons lichaam</strong>.
+                  Onze zenuwen sturen elektrische pulsen met ongelofelijke snelheid - sneller dan elk computernetwerk.
+                  Onze hersenen zijn een elektrisch orgaan miljarden synapsen sterk.
                 </p>
                 <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
-                  Efficiëntie en Rendement bepalen hoe effectief we energie gebruiken.
-                  Het is niet alleen hoeveel kracht je hebt, maar hoe slim je die inzet.
-                  Maximale output met minimale input - dat is de kunst van energiebeheer.
+                  Efficiëntie in ons lichaam betekent <strong>slimme energie-uitwisseling</strong>.
+                  Elke cel is een mini-generator. Onze longen en hart werken als natuurlijke pompen.
+                  Dit is de ultieme efficiëntie - 100% natuurlijk en perfect ontworpen.
                 </p>
                 <p className="hover:text-indigo-200 transition-colors duration-300 cursor-pointer">
-                  En Nucleair en Generatoren? Dat zijn de krachtbronnen die onze beschaving aandrijven.
-                  Van de immens kracht van atomen tot de slimme generatoren die beweging omzetten in bruikbare energie.
-                  Dat zijn de motoren van vooruitgang.
+                  Ons metabolisme is de <strong>constante energie-omzetter</strong>.
+                  Het zet voedsel om in bruikbare energie, warmte, en bouwstenen.
+                  Dit is geen simpel proces - het is een wonder van biochemische efficiëntie.
                 </p>
               </div>
             </div>
