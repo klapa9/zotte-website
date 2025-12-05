@@ -1,285 +1,339 @@
 import { useSeoMeta } from '@unhead/react';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import AudioPlayer from '@/components/AudioPlayer';
 
 const Index = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [scrollY, setScrollY] = useState(0);
   const [isGlitching, setIsGlitching] = useState(false);
+  const [activeSection, setActiveSection] = useState(0);
 
   useSeoMeta({
     title: 'Wees Zot! - Mindblowing Ideas',
-    description: 'Een gekke website voor het inspireren en uitdagen van mensen om mindblowing ideëen te leren.',
+    description: 'Ontdek een wereld waar alles anders is dan je denkt. Durf zot te zijn, open je geest, en laat je leven exploderen met energie!',
   });
 
-  // Pre-calculate background elements to prevent flickering
-  const backgroundElements = useMemo(() => {
-    return [...Array(15)].map((_, i) => ({
-      id: i,
-      width: Math.random() * 400 + 100,
-      height: Math.random() * 400 + 100,
-      color: `hsl(${Math.random() * 360}, 70%, 60%)`,
-      top: Math.random() * 100,
-      left: Math.random() * 100,
-    }));
-  }, []);
-
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+
+      // Determine which section is in view
+      const sections = document.querySelectorAll('.section-trigger');
+      sections.forEach((section, index) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          setActiveSection(index);
+        }
+      });
     };
 
     const glitchInterval = setInterval(() => {
       setIsGlitching(true);
-      setTimeout(() => setIsGlitching(false), 200);
-    }, 3000);
+      setTimeout(() => setIsGlitching(false), 300);
+    }, 4000);
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('scroll', handleScroll);
       clearInterval(glitchInterval);
     };
   }, []);
 
-  const calculateRotation = (x: number, y: number, intensity: number = 10) => {
-    const centerX = window.innerWidth / 2;
-    const centerY = window.innerHeight / 2;
-    const rotateX = ((y - centerY) / centerY) * intensity;
-    const rotateY = ((x - centerX) / centerX) * -intensity;
-    return { rotateX, rotateY };
-  };
-
-  const { rotateX, rotateY } = calculateRotation(mousePosition.x, mousePosition.y);
+  // Content sections for the site
+  const siteSections = [
+    {
+      title: "WEES ZOT",
+      subtitle: "Durf gek te zijn",
+      description: "Volg je enthousiasme, vertrouw je intuïtie en durf anders te zijn. De wereld heeft jouw zotte ideeën nodig!",
+      route: "/weeszot",
+      gradient: "from-yellow-400 via-pink-500 to-purple-600",
+      icon: "🎭",
+      questions: ["Wat als je alles durft?", "Waar wacht je nog op?", "Zot genoeg?"]
+    },
+    {
+      title: "LEVEN?",
+      subtitle: "De fundamentele vragen",
+      description: "Waarom leef je? Wat is echt belangrijk? Hoe kan je beter leven? Duik diep in de betekenis van bestaan.",
+      route: "/leven",
+      gradient: "from-blue-400 via-purple-500 to-pink-600",
+      icon: "🌱",
+      questions: ["Waarom ben je hier?", "Wat geeft richting?", "Hoe leef je voluit?"]
+    },
+    {
+      title: "ENERGIE",
+      subtitle: "Onbegrensde kracht",
+      description: "Ontdek de bron van vitale kracht. Van normaal naar EPIC - jouw energiereserve is oneindig!",
+      route: "/energie",
+      gradient: "from-green-400 to-blue-600",
+      icon: "⚡",
+      questions: ["Wat drijft je?", "Hoe explodeer je energie?", "Wanneer voel je je EPIC?"]
+    },
+    {
+      title: "ZIEK ZOT",
+      subtitle: "Spel met de grenzen",
+      description: "Ziek zijn is zot! Beter om gewoon niet zot ziek te zijn. Een speelse kijk op gezondheid en welzijn.",
+      route: "/ziekzot",
+      gradient: "from-red-600 to-pink-600",
+      icon: "🎪",
+      questions: ["Gezond of zot?", "Waar ligt de grens?", "Wie bepaalt het?"]
+    },
+    {
+      title: "OPEN JE GEEST",
+      subtitle: "Blaas je ideeën op",
+      description: "Alles is veel zotter dan je denkt! Quantumfysica, bewustzijn, parallelle werelden - de realiteit is verrassender dan je kunt voorstellen.",
+      route: "/openjegeest",
+      gradient: "from-purple-600 to-indigo-800",
+      icon: "🌌",
+      questions: ["Wat is echt?", "Hoe groot is de werkelijkheid?", "Durf jij te denken?"]
+    }
+  ];
 
   return (
     <>
       <CursorStyles />
       <AudioPlayer pageType="index" />
-      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-800 to-orange-600 overflow-hidden relative">
-      {/* Static background elements - no more flickering! */}
-      <div className="absolute inset-0">
-        {backgroundElements.map((element) => (
-          <div
-            key={element.id}
-            className="absolute rounded-full mix-blend-screen opacity-20"
-            style={{
-              width: `${element.width}px`,
-              height: `${element.height}px`,
-              background: element.color,
-              top: `${element.top}%`,
-              left: `${element.left}%`,
-            }}
-          />
-        ))}
-      </div>
+      <div className="min-h-screen bg-black overflow-hidden relative">
+        {/* Animated background */}
+        <div className="fixed inset-0 bg-gradient-to-br from-purple-900 via-pink-900 to-orange-900">
+          {[...Array(30)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute rounded-full mix-blend-screen opacity-20"
+              style={{
+                width: `${Math.random() * 600 + 100}px`,
+                height: `${Math.random() * 600 + 100}px`,
+                background: `hsl(${Math.random() * 360}, 70%, 60%)`,
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                transform: `translateY(${-scrollY * 0.5}px)`,
+                animation: `float ${Math.random() * 20 + 10}s infinite ease-in-out`,
+                animationDelay: `${Math.random() * 5}s`,
+              }}
+            />
+          ))}
+        </div>
 
-      <div className="relative z-10 min-h-screen flex flex-col">
-        {/* Hero Section - Wees Zot! */}
-        <Link
-          to="/weeszot"
-          className="flex-1 flex items-center justify-center px-4 py-20 group"
-          style={{
-            transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
-            transition: 'transform 0.1s ease-out',
-          }}
-        >
-          <div className={`text-center max-w-4xl ${isGlitching ? 'animate-glitch' : ''}`}>
-            <h1 className="text-6xl md:text-8xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 animate-pulse group-hover:scale-110 transition-transform duration-300">
-              WEES ZOT!
-            </h1>
-            <div className="space-y-6 text-white">
-              <p className="text-2xl md:text-3xl font-bold transform hover:scale-110 hover:rotate-6 transition-all duration-300 inline-block cursor-pointer active:scale-95">
-                Volg je enthousiasme
+        {/* Content */}
+        <div className="relative z-10">
+          {/* Hero Section */}
+          <section className="min-h-screen flex items-center justify-center px-4 relative section-trigger">
+            <div className="text-center max-w-6xl">
+              {/* Main title with glitch effect */}
+              <div className={`mb-8 ${isGlitching ? 'animate-glitch' : ''}`}>
+                <h1 className="text-6xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 leading-tight transform hover:scale-110 transition-transform duration-500">
+                  ALLES IS
+                </h1>
+                <h1 className="text-6xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-600 to-orange-500 leading-tight transform hover:scale-110 transition-transform duration-500">
+                  VEEL ZOTTER
+                </h1>
+                <h1 className="text-6xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-orange-500 to-yellow-400 leading-tight transform hover:scale-110 transition-transform duration-500">
+                  DAN JE DENKT!
+                </h1>
+              </div>
+
+              {/* Subtitle */}
+              <p className="text-xl md:text-3xl text-white font-bold mb-8 opacity-90 transform hover:scale-105 transition-all duration-300">
+                Welkom bij een wereld waar de realiteit zelf een mindblowing experience is
               </p>
-              <p className="text-xl md:text-2xl font-light italic opacity-90 transform hover:scale-105 hover:rotate-3 transition-all duration-300 inline-block cursor-pointer active:scale-95">
-                Volg je intuïtie en ga dieper in op wat je enthousiasmeert!
-              </p>
-            </div>
-          </div>
-        </Link>
 
-        {/* L E V E N Section */}
-        <Link to="/leven" className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm block group">
-          <div
-            className="max-w-6xl mx-auto"
-            style={{
-              transform: `perspective(1000px) rotateX(${calculateRotation(mousePosition.x, mousePosition.y, 3).rotateX}deg) rotateY(${calculateRotation(mousePosition.x, mousePosition.y, 3).rotateY}deg)`,
-              transition: 'transform 0.2s ease-out',
-            }}
-          >
-            <h2 className="text-5xl md:text-7xl font-black text-center mb-12 text-white tracking-wider group-hover:scale-110 transition-transform duration-300">
-              L E V E N ?
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <Link to="/leven" className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 transform hover:rotate-3 hover:scale-105 transition-all duration-500 border border-white border-opacity-20 group">
-                <p className="text-xl md:text-2xl text-white font-medium">Waarom leef je?</p>
-              </Link>
-              <Link to="/leven" className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 transform hover:rotate-3 hover:scale-105 transition-all duration-500 border border-white border-opacity-20 group">
-                <p className="text-xl md:text-2xl text-white font-medium">Wat is belangrijk in je leven?</p>
-              </Link>
-              <Link to="/weeszot" className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 transform hover:rotate-3 hover:scale-105 transition-all duration-500 border border-white border-opacity-20 group">
-                <p className="text-xl md:text-2xl text-white font-medium">Hoe kan je beter leven?</p>
-              </Link>
+              {/* Scroll indicator */}
+              <div className="animate-bounce mt-16">
+                <div className="text-white text-2xl">↓</div>
+                <p className="text-white text-sm opacity-70">Scroll om te ontdekken</p>
+              </div>
             </div>
-          </div>
-        </Link>
+          </section>
 
-        {/* ENERGIE Section */}
-        <Link to="/energie" className="py-20 px-4 block group">
-          <div
-            className="max-w-6xl mx-auto"
-            style={{
-              transform: `perspective(1000px) rotateX(${calculateRotation(mousePosition.x, mousePosition.y, 4).rotateX}deg) rotateY(${calculateRotation(mousePosition.x, mousePosition.y, 4).rotateY}deg)`,
-              transition: 'transform 0.2s ease-out',
-            }}
-          >
-            <h2 className="text-6xl md:text-8xl font-black text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-600 group-hover:scale-110 transition-transform duration-300">
-              ENERGIE
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-              {[
-                "ECHT", "NIENORMAAL", "Helemaal", "Rekbaar",
-                "Groeibaar", "Immens", "EPIC"
-              ].map((word, index) => (
-                <div
-                  key={index}
-                  className="text-center p-4 transition-all duration-500"
-                  style={{
-                    animation: `bounce 2s infinite ${index * 0.1}s`,
-                    transform: `perspective(1000px) rotateX(${calculateRotation(mousePosition.x, mousePosition.y, 8).rotateX}deg) rotateY(${calculateRotation(mousePosition.x, mousePosition.y, 8).rotateY}deg)`,
-                    transition: 'transform 0.2s ease-out',
-                  }}
-                >
-                  <span className="text-2xl md:text-3xl font-bold text-white inline-block hover:scale-125 hover:rotate-12 hover:skew-y-12 transition-transform duration-300">
-                    {word}
-                  </span>
+          {/* Introduction Section */}
+          <section className="py-20 px-4 relative section-trigger">
+            <div className="max-w-4xl mx-auto text-center">
+              <div
+                className="bg-white bg-opacity-5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20"
+                style={{
+                  transform: `translateY(${-scrollY * 0.2}px)`,
+                }}
+              >
+                <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+                  Kies jouw realiteit
+                </h2>
+                <p className="text-xl md:text-2xl text-white leading-relaxed mb-8">
+                  Elke wereld die je kunt bedenken is maar één klik verwijderd.
+                  Welk pad roept jou het hardst?
+                </p>
+                <div className="inline-block">
+                  <p className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 animate-pulse">
+                    DURF TE KIEZEN!
+                  </p>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-        </Link>
+          </section>
 
-        {/* Ziek Zot Section */}
-        <Link to="/ziekzot" className="py-20 px-4 bg-gradient-to-r from-red-600 to-pink-600 block group">
-          <div
-            className="max-w-4xl mx-auto text-center"
-            style={{
-              transform: `perspective(1000px) rotateX(${calculateRotation(mousePosition.x, mousePosition.y, 5).rotateX}deg) rotateY(${calculateRotation(mousePosition.x, mousePosition.y, 5).rotateY}deg)`,
-              transition: 'transform 0.2s ease-out',
-            }}
-          >
-            <h2 className="text-5xl md:text-7xl font-black mb-8 text-white group-hover:scale-110 transition-transform duration-300">
-              Ziek Zot!
-            </h2>
-            <div className="space-y-6">
-              <p className="text-2xl md:text-3xl text-white font-bold">
-                Ziek zijn is zot!
+          {/* Main Sections Grid */}
+          <section className="py-20 px-4 relative section-trigger">
+            <div className="max-w-7xl mx-auto">
+              <div className="space-y-12 md:space-y-16">
+                {siteSections.map((section, index) => (
+                  <Link
+                    key={section.title}
+                    to={section.route}
+                    className={`block group transform transition-all duration-700 ${
+                      activeSection === index + 2 ? 'scale-105' : ''
+                    }`}
+                  >
+                    <div
+                      className={`
+                        bg-gradient-to-br ${section.gradient}
+                        rounded-3xl p-8 md:p-12
+                        border-2 border-white border-opacity-20
+                        hover:scale-105 hover:rotate-1
+                        transition-all duration-500 cursor-pointer
+                        relative overflow-hidden
+                      `}
+                    >
+                      {/* Background pattern */}
+                      <div className="absolute inset-0 opacity-10">
+                        {[...Array(5)].map((_, i) => (
+                          <div
+                            key={i}
+                            className="absolute rounded-full bg-white"
+                            style={{
+                              width: `${100 + i * 50}px`,
+                              height: `${100 + i * 50}px`,
+                              top: `${Math.random() * 100}%`,
+                              left: `${Math.random() * 100}%`,
+                              animation: `float ${5 + i * 2}s infinite ease-in-out`,
+                            }}
+                          />
+                        ))}
+                      </div>
+
+                      <div className="relative z-10">
+                        {/* Icon and title */}
+                        <div className="flex items-center gap-4 mb-6">
+                          <span className="text-5xl md:text-6xl">{section.icon}</span>
+                          <div>
+                            <h3 className="text-4xl md:text-6xl font-black text-white">
+                              {section.title}
+                            </h3>
+                            <p className="text-xl md:text-2xl text-white opacity-90 font-bold">
+                              {section.subtitle}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Description */}
+                        <p className="text-lg md:text-xl text-white mb-8 leading-relaxed max-w-3xl">
+                          {section.description}
+                        </p>
+
+                        {/* Questions */}
+                        <div className="grid md:grid-cols-3 gap-4 mb-8">
+                          {section.questions.map((question, qIndex) => (
+                            <div
+                              key={qIndex}
+                              className="bg-black bg-opacity-20 backdrop-blur-sm rounded-2xl p-4 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-2 transition-all duration-300"
+                            >
+                              <p className="text-white font-bold text-center text-sm md:text-base">
+                                {question}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Call to action */}
+                        <div className="text-right">
+                          <div className="inline-flex items-center gap-2 bg-black bg-opacity-30 rounded-full px-6 py-3 backdrop-blur-sm transform group-hover:scale-110 transition-all duration-300">
+                            <span className="text-white font-bold text-lg">ONTDEK</span>
+                            <span className="text-2xl">→</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Final Call to Action */}
+          <section className="py-20 px-4 relative section-trigger">
+            <div className="max-w-4xl mx-auto text-center">
+              <div
+                className="bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-3xl p-8 md:p-12 transform hover:scale-105 transition-all duration-500"
+              >
+                <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
+                  JE REALITEIT WACHT
+                </h2>
+                <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
+                  De keuze is aan jou. Zet de stap. Open je geest. Wees zot.
+                </p>
+                <div className="space-y-4">
+                  <div className="text-5xl md:text-7xl font-black text-white animate-pulse">
+                    DOE HET NU!
+                  </div>
+                  <p className="text-lg text-white opacity-80">
+                    Elke klik is een nieuwe wereld
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Footer */}
+          <footer className="py-12 px-4 bg-black bg-opacity-50 text-center">
+            <div className="max-w-4xl mx-auto space-y-4">
+              <p className="text-white text-lg">
+                Contacteer mij: <span className="text-pink-400 font-bold">puurleven@protonmail.com</span>
               </p>
-              <p className="text-xl md:text-2xl text-white font-light">
-                Beter om gewoon niet zot ziek te zijn!
-              </p>
+              <p className="text-gray-300">© 2025 Alles mag gekopieerd worden! Laat je gaan!</p>
+              <p className="text-red-400 font-bold text-lg">Geen cookies! Cookies</p>
             </div>
-          </div>
-        </Link>
-
-        {/* Wat? Section */}
-        <Link to="/openjegeest" className="py-20 px-4 bg-black bg-opacity-50 block group">
-          <div
-            className="max-w-4xl mx-auto text-center"
-            style={{
-              transform: `perspective(1000px) rotateX(${calculateRotation(mousePosition.x, mousePosition.y, 6).rotateX}deg) rotateY(${calculateRotation(mousePosition.x, mousePosition.y, 6).rotateY}deg)`,
-              transition: 'transform 0.2s ease-out',
-            }}
-          >
-            <h2 className="text-4xl md:text-6xl font-black mb-8 text-white group-hover:scale-110 transition-transform duration-300">
-              Wat?
-            </h2>
-            <div className="transform hover:scale-110 transition-transform duration-500">
-              <p className="text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 animate-pulse">
-                Mind blowers!
-              </p>
-            </div>
-          </div>
-        </Link>
-
-        {/* Big Statement */}
-        <div className="py-20 px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <Link to="/openjegeest" className="text-4xl md:text-6xl font-black text-white leading-tight transform hover:scale-105 transition-transform duration-300 inline-block">
-              Alles is veel zotter dan je denkt!
-            </Link>
-          </div>
-        </div>
-
-        {/* Open Geest Section */}
-        <Link to="/openjegeest" className="py-20 px-4 bg-gradient-to-r from-purple-600 to-indigo-800 block group">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-2xl md:text-4xl font-bold text-white leading-relaxed transform hover:rotate-1 hover:scale-105 transition-all duration-500 group-hover:scale-110">
-              HEB EEN OPEN GEEST, ALLEEN ZO KAN JE JE OUDE IDEEËN OPBLAZEN!
-            </p>
-          </div>
-        </Link>
-
-        {/* FAQ Section */}
-        <div className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-6xl font-black mb-12 text-white transform hover:scale-110 hover:rotate-3 transition-all duration-300 cursor-pointer active:scale-95">FAQ</h2>
-            <p className="text-xl md:text-2xl text-white mb-4 transform hover:scale-105 hover:rotate-2 transition-all duration-300 cursor-pointer active:scale-95">Veelgestelde vragen</p>
-            <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-2 transition-all duration-300 cursor-pointer active:scale-95">
-              <p className="text-lg text-white mb-4 hover:text-yellow-300 transition-colors duration-300 cursor-pointer active:scale-95">Stel hier je vragen</p>
-              <p className="text-lg text-pink-400 font-bold hover:text-pink-300 transition-colors duration-300 cursor-pointer active:scale-95">Werkt nog niet</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Footer */}
-        <div className="py-12 px-4 bg-black bg-opacity-50 text-center">
-          <div className="max-w-4xl mx-auto space-y-4">
-            <p className="text-white text-lg transform hover:scale-105 hover:rotate-2 transition-all duration-300 cursor-pointer active:scale-95">
-              Contacteer mij: <span className="text-pink-400 font-bold hover:text-pink-300 transition-colors duration-300 cursor-pointer active:scale-95">puurleven@protonmail.com</span>
-            </p>
-            <p className="text-gray-300 transform hover:scale-105 hover:rotate-1 transition-all duration-300 cursor-pointer active:scale-95">© 2025 Alles mag gekopieerd worden! Laat je gaan!</p>
-            <p className="text-red-400 font-bold text-lg transform hover:scale-110 hover:rotate-3 hover:text-red-300 transition-all duration-300 cursor-pointer active:scale-95">Geen cookies! Cookies</p>
-          </div>
+          </footer>
         </div>
 
         <Navigation />
+
+        {/* Custom animations */}
+        <style jsx>{`
+          @keyframes float {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            25% { transform: translateY(-20px) translateX(10px); }
+            50% { transform: translateY(-10px) translateX(-15px); }
+            75% { transform: translateY(-30px) translateX(5px); }
+          }
+
+          @keyframes glitch {
+            0%, 100% {
+              filter: hue-rotate(0deg);
+              transform: translate(0);
+            }
+            20% {
+              filter: hue-rotate(90deg);
+              transform: translate(-5px, 5px);
+            }
+            40% {
+              filter: hue-rotate(180deg);
+              transform: translate(-5px, -5px);
+            }
+            60% {
+              filter: hue-rotate(270deg);
+              transform: translate(5px, 5px);
+            }
+            80% {
+              filter: hue-rotate(360deg);
+              transform: translate(5px, -5px);
+            }
+          }
+
+          .animate-glitch {
+            animation: glitch 0.3s ease-in-out;
+          }
+        `}</style>
       </div>
-
-      {/* Custom animations */}
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0; }
-          10% { opacity: 1; }
-          90% { opacity: 1; }
-          100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
-        }
-
-        @keyframes bounce {
-          0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-          40% { transform: translateY(-20px); }
-          60% { transform: translateY(-10px); }
-        }
-
-        @keyframes glitch {
-          0%, 100% { transform: translate(0); }
-          20% { transform: translate(-5px, 5px); }
-          40% { transform: translate(-5px, -5px); }
-          60% { transform: translate(5px, 5px); }
-          80% { transform: translate(5px, -5px); }
-        }
-
-        .animate-float {
-          animation: float linear infinite;
-        }
-
-        .animate-glitch {
-          animation: glitch 0.3s ease-in-out;
-        }
-      `}</style>
-    </div>
     </>
   );
 };
