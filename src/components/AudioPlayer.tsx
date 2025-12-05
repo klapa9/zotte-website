@@ -16,6 +16,7 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
   const getAudioFile = () => {
     if (audioFile) return audioFile;
     if (pageType === 'energie') return '/Energy.mp3';
+    if (pageType === 'leven') return '/Leven.mp3';
     return '/Rise_and_Shine.mp3';
   };
 
@@ -38,6 +39,7 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
 
         audio.addEventListener('ended', () => {
           setIsPlaying(false);
+          // DO NOT restart audio - stop when ended
         });
 
         audio.addEventListener('play', () => {

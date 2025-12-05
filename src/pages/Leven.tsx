@@ -26,7 +26,7 @@ const Leven = () => {
   return (
     <>
       <CursorStyles />
-      <AudioPlayer />
+      <AudioPlayer pageType="leven" />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-800 overflow-hidden relative">
       {/* Floating geometric shapes */}
       <div className="absolute inset-0">

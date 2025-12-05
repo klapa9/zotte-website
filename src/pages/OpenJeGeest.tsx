@@ -35,7 +35,7 @@ const OpenJeGeest = () => {
   return (
     <>
       <CursorStyles />
-      <AudioPlayer />
+      <AudioPlayer pageType="openjegeest" />
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-800 to-pink-900 overflow-hidden relative">
       {/* Explosive background particles */}
       <div className="absolute inset-0">

@@ -34,7 +34,7 @@ const WeesZot = () => {
   return (
     <>
       <CursorStyles />
-      <AudioPlayer />
+      <AudioPlayer pageType="weeszot" />
       <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 overflow-hidden relative">
         {/* Animated background */}
         <div className="absolute inset-0">

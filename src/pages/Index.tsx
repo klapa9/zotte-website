@@ -56,7 +56,7 @@ const Index = () => {
   return (
     <>
       <CursorStyles />
-      <AudioPlayer />
+      <AudioPlayer pageType="index" />
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-800 to-orange-600 overflow-hidden relative">
       {/* Static background elements - no more flickering! */}
       <div className="absolute inset-0">
