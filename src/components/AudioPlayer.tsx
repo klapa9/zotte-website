@@ -5,11 +5,16 @@ interface AudioPlayerProps {
   audioFile?: string;
 }
 
+// Global instance tracking to prevent double audio players
+let globalAudioRef: HTMLAudioElement | null = null;
+let globalPlayerId = 0;
+
 const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [volume, setVolume] = useState(0.3);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [playerId, setPlayerId] = useState(0);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   // Determine which audio file to use
@@ -27,6 +32,21 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
     const audio = audioRef.current;
     if (!audio) return;
 
+    // Generate unique player ID for this instance
+    const currentPlayerId = Date.now();
+    setPlayerId(currentPlayerId);
+
+    // If this is not the current global instance, stop it
+    if (globalAudioRef && globalPlayerId !== currentPlayerId) {
+      console.log(`Stopping older audio instance ${globalPlayerId}, current instance is ${currentPlayerId}`);
+      globalAudioRef.pause();
+      globalAudioRef = null;
+    }
+
+    // Set this as the current global instance
+    globalAudioRef = audio;
+    globalPlayerId = currentPlayerId;
+
     // Clean up any existing state
     audio.pause();
     audio.currentTime = 0;
@@ -35,7 +55,7 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
 
     // Set new audio source
     const newAudioFile = getAudioFile();
-    console.log(`Setting audio source to: ${newAudioFile}`);
+    console.log(`Setting audio source to: ${newAudioFile}, player ID: ${currentPlayerId}`);
     audio.src = newAudioFile;
     audio.volume = isMuted ? 0 : volume;
 
@@ -45,7 +65,7 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
     };
 
     const handleEnded = () => {
-      console.log('Audio ended, stopping playback');
+      console.log(`Audio ended for player ${currentPlayerId}, stopping playback`);
       setIsPlaying(false);
       // Stop completely - do NOT restart
       audio.pause();
@@ -53,17 +73,17 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
     };
 
     const handlePlay = () => {
-      console.log('Audio play event');
+      console.log(`Audio play event for player ${currentPlayerId}`);
       setIsPlaying(true);
     };
 
     const handlePause = () => {
-      console.log('Audio pause event');
+      console.log(`Audio pause event for player ${currentPlayerId}`);
       setIsPlaying(false);
     };
 
     const handleError = (e: Event) => {
-      console.error('Audio error:', e);
+      console.error(`Audio error for player ${currentPlayerId}:`, e);
       setIsLoaded(false);
     };
 
@@ -86,10 +106,10 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
       try {
         if (audio.paused && !isPlaying) {
           await audio.play();
-          console.log(`Playing audio: ${newAudioFile}`);
+          console.log(`Playing audio: ${newAudioFile}, player ID: ${currentPlayerId}`);
         }
       } catch (error) {
-        console.log('Autoplay prevented:', error);
+        console.log(`Autoplay prevented for player ${currentPlayerId}:`, error);
         setIsPlaying(false);
       }
     }, 200);
@@ -102,7 +122,11 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
       audio.removeEventListener('play', handlePlay);
       audio.removeEventListener('pause', handlePause);
       audio.removeEventListener('error', handleError);
-      audio.pause();
+      if (globalAudioRef === audio) {
+        audio.pause();
+        globalAudioRef = null;
+        globalPlayerId = 0;
+      }
     };
   }, [pageType, audioFile]); // Reinitialize when pageType or audioFile changes
 
