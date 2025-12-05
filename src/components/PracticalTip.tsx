@@ -13,20 +13,28 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
           content: (
             <>
               <p className="hover:text-yellow-200 transition-colors duration-300 cursor-pointer">
-                <strong>Bekijk elke tegenslag als een les.</strong> Het universum probeert je iets te leren.
-                Wanneer je vaak dezelfde tegenslag ervaart, betekent dit dat je de les nog niet hebt begrepen.
+                <strong>Je eigen angst staat vaak in je weg.</strong> Angst is een beschermingsmechanisme,
+                maar meestal beschermt het je tegen dingen die helemaal niet gevaarlijk zijn.
+                Het houdt je klein en veilig, maar voorkomt ook dat je groeit.
               </p>
               <p className="hover:text-yellow-200 transition-colors duration-300 cursor-pointer">
-                Stop met vechten tegen tegenslag. Vraag jezelf af: "Wat probeert het leven me hier te leren?"
-                Soms is de les simpel: meer geduld hebben, beter luisteren, of loslaten wat je niet kunt controleren.
+                <strong>Overwin angst stap per stap.</strong> Begin klein. Heb je angst om te spreken voor groepen?
+                Oefen eerst voor de spiegel, dan voor één vriend, dan drie vrienden. Elke kleine stap
+                bouwt zelfvertrouwen op en verkleint de angst.
               </p>
               <p className="hover:text-yellow-200 transition-colors duration-300 cursor-pointer">
-                Wanneer je de les eindelijk begrijpt, verdwijnt de tegenslag als vanzelf.
-                Het is geen straf, maar een uitnodiging om te groeien en wijzer te worden.
+                <strong>Angst verdwijnt niet door het te ontwijken.</strong> Integendeel - hoe meer je het vermijdt,
+                hoe sterker het wordt. De enige manier om angst te overwinnen is er recht op af te bewegen,
+                zelfs als je trilt en zweet. De angst verdwijnt als je door de waas heen breekt.
+              </p>
+              <p className="hover:text-yellow-200 transition-colors duration-300 cursor-pointer">
+                <strong>Visualiseer je succes.</strong> Stel je voor dat je de angst hebt overwonnen en doet waar je bang voor was.
+                Hoe voelt dat? Vrij, krachtig, levend. Houd dat gevoel vast. Dat is je bestemming,
+                niet de angst die je nu voelt. Elke stap in die richting is een overwinning.
               </p>
             </>
           ),
-          link: { to: "/energie", text: "Ontdek de verschillende energieën die je helpen →", color: "yellow" }
+          link: { to: "/energie", text: "Gebruik energie om angst te overwinnen →", color: "yellow" }
         };
 
       case 'leven':
