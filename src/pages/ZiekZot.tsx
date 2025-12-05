@@ -102,22 +102,22 @@ const ZiekZot = () => {
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
                   Wat als ik je vertel dat je lichaam niet constant hoeft te eten om te overleven?
-                  Dat er mensen zijn die leven op pure levensenergie?
+                  Dat er mensen zijn die meerdere jaren zonder eten of drinken kunnen overleven?
                 </p>
                 <p>
                   Ons lichaam kan leven van kosmische energie,
                   van zonlicht en de levenskracht in de lucht die we inademen.
-                  We hebben geen voedsel nodig omdat onze cellen direct energie uit het universum trekken.
+                  We hebben geen voedsel nodig omdat onze cellen direct energie uit het universum kunnen trekken.
                 </p>
                 <p>
-                  Het resultaat? Geen ziekte. Geen veroudering. Gewoon pure vitaliteit.
-                  Het lichaam wordt niet belast door de constante energieverspilling van verteren. 
-                  Het systeem blijft perfect schoon.
+                  Dit vergt een aanpassing, allereerst mentaal en emotioneel.
+                  Je moet geloven dat je lichaam dit kan. Dat je lichaam weet hoe het zichzelf kan genezen en voeden.
+                  Vasten is de sleutel om deze vermogens te activeren.
                 </p>
                 <p>
                   Je hoeft niet meteen all in te gaan. Begin met af en toe te vasten.
                   Geef je lichaam rust. Laat het reinigen.
-                  Ziekte is een teken dat je lichaam overbelast is. Vasten is de reset knop.
+                  Ziekte is een teken dat je lichaam aan het genezen is. Onderdruk de symptomen niet, het is een natuurlijk proces.
                 </p>
               </div>
             </div>
@@ -138,7 +138,7 @@ const ZiekZot = () => {
                   Maar het gaat dieper: het begint ook emotionele en mentale blokkades op te ruimen.
                 </p>
                 <p>
-                  Dit is lastig in het begin, omdat je lichaam bezig is met de grote kuis.
+                  Dit is lastig, omdat je lichaam bezig is met de grote kuis.
                   Maar, zodra de reiniging voorbij is, voel je je lichter, helderder en energieker dan ooit tevoren.
                 </p>
               </div>
