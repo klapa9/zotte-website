@@ -9,6 +9,7 @@ import Leven from "./pages/Leven";
 import Energie from "./pages/Energie";
 import ZiekZot from "./pages/ZiekZot";
 import OpenJeGeest from "./pages/OpenJeGeest";
+import Geld from "./pages/Geld";
 import OldIndex from "./pages/Index.old";
 
 export function AppRouter() {
@@ -18,6 +19,7 @@ export function AppRouter() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/old" element={<OldIndex />} />
+        <Route path="/geld" element={<Geld />} />
         <Route path="/weeszot" element={<WeesZot />} />
         <Route path="/leven" element={<Leven />} />
         <Route path="/energie" element={<Energie />} />

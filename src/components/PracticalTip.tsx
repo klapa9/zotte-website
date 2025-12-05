@@ -1,12 +1,42 @@
 import { Link } from 'react-router-dom';
 
 interface PracticalTipProps {
-  pageType: 'weeszot' | 'leven' | 'energie' | 'ziekzot' | 'openjegeest';
+  pageType: 'weeszot' | 'leven' | 'energie' | 'ziekzot' | 'openjegeest' | 'geld';
 }
 
 const PracticalTip = ({ pageType }: PracticalTipProps) => {
   const getTipContent = () => {
     switch (pageType) {
+      case 'geld':
+        return {
+          title: "🎯 Praktische Tip",
+          content: (
+            <>
+              <p className="hover:text-orange-200 transition-colors duration-300 cursor-pointer">
+                <strong>Begin klein, maar begin nu.</strong> Je hoeft geen hele bitcoin te kopen.
+                Begin met een paar euro aan sats - het gaat om het principe en de gewenning.
+              </p>
+              <p className="hover:text-orange-200 transition-colors duration-300 cursor-pointer">
+                <strong>Automatiseer je accumulation.</strong> Zet een DCA (Dollar Cost Averaging) op
+                voor elke week of maand. Consistentie wint altijd van timing.
+              </p>
+              <p className="hover:text-orange-200 transition-colors duration-300 cursor-pointer">
+                <strong>Gebruik een hardware wallet.</strong> Not your keys, not your bitcoin.
+                Een Ledger of Trezor kost een paar tientjes maar beschermt je tegen de meeste risico's.
+              </p>
+              <p className="hover:text-orange-200 transition-colors duration-300 cursor-pointer">
+                <strong>Leer de basis van Lightning Network.</strong> Voor kleine dagelijkse transacties
+                is Lightning perfect - lage fees en instant payments.
+              </p>
+              <p className="hover:text-orange-200 transition-colors duration-300 cursor-pointer">
+                <strong>Vergeet de prijs.</strong> Focus op accumulation, niet op de huidige koers.
+                Over 5-10 jaar maakt het niet uit of je op $30k of $60k begon.
+              </p>
+            </>
+          ),
+          link: { to: "/weeszot", text: "Gebruik Bitcoin om financieel vrij te worden →", color: "orange" }
+        };
+
       case 'weeszot':
         return {
           title: "🎯 Praktische Tip",
@@ -158,6 +188,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
   const tipContent = getTipContent();
   const getGradientColors = () => {
     switch (pageType) {
+      case 'geld': return 'from-amber-600 to-orange-600';
       case 'weeszot': return 'from-orange-600 to-yellow-600';
       case 'leven': return 'from-cyan-600 to-teal-600';
       case 'energie': return 'from-green-600 to-emerald-600';
@@ -169,6 +200,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
 
   const getLinkColor = () => {
     switch (tipContent.link.color) {
+      case 'orange': return 'bg-orange-600 bg-opacity-20 border-orange-400 text-orange-300 hover:text-orange-100';
       case 'yellow': return 'bg-yellow-600 bg-opacity-20 border-yellow-400 text-yellow-300 hover:text-yellow-100';
       case 'cyan': return 'bg-cyan-600 bg-opacity-20 border-cyan-400 text-cyan-300 hover:text-cyan-100';
       case 'green': return 'bg-emerald-600 bg-opacity-20 border-emerald-400 text-emerald-300 hover:text-emerald-100';
@@ -180,6 +212,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
 
   const getLinkBgColor = () => {
     switch (tipContent.link.color) {
+      case 'orange': return 'text-orange-200';
       case 'yellow': return 'text-yellow-200';
       case 'cyan': return 'text-teal-200';
       case 'green': return 'text-emerald-200';
