@@ -75,7 +75,7 @@ const ZiekZot = () => {
             ZIEK ZOT!
           </h1>
           <p className="text-2xl md:text-3xl text-pink-300 font-bold">
-            De ongemakkelijke waarheid
+            Er is een andere weg
           </p>
         </div>
 
@@ -86,85 +86,90 @@ const ZiekZot = () => {
             <div className="text-center">
               <div className="inline-block transform hover:scale-110 transition-transform duration-500">
                 <p className="text-4xl md:text-6xl font-black text-red-400 mb-4">
-                  Ziek zijn is zot!
+                  Nooit meer ziek worden
                 </p>
               </div>
               <p className="text-2xl md:text-3xl text-white font-light">
-                Beter om gewoon niet zot ziek te zijn!
+                Door de kracht van vasten en de natuur
               </p>
             </div>
 
-            {/* What makes sickness crazy */}
+            {/* The Breatharian Way */}
             <div className="bg-black bg-opacity-30 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-red-400 border-opacity-30">
               <h2 className="text-4xl md:text-5xl font-black text-red-400 mb-6">
-                Waarom is ziek zijn zo zot?
+                De Weg van Vasten
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Stel je voor: je lichaam, die perfecte machine die normaal zo soepel functioneert,
-                  beslist opeens een eigen feestje te geven. En niet een leuk feestje,
-                  maar een van die feesten waar alles uit de hand loopt.
+                  Wat als ik je vertel dat je lichaam niet constant hoeft te eten om te overleven?
+                  Dat er mensen zijn die leven op pure levensenergie, bekend als prana?
+                  Dit is geen fantasie - het is een古老e wijsheid die veel culturen kenden.
                 </p>
                 <p>
-                  Koorts? Je lichaam verhit zichzelf alsof het in een sauna zit die te warm is.
-                  Hoest? Je longen denken dat het een goed idee is om constant te schreeuwen.
-                  Neusverstopping? Alsof iemand je neus heeft volgepropt met watten.
+                  Breatharians begrijpen dat ons lichaam direct kan leven van kosmische energie,
+                  zonlicht en de levenskracht in de lucht die we inademen.
+                  Ze hebben geen voedsel nodig omdat hun cellen direct energie uit het universum trekken.
                 </p>
                 <p>
-                  En het gekste van allemaal? Je moet betalen om dit te laten gebeuren.
-                  Je betaalt de dokter, je betaalt de medicijnen, je betaalt voor het privilege
-                  om je ellendig te voelen. Dat is pas echt zot!
+                  Het resultaat? Geen ziekte. Geen veroudering. Gewoon pure vitaliteit.
+                  Hun lichaam wordt niet belast door voedselvergiftiging, spijsverteringsproblemen,
+                  of de constante energieverspilling van verteren. Het systeem blijft perfect schoon.
+                </p>
+                <p>
+                  Je hoeft niet meteen volledig breatharian te worden. Begin met vasten.
+                  Geef je lichaam rust. Laat het reinigen. Leer luisteren naar je ware energiebronnen.
+                  Ziekte is een teken dat je lichaam overbelast is. Vasten is de reset knop.
                 </p>
               </div>
             </div>
 
-            {/* The Alternative */}
+            {/* How Fasting Works */}
             <div className="bg-gradient-to-r from-pink-600 to-red-600 rounded-3xl p-8 md:p-12 transform hover:rotate-1 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-                Het alternatief: Niet ziek zijn
+                Hoe Vasten Werkt
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Klinkt logisch, toch? Niet ziek zijn. Simpel. Effectief.
-                  Waarom zou je kiezen voor hoesten, koorts en ellende als je ook
-                  kunt kiezen voor... nou ja, voor niets van dat alles?
+                  Wanneer je stopt met eten, gebeurt er iets magisch. Je lichaam schakelt over
+                  van spijsvertering naar zelfreiniging en celvernieuwing. Dit heet autofagie.
+                  Oude, zieke cellen worden opgeruimd en vervangen door nieuwe, gezonde cellen.
                 </p>
                 <p>
-                  Niet ziek zijn betekent: energie. Vrolijkheid. Het vermogen om
-                  te doen wat je wilt, wanneer je het wilt. Geen "nee, ik kan niet,
-                  ik ben ziek" maar "ja, laten we gaan!"
+                  Na 2-3 dagen vasten begint je lichaam opgeslagen vetten te verbranden.
+                  Maar het gaat dieper - het begint ook emotionele en mentale blokkades op te ruimen.
+                  Je wordt helderder, energieker, meer jezelf.
                 </p>
                 <p>
-                  Het is de ultieme vorm van vrijheid. Vrijheid van pijn,
-                  vrijheid van beperkingen, vrijheid van het constant moeten
-                  denken aan je gezondheid.
+                  Breatharians hebben dit proces meester gemaakt. Ze leven constant in een staat
+                  van "light eating" - waarbij hun lichaam direct levensenergie uit de omgeving haalt.
+                  Geen spijsvertering, geen afval, geen ziekte. Pure efficiëntie.
                 </p>
               </div>
             </div>
 
-            {/* Prevention is Better */}
+            {/* Nature's Healing */}
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white bg-opacity-5 backdrop-blur-md rounded-3xl p-8 border border-pink-400 border-opacity-30">
                 <h3 className="text-3xl font-black text-pink-400 mb-4">
-                  Preventie is de sleutel
+                  De Natuur Geneest
                 </h3>
                 <p className="text-white text-lg">
-                  In plaats van wachten tot je ziek wordt en dan proberen het op te lossen,
-                  waarom niet voorkomen dat het überhaupt gebeurt?
-                  Gezond eten, bewegen, rusten, ontspannen.
-                  Het klinkt saai, maar het is eigenlijk best geniaal.
+                  De natuur heeft alles wat je nodig hebt om gezond te blijven.
+                  Zonlicht geeft je vitamine D en levensenergie. Schone lucht zuivert je longen.
+                  Water hydrateert en reinigt je systeem. De aarde gronden en kalmeert je.
+                  Wanneer je met de natuur leeft in plaats van tegen haar, verdwijnt ziekte.
                 </p>
               </div>
 
               <div className="bg-white bg-opacity-5 backdrop-blur-md rounded-3xl p-8 border border-purple-400 border-opacity-30">
                 <h3 className="text-3xl font-black text-purple-400 mb-4">
-                  Luister naar je lichaam
+                  Luister naar je Ware Zelf
                 </h3>
                 <p className="text-white text-lg">
-                  Je lichaam is eigenlijk best slim. Het geeft signalen wanneer
-                  iets niet goed is. Vermoeid? Rust uit. Honger? Eet.
-                  Stress? Ontspan. Het is niet rocket science,
-                  maar het werkt wel beter dan de meeste rocket science.
+                  Je lichaam weet precies wat het nodig heeft. Honger is vaak niet echt honger -
+                  het is een gewoonte, een emotie, een verveling. Leer onderscheid maken.
+                  Echte honger komt zelden voor. Je lichaam kan veel langer zonder voedsel
+                  dan je denkt. Vertrouw op de wijsheid die al in je zit.
                 </p>
               </div>
             </div>
@@ -175,14 +180,14 @@ const ZiekZot = () => {
             <div className="text-center py-12">
               <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-2 transition-all duration-500 cursor-pointer active:scale-95">
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
-                  Dus... wees niet zot!
+                  Begin Vandaag Nog!
                 </h2>
                 <p className="text-xl md:text-2xl text-white mb-6 hover:text-pink-200 transition-colors duration-300">
-                  Zorg goed voor jezelf, want niemand anders doet het voor je
+                  Ontdek de kracht van vasten en natuurlijke genezing
                 </p>
                 <div className="inline-block transform hover:scale-110 hover:rotate-6 transition-all duration-300 cursor-pointer active:scale-95">
                   <p className="text-3xl md:text-5xl font-black text-red-400 hover:text-red-300 transition-colors duration-300">
-                    BLIJF GEZOND!
+                    WORD DEENGEZONDSTEVERSIE!
                   </p>
                 </div>
               </div>
