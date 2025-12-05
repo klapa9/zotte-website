@@ -27,12 +27,16 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    // Stop any existing playback
+    // Clean up any existing state
     audio.pause();
     audio.currentTime = 0;
+    setIsLoaded(false);
+    setIsPlaying(false);
 
     // Set new audio source
-    audio.src = getAudioFile();
+    const newAudioFile = getAudioFile();
+    console.log(`Setting audio source to: ${newAudioFile}`);
+    audio.src = newAudioFile;
     audio.volume = isMuted ? 0 : volume;
 
     // Set up event listeners
@@ -41,6 +45,7 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
     };
 
     const handleEnded = () => {
+      console.log('Audio ended, stopping playback');
       setIsPlaying(false);
       // Stop completely - do NOT restart
       audio.pause();
@@ -48,10 +53,12 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
     };
 
     const handlePlay = () => {
+      console.log('Audio play event');
       setIsPlaying(true);
     };
 
     const handlePause = () => {
+      console.log('Audio pause event');
       setIsPlaying(false);
     };
 
@@ -60,7 +67,14 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
       setIsLoaded(false);
     };
 
-    // Add all event listeners
+    // Remove all existing event listeners first
+    audio.removeEventListener('canplaythrough', () => {});
+    audio.removeEventListener('ended', () => {});
+    audio.removeEventListener('play', () => {});
+    audio.removeEventListener('pause', () => {});
+    audio.removeEventListener('error', () => {});
+
+    // Add new event listeners
     audio.addEventListener('canplaythrough', handleCanPlayThrough);
     audio.addEventListener('ended', handleEnded);
     audio.addEventListener('play', handlePlay);
@@ -70,13 +84,15 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
     // Try to autoplay after a short delay
     const autoplayTimeout = setTimeout(async () => {
       try {
-        await audio.play();
-        console.log(`Playing audio: ${getAudioFile()}`);
+        if (audio.paused && !isPlaying) {
+          await audio.play();
+          console.log(`Playing audio: ${newAudioFile}`);
+        }
       } catch (error) {
         console.log('Autoplay prevented:', error);
         setIsPlaying(false);
       }
-    }, 100);
+    }, 200);
 
     // Cleanup function
     return () => {
@@ -131,7 +147,7 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
         loop={false}
         preload="auto"
       />
-      
+
       {/* Floating Audio Controls */}
       <div className="fixed top-4 right-4 z-50 bg-black bg-opacity-80 backdrop-blur-md rounded-full p-3 flex items-center gap-2 shadow-lg border border-white border-opacity-20">
         {/* Play/Pause Button */}
