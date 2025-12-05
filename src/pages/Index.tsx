@@ -108,7 +108,7 @@ const Index = () => {
                 background: `hsl(${Math.random() * 360}, 70%, 60%)`,
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
-                transform: `translateY(${-scrollY * 0.5}px)`,
+
                 animation: `float ${Math.random() * 20 + 10}s infinite ease-in-out`,
                 animationDelay: `${Math.random() * 5}s`,
               }}
@@ -150,12 +150,7 @@ const Index = () => {
           {/* Introduction Section */}
           <section className="py-20 px-4 relative section-trigger">
             <div className="max-w-4xl mx-auto text-center">
-              <div
-                className="bg-white bg-opacity-5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20"
-                style={{
-                  transform: `translateY(${-scrollY * 0.2}px)`,
-                }}
-              >
+              <div className="bg-white bg-opacity-5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20">
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
                   Kies jouw realiteit
                 </h2>
