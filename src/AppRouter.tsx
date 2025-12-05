@@ -9,6 +9,7 @@ import Leven from "./pages/Leven";
 import Energie from "./pages/Energie";
 import ZiekZot from "./pages/ZiekZot";
 import OpenJeGeest from "./pages/OpenJeGeest";
+import Test from "./pages/Test";
 
 export function AppRouter() {
   return (
@@ -16,6 +17,7 @@ export function AppRouter() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Index />} />
+        <Route path="/test" element={<Test />} />
         <Route path="/weeszot" element={<WeesZot />} />
         <Route path="/leven" element={<Leven />} />
         <Route path="/energie" element={<Energie />} />
