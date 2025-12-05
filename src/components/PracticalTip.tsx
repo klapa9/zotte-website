@@ -73,23 +73,28 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
           content: (
             <>
               <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
-                <strong>Karma bestaat echt.</strong> Alles wat je uitstraalt, komt terug.
-                Liefde, vriendelijkheid, compassie - het universeel kent geen grenzen en
-                werkt door iedereen en alles heen.
+                <strong>Bepaal je percentage intentie.</strong> Weet je op welk pad je zit.
+                STO vereist meer dan 51% dienst aan anderen, STS vereist meer dan 95% focus op zelf.
+                Wees eerlijk over waar je energie naartoe gaat.
               </p>
               <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
-                Je hoeft niet te geloven in karma om het te ervaren. Probeer het:
-                wees liefdevol naar vreemden, help iemand zonder iets terug te verwachten,
-                en observeer wat er in je leven gebeurt.
+                <strong>Polariseer bewust.</strong> Elke gedachte en keuze versterkt je pad.
+                Wanneer je consistent kiest in lijn met je pad, creëer je spiritueel
+                momentum en accelereer je bewustzijnsontwikkeling.
               </p>
               <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
-                De liefde die je geeft is de liefde die je ontvangt. Niet per se van
-                dezelfde persoon, maar het universum regelt dit op mysterieuze wijzen.
-                Houd elkaar lief - het is de meest praktische vorm van spiritualiteit.
+                <strong>Observeer zonder oordeel.</strong> Zowel STO als STS zijn geldige paden.
+                Oordeel jezelf niet wanneer je van pad wisselt - elke ervaring biedt
+                unieke lessen en draagt bij aan je groei naar eenheid.
+              </p>
+              <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
+                <strong>Leef je keuze volledig.</strong> Halfslachtigheid vertraagt groei.
+                Of je nu voor liefde of macht kiest - doe het met volle overgave
+                en duidelijke intentie. Alleen dan versterk je werkelijk je pad.
               </p>
             </>
           ),
-          link: { to: "/openjegeest", text: "Ontdek hoe je je innerlijke wereld kunt sturen →", color: "cyan" }
+          link: { to: "/energie", text: "Gebruik bewuste keuze om je energie te richten →", color: "cyan" }
         };
 
       case 'energie':
