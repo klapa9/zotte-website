@@ -34,7 +34,6 @@ const Energie = () => {
   return (
     <>
       <CursorStyles />
-      <AudioPlayer />
       <div className="min-h-screen bg-gradient-to-br from-green-900 via-teal-800 to-blue-900 overflow-hidden relative">
       {/* Energy particles */}
       <div className="absolute inset-0">
@@ -181,7 +180,7 @@ const Energie = () => {
           </div>
         </div>
 
-        <AudioPlayer pageType="energie" />
+        <AudioPlayer audioFile="/Energy2.mp3" />
         <Navigation />
 
 
