@@ -148,23 +148,6 @@ const Energie = () => {
                   Het zet voedsel om in bruikbare energie, warmte, en bouwstenen.
                   Dit is geen simpel proces - het is een wonder van biochemische efficiëntie.
                 </p>
-                <p className="hover:text-purple-200 transition-colors duration-300 cursor-pointer">
-                  En hier wordt het echt zot: <strong>wij zijn de waarnemers die realiteit creëren.</strong>
-                  Volgens de quantumfysica bestaat materie niet in een vaste staat totdat iemand het observeert.
-                  Onze aandacht - onze bewuste energie - collapseert de quantum golven naar specifieke uitkomsten.
-                </p>
-                <p className="hover:text-pink-200 transition-colors duration-300 cursor-pointer">
-                  <strong>Onze geest is de creator van ons leven.</strong> Elke gedachte is een energie-signaal
-                  dat het quantumveld beïnvloedt. Wanneer je gelooft dat iets mogelijk is, stuur je energie
-                  naar die potentie en help je het manifesteren. Wanneer je denkt in onmogelijkheden,
-                  creëer je precies dat: beperkingen.
-                </p>
-                <p className="hover:text-yellow-200 transition-colors duration-300 cursor-pointer">
-                  <strong>Je bent geen slachtoffer van omstandigheden - je bent de architect.</strong>
-                  Je bewustzijn is de bouwstenen, je emoties zijn het cement, je focus is het gereedschap.
-                  Alles wat je ervaart is energetisch gemanifesteerd door jouw innerlijke staat.
-                  Dit is de ultieme vrijheid: het vermogen om je eigen realiteit te creëren.
-                </p>
               </div>
             </div>
 
