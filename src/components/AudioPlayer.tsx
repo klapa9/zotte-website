@@ -15,70 +15,80 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
   // Determine which audio file to use
   const getAudioFile = () => {
     if (audioFile) return audioFile;
-    if (pageType === 'energie') return '/Energy.mp3';
-    if (pageType === 'leven') return '/Leven.mp3';
-    return '/Rise_and_Shine.mp3';
+    switch (pageType) {
+      case 'energie': return '/Energy.mp3';
+      case 'leven': return '/Leven.mp3';
+      case 'weeszot': return '/Wees_Zot.mp3';
+      default: return '/Rise_and_Shine.mp3';
+    }
   };
 
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    // Set initial volume
-    audio.volume = volume;
+    // Stop any existing playback
+    audio.pause();
+    audio.currentTime = 0;
 
-    // Try to autoplay when component mounts
-    const playAudio = async () => {
+    // Set new audio source
+    audio.src = getAudioFile();
+    audio.volume = isMuted ? 0 : volume;
+
+    // Set up event listeners
+    const handleCanPlayThrough = () => {
+      setIsLoaded(true);
+    };
+
+    const handleEnded = () => {
+      setIsPlaying(false);
+      // Stop completely - do NOT restart
+      audio.pause();
+      audio.currentTime = 0;
+    };
+
+    const handlePlay = () => {
+      setIsPlaying(true);
+    };
+
+    const handlePause = () => {
+      setIsPlaying(false);
+    };
+
+    const handleError = (e: Event) => {
+      console.error('Audio error:', e);
+      setIsLoaded(false);
+    };
+
+    // Add all event listeners
+    audio.addEventListener('canplaythrough', handleCanPlayThrough);
+    audio.addEventListener('ended', handleEnded);
+    audio.addEventListener('play', handlePlay);
+    audio.addEventListener('pause', handlePause);
+    audio.addEventListener('error', handleError);
+
+    // Try to autoplay after a short delay
+    const autoplayTimeout = setTimeout(async () => {
       try {
-        // Set audio source
-        audio.src = getAudioFile();
-
-        audio.addEventListener('canplaythrough', () => {
-          setIsLoaded(true);
-        });
-
-        audio.addEventListener('ended', () => {
-          setIsPlaying(false);
-          // DO NOT restart audio - stop when ended
-        });
-
-        audio.addEventListener('play', () => {
-          setIsPlaying(true);
-        });
-
-        audio.addEventListener('pause', () => {
-          setIsPlaying(false);
-        });
-
-        // Attempt to play (may be blocked by browser autoplay policy)
-        const playPromise = audio.play();
-
-        if (playPromise !== undefined) {
-          playPromise.then(() => {
-            setIsPlaying(true);
-          }).catch((error) => {
-            console.log('Autoplay prevented:', error);
-            setIsPlaying(false);
-          });
-        }
+        await audio.play();
+        console.log(`Playing audio: ${getAudioFile()}`);
       } catch (error) {
-        console.error('Audio setup error:', error);
+        console.log('Autoplay prevented:', error);
+        setIsPlaying(false);
       }
-    };
+    }, 100);
 
-    // Small delay to ensure page is loaded
-    setTimeout(playAudio, 100);
-
+    // Cleanup function
     return () => {
-      if (audio) {
-        audio.pause();
-        audio.removeEventListener('canplaythrough', () => {});
-        audio.removeEventListener('ended', () => {});
-        audio.removeEventListener('play', () => {});
-        audio.removeEventListener('pause', () => {});
-      }
+      clearTimeout(autoplayTimeout);
+      audio.removeEventListener('canplaythrough', handleCanPlayThrough);
+      audio.removeEventListener('ended', handleEnded);
+      audio.removeEventListener('play', handlePlay);
+      audio.removeEventListener('pause', handlePause);
+      audio.removeEventListener('error', handleError);
+      audio.pause();
     };
-  }, []);
+  }, [pageType, audioFile]); // Reinitialize when pageType or audioFile changes
 
   useEffect(() => {
     if (audioRef.current) {
@@ -95,6 +105,8 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
         audio.pause();
         setIsPlaying(false);
       } else {
+        // Make sure we have the correct source
+        audio.src = getAudioFile();
         await audio.play();
         setIsPlaying(true);
       }
@@ -116,10 +128,10 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
     <>
       <audio
         ref={audioRef}
-        loop
+        loop={false}
         preload="auto"
       />
-
+      
       {/* Floating Audio Controls */}
       <div className="fixed top-4 right-4 z-50 bg-black bg-opacity-80 backdrop-blur-md rounded-full p-3 flex items-center gap-2 shadow-lg border border-white border-opacity-20">
         {/* Play/Pause Button */}
@@ -208,10 +220,20 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
       {!isPlaying && isLoaded && (
         <div className="fixed top-20 left-4 z-40 bg-black bg-opacity-80 backdrop-blur-md rounded-2xl p-4 max-w-xs animate-fade-in">
           <p className="text-white text-sm">
-            🎵 Klik op de play knop om "Rise and Shine" af te spelen
+            🎵 Muziek beschikbaar - klik om af te spelen
           </p>
         </div>
       )}
+
+      <style jsx>{`
+        @keyframes fade-in {
+          from { opacity: 0; transform: translateY(-10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+          animation: fade-in 0.3s ease-out;
+        }
+      `}</style>
     </>
   );
 };
