@@ -23,7 +23,7 @@ const Test = () => {
 
     const handleScroll = () => {
       setScrollY(window.scrollY);
-      
+
       // Determine which section is in view
       const sections = document.querySelectorAll('.section-trigger');
       sections.forEach((section, index) => {
@@ -126,7 +126,7 @@ const Test = () => {
                 background: `hsl(${Math.random() * 360}, 70%, 60%)`,
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
-                transform: `translate(${translateX * 0.3}px, ${translateY * 0.3}px) translateY(${-scrollY * 0.5}px)`,
+                transform: `translate(${translateX * 0.003}px, ${translateY * 0.003}px) translateY(${-scrollY * 0.5}px)`,
                 transition: 'transform 0.1s ease-out',
                 animation: `float ${Math.random() * 20 + 10}s infinite ease-in-out`,
                 animationDelay: `${Math.random() * 5}s`,
@@ -139,7 +139,7 @@ const Test = () => {
         <div className="relative z-10">
           {/* Hero Section */}
           <section className="min-h-screen flex items-center justify-center px-4 relative section-trigger">
-            <div 
+            <div
               className="text-center max-w-6xl"
               style={{
                 transform: `perspective(1000px) rotateX(${rotateX * 0.5}deg) rotateY(${rotateY * 0.5}deg) translateX(${translateX * 0.3}px) translateY(${translateY * 0.3}px)`,
@@ -175,7 +175,7 @@ const Test = () => {
           {/* Introduction Section */}
           <section className="py-20 px-4 relative section-trigger">
             <div className="max-w-4xl mx-auto text-center">
-              <div 
+              <div
                 className="bg-white bg-opacity-5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20"
                 style={{
                   transform: `translateY(${-scrollY * 0.2}px)`,
@@ -212,12 +212,12 @@ const Test = () => {
                       transform: `translateY(${-scrollY * 0.1}px) translateX(${Math.sin(scrollY * 0.01 + index) * 20}px)`,
                     }}
                   >
-                    <div 
+                    <div
                       className={`
-                        bg-gradient-to-br ${section.gradient} 
-                        rounded-3xl p-8 md:p-12 
+                        bg-gradient-to-br ${section.gradient}
+                        rounded-3xl p-8 md:p-12
                         border-2 border-white border-opacity-20
-                        hover:scale-105 hover:rotate-1 
+                        hover:scale-105 hover:rotate-1
                         transition-all duration-500 cursor-pointer
                         relative overflow-hidden
                       `}
@@ -290,7 +290,7 @@ const Test = () => {
           {/* Final Call to Action */}
           <section className="py-20 px-4 relative section-trigger">
             <div className="max-w-4xl mx-auto text-center">
-              <div 
+              <div
                 className="bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-3xl p-8 md:p-12 transform hover:scale-105 transition-all duration-500"
                 style={{
                   transform: `rotate(${Math.sin(scrollY * 0.02) * 2}deg)`,
@@ -338,23 +338,23 @@ const Test = () => {
           }
 
           @keyframes glitch {
-            0%, 100% { 
+            0%, 100% {
               filter: hue-rotate(0deg);
               transform: translate(0);
             }
-            20% { 
+            20% {
               filter: hue-rotate(90deg);
               transform: translate(-5px, 5px);
             }
-            40% { 
+            40% {
               filter: hue-rotate(180deg);
               transform: translate(-5px, -5px);
             }
-            60% { 
+            60% {
               filter: hue-rotate(270deg);
               transform: translate(5px, 5px);
             }
-            80% { 
+            80% {
               filter: hue-rotate(360deg);
               transform: translate(5px, -5px);
             }
