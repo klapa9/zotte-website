@@ -22,13 +22,13 @@ const Navigation = ({ className = '' }: NavigationProps) => {
   const currentPage = getCurrentPage();
 
   const navigationItems = [
-    { key: 'home', label: 'Home', icon: '🏠', href: '/' },
-    { key: 'geld', label: 'Geld', icon: '₿', href: '/geld' },
+    { key: 'home', label: 'Home', icon: '🏠', href: '/' },    
+    { key: 'openjegeest', label: 'Open Geest', icon: '🧠', href: '/openjegeest' },
     { key: 'weeszot', label: 'Wees Zot', icon: '🌟', href: '/weeszot' },
     { key: 'leven', label: 'Leven', icon: '❓', href: '/leven' },
     { key: 'energie', label: 'Energie', icon: '⚡', href: '/energie' },
     { key: 'ziekzot', label: 'Ziek Zot', icon: '🤪', href: '/ziekzot' },
-    { key: 'openjegeest', label: 'Open Geest', icon: '🧠', href: '/openjegeest' },
+    { key: 'geld', label: 'Geld', icon: '₿', href: '/geld' },
   ];
 
   const getItemColor = (itemKey: string) => {
