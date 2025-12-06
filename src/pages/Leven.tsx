@@ -94,7 +94,7 @@ const Leven = () => {
                       onClick={() => setShowLawOfOneDialog(true)}
                       className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
                     >
-                      📖 Meer Informatie
+                      ✨ Je hebt een keuze!
                     </Button>
                   </div>
                 </div>
@@ -183,8 +183,8 @@ const Leven = () => {
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
               <h3 className="text-2xl font-black text-cyan-300 mb-3">Alles is Één Bewustzijn</h3>
               <p>
-                Alles in het universum is één bewustzijn. Elke ziel ontwikkelt zich 
-                door verschillende niveaus en kiest daarbij een duidelijke richting 
+                Alles in het universum is één bewustzijn. Elke ziel ontwikkelt zich
+                door verschillende niveaus en kiest daarbij een duidelijke richting
                 van groei.
               </p>
             </div>
@@ -193,16 +193,16 @@ const Leven = () => {
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
               <h3 className="text-2xl font-black text-blue-300 mb-3">Twee Evolutionaire Paden</h3>
               <p className="mb-4">
-                Er bestaan maar twee evolutionaire paden waar je tussen kunt kiezen. 
+                Er bestaan maar twee evolutionaire paden waar je tussen kunt kiezen.
                 Deze keuze bepaalt hoe jouw bewustzijn zich ontwikkelt:
               </p>
-              
+
               {/* Service to Others */}
               <div className="mb-4 pl-4 border-l-4 border-teal-400">
                 <h4 className="text-xl font-bold text-teal-300 mb-2">Service to Others (STO)</h4>
                 <p className="mb-2">
-                  Het STO-pad is gericht op liefde, samenwerking en het verhogen 
-                  van het welzijn van anderen. Een ziel volgt dit pad wanneer 
+                  Het STO-pad is gericht op liefde, samenwerking en het verhogen
+                  van het welzijn van anderen. Een ziel volgt dit pad wanneer
                   zij meer dan 51% van haar intentie wijdt aan het dienen van anderen.
                 </p>
                 <ul className="list-disc list-inside space-y-1 text-teal-200">
@@ -217,8 +217,8 @@ const Leven = () => {
               <div className="pl-4 border-l-4 border-purple-400">
                 <h4 className="text-xl font-bold text-purple-300 mb-2">Service to Self (STS)</h4>
                 <p className="mb-2">
-                  Het STS-pad draait om macht, controle en zelfverheffing. 
-                  Een ziel kiest dit pad wanneer zij meer dan 95% van haar energie 
+                  Het STS-pad draait om macht, controle en zelfverheffing.
+                  Een ziel kiest dit pad wanneer zij meer dan 95% van haar energie
                   richt op het dienen van zichzelf.
                 </p>
                 <ul className="list-disc list-inside space-y-1 text-purple-200">
@@ -234,9 +234,9 @@ const Leven = () => {
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
               <h3 className="text-2xl font-black text-cyan-300 mb-3">Geen Goed of Fout</h3>
               <p>
-                Beide paden zijn volwaardige en legitieme routes van 
-                spirituele vooruitgang. Elk pad biedt unieke lessen en 
-                leidt uiteindelijk naar dezelfde bron. Er is geen moreel 
+                Beide paden zijn volwaardige en legitieme routes van
+                spirituele vooruitgang. Elk pad biedt unieke lessen en
+                leidt uiteindelijk naar dezelfde bron. Er is geen moreel
                 oordeel - beide zijn geldige keuzes voor bewustzijnsontwikkeling.
               </p>
             </div>
@@ -245,12 +245,12 @@ const Leven = () => {
             <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-6 border border-cyan-400 border-opacity-30">
               <h3 className="text-2xl font-black text-white mb-3">Jouw Keuze Bepaalt Alles</h3>
               <p className="mb-3">
-                Elke gedachte, keuze en intentie versterkt jouw pad. 
-                Polarisatie is essentieel: hoe duidelijker jouw keuze, 
+                Elke gedachte, keuze en intentie versterkt jouw pad.
+                Polarisatie is essentieel: hoe duidelijker jouw keuze,
                 hoe sneller je spiritueel groeit.
               </p>
               <p className="text-cyan-200 font-bold">
-                Consistentie in je keuzen creëert spiritueel momentum 
+                Consistentie in je keuzen creëert spiritueel momentum
                 en accelereert je bewustzijnsontwikkeling.
               </p>
             </div>
