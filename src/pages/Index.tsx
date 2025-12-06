@@ -51,17 +51,17 @@ const Index = () => {
       route: "/weeszot",
       gradient: "from-yellow-400 via-pink-500 to-purple-600",
       icon: "🎭",
-      questions: ["Wat als je alles durft?", "Waar wacht je nog op?", "Zot genoeg?"]
+      questions: ["Van waar komt je buikgevoel?", "Ben je bang of uniek?", "Durf jij jezelf zijn?"]
     },
     {
-      title: "GELD",
-      subtitle: "Bitcoin is de oplossing",
-      description: "De scheiding van staat en geld. Bescherm je koopkracht, bereik financiële vrijheid, en ontdek globale samenwerking via Bitcoin.",
-      route: "/geld",
-      gradient: "from-amber-600 via-orange-600 to-yellow-600",
-      icon: "₿",
-      questions: ["Wat is echt geld?", "Bescherm je koopkracht", "Word financieel vrij"]
-    },
+      title: "OPEN JE GEEST",
+      subtitle: "Blaas je ideeën op",
+      description: "Alles is veel zotter dan je denkt! Quantumfysica, bewustzijn, parallelle werelden ...",
+      route: "/openjegeest",
+      gradient: "from-purple-600 to-indigo-800",
+      icon: "🌌",
+      questions: ["Wat is echt?", "Hoe zot is de werkelijkheid?", "Durf jij te denken?"]
+    },    
     {
       title: "LEVEN?",
       subtitle: "De fundamentele vragen",
@@ -74,29 +74,29 @@ const Index = () => {
     {
       title: "ENERGIE",
       subtitle: "Onbegrensde kracht",
-      description: "Ontdek de bron van vitale kracht. Van normaal naar EPIC - jouw energiereserve is oneindig!",
+      description: "Ontdek de bron van vitale kracht. Alles is energie. Jouw energiereserve is oneindig!",
       route: "/energie",
       gradient: "from-green-400 to-blue-600",
       icon: "⚡",
-      questions: ["Wat drijft je?", "Hoe explodeer je energie?", "Wanneer voel je je EPIC?"]
+      questions: ["Vanwaar komt je energie?", "Hoe vergroot je je energie?", "Ontdek de stroom van het leven."]
     },
     {
       title: "ZIEK ZOT",
       subtitle: "Spel met de grenzen",
-      description: "Ziek zijn is zot! Beter om gewoon niet zot ziek te zijn. Een speelse kijk op gezondheid en welzijn.",
+      description: "Ziek zijn is zot! Beter om gewoon niet zot ziek te zijn.",
       route: "/ziekzot",
       gradient: "from-red-600 to-pink-600",
       icon: "🎪",
-      questions: ["Gezond of zot?", "Waar ligt de grens?", "Wie bepaalt het?"]
+      questions: ["Nooit meer ziek?", "Wat kan je lichaam aan", "Kan je jezelf genezen?"]
     },
     {
-      title: "OPEN JE GEEST",
-      subtitle: "Blaas je ideeën op",
-      description: "Alles is veel zotter dan je denkt! Quantumfysica, bewustzijn, parallelle werelden - de realiteit is verrassender dan je kunt voorstellen.",
-      route: "/openjegeest",
-      gradient: "from-purple-600 to-indigo-800",
-      icon: "🌌",
-      questions: ["Wat is echt?", "Hoe groot is de werkelijkheid?", "Durf jij te denken?"]
+      title: "GELD",
+      subtitle: "Bitcoin is magisch internet geld.",
+      description: "De scheiding van staat en geld. Bereik financiële vrijheid, en ontdek globale samenwerking via Bitcoin.",
+      route: "/geld",
+      gradient: "from-amber-600 via-orange-600 to-yellow-600",
+      icon: "₿",
+      questions: ["Wat is echt geld?", "Bescherm je koopkracht", "Is het huidige systeem duurzaam?"]
     }
   ];
 
@@ -145,7 +145,7 @@ const Index = () => {
 
               {/* Subtitle */}
               <p className="text-xl md:text-3xl text-white font-bold mb-8 opacity-90 transform hover:scale-105 transition-all duration-300">
-                Welkom bij een wereld waar de realiteit zelf een mindblowing experience is
+                Welkom bij een site die de zotheid van het leven uitzoekt!
               </p>
 
               {/* Scroll indicator */}
@@ -161,15 +161,15 @@ const Index = () => {
             <div className="max-w-4xl mx-auto text-center">
               <div className="bg-white bg-opacity-5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20">
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-                  Kies jouw realiteit
+                  Volg je nieuwsgierigheid!
                 </h2>
                 <p className="text-xl md:text-2xl text-white leading-relaxed mb-8">
-                  Elke wereld die je kunt bedenken is maar één klik verwijderd.
-                  Welk pad roept jou het hardst?
+                  Elke klik brengt je een nieuw idee.
+                  Welk idee voelt goed aan?
                 </p>
                 <div className="inline-block">
                   <p className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 animate-pulse">
-                    DURF TE KIEZEN!
+                    DURF TE TWIJFELEN!
                   </p>
                 </div>
               </div>
@@ -272,17 +272,17 @@ const Index = () => {
                 className="bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-3xl p-8 md:p-12 transform hover:scale-105 transition-all duration-500"
               >
                 <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
-                  JE REALITEIT WACHT
+                  Unieke ideeën wachten op jou!
                 </h2>
                 <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
-                  De keuze is aan jou. Zet de stap. Open je geest. Wees zot.
+                  De keuze is aan jou. Open je geest. Wees zot.
                 </p>
                 <div className="space-y-4">
                   <div className="text-5xl md:text-7xl font-black text-white animate-pulse">
                     DOE HET NU!
                   </div>
                   <p className="text-lg text-white opacity-80">
-                    Elke klik is een nieuwe wereld
+                    Elke klik is een nieuwe idee. Volg je gevoel.
                   </p>
                 </div>
               </div>
@@ -295,8 +295,8 @@ const Index = () => {
               <p className="text-white text-lg">
                 Contacteer mij: <span className="text-pink-400 font-bold">puurleven@protonmail.com</span>
               </p>
-              <p className="text-gray-300">© 2025 Alles mag gekopieerd worden! Laat je gaan!</p>
-              <p className="text-red-400 font-bold text-lg">Geen cookies! Cookies</p>
+              <p className="text-gray-300">© Copyright is onnozel! Alles mag gekopieerd worden! Laat je gaan!</p>
+              <p className="text-red-400 font-bold text-lg">Geen cookies!</p>
             </div>
           </footer>
         </div>
