@@ -54,6 +54,15 @@ const Index = () => {
       questions: ["Wat als je alles durft?", "Waar wacht je nog op?", "Zot genoeg?"]
     },
     {
+      title: "GELD",
+      subtitle: "Bitcoin is de oplossing",
+      description: "De scheiding van staat en geld. Bescherm je koopkracht, bereik financiële vrijheid, en ontdek globale samenwerking via Bitcoin.",
+      route: "/geld",
+      gradient: "from-amber-600 via-orange-600 to-yellow-600",
+      icon: "₿",
+      questions: ["Wat is echt geld?", "Bescherm je koopkracht", "Word financieel vrij"]
+    },
+    {
       title: "LEVEN?",
       subtitle: "De fundamentele vragen",
       description: "Waarom leef je? Wat is echt belangrijk? Hoe kan je beter leven? Duik diep in de betekenis van bestaan.",
@@ -166,6 +175,8 @@ const Index = () => {
               </div>
             </div>
           </section>
+
+
 
           {/* Main Sections Grid */}
           <section className="py-20 px-4 relative section-trigger">

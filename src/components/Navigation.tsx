@@ -15,6 +15,7 @@ const Navigation = ({ className = '' }: NavigationProps) => {
     if (path === '/energie' || path.includes('energie')) return 'energie';
     if (path === '/ziekzot' || path.includes('ziekzot')) return 'ziekzot';
     if (path === '/openjegeest' || path.includes('openjegeest')) return 'openjegeest';
+    if (path === '/geld' || path.includes('geld')) return 'geld';
     return 'home';
   };
 
@@ -22,6 +23,7 @@ const Navigation = ({ className = '' }: NavigationProps) => {
 
   const navigationItems = [
     { key: 'home', label: 'Home', icon: '🏠', href: '/' },
+    { key: 'geld', label: 'Geld', icon: '₿', href: '/geld' },
     { key: 'weeszot', label: 'Wees Zot', icon: '🌟', href: '/weeszot' },
     { key: 'leven', label: 'Leven', icon: '❓', href: '/leven' },
     { key: 'energie', label: 'Energie', icon: '⚡', href: '/energie' },
@@ -32,6 +34,8 @@ const Navigation = ({ className = '' }: NavigationProps) => {
   const getItemColor = (itemKey: string) => {
     if (itemKey === currentPage) {
       switch (itemKey) {
+        case 'geld':
+          return 'text-orange-300 hover:text-orange-200';
         case 'weeszot':
           return 'text-yellow-300 hover:text-yellow-200';
         case 'leven':
@@ -52,6 +56,8 @@ const Navigation = ({ className = '' }: NavigationProps) => {
   const getActiveBackground = (itemKey: string) => {
     if (itemKey === currentPage) {
       switch (itemKey) {
+        case 'geld':
+          return 'bg-orange-600 bg-opacity-30 border-orange-400';
         case 'weeszot':
           return 'bg-yellow-600 bg-opacity-30 border-yellow-400';
         case 'leven':
