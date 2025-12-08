@@ -131,18 +131,15 @@ const Leven = () => {
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
                   Beter leven begint met bewustwording. Weten wie je bent, wat je wilt,
-                  en waarom je het wilt. Zonder bewustwording is elke verandering slechts
-                  een oppervlakkige cosmetische ingreep.
+                  en waarom je het wilt.
                 </p>
                 <p>
                   Daarna komt actie. Kleine stappen, consequent uitgevoerd.
-                  Niet wachten op motivatie, maar discipline ontwikkelen.
-                  Niet perfectionisme nastreven, maar vooruitgang.
+                  Je ontwikkelt discipline door actie te ondernemen.
                 </p>
                 <p>
-                  En misschien wel het belangrijkste: mildheid voor jezelf.
-                  Accepteren dat je fouten maakt, dat je niet perfect bent,
-                  maar dat je wel elke dag een beetje beter probeert te worden.
+                  Accepteer het als je fouten maakt,
+                  maar weet dat je wel elke dag een beetje beter probeert te worden.
                 </p>
               </div>
             </div>
