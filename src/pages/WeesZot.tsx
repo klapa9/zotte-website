@@ -75,17 +75,17 @@ const WeesZot = () => {
               {/* Enthousiasme Section */}
               <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20">
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-                  Volg je Enthousiasme
+                  Volg je enthousiasme
                 </h2>
                 <div className="space-y-4 text-white text-lg md:text-xl">
                   <p>
-                    Enthousiasme is de brandstof van de ziel. Wanneer je iets doet met passie,
-                    verdwijnt de tijd en ontstaat er magie. Je enthousiasme is je innerlijke kompas
-                    dat je naar je bestemming leidt.
+                    Je enthousiasme is je innerlijke kompas dat je naar je bestemming leidt.
+                    Het is een signaal dat je moet volgen, zelfs als het eng of onlogisch lijkt.
                   </p>
                   <p>
-                    Stel je voor: een wereld waarin iedereen doet waar ze echt van houden.
-                    Dat is de wereld die we kunnen creëren.
+                    Als je je enthousiasme volgt, open je de deur naar nieuwe mogelijkheden,
+                    onverwachte kansen, en magische ervaringen. Het is de sleutel tot een
+                    vervuld en betekenisvol leven.
                   </p>
                   <div className="mt-6 p-4 bg-purple-600 bg-opacity-20 rounded-2xl border border-purple-400 border-opacity-30">
                     <Button
@@ -94,30 +94,6 @@ const WeesZot = () => {
                     >
                       💡 Wil je weten van waar je enthousiasme komt?
                     </Button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Intuïtie Section */}
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 md:p-12">
-                <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-                  Vertrouw je Intuïtie
-                </h2>
-                <div className="space-y-4 text-white text-lg md:text-xl">
-                  <p>
-                    Je intuïtie is slimmer dan je denkt. Het is de stem van je onderbewustzijn,
-                    de som van al je ervaringen, je diepste wijsheid. Luister ernaar.
-                  </p>
-                  <p>
-                    Soms weet je iets zonder te weten hoe je het weet. Dat is geen toeval.
-                    Dat is je intuïtie die je een seintje geeft. De uitdaging is om te leren
-                    onderscheid te maken tussen angst en ware intuïtie.
-                  </p>
-                  <div className="mt-6 p-4 bg-pink-600 bg-opacity-20 rounded-2xl border border-pink-400 border-opacity-30">
-                    <p className="text-sm text-pink-200 mb-2">🔮 Je intuïtie heeft oneindig veel potentieel</p>
-                    <Link to="/openjegeest" className="text-pink-300 hover:text-pink-100 underline font-bold transition-colors duration-300">
-                      Ontdek hoe je je geest kunt openblazen →
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -157,7 +133,7 @@ const WeesZot = () => {
                 </p>
                 <div className="inline-block">
                   <p className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
-                    DOE HET NU!
+                    Volg je enthousiasme!
                   </p>
                 </div>
               </div>
