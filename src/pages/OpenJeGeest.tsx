@@ -213,12 +213,18 @@ const OpenJeGeest = () => {
       </div>
        <Dialog open={showDialog} onOpenChange={setShowDialog}>
         <DialogContent className="max-w-3xl bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+
           {selectedIdea && (
             <>
               <DialogHeader>
                 <DialogTitle className="text-3xl font-black text-yellow-300">
                   {selectedIdea.title}
                 </DialogTitle>
+
+                {/* ✔ VERPLICHTE DESCRIPTION (onzichtbaar) */}
+                <DialogDescription className="sr-only">
+                  {selectedIdea.desc ?? ""}
+                </DialogDescription>
               </DialogHeader>
 
               {/* Lange tekst secties */}
@@ -249,9 +255,7 @@ const OpenJeGeest = () => {
               {/* Sluitknop */}
               <div className="text-center mt-8">
                 <Button
-                  onClick={() => {
-                    setShowDialog(false);
-                  }}
+                  onClick={() => setShowDialog(false)}
                   className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg"
                 >
                   Sluiten
@@ -261,6 +265,7 @@ const OpenJeGeest = () => {
           )}
         </DialogContent>
       </Dialog>
+
 
     </>
   );
