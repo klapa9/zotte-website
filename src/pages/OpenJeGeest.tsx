@@ -150,7 +150,7 @@ const OpenJeGeest = () => {
               {ideas.map((idea, index) => (
                 <div
                   key={index}
-                  className="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-3 transition-all duration-500"
+                  className="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-3 transition-all duration-500 cursor-pointer"
                   onClick={() => {
                     handleSelect(index);
                   }}
