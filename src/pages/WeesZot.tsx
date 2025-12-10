@@ -192,8 +192,7 @@ const WeesZot = () => {
               <p className="mb-4">
                 Je ziel communiceert met jou via gevoelens.
 
-                Enthousiasme is een signaal dat je op het juiste pad zit,
-                terwijl angst aangeeft dat je afwijkt van je ware zelf.
+                Enthousiasme is een signaal dat je op het juiste pad zit.
                 
               </p>
 
