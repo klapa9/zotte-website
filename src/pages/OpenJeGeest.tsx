@@ -154,6 +154,7 @@ const OpenJeGeest = () => {
                   onClick={() => {
                     handleSelect(index);
                     setShowDialog(true);
+                    console.log("Selected idea:", idea);
                   }}
                 >
                   <h3 className="text-2xl font-black text-yellow-400 mb-3">
