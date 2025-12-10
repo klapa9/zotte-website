@@ -151,7 +151,7 @@ const Energie = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-yellow-600 to-blue-400 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 cursor-pointer active:scale-95">
+            <div className="bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 cursor-pointer active:scale-95">
               <h2 className="text-4xl md:text-5xl font-black text-purple-400 mb-6">
                 Je geloof bepaalt je limieten.
               </h2>
