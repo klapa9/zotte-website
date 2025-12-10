@@ -198,7 +198,7 @@ const Energie = () => {
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              De Wet van Eénheid
+              Energie
             </DialogTitle>
           </DialogHeader>
           <div className="space-y-6 text-lg">
