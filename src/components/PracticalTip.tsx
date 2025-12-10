@@ -13,28 +13,31 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
           content: (
             <>
               <p className="hover:text-orange-200 transition-colors duration-300 cursor-pointer">
-                <strong>Begin klein, maar begin nu.</strong> Je hoeft geen hele bitcoin te kopen.
+                <strong>Start met een klein beetje.</strong> Je hoeft geen hele bitcoin te kopen.
+                1 bitcoin is 100 miljoen sats (satoshis) - de kleinste eenheid.
                 Begin met een paar euro aan sats - het gaat om het principe en de gewenning.
               </p>
               <p className="hover:text-orange-200 transition-colors duration-300 cursor-pointer">
-                <strong>Automatiseer je accumulation.</strong> Zet een DCA (Dollar Cost Averaging) op
-                voor elke week of maand. Consistentie wint altijd van timing.
+                <strong>Automatiseer je spaarboekje.</strong> Koop elke week of maand automatisch een vast bedrag aan sats.
+                Ik raad deze dienst aan: <a
+                  href="https://strike.me/"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="underline font-bold"
+                >Strike</a>
               </p>
               <p className="hover:text-orange-200 transition-colors duration-300 cursor-pointer">
-                <strong>Gebruik een hardware wallet.</strong> Not your keys, not your bitcoin.
-                Een Ledger of Trezor kost een paar tientjes maar beschermt je tegen de meeste risico's.
+                <strong>Heb je veel sats: gebruik een hardware wallet.</strong>
+                Een Ledger of Trezor hardware wallet kost minder dan 100€ en beschermt je tegen de meeste risico's.
+                Leer dit eerst goed kennen voordat je grote bedragen erop zet.
               </p>
               <p className="hover:text-orange-200 transition-colors duration-300 cursor-pointer">
-                <strong>Leer de basis van Lightning Network.</strong> Voor kleine dagelijkse transacties
-                is Lightning perfect - lage fees en instant payments.
-              </p>
-              <p className="hover:text-orange-200 transition-colors duration-300 cursor-pointer">
-                <strong>Vergeet de prijs.</strong> Focus op accumulation, niet op de huidige koers.
-                Over 5-10 jaar maakt het niet uit of je op $30k of $60k begon.
+                <strong>Vergeet de prijs.</strong> Focus op de lange termijn, niet op de huidige koers.
+                Over 5-10 jaar maakt het niet uit of je op $200k of $100k begon.
               </p>
             </>
           ),
-          link: { to: "/weeszot", text: "Gebruik Bitcoin om financieel vrij te worden →", color: "orange" }
+          link: { to: "/leven", text: "Geld is een middel, geen doel →", color: "orange" }
         };
 
       case 'weeszot':
@@ -64,7 +67,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
               </p>
             </>
           ),
-          link: { to: "/energie", text: "Gebruik energie om angst te overwinnen →", color: "yellow" }
+          link: { to: "/geld", text: "Geld is een hulpmiddel  →", color: "yellow" }
         };
 
       case 'leven':
@@ -89,7 +92,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
               </p>
             </>
           ),
-          link: { to: "/energie", text: "Gebruik bewuste keuze om je energie te richten →", color: "cyan" }
+          link: { to: "/ziekzot", text: "Je hoeft niet ziek te zijn in je leven. →", color: "cyan" }
         };
 
       case 'energie':
@@ -117,7 +120,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
               </p>
             </>
           ),
-          link: { to: "/weeszot", text: "Volg je enthousiasme →", color: "green" }
+          link: { to: "/weeszot", text: "Wat doe je met je energie? →", color: "green" }
         };
 
       case 'ziekzot':

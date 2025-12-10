@@ -55,7 +55,7 @@ const Geld = () => {
                 BITCOIN
               </h1>
               <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
-                IS DE OPLOSSING
+                Magisch internetgeld
               </h2>
             </div>
             <p className="text-xl md:text-2xl text-white font-bold opacity-90">
@@ -98,21 +98,21 @@ const Geld = () => {
                     <ul className="space-y-2">
                       <li>• Decentralized protocol</li>
                       <li>• Echte scheiding van staat en geld</li>
-                      <li>• Proof-of-Work: energie verspild is veiligheid</li>
+                      <li>• Proof-of-Work: gebruikte energie is veiligheid</li>
                       <li>• Fixed supply: 21 miljoen</li>
-                      <li>• No CEO, no company, no marketing team</li>
+                      <li>• Geen CEO, bedrijf of marketing team.</li>
                       <li>• 15+ jaar bewezen</li>
                     </ul>
                   </div>
                   <div>
                     <h3 className="text-2xl font-black text-yellow-300 mb-4">CRYPTO</h3>
                     <ul className="space-y-2">
-                      <li>• Centralized companies</li>
+                      <li>• Bedrijven</li>
                       <li>• Pre-mined, VC funded</li>
-                      <li>• Tokens, not money</li>
-                      <li>• CEOs die kunnen worden aangeklaagd</li>
-                      <li>• Infinite supply possible</li>
-                      <li>• Rebranding en scams</li>
+                      <li>• Tokens, geen geld</li>
+                      <li>• CEOs die het kunnen stoppen</li>
+                      <li>• oneindige voorraad mogelijk</li>
+                      <li>• scams</li>
                     </ul>
                   </div>
                 </div>
@@ -126,7 +126,7 @@ const Geld = () => {
                 <div className="space-y-4 text-white text-lg md:text-xl">
                   <p>
                     Bitcoin beschermt jouw koopkracht omdat niemand zomaar meer kan bijmaken.
-                    De 21 miljoen supply is hardcoded in het protocol - geen overheid of centrale bank kan dit veranderen.
+                    De 21 miljoen voorraad is hardcoded in het protocol - niemand kan dit veranderen.
                   </p>
                   <p>
                     Dit is fundamenteel anders dan fiat valuta die continu worden gedevalueerd.
@@ -163,8 +163,8 @@ const Geld = () => {
                     <li>• Financiële inclusie voor miljarden mensen</li>
                   </ul>
                   <p>
-                    Bitcoin creëert een <span className="text-yellow-400 font-black">level playing field</span> 
-                    waar de where je wordt geboren niet langer je financiële toekomst bepaalt.
+                    Bitcoin creëert een eerlijk speelveld, 
+                    waar de locatie waar je wordt geboren niet langer je financiële toekomst bepaalt.
                   </p>
                 </div>
               </div>
@@ -186,29 +186,16 @@ const Geld = () => {
                   </p>
                   <div className="mt-8 space-y-4">
                     <p className="text-xl md:text-2xl text-white">
-                      Vergeet de prijs, focus op de accumulation
+                      Vergeet de prijs, focus op de lange termijn.
                     </p>
                     <p className="text-lg md:text-xl text-white opacity-90">
-                      Elke satoshi is een stukje financiële vrijheid
+                      Spaar voor je financiële vrijheid.
                     </p>
                     <div className="text-2xl md:text-3xl font-black text-white">
-                      ₿1 = 100.000.000 sats
+                      1 bitcoin = 100.000.000 sats
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Final Message */}
-              <div className="text-center py-12">
-                <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-                  DE TOEKOMST IS ORANGE
-                </h2>
-                <p className="text-xl md:text-2xl text-orange-400 font-bold mb-4">
-                  Bitcoin is niet alleen technologie - het is revolutie
-                </p>
-                <p className="text-lg md:text-xl text-white">
-                  Neem de rode pil, stack sats, en word vrij
-                </p>
               </div>
             </div>
           </div>
