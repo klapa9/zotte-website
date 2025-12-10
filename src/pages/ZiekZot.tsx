@@ -26,7 +26,7 @@ const ZiekZot = () => {
   return (
     <>
       <CursorStyles />
-      <AudioPlayer pageType="ziekzot" audioFile="/De_natuur_geneest.mp3" />
+      <AudioPlayer pageType="ziekzot" />
       <div className="min-h-screen bg-gradient-to-br from-red-900 via-pink-800 to-purple-900 overflow-hidden relative">
       {/* Distorted background elements */}
       <div className="absolute inset-0">

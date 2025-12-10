@@ -25,7 +25,8 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
       case 'openjegeest': return '/Open_Je_Geest_1.mp3';
       case 'leven': return '/Leven.mp3';
       case 'weeszot': return '/Wees_Zot.mp3';
-      case 'geld': return '/De_natuur_geneest.mp3';
+      case 'geld': return '/btc.mp3';
+      case 'ziekzot': return '/De_natuur_geneest.mp3';
       default: return '/startpagina2.mp3';
     }
   };
