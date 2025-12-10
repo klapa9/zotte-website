@@ -14,7 +14,7 @@ const Energie = () => {
 
   useSeoMeta({
     title: 'ENERGIE - De Kracht van het Leven',
-    description: 'Ontdek de verschillende vormen van energie: ECHT, NIENORMAAL, Helemaal, Rekbaar, Groeibaar, Immens, EPIC.',
+    description: 'Ontdek de verschillende vormen van energie.',
   });
 
   useEffect(() => {
