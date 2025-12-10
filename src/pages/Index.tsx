@@ -186,7 +186,7 @@ const Index = () => {
                   <Link
                     key={section.title}
                     to={section.route}
-                    className={`block group transform transition-all duration-700 cursor-pointer${
+                    className={`block group transform transition-all duration-700 cursor-pointer ${
                       activeSection === index + 2 ? 'scale-105' : ''
                     }`}
                   >
