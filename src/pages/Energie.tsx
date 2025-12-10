@@ -151,29 +151,49 @@ const Energie = () => {
               </div>
             </div>
 
+            <div className="bg-white bg-opacity-5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-purple-400 border-opacity-30">
+              <h2 className="text-4xl md:text-5xl font-black text-purple-400 mb-6">
+                Je geloof bepaalt je limieten.
+              </h2>
+              <div className="space-y-4 text-white text-lg md:text-xl">
+                <p>
+                  Alles waar jij in gelooft, zorgt voor jouw werkelijkheid. Als jij gelooft dat iets onmogelijk is,
+                  dan zal je manieren vinden om dat te bevestigen.
+                </p>
+                <p>
+                  Als je gelooft dat je onbegrensde energie hebt, dan zal je manieren vinden om dat te ervaren.
+                  Jouw overtuigingen bepalen jouw energieniveau.
+                </p>
+                <p>
+                  Eerst moet je beseffen dat jouw energie grenzeloos is.
+                  Dan moet je handelen vanuit die overtuiging.
+                </p>
+              </div>
+            </div>
+
             <PracticalTip pageType="energie" />
 
             {/* Energy Flow */}
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-black bg-opacity-30 backdrop-blur-md rounded-3xl p-8 border border-teal-400 border-opacity-30">
                 <h3 className="text-3xl font-black text-teal-400 mb-4">
-                  Energie Stroomt
+                  Angst Blokkeert Energie
                 </h3>
                 <p className="text-white text-lg">
-                  Energie is nooit statisch. Het beweegt, het stroomt, het transformeert.
-                  Vandaag ben je vol van de ene energie, morgen van een andere.
-                  En dat is oké. Dat is het leven.
+                  Angst is de grootste energievreter. Het blokkeert de natuurlijke stroom van energie in ons lichaam.
+                  Wanneer we bang zijn, sluiten we ons af van onze kracht.
+                  Door angst los te laten, bevrijden we onze energie.
                 </p>
               </div>
 
               <div className="bg-black bg-opacity-30 backdrop-blur-md rounded-3xl p-8 border border-blue-400 border-opacity-30">
                 <h3 className="text-3xl font-black text-blue-400 mb-4">
-                  Energie Verbindt
+                  Liefde Vermenigvuldigt Energie
                 </h3>
                 <p className="text-white text-lg">
-                  Wanneer je jouw energie deelt met anderen, gebeurt er magie.
-                  Energie vermenigvuldigt zichzelf. Het creëert iets groters dan de som der delen.
-                  Dat is de kracht van gemeenschap.
+                  Wanneer je handelt vanuit liefde, stroomt je energie vrijelijk.
+                  Liefde opent je hart en geest, waardoor je meer energie aantrekt.
+                  Het is de ultieme krachtbron die ons verbindt met alles om ons heen.
                 </p>
               </div>
             </div>
