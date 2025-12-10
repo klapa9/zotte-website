@@ -5,11 +5,20 @@ import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
 import AudioPlayer from '@/components/AudioPlayer';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { ideas } from "../data/ideas";
 
 const OpenJeGeest = () => {
   const [explosion, setExplosion] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [activeWord, setActiveWord] = useState(0);
+  const [selectedIdea, setSelectedIdea] = useState(null);
+  const [showDialog, setShowDialog] = useState(false);
 
+  const handleSelect = (index: number) => {
+    setSelectedIdea(index);
+  };
   useSeoMeta({
     title: 'Open Je Geest - Blaas je Oude Ideëen Op',
     description: 'Alles is veel zotter dan je denkt! Ontdek hoe een open geest je oude ideëen kan opblazen.',
@@ -138,17 +147,14 @@ const OpenJeGeest = () => {
 
             {/* Examples of Mind-Blowing Ideas */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { title: "Tijd is een illusie", desc: "Verleden, heden en toekomst bestaan allemaal tegelijk" },
-                { title: "Je bent het universum", desc: "Je bewustzijn is een fragment van het grotere geheel" },
-                { title: "Realiteit is een projectie", desc: "De wereld om je heen wordt gecreëerd door je perceptie" },
-                { title: "Alles is verbonden", desc: "Elke deeltje beïnvloedt elk ander deeltje in het universum" },
-                { title: "Oneindige mogelijkheden", desc: "Er zijn oneindig veel parallelle werelden" },
-                { title: "Bewustzijn is fundamenteel", desc: "Bewustzijn komt niet uit de hersenen, maar andersom" }
-              ].map((idea, index) => (
+              {ideas.map((idea, index) => (
                 <div
                   key={index}
                   className="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-3 transition-all duration-500"
+                  onClick={() => {
+                    handleSelect(index);
+                    setShowDialog(true);
+                  }}
                 >
                   <h3 className="text-2xl font-black text-yellow-400 mb-3">
                     {idea.title}
@@ -205,6 +211,57 @@ const OpenJeGeest = () => {
         }
       `}</style>
       </div>
+       <Dialog open={showDialog} onOpenChange={setShowDialog}>
+        <DialogContent className="max-w-3xl bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+          {selectedIdea && (
+            <>
+              <DialogHeader>
+                <DialogTitle className="text-3xl font-black text-yellow-300">
+                  {selectedIdea.title}
+                </DialogTitle>
+              </DialogHeader>
+
+              {/* Lange tekst secties */}
+              {selectedIdea.longText?.map((paragraph, i) => (
+                <p key={i} className="mt-4 text-lg leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+
+              {/* Afbeelding */}
+              {selectedIdea.image && (
+                <img
+                  src={selectedIdea.image}
+                  alt={selectedIdea.title}
+                  className="mt-6 rounded-xl shadow-xl"
+                />
+              )}
+
+              {/* Bullet points */}
+              {selectedIdea.bullets && (
+                <ul className="mt-6 list-disc pl-6 space-y-2 text-white/90">
+                  {selectedIdea.bullets.map((b, i) => (
+                    <li key={i}>{b}</li>
+                  ))}
+                </ul>
+              )}
+
+              {/* Sluitknop */}
+              <div className="text-center mt-8">
+                <Button
+                  onClick={() => {
+                    setShowDialog(false);
+                  }}
+                  className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg"
+                >
+                  Sluiten
+                </Button>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
+
     </>
   );
 };
