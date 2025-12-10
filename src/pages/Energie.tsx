@@ -5,9 +5,12 @@ import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
 import AudioPlayer from '@/components/AudioPlayer';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
 
 const Energie = () => {
   const [activeWord, setActiveWord] = useState(0);
+  const [showDialog, setShowDialog] = useState(false);
 
   useSeoMeta({
     title: 'ENERGIE - De Kracht van het Leven',
@@ -24,8 +27,6 @@ const Energie = () => {
   const energyWords = [
     { word: "Elektriciteit", description: "De stroom die ons zenuwstelsel aandrijft", color: "from-yellow-400 to-blue-600" },
     { word: "Hartslag", description: "De biologische generator van ons bestaan", color: "from-red-400 to-pink-600" },
-    { word: "Efficiëntie", description: "Hoe slim ons lichaam energie gebruikt", color: "from-cyan-400 to-teal-600" },
-    { word: "Metabolisme", description: "De verbranding die ons in leven houdt", color: "from-green-400 to-emerald-600" },
     { word: "Ademhaling", description: "De constante energie-uitwisseling", color: "from-purple-400 to-indigo-600" },
     { word: "Celkracht", description: "De fundamentele energiebron van leven", color: "from-orange-400 to-amber-600" },
     { word: "Levenskracht", description: "De allesomvattende kracht van bestaan", color: "from-pink-400 to-rose-600" }
@@ -87,15 +88,12 @@ const Energie = () => {
             <div className="text-center mb-20">
               <div className="inline-block">
                 <h2 className={`text-6xl md:text-8xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-r ${energyWords[activeWord].color} transition-all duration-1000 hover:scale-105 cursor-pointer transition-transform duration-300`}
-                    onClick={() => window.open('https://nl.wikipedia.org/wiki/Menselijk_lichaam', '_blank')}
+                    onClick={() => window.open('https://zottewebsite.be/ziekzot', '_blank')}
                 >
                   {energyWords[activeWord].word}
                 </h2>
                 <p className="text-xl md:text-2xl text-white opacity-90">
                   {energyWords[activeWord].description}
-                </p>
-                <p className="text-sm text-gray-300 mt-2">
-                  👆 Klik voor meer informatie over het menselijk lichaam
                 </p>
               </div>
             </div>
@@ -107,7 +105,7 @@ const Energie = () => {
                   key={index}
                   className={`bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-3 transition-all duration-500 cursor-pointer ${index === activeWord ? 'ring-4 ring-white ring-opacity-50' : ''}`}
                   onMouseEnter={() => setActiveWord(index)}
-                  onClick={() => window.open('https://nl.wikipedia.org/wiki/Menselijk_lichaam', '_blank')}
+                  onClick={() => setShowDialog(true)}
                 >
                   <h3 className={`text-3xl md:text-4xl font-black mb-3 text-transparent bg-clip-text bg-gradient-to-r ${energy.color}`}>
                     {energy.word}
@@ -195,6 +193,91 @@ const Energie = () => {
         }
       `}</style>
       </div>
+      {/* Law of One Dialog */}
+      <Dialog open={showDialog} onOpenChange={setShowDialog}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
+          <DialogHeader>
+            <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
+              De Wet van Eénheid
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-6 text-lg">
+            {/* Introductie */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">Energie</h3>
+              <p>
+                Energie is de fundamentele bouwsteen van het universum. Het manifesteert zich
+                in verschillende vormen zoals materie, licht, warmte, en elektromagnetisme.
+                Alles wat bestaat is een vorm van energie in verschillende trillingstoestanden.
+                
+              </p>
+            </div>
+
+            {/* Polariteit */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-blue-300 mb-3">Polariteit</h3>
+              <p className="mb-4">
+                Alles in het universum is één bewustzijn. Om zichzelf te ervaren,
+                splitst dit bewustzijn zich op in polariteiten zoals licht en donker,
+                goed en kwaad, mannelijk en vrouwelijk. Deze dualiteit is essentieel.
+              </p>
+
+              <div className="mb-4 pl-4 border-l-4 border-teal-400">
+                <h4 className="text-xl font-bold text-teal-300 mb-2">Energie balans: (STO)</h4>
+                <p className="mb-2">
+                  Er is een positieve groeiende energie en een negatieve krimpende energie.
+                  Er is altijd een balans tussen deze twee krachten.
+                </p>
+                <p className="mb-2">
+                  Positieve energie brengt expansie, creatie, en verbinding.
+                  Negatieve energie brengt introspectie, loslaten, en transformatie.
+                </p>
+                <p>
+                  Door bewust te kiezen welke energie je voedt, kun je je ervaring
+                  van het leven vormgeven.
+                </p>
+                
+              </div>
+
+             
+            </div>
+
+            {/* Geen Goed of Fout */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">Geen Goed of Fout</h3>
+              <p>
+                positieve en negatieve energie zijn beide noodzakelijk voor balans.
+                Er is geen inherent goed of fout in energie; het is de intentie en het
+                bewustzijn erachter dat betekenis geeft.
+                Beide polariteiten zijn aspecten van hetzelfde geheel.
+              </p>
+            </div>
+
+            {/* Liefde */}
+            <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-white mb-3">Liefde is de grotere stroming.</h3>
+              <p className="mb-3">
+                Als je mee met de stroom van liefde gaat, krijg je energie.
+                Je ervaart expansie, vreugde, en verbinding. Je groeit en evolueert.
+              </p>
+              <p className="mb-3">
+                Als je tegen de stroom in gaat, kost het je energie.
+                Je ervaart weerstand, frustratie, en isolatie. Je krimpt en stagneert.
+              </p>
+            </div>
+
+            {/* Sluit knop */}
+            <div className="text-center pt-4">
+              <Button
+                onClick={() => setShowDialog(false)}
+                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Sluiten
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
