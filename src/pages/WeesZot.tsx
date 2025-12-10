@@ -121,22 +121,22 @@ const WeesZot = () => {
               {/* Dieper Gaan Section */}
               <div className="bg-black bg-opacity-30 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20 transform hover:-rotate-1 hover:scale-105 transition-all duration-500 cursor-pointer active:scale-95">
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
-                  Ga Dieper in op wat je Enthousiasmeert
+                  Laat verwachtingen los en vertrouw het leven.
                 </h2>
                 <div className="space-y-4 text-white text-lg md:text-xl">
                   <p className="hover:text-indigo-200 transition-colors duration-300 cursor-pointer">
-                    Oppervlakkigheid is de vijand van groei. Wanneer iets je raakt,
-                    duik erin. Onderzoek het. Begrijp het. Word er een expert in.
+                    Vertrouw dat het universum je altijd ondersteunt.
+                    Wanneer je loslaat wat je denkt nodig te hebben,
+                    maak je ruimte voor iets beters.
                   </p>
                   <p className="hover:text-purple-200 transition-colors duration-300 cursor-pointer">
-                    De wereld heeft genoeg mensen die een beetje van alles weten.
-                    Wat we nodig hebben zijn mensen die diep durven te gaan.
-                    Mensen die hun onderwerp van binnen en buiten kennen.
+                    Je enthousiasme en intuïtie zijn de perfecte gidsen.
+                    Ze leiden je naar onverwachte kansen en magische ervaringen.
                   </p>
                   <p className="hover:text-pink-200 transition-colors duration-300 cursor-pointer">
-                    Diepgaande kennis leidt tot diepgaande inzichten.
-                    Diepgaande inzichten leiden tot doorbraken.
-                    Doorbraken veranderen de wereld.
+                    Geloof in jezelf en in het proces.
+                    Durf gek te zijn, zonder angst of verwachtingen.
+                    Geef je over aan het avontuur van het leven.
                   </p>
                 </div>
               </div>
