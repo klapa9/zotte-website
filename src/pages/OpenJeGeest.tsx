@@ -5,7 +5,7 @@ import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
 import AudioPlayer from '@/components/AudioPlayer';
-import { Dialog, DialogContent, DialogHeader, DialogTitle,DialogDescription } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { ideas } from "../data/ideas";
 
