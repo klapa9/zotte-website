@@ -133,23 +133,17 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
                 wanneer je het de juiste omstandigheden geeft. De natuur biedt alles wat je nodig hebt.
               </p>
               <p className="hover:text-red-200 transition-colors duration-300 cursor-pointer">
-                <strong>Onze natuurlijke staat is geen voeding, water of slaap.</strong>
-                Wie ooit heeft gelezen dat dieren in het wild tellen hoeveel calorieën ze eten,
-                hoeveel glazen water ze drinken, of hoeveel uur ze slapen?
+                <strong>Onze natuurlijke staat van zijn is zonder voeding in ons lichaam.</strong> 
+                Ons lichaam is perfect ontworpen om periodes zonder voeding te overleven en zelfs te floreren.
               </p>
               <p className="hover:text-red-200 transition-colors duration-300 cursor-pointer">
-                <strong>Vasten is onze natuurlijke staat van zijn.</strong> Vroeger aten we niet elke dag,
-                en ons lichaam is perfect ontworpen om periodes zonder voeding te overleven en zelfs te floreren.
+                Heb je het te lastig om te vasten? Begin klein. Probeer eerst 12 uur, dan 16 uur.
+                Bouw het langzaam op. Luister naar je lichaam, maar daag het ook uit.
               </p>
               <p className="hover:text-red-200 transition-colors duration-300 cursor-pointer">
-                <strong>De voordelen van vasten zijn enorm:</strong> celvernieuwing (autophagy),
-                verbeterde insulinegevoeligheid, mentale helderheid, meer energie, en zelfs langere levensduur.
-                Start met 16:8 intermittent fasting en voel hoe je lichaam tot leven komt.
-              </p>
-              <p className="hover:text-red-200 transition-colors duration-300 cursor-pointer">
-                Vertrouw op je lichaam en de natuur. Ze weten wat goed voor je is.
-                Luister naar je hongersignalen, eet wanneer je echt honger hebt, en
-                geef je spijsvertering rust om te herstellen.
+                <strong>Je gedachten beïnvloeden je genezing.</strong> Negatieve gedachten en emoties
+                creëren stress, wat je energie ondermijnt. Cultiveer positieve gedachten,
+                dankbaarheid, en liefde om je te ondersteunen.
               </p>
             </>
           ),
