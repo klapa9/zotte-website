@@ -126,31 +126,6 @@ const Geld = () => {
                 </div>
               </div>
 
-              {/* Koopkracht Behouden */}
-              <div className="bg-white bg-opacity-5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-yellow-400 border-opacity-30">
-                <h2 className="text-4xl md:text-5xl font-black text-yellow-400 mb-6">
-                  JE KOOPKRACHT BESCHERMEN
-                </h2>
-                <div className="space-y-4 text-white text-lg md:text-xl">
-                  <p>
-                    Bitcoin beschermt jouw koopkracht omdat niemand zomaar meer kan bijmaken.
-                    De 21 miljoen voorraad is hardcoded in het protocol - niemand kan dit veranderen.
-                  </p>
-                  <p>
-                    Dit is fundamenteel anders dan fiat valuta die continu worden gedevalueerd.
-                    Terwijl de euro en dollar verliezen aan waarde, behoudt Bitcoin zijn schaarste.
-                  </p>
-                  <div className="mt-6">
-                    <Button
-                      onClick={() => setShowDialog(true)}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                    >
-                      ✨ Er is een keuze!
-                    </Button>
-                  </div>
-                </div>
-              </div>
-
               {/* Globale Samenwerking */}
               <div className="bg-gradient-to-r from-yellow-600 to-amber-600 rounded-3xl p-8 md:p-12">
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
@@ -174,6 +149,31 @@ const Geld = () => {
                     Bitcoin creëert een eerlijk speelveld, 
                     waar de locatie waar je wordt geboren niet langer je financiële toekomst bepaalt.
                   </p>
+                </div>
+              </div>
+
+              {/* Koopkracht Behouden */}
+              <div className="bg-white bg-opacity-5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-yellow-400 border-opacity-30">
+                <h2 className="text-4xl md:text-5xl font-black text-yellow-400 mb-6">
+                  JE KOOPKRACHT BESCHERMEN
+                </h2>
+                <div className="space-y-4 text-white text-lg md:text-xl">
+                  <p>
+                    Bitcoin beschermt jouw koopkracht omdat niemand zomaar meer kan bijmaken.
+                    De 21 miljoen voorraad is hardcoded in het protocol - niemand kan dit veranderen.
+                  </p>
+                  <p>
+                    Dit is fundamenteel anders dan fiat valuta die continu worden gedevalueerd.
+                    Terwijl de euro en dollar verliezen aan waarde, behoudt Bitcoin zijn schaarste.
+                  </p>
+                  <div className="mt-6">
+                    <Button
+                      onClick={() => setShowDialog(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      ✨ Er is een keuze!
+                    </Button>
+                  </div>
                 </div>
               </div>
 
