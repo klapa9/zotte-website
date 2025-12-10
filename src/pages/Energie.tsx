@@ -19,7 +19,7 @@ const Energie = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveWord((prev) => (prev + 1) % 7);
+      setActiveWord((prev) => (prev + 1) % energyWords.length);
     }, 2000);
     return () => clearInterval(interval);
   }, []);
