@@ -33,7 +33,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
               </p>
               <p className="hover:text-orange-200 transition-colors duration-300 cursor-pointer">
                 <strong>Vergeet de prijs.</strong> Focus op de lange termijn, niet op de huidige koers.
-                Over 5-10 jaar maakt het niet uit of je op $200k of $100k begon.
+                Over 5-10 jaar maakt het niet uit of je 2000 of 1000 satoshis kocht per euro.
               </p>
             </>
           ),
