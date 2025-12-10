@@ -5,7 +5,7 @@ import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
 import AudioPlayer from '@/components/AudioPlayer';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { ideas } from "../data/ideas";
 
@@ -211,59 +211,67 @@ const OpenJeGeest = () => {
       `}</style>
       </div>
        <Dialog open={selectedIdea !== null} onOpenChange={() => setSelectedIdea(null)}>
-        <DialogContent className="max-w-3xl bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+        {selectedIdea !== null && (
+          <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-slate-900 to-slate-800 text-white border-2 border-yellow-400">
+            
+            {/* Header */}
+            <DialogHeader>
+              <DialogTitle className="text-3xl md:text-4xl font-black text-yellow-300 mb-4">
+                {ideas[selectedIdea].title}
+              </DialogTitle>
 
-          {selectedIdea !== null && (
-            <>
-              <DialogHeader>
-                <DialogTitle className="text-3xl font-black text-yellow-300">
-                  {selectedIdea.title}
-                </DialogTitle>
+              {/* Beschrijving (visueel verborgen, toegankelijk) */}
+              <DialogDescription className="sr-only">
+                {ideas[selectedIdea].desc ?? ""}
+              </DialogDescription>
+            </DialogHeader>
 
-                {/* ✔ VERPLICHTE DESCRIPTION (onzichtbaar) */}
-                <DialogDescription className="sr-only">
-                  {selectedIdea.desc ?? ""}
-                </DialogDescription>
-              </DialogHeader>
-
+            {/* Content */}
+            <div className="space-y-6 text-lg">
               {/* Lange tekst secties */}
-              {selectedIdea.longText?.map((paragraph, i) => (
-                <p key={i} className="mt-4 text-lg leading-relaxed">
-                  {paragraph}
-                </p>
+              {ideas[selectedIdea].longText?.map((paragraph, i) => (
+                <div
+                  key={i}
+                  className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400 border-opacity-30"
+                >
+                  <p>{paragraph}</p>
+                </div>
               ))}
 
               {/* Afbeelding */}
-              {selectedIdea.image && (
-                <img
-                  src={selectedIdea.image}
-                  alt={selectedIdea.title}
-                  className="mt-6 rounded-xl shadow-xl"
-                />
+              {ideas[selectedIdea].image && (
+                <div className="mt-6 flex justify-center">
+                  <img
+                    src={ideas[selectedIdea].image}
+                    alt={ideas[selectedIdea].title}
+                    className="rounded-xl shadow-xl"
+                  />
+                </div>
               )}
 
               {/* Bullet points */}
-              {selectedIdea.bullets && (
-                <ul className="mt-6 list-disc pl-6 space-y-2 text-white/90">
-                  {selectedIdea.bullets.map((b, i) => (
+              {ideas[selectedIdea].bullets && (
+                <ul className="list-disc list-inside space-y-2 text-white/90">
+                  {ideas[selectedIdea].bullets.map((b, i) => (
                     <li key={i}>{b}</li>
                   ))}
                 </ul>
               )}
 
               {/* Sluitknop */}
-              <div className="text-center mt-8">
+              <div className="text-center pt-4">
                 <Button
-                  onClick={() => setShowDialog(false)}
-                  className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg"
+                  onClick={() => setSelectedIdea(null)}
+                  className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
                 >
                   Sluiten
                 </Button>
               </div>
-            </>
-          )}
-        </DialogContent>
+            </div>
+          </DialogContent>
+        )}
       </Dialog>
+
 
 
     </>
