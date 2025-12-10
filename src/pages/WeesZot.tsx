@@ -6,6 +6,7 @@ import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
 import AudioPlayer from '@/components/AudioPlayer';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 
 const WeesZot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
