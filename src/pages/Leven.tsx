@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 
 const Leven = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [showLawOfOneDialog, setShowLawOfOneDialog] = useState(false);
 
   useSeoMeta({
     title: 'L E V E N ? - De Grote Vragen',
@@ -24,6 +25,7 @@ const Leven = () => {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+
 
   return (
     <>
