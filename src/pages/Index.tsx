@@ -82,7 +82,7 @@ const Index = () => {
     },
     {
       title: "ZIEK ZOT",
-      subtitle: "Spel met de grenzen",
+      subtitle: "Genees jezelf",
       description: "Ziek zijn is zot! Beter om gewoon niet zot ziek te zijn.",
       route: "/ziekzot",
       gradient: "from-red-600 to-pink-600",
