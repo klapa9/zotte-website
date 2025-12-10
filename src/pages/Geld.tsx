@@ -5,9 +5,12 @@ import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
 import AudioPlayer from '@/components/AudioPlayer';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
 
 const Geld = () => {
   const [isGlitching, setIsGlitching] = useState(false);
+  const [showDialog, setShowDialog] = useState(false);
 
   useSeoMeta({
     title: 'Geld - Bitcoin is de Oplossing',
@@ -137,6 +140,14 @@ const Geld = () => {
                     Dit is fundamenteel anders dan fiat valuta die continu worden gedevalueerd.
                     Terwijl de euro en dollar verliezen aan waarde, behoudt Bitcoin zijn schaarste.
                   </p>
+                  <div className="mt-6">
+                    <Button
+                      onClick={() => setShowDialog(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      ✨ Er is een keuze!
+                    </Button>
+                  </div>
                 </div>
               </div>
 
@@ -226,6 +237,78 @@ const Geld = () => {
           }
         `}</style>
       </div>
+      <Dialog open={showDialog} onOpenChange={setShowDialog}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
+          <DialogHeader>
+            <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
+              Hyperbitcoinisatie
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-6 text-lg">
+            {/* Introductie */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">Wat als iedereen enkel Bitcoin gebruikt?</h3>
+              <p>
+                Als Bitcoin het pad van het internet volgt, zal het de dominante vorm van geld worden.
+                Dit proces wordt hyperbitcoinisatie genoemd. Het betekent dat traditionele valuta's
+                hun waarde verliezen ten opzichte van Bitcoin, omdat steeds meer mensen en bedrijven
+                Bitcoin als hun primaire geldsysteem adopteren.
+              </p>
+            </div>
+
+            {/* De Twee Paden */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-blue-300 mb-3">Scheiding van staat en geld.</h3>
+              <p className="mb-4">
+                Net als de scheiding van kerk en staat, zal de scheiding van staat en geld leiden tot een vrijere samenleving.
+                Overheden zullen niet langer controle hebben over geldstromen, wat hun macht aanzienlijk zal verminderen.
+                Dit zal leiden tot meer individuele vrijheid, minder corruptie en een eerlijker economisch systeem.
+              </p>
+
+              {/* Scheiding van staat en geld */}
+              <div className="mb-4 pl-4 border-l-4 border-teal-400">
+                <h4 className="text-xl font-bold text-teal-300 mb-2">Gevolgen?</h4>
+                <p className="mb-2">
+                  Oorlog zal veel moeilijker zijn in een wereld waar iedereen Bitcoin gebruikt.
+                  Zonder controle over geld kunnen overheden hun militaire macht niet langer financieren.
+                  Dit zal de drang naar conflicten aanzienlijk verminderen.
+                </p>
+                <p>
+                  Bovendien zal het de weg vrijmaken voor meer internationale samenwerking en vrede.
+                  Landen zullen meer geneigd zijn om samen te werken in plaats van tegen elkaar te strijden,
+                  omdat hun economische belangen dan meer op één lijn liggen.
+                </p>
+
+              </div>
+
+            </div>
+
+            {/* De Keuze */}
+            <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-white mb-3">Btc</h3>
+              <p className="mb-3">
+                Bitcoin biedt een alternatief voor het huidige financiële systeem.
+                Door te kiezen voor Bitcoin, kies je voor financiële vrijheid en onafhankelijkheid van politieke beslissingen.
+                Het is een kans om deel uit te maken van een eerlijker en transparanter economisch systeem.
+              </p>
+              <p>
+                De keuze is aan jou: blijf je vasthouden aan traditionele valuta's die worden gedevalueerd,
+                of omarm je de toekomst met Bitcoin als jouw geldsysteem?
+              </p>
+            </div>
+
+            {/* Sluit knop */}
+            <div className="text-center pt-4">
+              <Button
+                onClick={() => setShowDialog(false)}
+                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Sluiten
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
