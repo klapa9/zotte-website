@@ -118,8 +118,8 @@ const Leven = () => {
                 </p>
                 <div className="mt-6 p-4 bg-indigo-600 bg-opacity-20 rounded-2xl border border-indigo-400 border-opacity-30">
                   <p className="text-sm text-indigo-200 mb-2">💰 Energie heeft vele vormen</p>
-                  <Link to="/energie" className="text-indigo-300 hover:text-indigo-100 underline font-bold transition-colors duration-300">
-                    Ontdek de kracht van verschillende energieën →
+                  <Link to="/geld" className="text-indigo-300 hover:text-indigo-100 underline font-bold transition-colors duration-300">
+                    Ontdek wat geld is, en hoe je dit verdient. →
                   </Link>
                 </div>
               </div>
@@ -132,12 +132,13 @@ const Leven = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Beter leven begint met bewustwording. Weten wie je bent, wat je wilt,
-                  en waarom je het wilt.
+                  Beter leven is persoonlijk. 
+                  Kies wat beter voor jou betekent en handel daarnaar.
                 </p>
                 <p>
-                  Daarna komt actie. Kleine stappen, consequent uitgevoerd.
+                  Handel naar jouw keuzes. Kleine stappen, consequent uitgevoerd.
                   Je ontwikkelt discipline door actie te ondernemen.
+                  Laat perfectie los en focus op vooruitgang.
                 </p>
                 <p>
                   Accepteer het als je fouten maakt,
