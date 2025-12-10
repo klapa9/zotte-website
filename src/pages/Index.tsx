@@ -272,9 +272,7 @@ const Index = () => {
                 to="/zottewebsite/weeszot/weeszot"
                 className="block transform hover:scale-105 transition-all duration-500"
               >
-                <div
-                  className="bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-3xl p-8 md:p-12"
-                >
+                <div className="bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-3xl p-8 md:p-12">
                   <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
                     Unieke ideeën wachten op jou!
                   </h2>
@@ -293,6 +291,7 @@ const Index = () => {
               </Link>
             </div>
           </section>
+
 
 
           {/* Footer */}
