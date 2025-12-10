@@ -169,7 +169,7 @@ const Index = () => {
                 </p>
                 <div className="inline-block">
                   <p className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 animate-pulse">
-                    DURF TE TWIJFELEN!
+                    Luister naar je gevoel!
                   </p>
                 </div>
               </div>
