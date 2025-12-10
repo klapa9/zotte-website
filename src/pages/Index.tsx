@@ -267,7 +267,7 @@ const Index = () => {
 
           {/* Final Call to Action */}
           <section className="py-20 px-4 relative section-trigger">
-            <Link to="/weeszot" className="absolute inset-0 z-0 cursor-pointer">
+            <Link to="/zottewebsite/weeszot/weeszot" className="absolute inset-0 z-0 cursor-pointer">
               <div className="max-w-4xl mx-auto text-center">
                 <div
                   className="bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-3xl p-8 md:p-12 transform hover:scale-105 transition-all duration-500"
