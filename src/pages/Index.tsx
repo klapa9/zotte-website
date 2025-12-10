@@ -268,22 +268,27 @@ const Index = () => {
           {/* Final Call to Action */}
           <section className="py-20 px-4 relative section-trigger">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-3xl p-8 md:p-12">
-                <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
-                  Unieke ideeën wachten op jou!
-                </h2>
-                <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
-                  De keuze is aan jou. Open je geest. Wees zot.
-                </p>
-                <div className="space-y-4">
-                  <div className="text-5xl md:text-7xl font-black text-white animate-pulse">
-                    DOE HET NU!
-                  </div>
-                  <p className="text-lg text-white opacity-80">
-                    Elke klik is een nieuwe idee. Volg je gevoel.
+              <Link
+                to="/weeszot"
+                className="block transform hover:scale-105 transition-all duration-500"
+              >
+                <div className="bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-3xl p-8 md:p-12">
+                  <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
+                    Unieke ideeën wachten op jou!
+                  </h2>
+                  <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
+                    De keuze is aan jou. Open je geest. Wees zot.
                   </p>
+                  <div className="space-y-4">
+                    <div className="text-5xl md:text-7xl font-black text-white animate-pulse">
+                      DOE HET NU!
+                    </div>
+                    <p className="text-lg text-white opacity-80">
+                      Elke klik is een nieuwe idee. Volg je gevoel.
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </section>
 
