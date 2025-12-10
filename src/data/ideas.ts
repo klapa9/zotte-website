@@ -27,6 +27,22 @@ export const ideas: Idea[] = [
     quantumPrinciple: "Superpositie – meerdere toestanden bestaan tegelijkertijd"
   },
   {
+    title: "Intentie creëert werkelijkheid",
+    desc: "Wat je aandacht geeft, groeit; jouw intenties beïnvloeden hoe de wereld zich manifesteert",
+    longText: [
+        "Onze gedachten en intenties zijn niet zomaar abstracties; ze vormen de basis van hoe onze werkelijkheid zich ontvouwt. Alles waar je focus en energie aan geeft, krijgt kracht en vorm.",
+        "In de quantummechanica is er het principe van Quantum Potential, waarbij de waarschijnlijkheidsgolven aangeven welke uitkomsten mogelijk zijn voordat een waarneming plaatsvindt. Jouw bewustzijn en intentie kunnen deze uitkomsten beïnvloeden door te ‘kiezen’ waar energie en aandacht naartoe gaan.",
+        "Dit betekent dat jij door je intenties te richten, bepaalde mogelijkheden activeert en andere minder waarschijnlijk maakt. Wat je aandacht en energie geeft, manifesteert zich sterker in je ervaring.",
+        "Door bewust intenties te zetten en je aandacht te sturen, leer je actief mee te werken aan de creatie van je werkelijkheid. Je bent geen passieve toeschouwer; je bent een actieve participant in het vormgeven van je leven."
+    ],
+    bullets: [
+        "Intentie geeft richting aan jouw energie",
+        "Focus bepaalt welke mogelijkheden werkelijkheid worden",
+        "Bewustzijn beïnvloedt de waarschijnlijkheidsgolven van quantumtoestanden",
+        "Actief creëren door aandacht en energie te sturen"
+    ]
+    },
+  {
     title: "Je bent het universum",
     desc: "Je bewustzijn is een fragment van het grotere geheel",
     longText: [
