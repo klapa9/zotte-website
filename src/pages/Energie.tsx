@@ -174,29 +174,6 @@ const Energie = () => {
             <PracticalTip pageType="energie" />
 
             {/* Energy Flow */}
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-black bg-opacity-30 backdrop-blur-md rounded-3xl p-8 border border-teal-400 border-opacity-30">
-                <h3 className="text-3xl font-black text-teal-400 mb-4">
-                  Angst Blokkeert Energie
-                </h3>
-                <p className="text-white text-lg">
-                  Angst is de grootste energievreter. Het blokkeert de natuurlijke stroom van energie in ons lichaam.
-                  Wanneer we bang zijn, sluiten we ons af van onze kracht.
-                  Door angst los te laten, bevrijden we onze energie.
-                </p>
-              </div>
-
-              <div className="bg-black bg-opacity-30 backdrop-blur-md rounded-3xl p-8 border border-blue-400 border-opacity-30">
-                <h3 className="text-3xl font-black text-blue-400 mb-4">
-                  Liefde Vermenigvuldigt Energie
-                </h3>
-                <p className="text-white text-lg">
-                  Wanneer je handelt vanuit liefde, stroomt je energie vrijelijk.
-                  Liefde opent je hart en geest, waardoor je meer energie aantrekt.
-                  Het is de ultieme krachtbron die ons verbindt met alles om ons heen.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
 
