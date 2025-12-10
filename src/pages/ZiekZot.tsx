@@ -86,7 +86,7 @@ const ZiekZot = () => {
             <div className="text-center">
               <div className="inline-block transform hover:scale-110 transition-transform duration-500">
                 <p className="text-4xl md:text-6xl font-black text-red-400 mb-4">
-                  Nooit meer ziek worden
+                  Elke ziekte is geneesbaar
                 </p>
               </div>
               <p className="text-2xl md:text-3xl text-white font-light">

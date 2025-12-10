@@ -37,7 +37,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
               </p>
             </>
           ),
-          link: { to: "/leven", text: "Geld is een middel, geen doel →", color: "orange" }
+          link: { to: "/leven", text: "Wat is je levensdoel? →", color: "orange" }
         };
 
       case 'weeszot':
@@ -120,7 +120,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
               </p>
             </>
           ),
-          link: { to: "/weeszot", text: "Wat doe je met je energie? →", color: "green" }
+          link: { to: "/weeszot", text: "Volg je enthousiasme! →", color: "green" }
         };
 
       case 'ziekzot':
@@ -147,7 +147,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
               </p>
             </>
           ),
-          link: { to: "/openjegeest", text: "Ontdek hoe je denken je genezing beïnvloedt →", color: "red" }
+          link: { to: "/openjegeest", text: "De kracht van je geest? →", color: "red" }
         };
 
       case 'openjegeest':
@@ -177,7 +177,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
               </p>
             </>
           ),
-          link: { to: "/energie", text: "Ontdek de verschillende vormen van energie →", color: "purple" }
+          link: { to: "/energie", text: "Krijg meer energie →", color: "purple" }
         };
     }
   };
