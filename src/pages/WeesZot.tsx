@@ -5,9 +5,11 @@ import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
 import AudioPlayer from '@/components/AudioPlayer';
+import { Button } from '@/components/ui/button';
 
 const WeesZot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [showDialog, setShowDialog] = useState(false);
 
   useSeoMeta({
     title: 'Wees Zot! - Durf Gek te Zijn',
@@ -82,14 +84,15 @@ const WeesZot = () => {
                   </p>
                   <p>
                     Stel je voor: een wereld waarin iedereen doet waar ze echt van houden.
-                    Een wereld waarin enthousiasme de norm is, niet de uitzondering.
                     Dat is de wereld die we kunnen creëren.
                   </p>
                   <div className="mt-6 p-4 bg-purple-600 bg-opacity-20 rounded-2xl border border-purple-400 border-opacity-30">
-                    <p className="text-sm text-purple-200 mb-2">💡 Wil je weten waarom dit belangrijk is?</p>
-                    <Link to="/leven" className="text-purple-300 hover:text-purple-100 underline font-bold transition-colors duration-300">
-                      Ontdek de fundamentele levensvragen →
-                    </Link>
+                    <Button
+                      onClick={() => setShowDialog(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      💡 Wil je weten van waar je enthousiasme komt?
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -163,6 +166,70 @@ const WeesZot = () => {
           <Navigation />
         </div>
       </div>
+      {/* Law of One Dialog */}
+      <Dialog open={showDialog} onOpenChange={setShowDialog}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
+          <DialogHeader>
+            <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
+              Je bent een oneindige ziel.
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-6 text-lg">
+            {/* Introductie */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">Alles is Één Bewustzijn</h3>
+              <p>
+                Je bent een oneindige ziel die jouw bewustzijn ervaart via je menselijk lichaam.
+                Jouw ziel kiest specifieke levensomstandigheden om bepaalde lessen te leren
+                en spiritueel te groeien.
+              </p>
+            </div>
+
+            {/* De communicatie */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-blue-300 mb-3">Communicatie</h3>
+              <p className="mb-4">
+                Je ziel communiceert met jou via gevoelens.
+                Enthousiasme is een signaal dat je op het juiste pad zit,
+                terwijl angst aangeeft dat je afwijkt van je ware zelf.
+              </p>
+
+              {/* Zeker? */}
+              <div className="mb-4 pl-4 border-l-4 border-teal-400">
+                <h4 className="text-xl font-bold text-teal-300 mb-2">Hoe kan je zeker zijn?</h4>
+                <p className="mb-2">
+                  Het is eerst een kwestie van vertrouwen hebben.
+                  Door te oefenen in het volgen van je enthousiasme,
+                  ontwikkel je een dieper vertrouwen in je intuïtie.
+                  Na verloop van tijd wordt het duidelijker welke keuzes
+                  in lijn zijn met je ziel.
+                </p>
+              </div>
+            </div>
+
+            {/* Geen Goed of Fout */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">Kiest je ziel altijd het beste?</h3>
+              <p>
+                Je ziel streeft ernaar om te groeien en te evolueren,
+                maar dat betekent niet altijd dat het pad gemakkelijk is.
+                Soms kiest je ziel uitdagingen die pijnlijk lijken,
+                maar die uiteindelijk leiden tot diepere inzichten en groei.
+              </p>
+            </div>
+
+            {/* Sluit knop */}
+            <div className="text-center pt-4">
+              <Button
+                onClick={() => setShowDialog(false)}
+                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Sluiten
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
