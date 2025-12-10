@@ -85,14 +85,7 @@ const Leven = () => {
                   Het mooie is: er is geen juist antwoord. Jouw antwoord is het juiste antwoord.
                   Maar de vraag stellen? Dat is de eerste stap naar een bewust leven.
                 </p>
-                <div className="mt-6">
-                    <Button
-                      onClick={() => setShowLawOfOneDialog(true)}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                    >
-                      ✨ Je hebt een keuze!
-                    </Button>
-                  </div>
+                
               </div>
             </div>
 
@@ -116,12 +109,6 @@ const Leven = () => {
                   Niet praten over wat belangrijk is, maar er ook echt naar handelen.
                   Dat is de uitdaging. En de beloning.
                 </p>
-                <div className="mt-6 p-4 bg-indigo-600 bg-opacity-20 rounded-2xl border border-indigo-400 border-opacity-30">
-                  <p className="text-sm text-indigo-200 mb-2">💰 Energie heeft vele vormen</p>
-                  <Link to="/geld" className="text-indigo-300 hover:text-indigo-100 underline font-bold transition-colors duration-300">
-                    Ontdek wat geld is, en hoe je dit verdient. →
-                  </Link>
-                </div>
               </div>
             </div>
 
@@ -144,6 +131,14 @@ const Leven = () => {
                   Accepteer het als je fouten maakt,
                   maar weet dat je wel elke dag een beetje beter probeert te worden.
                 </p>
+                <div className="mt-6">
+                    <Button
+                      onClick={() => setShowLawOfOneDialog(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      ✨ Er is een keuze die we allemaal ooit moeten maken!
+                    </Button>
+                  </div>
               </div>
             </div>
 
@@ -197,7 +192,7 @@ const Leven = () => {
               <p>
                 Alles in het universum is één bewustzijn. Elke ziel ontwikkelt zich
                 door verschillende niveaus en kiest daarbij een duidelijke richting
-                van groei.
+                van groei. Deze keuze neemt iedereen op een bepaald moment in zijn of haar leven.
               </p>
             </div>
 
@@ -205,8 +200,7 @@ const Leven = () => {
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
               <h3 className="text-2xl font-black text-blue-300 mb-3">Twee Evolutionaire Paden</h3>
               <p className="mb-4">
-                Er bestaan maar twee evolutionaire paden waar je tussen kunt kiezen.
-                Deze keuze bepaalt hoe jouw bewustzijn zich ontwikkelt:
+                Er bestaan maar twee evolutionaire paden waar je tussen kunt kiezen:
               </p>
 
               {/* Service to Others */}
@@ -255,15 +249,15 @@ const Leven = () => {
 
             {/* De Keuze */}
             <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-white mb-3">Jouw Keuze Bepaalt Alles</h3>
+              <h3 className="text-2xl font-black text-white mb-3">Je moet nog niet kiezen</h3>
               <p className="mb-3">
-                Elke gedachte, keuze en intentie versterkt jouw pad.
-                Polarisatie is essentieel: hoe duidelijker jouw keuze,
-                hoe sneller je spiritueel groeit.
+                Je kan ook nog niet kiezen. Veel zielen hebben nog niet gekozen.
+                Het is een proces van zelfontdekking en groei.
+                Uiteindelijk zal iedereen een duidelijke keuze maken.
               </p>
-              <p className="text-cyan-200 font-bold">
-                Consistentie in je keuzen creëert spiritueel momentum
-                en accelereert je bewustzijnsontwikkeling.
+              <p className="mb-3">
+                Hoe duidelijker jouw keuze en overeenkomstige acties
+                hoe sneller je spiritueel groeit.
               </p>
             </div>
 

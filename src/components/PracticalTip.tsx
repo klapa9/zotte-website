@@ -58,7 +58,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
                 zelfs als je trilt en zweet. De angst verdwijnt als je door de waas heen breekt.
               </p>
               <p className="hover:text-yellow-200 transition-colors duration-300 cursor-pointer">
-                <strong>Visualiseer je succes.</strong> Stel je voor dat je de angst hebt overwonnen en doet waar je bang voor was.
+                <strong>Visualiseer je succes.</strong> Stel je voor dat je de angst hebt overwonnen.
                 Hoe voelt dat? Vrij, krachtig, levend. Houd dat gevoel vast. Dat is je bestemming,
                 niet de angst die je nu voelt. Elke stap in die richting is een overwinning.
               </p>
