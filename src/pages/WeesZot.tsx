@@ -87,14 +87,13 @@ const WeesZot = () => {
                     onverwachte kansen, en magische ervaringen. Het is de sleutel tot een
                     vervuld en betekenisvol leven.
                   </p>
-                  <div className="mt-6 p-4 bg-purple-600 bg-opacity-20 rounded-2xl border border-purple-400 border-opacity-30">
-                    <Button
-                      onClick={() => setShowDialog(true)}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                    >
-                      💡 Wil je weten van waar je enthousiasme komt?
-                    </Button>
-                  </div>
+                  
+                  <Button
+                    onClick={() => setShowDialog(true)}
+                    className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                  >
+                    💡 Wil je weten van waar je enthousiasme komt?
+                  </Button>
                 </div>
               </div>
 
