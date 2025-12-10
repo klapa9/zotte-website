@@ -10,21 +10,20 @@ export interface Idea {
 
 export const ideas: Idea[] = [
   {
-    title: "Tijd is een illusie",
-    desc: "Verleden, heden en toekomst bestaan allemaal tegelijk",
+    title: "Bewustzijn is fundamenteel",
+    desc: "Bewustzijn komt niet uit de hersenen, maar andersom",
     longText: [
-        "Hoewel wij tijd ervaren als een lineaire opeenvolging van verleden, heden en toekomst, bestaan alle momenten op kwantumniveau tegelijkertijd. Onze ervaring van tijd is een perceptie van het bewustzijn, niet de absolute werkelijkheid.",
-        "Het quantumprincipe van Superpositie laat zien dat een deeltje meerdere toestanden tegelijk kan hebben totdat het wordt gemeten. Op dezelfde manier bestaan alle tijdsmomenten tegelijk, en pas wanneer we ze bewust waarnemen 'klappen' ze in één ervaring van tijd.",
-        "Dit inzicht helpt ons te begrijpen dat gebeurtenissen niet vastliggen. Onze keuzes, intenties en waarneming kunnen flexibel door de tijd navigeren en verschillende mogelijkheden openen.",
-        "Door deze visie te omarmen, kun je leren tijd niet als een beperking te zien, maar als een dynamisch veld waarin bewustzijn en ervaring samenkomen."
+        "In tegenstelling tot wat vaak wordt gedacht, is bewustzijn niet slechts een bijproduct van de hersenen. Bewustzijn zelf vormt de basis van alle ervaring en werkelijkheid. Het is de bron waaruit alles ontstaat, niet iets dat er alleen uit voortkomt.",
+        "In de quantummechanica is er het principe van Wave Function Collapse. Dit principe laat zien dat een deeltje pas een vaste staat krijgt op het moment dat het wordt waargenomen. Voor ons bewustzijn betekent dit dat onze waarneming de vorm en manifestatie van de werkelijkheid beïnvloedt.",
+        "Met andere woorden: wat jij ziet, ervaart en aandacht geeft, helpt letterlijk vorm te geven aan je werkelijkheid. Jouw intenties, focus en bewustzijn zijn de fundamentele bouwstenen van je ervaringen en het universum waarin je leeft.",
+        "Door dit principe te begrijpen, realiseer je dat je niet passief bent in de wereld, maar actief deelneemt aan het creëren ervan. Elke gedachte en intentie draagt bij aan de manier waarop je werkelijkheid zich ontvouwt."
     ],
-
     bullets: [
-      "Lineaire tijd is een perceptie",
-      "Alle momenten bestaan tegelijk",
-      "Bewustzijn beweegt door tijd heen"
+      "Bewustzijn schept materie",
+      "Hersenen registreren en verwerken ervaring",
+      "Universeel bewustzijn is de kern"
     ],
-    quantumPrinciple: "Superpositie – meerdere toestanden bestaan tegelijkertijd"
+    quantumPrinciple: "Wave Function Collapse – bewustzijn beïnvloedt manifestatie"
   },
   {
     title: "Intentie creëert werkelijkheid",
@@ -93,19 +92,20 @@ export const ideas: Idea[] = [
     quantumPrinciple: "Many Worlds Interpretation – alle mogelijke uitkomsten bestaan"
   },
   {
-    title: "Bewustzijn is fundamenteel",
-    desc: "Bewustzijn komt niet uit de hersenen, maar andersom",
+    title: "Tijd is een illusie",
+    desc: "Verleden, heden en toekomst bestaan allemaal tegelijk",
     longText: [
-        "In tegenstelling tot wat vaak wordt gedacht, is bewustzijn niet slechts een bijproduct van de hersenen. Bewustzijn zelf vormt de basis van alle ervaring en werkelijkheid. Het is de bron waaruit alles ontstaat, niet iets dat er alleen uit voortkomt.",
-        "In de quantummechanica is er het principe van Wave Function Collapse. Dit principe laat zien dat een deeltje pas een vaste staat krijgt op het moment dat het wordt waargenomen. Voor ons bewustzijn betekent dit dat onze waarneming de vorm en manifestatie van de werkelijkheid beïnvloedt.",
-        "Met andere woorden: wat jij ziet, ervaart en aandacht geeft, helpt letterlijk vorm te geven aan je werkelijkheid. Jouw intenties, focus en bewustzijn zijn de fundamentele bouwstenen van je ervaringen en het universum waarin je leeft.",
-        "Door dit principe te begrijpen, realiseer je dat je niet passief bent in de wereld, maar actief deelneemt aan het creëren ervan. Elke gedachte en intentie draagt bij aan de manier waarop je werkelijkheid zich ontvouwt."
+        "Hoewel wij tijd ervaren als een lineaire opeenvolging van verleden, heden en toekomst, bestaan alle momenten op kwantumniveau tegelijkertijd. Onze ervaring van tijd is een perceptie van het bewustzijn, niet de absolute werkelijkheid.",
+        "Het quantumprincipe van Superpositie laat zien dat een deeltje meerdere toestanden tegelijk kan hebben totdat het wordt gemeten. Op dezelfde manier bestaan alle tijdsmomenten tegelijk, en pas wanneer we ze bewust waarnemen 'klappen' ze in één ervaring van tijd.",
+        "Dit inzicht helpt ons te begrijpen dat gebeurtenissen niet vastliggen. Onze keuzes, intenties en waarneming kunnen flexibel door de tijd navigeren en verschillende mogelijkheden openen.",
+        "Door deze visie te omarmen, kun je leren tijd niet als een beperking te zien, maar als een dynamisch veld waarin bewustzijn en ervaring samenkomen."
     ],
+
     bullets: [
-      "Bewustzijn schept materie",
-      "Hersenen registreren en verwerken ervaring",
-      "Universeel bewustzijn is de kern"
+      "Lineaire tijd is een perceptie",
+      "Alle momenten bestaan tegelijk",
+      "Bewustzijn beweegt door tijd heen"
     ],
-    quantumPrinciple: "Wave Function Collapse – bewustzijn beïnvloedt manifestatie"
+    quantumPrinciple: "Superpositie – meerdere toestanden bestaan tegelijkertijd"
   }
 ];
