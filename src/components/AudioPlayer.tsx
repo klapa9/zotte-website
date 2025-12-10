@@ -26,7 +26,7 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
       case 'leven': return '/Leven.mp3';
       case 'weeszot': return '/Wees_Zot.mp3';
       case 'geld': return '/De_natuur_geneest.mp3';
-      default: return '/Rise_and_Shine.mp3';
+      default: return '/startpagina.mp3';
     }
   };
 
