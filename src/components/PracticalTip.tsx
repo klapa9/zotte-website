@@ -73,24 +73,19 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
           content: (
             <>
               <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
-                <strong>Bepaal je percentage intentie.</strong> Weet je op welk pad je zit.
-                STO vereist meer dan 51% dienst aan anderen, STS vereist meer dan 95% focus op zelf.
-                Wees eerlijk over waar je energie naartoe gaat.
+                <strong>Je moet niets forceren.</strong> Iedereen leeft zijn leven.
+                Het universum heeft een natuurlijk ritme. Probeer niet te hard te sturen.
+                Vertrouw op het proces en laat dingen op hun tijd gebeuren.
               </p>
               <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
-                <strong>Polariseer bewust.</strong> Elke gedachte en keuze versterkt je pad.
-                Wanneer je consistent kiest in lijn met je pad, creëer je spiritueel
-                momentum en accelereer je bewustzijnsontwikkeling.
+                <strong>Liefde is loslaten.</strong> Als je echt van iets of iemand houdt,
+                laat het dan vrij. Dwing geen situaties of relaties.
+                Ware liefde floreert in vrijheid, niet in controle.
               </p>
               <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
-                <strong>Observeer zonder oordeel.</strong> Zowel STO als STS zijn geldige paden.
-                Oordeel jezelf niet wanneer je van pad wisselt - elke ervaring biedt
-                unieke lessen en draagt bij aan je groei naar eenheid.
-              </p>
-              <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
-                <strong>Leef je keuze volledig.</strong> Halfslachtigheid vertraagt groei.
-                Of je nu voor liefde of macht kiest - doe het met volle overgave
-                en duidelijke intentie. Alleen dan versterk je werkelijk je pad.
+                <strong>Goed leven is balanceren.</strong> Zoek in alles naar balans:
+                werk en rust, geven en nemen, actie en reflectie.
+                Te veel van iets goeds kan schadelijk zijn.
               </p>
             </>
           ),
