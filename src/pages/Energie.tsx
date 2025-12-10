@@ -88,7 +88,7 @@ const Energie = () => {
             <div className="text-center mb-20">
               <div className="inline-block">
                 <h2 className={`text-6xl md:text-8xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-r ${energyWords[activeWord].color} transition-all duration-1000 hover:scale-105 cursor-pointer transition-transform duration-300`}
-                    onClick={() => window.open('https://zottewebsite.be/ziekzot', '_blank')}
+                  onClick={() => setShowDialog(true)}
                 >
                   {energyWords[activeWord].word}
                 </h2>
@@ -112,9 +112,6 @@ const Energie = () => {
                   </h3>
                   <p className="text-white text-lg">
                     {energy.description}
-                  </p>
-                  <p className="text-xs text-gray-300 mt-2">
-                    👆 Klik voor informatie over het lichaam
                   </p>
                 </div>
               ))}
