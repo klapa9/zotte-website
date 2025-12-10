@@ -175,7 +175,7 @@ const OpenJeGeest = () => {
                   Focus 
                 </h2>
                 <p className="text-xl md:text-2xl text-white mb-6 hover:text-yellow-200 transition-colors duration-300">
-                  Laat je niet afleiden door anderen.
+                  Laat je niet afleiden.
                 </p>
                 <p className="text-lg md:text-xl text-white opacity-90 hover:opacity-100 transition-opacity duration-300">
                   Je geest is de krachtigste tool die je hebt.
