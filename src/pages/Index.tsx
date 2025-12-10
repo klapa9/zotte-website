@@ -269,7 +269,7 @@ const Index = () => {
           <section className="py-20 px-4 relative section-trigger">
             <div className="max-w-4xl mx-auto text-center">
               <Link
-                to="/zottewebsite/weeszot"
+                to="/weeszot"
                 className="block transform hover:scale-105 transition-all duration-500"
               >
                 <div className="bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-3xl p-8 md:p-12">
