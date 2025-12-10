@@ -21,7 +21,7 @@ const OpenJeGeest = () => {
   
   useSeoMeta({
     title: 'Open Je Geest - Blaas je Oude Ideëen Op',
-    description: 'Alles is veel zotter dan je denkt! Ontdek hoe een open geest je oude ideëen kan opblazen.',
+    description: 'Alles is veel zotter dan je denkt!',
   });
 
   useEffect(() => {
