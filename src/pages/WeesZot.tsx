@@ -50,7 +50,6 @@ const WeesZot = () => {
                 left: `${Math.random() * 100}%`,
                 animationDuration: `${Math.random() * 8 + 4}s`,
                 animationDelay: `${Math.random() * 3}s`,
-                transform: `translate(${calculateParallax(mousePosition.x, mousePosition.y, 20).moveX}px, ${calculateParallax(mousePosition.x, mousePosition.y, 20).moveY}px)`,
               }}
             />
           ))}
