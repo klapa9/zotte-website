@@ -266,12 +266,13 @@ const Index = () => {
           </section>
 
           {/* Final Call to Action */}
-            <section className="py-20 px-4 relative section-trigger">
-              <div className="max-w-4xl mx-auto text-center">
-                <Link
-                  to="/weeszot"
-                  className="block transform hover:scale-105 transition-all duration-500 bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-3xl p-8 md:p-12"
-                >
+          <section className="py-20 px-4 relative section-trigger">
+            <div className="max-w-4xl mx-auto text-center">
+              <Link
+                to="/weeszot"
+                className="block transform hover:scale-105 transition-all duration-500"
+              >
+                <div className="bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-3xl p-8 md:p-12">
                   <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
                     Unieke ideeën wachten op jou!
                   </h2>
@@ -286,9 +287,11 @@ const Index = () => {
                       Elke klik is een nieuwe idee. Volg je gevoel.
                     </p>
                   </div>
-                </Link>
-              </div>
-            </section>
+                </div>
+              </Link>
+            </div>
+          </section>
+
 
 
 
