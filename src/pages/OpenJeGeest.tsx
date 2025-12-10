@@ -13,12 +13,12 @@ const OpenJeGeest = () => {
   const [explosion, setExplosion] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [activeWord, setActiveWord] = useState(0);
-  const [selectedIdea, setSelectedIdea] = useState(null);
-  const [showDialog, setShowDialog] = useState(false);
+  const [selectedIdea, setSelectedIdea] = useState<number | null>(null);
 
   const handleSelect = (index: number) => {
-    setSelectedIdea(index);
+    setSelectedIdea(index); // automatisch opent de dialog via conditional rendering
   };
+  
   useSeoMeta({
     title: 'Open Je Geest - Blaas je Oude Ideëen Op',
     description: 'Alles is veel zotter dan je denkt! Ontdek hoe een open geest je oude ideëen kan opblazen.',
@@ -153,8 +153,6 @@ const OpenJeGeest = () => {
                   className="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-3 transition-all duration-500"
                   onClick={() => {
                     handleSelect(index);
-                    setShowDialog(true);
-                    console.log("Selected idea:", idea);
                   }}
                 >
                   <h3 className="text-2xl font-black text-yellow-400 mb-3">
@@ -212,10 +210,10 @@ const OpenJeGeest = () => {
         }
       `}</style>
       </div>
-       <Dialog open={showDialog} onOpenChange={setShowDialog}>
+       <Dialog open={selectedIdea !== null} onOpenChange={() => setSelectedIdea(null)}>
         <DialogContent className="max-w-3xl bg-gradient-to-br from-slate-900 to-slate-800 text-white">
 
-          {selectedIdea && (
+          {selectedIdea !== null && (
             <>
               <DialogHeader>
                 <DialogTitle className="text-3xl font-black text-yellow-300">
