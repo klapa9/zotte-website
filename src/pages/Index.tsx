@@ -268,24 +268,22 @@ const Index = () => {
           {/* Final Call to Action */}
           <section className="py-20 px-4 relative section-trigger">
             <div className="max-w-4xl mx-auto text-center">
-              <Link to="/openjegeest" className="block">
-                <div className="bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-3xl p-8 md:p-12">
-                  <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
-                    Unieke ideeën wachten op jou!
-                  </h2>
-                  <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
-                    De keuze is aan jou. Open je geest. Wees zot.
-                  </p>
-                  <div className="space-y-4">
-                    <div className="text-5xl md:text-7xl font-black text-white animate-pulse">
-                      DOE HET NU!
-                    </div>
-                    <p className="text-lg text-white opacity-80">
-                      Elke klik is een nieuwe idee. Volg je gevoel.
-                    </p>
+              <div className="bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-3xl p-8 md:p-12">
+                <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
+                  Unieke ideeën wachten op jou!
+                </h2>
+                <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
+                  De keuze is aan jou. Open je geest. Wees zot.
+                </p>
+                <div className="space-y-4">
+                  <div className="text-5xl md:text-7xl font-black text-white animate-pulse">
+                    DOE HET NU!
                   </div>
+                  <p className="text-lg text-white opacity-80">
+                    Elke klik is een nieuwe idee. Volg je gevoel.
+                  </p>
                 </div>
-              </Link>
+              </div>
             </div>
           </section>
 
