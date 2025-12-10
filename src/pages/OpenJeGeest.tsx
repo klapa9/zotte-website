@@ -90,7 +90,7 @@ const OpenJeGeest = () => {
             <div className="text-center">
               <div className="inline-block transform hover:scale-110 transition-transform duration-500">
                 <p className="text-5xl md:text-7xl font-black text-white leading-tight">
-                  alles is veel zotter dan je denkt!
+                  Alles is veel zotter dan je denkt!
                 </p>
               </div>
             </div>
@@ -111,11 +111,6 @@ const OpenJeGeest = () => {
                   dan ons beperkte brein kan bevatten. Quantumfysica, bewustzijn,
                   de aard van tijd en ruimte - het zijn allemaal concepten
                   die onze intuïtie tarten.
-                </p>
-                <p>
-                  En dat is nog maar het begin. Wat als er nog veel meer is?
-                  Dingen die we ons nog niet eens kunnen voorstellen?
-                  Dat is waar het echt zot wordt.
                 </p>
               </div>
             </div>
