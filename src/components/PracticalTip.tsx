@@ -103,26 +103,27 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
           content: (
             <>
               <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
-                <strong>Geld is een vorm van energie.</strong> Het is opgeslagen levensenergie,
-                tijd, en creativiteit. Wanneer je geld geeft of ontvangt, vindt er een energietransfer plaats.
+                <strong>Angst Blokkeert Energie!</strong>
+                  Het blokkeert de natuurlijke stroom van energie in ons lichaam.
+                  Wanneer we bang zijn, sluiten we ons af van onze kracht.
+                  Door angst los te laten, bevrijden we onze energie.
               </p>
               <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
-                Het huidige financiële systeem <strong>steelt constant je energie.</strong>
-                Inflatie, rente, belastingen - het zijn manieren om jouw energie langzaam af te tappen
-                zonder dat je het doorhebt.
+                  <strong>Liefde Vermenigvuldigt Energie!</strong>
+                  Wanneer je handelt vanuit liefde, stroomt je energie vrijelijk.
+                  Liefde opent je hart en geest, waardoor je meer energie aantrekt.
+                  Het is de ultieme krachtbron die ons verbindt met alles om ons heen.
               </p>
               <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
-                <strong>Bitcoin is het alternatieve geldsysteem.</strong> Het is decentraal,
-                geen centrale autoriteit kan het manipuleren of devalueerden. Met Bitcoin behoud je
-                volledige controle over je eigen energie.
+                <strong>Overwin je angst en voel het verschil.</strong>
+                Merk hoe je energie toeneemt zodra je angst loslaat.
               </p>
               <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
-                Begin klein, leer, en ontdek hoe Bitcoin financiële vrijheid kan bieden.
-                Het is niet zomaar geld - het is een escape route uit een systeem dat jouw energie leent.
+                Richt je aandacht op wat je vreugde brengt en zie je energie vermenigvuldigen.
               </p>
             </>
           ),
-          link: { to: "/ziekzot", text: "Ontdek hoe je je gezondheid kunt beschermen →", color: "green" }
+          link: { to: "/weeszot", text: "Volg je enthousiasme →", color: "green" }
         };
 
       case 'ziekzot':
