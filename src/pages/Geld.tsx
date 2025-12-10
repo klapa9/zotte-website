@@ -59,7 +59,7 @@ const Geld = () => {
               </h2>
             </div>
             <p className="text-xl md:text-2xl text-white font-bold opacity-90">
-              De scheiding van staat en geld - eindelijk mogelijk!
+              Een eerlijk systeem.
             </p>
           </div>
 
@@ -69,20 +69,25 @@ const Geld = () => {
               {/* Probleem: Staat en Geld */}
               <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-orange-400 border-opacity-30 transform hover:scale-105 transition-all duration-500">
                 <h2 className="text-4xl md:text-5xl font-black text-orange-400 mb-6">
-                  HET PROBLEEM: STAAT EN GELD
+                  Een nieuw internetprotocol voor geld
                 </h2>
                 <div className="space-y-4 text-white text-lg md:text-xl">
                   <p>
-                    Duizenden jaren lang konden heersers munten devalueren. De introductie van 
-                    papiergeld maakte het nog erger - nu konden overheden simpelweg geld printen.
+                    Bitcoin is een gedecentraliseerd netwerk dat geld mogelijk maakt zonder tussenpersonen.
+                    Het zorgt voor een eerlijke manier om waarde over te dragen via het internet.
                   </p>
                   <p>
-                    Resultaat? Je koopkracht wordt systematisch afgepakt. Inflatie is geen 
-                    natuurlijk verschijnsel - het is <span className="text-orange-400 font-bold">institutionele diefstal</span>.
+                    Iedereen is gelijk voor het protocol - er is geen centrale autoriteit die de regels bepaalt.
+                    Iedereen kan deelnemen zonder toestemming.
+                    De regels zijn transparant en onveranderlijk.                    
                   </p>
                   <p>
-                    Centrale banken en overheden beslissen hoeveel jouw spaargeld waard is.
-                    Dat is geen vrijheid - dat is financiële slavernij.
+                    1 van de belangrijkste eigenschappen van Bitcoin is de limiet van 21 miljoen munten.
+                    Dit zorgt ervoor dat Bitcoin niet kan worden gedevalueerd door inflatie zoals traditionele valuta.
+                  </p>
+                  <p>
+                    Wel kan een Bitcoin worden opgesplitst in 100 miljoen eenheden, genaamd sats.
+                    Dit maakt het mogelijk om via kleine bedragen deel te nemen aan het netwerk.
                   </p>
                 </div>
               </div>
@@ -132,14 +137,6 @@ const Geld = () => {
                     Dit is fundamenteel anders dan fiat valuta die continu worden gedevalueerd.
                     Terwijl de euro en dollar verliezen aan waarde, behoudt Bitcoin zijn schaarste.
                   </p>
-                  <div className="bg-orange-600 bg-opacity-20 rounded-2xl p-6 border border-orange-400 border-opacity-30">
-                    <p className="text-2xl font-black text-orange-300 mb-2">
-                      INFLATIE = DIEFSTAL
-                    </p>
-                    <p className="text-lg text-white">
-                      Bitcoin stopt de diefstal van je tijd en energie
-                    </p>
-                  </div>
                 </div>
               </div>
 
@@ -151,7 +148,7 @@ const Geld = () => {
                 <div className="space-y-4 text-white text-lg md:text-xl">
                   <p>
                     Bitcoin is het eerste echt globale decentrale geldnetwerk. 
-                    Iedereen met een internetverbinding kan deelnemen - geen toestemming nodig.
+                    Iedereen met een internetverbinding kan deelnemen - er is geen toestemming nodig.
                   </p>
                   <p>
                     Dit maakt globale samenwerking mogelijk zoals nooit tevoren:
