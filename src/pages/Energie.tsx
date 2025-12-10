@@ -124,24 +124,19 @@ const Energie = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
-                  <strong>Wij zijn epische generatoren van energie.</strong> Ons lichaam is geen biologische machine,
-                  maar een elektro-chemisch systeem dat constant elektriciteit genereert en gebruikt.
-                  Elke hartslag, elke gedachte, elke beweging - het zijn allemaal elektrische signalen.
+                  <strong>Wij zijn generatoren van energie.</strong> Ons lichaam is een elektro-chemisch systeem dat constant energie genereert en gebruikt.
+                  Elke hartslag, elke gedachte, elke beweging - het zijn allemaal energetische signalen.
                 </p>
                 <p className="hover:text-blue-200 transition-colors duration-300 cursor-pointer">
-                  Elektriciteit is de <strong>communicatietaal van ons lichaam</strong>.
+                  Energie is de <strong>communicatietaal van ons lichaam</strong>.
                   Onze zenuwen sturen elektrische pulsen met ongelofelijke snelheid - sneller dan elk computernetwerk.
                   Onze hersenen zijn een elektrisch orgaan miljarden synapsen sterk.
                 </p>
                 <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
-                  Efficiëntie in ons lichaam betekent <strong>slimme energie-uitwisseling</strong>.
-                  Elke cel is een mini-generator. Onze longen en hart werken als natuurlijke pompen.
-                  Dit is de ultieme efficiëntie - 100% natuurlijk en perfect ontworpen.
-                </p>
-                <p className="hover:text-indigo-200 transition-colors duration-300 cursor-pointer">
-                  Ons metabolisme is de <strong>constante energie-omzetter</strong>.
-                  Het zet voedsel om in bruikbare energie, warmte, en bouwstenen.
-                  Dit is geen simpel proces - het is een wonder van biochemische efficiëntie.
+                  Energie stroomt door ons heen en verbindt ons met alles om ons heen.
+                  We zijn niet alleen fysieke wezens, maar ook energetische wezens.
+                  Door ons bewust te worden van deze energie kunnen we onze gezondheid,
+                  ons welzijn, en onze levenskwaliteit drastisch verbeteren.
                 </p>
               </div>
             </div>
