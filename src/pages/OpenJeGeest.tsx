@@ -98,19 +98,16 @@ const OpenJeGeest = () => {
             {/* What does it mean? */}
             <div className="bg-white bg-opacity-5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-purple-400 border-opacity-30">
               <h2 className="text-4xl md:text-5xl font-black text-purple-400 mb-6">
-                Wat betekent dit eigenlijk?
+                Wees bescheiden.
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
                   Je denkt dat je de wereld begrijpt. Je hebt je theorieën, je overtuigingen,
-                  je zekerheden. Maar wat als alles wat je denkt te weten,
-                  slechts een klein stukje van de realiteit is?
+                  je zekerheden. Enkel door bescheidenheid kan je werkelijk leren.
                 </p>
                 <p>
-                  De werkelijkheid is veel vreemder, complexer, en wonderlijker
-                  dan ons beperkte brein kan bevatten. Quantumfysica, bewustzijn,
-                  de aard van tijd en ruimte - het zijn allemaal concepten
-                  die onze intuïtie tarten.
+                  De werkelijkheid is veel mooier, complexer, en wonderlijker
+                  dan we beseffen.
                 </p>
               </div>
             </div>
@@ -135,30 +132,6 @@ const OpenJeGeest = () => {
                   Een open geest is de sleutel tot groei. Zonder openheid
                   blijf je vastzitten in dezelfde denkkaders,
                   dezelfde beperkingen, dezelfde realiteit.
-                </p>
-              </div>
-            </div>
-
-            {/* Oude Ideëen Opblazen */}
-            <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-pink-400 border-opacity-30">
-              <h2 className="text-4xl md:text-5xl font-black text-pink-400 mb-6">
-                ALLEEN ZO KAN JE JE OUDE IDEEËN OPBLAZEN!
-              </h2>
-              <div className="space-y-4 text-white text-lg md:text-xl">
-                <p>
-                  Je oude ideëen zijn als een kooi. Ze houden je gevangen,
-                  beperken je mogelijkheden, bepalen je realiteit.
-                  Om echt vrij te zijn, moet je die kooi opblazen.
-                </p>
-                <p>
-                  En dat is precies wat een open geest doet. Het stelt vragen.
-                  Het twijfelt. Het onderzoekt. Het durft te denken
-                  wat nog nooit gedacht is.
-                </p>
-                <p>
-                  Het resultaat? Een explosie van nieuwe mogelijkheden.
-                  Een wereld die plotseling veel groter, kleurrijker,
-                  en interessanter is dan je ooit had kunnen bedenken.
                 </p>
               </div>
             </div>
@@ -193,15 +166,14 @@ const OpenJeGeest = () => {
             <div className="text-center py-12">
               <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-3xl p-8 md:p-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 cursor-pointer active:scale-95">
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-110 hover:rotate-3 transition-all duration-300">
-                  DURF TE DENKEN
+                  Focus 
                 </h2>
                 <p className="text-xl md:text-2xl text-white mb-6 hover:text-yellow-200 transition-colors duration-300">
-                  De grenzen van de werkelijkheid zijn er om doorbroken te worden
+                  Laat je niet afleiden door anderen.
                 </p>
                 <p className="text-lg md:text-xl text-white opacity-90 hover:opacity-100 transition-opacity duration-300">
                   Je geest is de krachtigste tool die je hebt.
-                  Gebruik haar. Daag haar uit.
-                  Blaas haar op tot ongekende hoogten.
+                  Waar jij je op focust, groeit.                 
                 </p>
               </div>
             </div>
