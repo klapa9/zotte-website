@@ -103,23 +103,22 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
           content: (
             <>
               <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
-                <strong>Angst Blokkeert Energie!</strong>
+                <strong>Angst Blokkeert Energie: </strong>
                   Het blokkeert de natuurlijke stroom van energie in ons lichaam.
                   Wanneer we bang zijn, sluiten we ons af van onze kracht.
                   Door angst los te laten, bevrijden we onze energie.
               </p>
               <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
-                  <strong>Liefde Vermenigvuldigt Energie!</strong>
+                  <strong>Liefde Vermenigvuldigt Energie: </strong>
                   Wanneer je handelt vanuit liefde, stroomt je energie vrijelijk.
                   Liefde opent je hart en geest, waardoor je meer energie aantrekt.
                   Het is de ultieme krachtbron die ons verbindt met alles om ons heen.
               </p>
               <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
                 <strong>Overwin je angst en voel het verschil.</strong>
-                Merk hoe je energie toeneemt zodra je angst loslaat.
               </p>
               <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
-                Richt je aandacht op wat je vreugde brengt en zie je energie vermenigvuldigen.
+                <strong>Richt je aandacht op wat je vreugde brengt en zie je energie vermenigvuldigen.</strong>
               </p>
             </>
           ),
