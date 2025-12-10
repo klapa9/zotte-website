@@ -117,7 +117,6 @@ const ZiekZot = () => {
                 <p>
                   Je hoeft niet meteen all in te gaan. Begin met af en toe te vasten.
                   Geef je lichaam rust. Laat het reinigen.
-                  Ziekte is een teken dat je lichaam aan het genezen is. Onderdruk de symptomen niet, het is een natuurlijk proces.
                 </p>
               </div>
             </div>
@@ -141,6 +140,11 @@ const ZiekZot = () => {
                   Dit is lastig, omdat je lichaam bezig is met de grote kuis.
                   Maar, zodra de reiniging voorbij is, voel je je lichter, helderder en energieker dan ooit tevoren.
                 </p>
+                <p>
+                  Nog later leert je lichaam om energie direct uit de omgeving te halen.
+                  Zonlicht, lucht, en de energie van de aarde voeden je cellen.
+                  Je wordt een autonoom wezen dat niet langer afhankelijk is van voedsel.
+                </p>
               </div>
             </div>
 
@@ -160,12 +164,13 @@ const ZiekZot = () => {
 
               <div className="bg-white bg-opacity-5 backdrop-blur-md rounded-3xl p-8 border border-purple-400 border-opacity-30">
                 <h3 className="text-3xl font-black text-purple-400 mb-4">
-                  Luister naar je Ware Zelf
+                  Liefde is noodzakelijk
                 </h3>
                 <p className="text-white text-lg">
-                  Je lichaam weet precies wat het nodig heeft. Honger is vaak niet echt honger, het is een gewoonte, een emotie, een verveling. Leer onderscheid maken.
-                  Echte honger komt zelden voor. Je lichaam kan veel langer zonder voedsel
-                  dan je denkt.
+                  Als je lichaam geblokeert is door negatieve emoties zoals angst, woede, of verdriet,
+                  kan het niet goed functioneren. Liefde en vreugde zijn essentieel als je langdurig wilt vasten.
+                  Omarm het leven, wees dankbaar, en cultiveer liefde in je hart.
+                  Dit opent de deur naar een gezond lichaam.
                 </p>
               </div>
             </div>
