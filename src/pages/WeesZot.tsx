@@ -167,7 +167,7 @@ const WeesZot = () => {
           <Navigation />
         </div>
       </div>
-      {/* Law of One Dialog */}
+      {/* Dialog */}
       <Dialog open={showDialog} onOpenChange={setShowDialog}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
@@ -178,7 +178,7 @@ const WeesZot = () => {
           <div className="space-y-6 text-lg">
             {/* Introductie */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-cyan-300 mb-3">Alles is Één Bewustzijn</h3>
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">Je bent een oneindige ziel.</h3>
               <p>
                 Je bent een oneindige ziel die jouw bewustzijn ervaart via je menselijk lichaam.
                 Jouw ziel kiest specifieke levensomstandigheden om bepaalde lessen te leren
@@ -191,8 +191,10 @@ const WeesZot = () => {
               <h3 className="text-2xl font-black text-blue-300 mb-3">Communicatie</h3>
               <p className="mb-4">
                 Je ziel communiceert met jou via gevoelens.
+
                 Enthousiasme is een signaal dat je op het juiste pad zit,
                 terwijl angst aangeeft dat je afwijkt van je ware zelf.
+                
               </p>
 
               {/* Zeker? */}
