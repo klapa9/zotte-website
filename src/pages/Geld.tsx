@@ -268,11 +268,11 @@ const Geld = () => {
 
               {/* Spaargeld */}
               <div className="mb-4 pl-4 border-l-4 border-teal-400">
-                <h4 className="text-xl font-bold text-teal-300 mb-2">Sparen of lenen?</h4>
+                <h4 className="text-xl font-bold text-teal-300 mb-2">Sparen of consumeren?</h4>
                 <p className="mb-2">
-                  Een toename in koopkracht moedigt je aan om te sparen in plaats van te lenen.
+                  Een toename in koopkracht moedigt je aan om te sparen in plaats van te consumeren.
+                  Hierdoor krijg je meer vermogen en minder schulden.
                   Leningen worden niet noodzakelijk als je voldoende spaargeld hebt.
-                  Hierdoor krijg je meer vermogen en minder schulden. 
                 </p>
                 <p>
                   Door de stijging van je vermogen, kun je eerder financiële onafhankelijkheid bereiken.
