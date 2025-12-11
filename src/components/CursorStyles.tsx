@@ -10,16 +10,20 @@ export const CursorStyles = ({ children }: CursorStylesProps) => {
     <>
       {children}
       <style jsx global>{`
-        /* Only links and buttons get pointer cursor */
-        a, button, [onclick], [role="button"] {
-          cursor: pointer !important;
-        }
-        
-        /* Everything else gets default cursor */
-        * {
-          cursor: default !important;
-        }
-      `}</style>
+      /* Default cursor for everything */
+      body {
+        cursor: default;
+      }
+
+      /* Pointer cursor voor klikbare elementen */
+      a,
+      button,
+      [role="button"],
+      .cursor-pointer {
+        cursor: pointer !important;
+      }
+    `}</style>
+
     </>
   );
 };
