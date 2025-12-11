@@ -256,7 +256,35 @@ const Geld = () => {
               </p>
             </div>
 
-            {/* De Twee Paden */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-blue-300 mb-3">Scheiding van staat en geld.</h3>
+              <p className="mb-4">
+                Net als de scheiding van kerk en staat, zal de scheiding van staat en geld leiden tot een vrijere samenleving.
+                Overheden zullen niet langer controle hebben over geldstromen, wat hun macht aanzienlijk zal verminderen.
+                Dit zal leiden tot meer individuele vrijheid, minder corruptie en een eerlijker economisch systeem.
+              </p>
+
+              {/* Spaargeld */}
+              <div className="mb-4 pl-4 border-l-4 border-teal-400">
+                <h4 className="text-xl font-bold text-teal-300 mb-2">Het beste spaarboekje</h4>
+                <p className="mb-2">
+                  Gezien er maar een beperkt aantal Bitcoin zal zijn, zal je spaargeld in Bitcoin stijgen in waarde over tijd.
+                  Als er meer goederen op de markt komen, maar de hoeveelheid geld gelijk blijft,
+                  zal de koopkracht van je spaargeld toenemen.
+                  Dit stimuleert sparen en langetermijndenken, in plaats van kortetermijnconsumptie.
+                </p>
+                <p>
+                  Dit zal leiden tot een stabielere economie, waar mensen hun geld waarderen en verstandig beheren.
+                  Maar ook tot meer welvaart, omdat mensen meer kunnen kopen met hun gespaarde Bitcoin.
+                  Schulden zullen minder aantrekkelijk worden, omdat de waarde van geld toeneemt in plaats van afneemt.
+                  Waardoor mensen minder geneigd zullen zijn om geld te lenen voor consumptie.
+                </p>
+
+              </div>
+
+            </div>
+
+            {/* scheiding staat en geld */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
               <h3 className="text-2xl font-black text-blue-300 mb-3">Scheiding van staat en geld.</h3>
               <p className="mb-4">
