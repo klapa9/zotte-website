@@ -155,16 +155,18 @@ const Geld = () => {
               {/* Koopkracht Behouden */}
               <div className="bg-white bg-opacity-5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-yellow-400 border-opacity-30">
                 <h2 className="text-4xl md:text-5xl font-black text-yellow-400 mb-6">
-                  JE KOOPKRACHT BESCHERMEN
+                  Je nieuwe spaarboekje
                 </h2>
                 <div className="space-y-4 text-white text-lg md:text-xl">
                   <p>
-                    Bitcoin beschermt jouw koopkracht omdat niemand zomaar meer kan bijmaken.
+                    Bitcoin stijgt in waarde omdat niemand zomaar meer kan bijmaken.
                     De 21 miljoen voorraad is hardcoded in het protocol - niemand kan dit veranderen.
+                    En gezien er steeds meer goederen en diensten op de markt komen,
+                    maar de hoeveelheid geld gelijk blijft, zal de koopkracht van je spaargeld toenemen.
                   </p>
                   <p>
                     Dit is fundamenteel anders dan fiat valuta die continu worden gedevalueerd.
-                    Terwijl de euro en dollar verliezen aan waarde, behoudt Bitcoin zijn schaarste.
+                    Terwijl de euro en dollar verliezen aan waarde, stijgt de waarde van Bitcoin.
                   </p>
                   <div className="mt-6">
                     <Button
