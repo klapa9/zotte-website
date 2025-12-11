@@ -171,7 +171,7 @@ const Geld = () => {
                       onClick={() => setShowDialog(true)}
                       className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
                     >
-                      ✨ Er is een keuze!
+                      ✨ Hyperbitcoinisatie?
                     </Button>
                   </div>
                 </div>
