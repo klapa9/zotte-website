@@ -184,7 +184,7 @@ const Geld = () => {
 
               {/* Stay Humble Stack Sats */}
               <div className="text-center py-12">
-                <div className="bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-3xl p-8 md:p-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 cursor-pointer">
+                <div className="bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-3xl p-8 md:p-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500">
                   <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
                     STAY HUMBLE
                   </h2>
