@@ -313,7 +313,7 @@ const Geld = () => {
 
             {/* De Keuze */}
             <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-white mb-3">Btc</h3>
+              <h3 className="text-2xl font-black text-white mb-3">De keuze is aan jou!</h3>
               <p className="mb-3">
                 Bitcoin biedt een alternatief voor het huidige financiële systeem.
                 Door te kiezen voor Bitcoin, kies je voor financiële vrijheid en onafhankelijkheid van politieke beslissingen.
