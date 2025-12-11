@@ -81,9 +81,9 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
                 Vertrouw op het proces en laat dingen op hun tijd gebeuren.
               </p>
               <p className="hover:text-cyan-200 transition-colors duration-300">
-                <strong>Liefde is loslaten.</strong> Als je echt van iets of iemand houdt,
-                laat het dan vrij. Dwing geen situaties of relaties.
-                Ware liefde floreert in vrijheid, niet in controle.
+                <strong>Luister naar je intuïtie.</strong> Je innerlijke stem weet vaak beter wat goed voor je is
+                dan je rationele geest. Neem regelmatig tijd om stil te worden en naar binnen te keren.
+                Je zult verbaasd zijn over de inzichten die je ontvangt.
               </p>
               <p className="hover:text-cyan-200 transition-colors duration-300">
                 <strong>Goed leven is balanceren.</strong> Zoek in alles naar balans:
