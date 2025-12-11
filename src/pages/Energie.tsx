@@ -25,12 +25,43 @@ const Energie = () => {
   }, []);
 
   const energyWords = [
-    { word: "Elektriciteit", description: "De stroom die ons zenuwstelsel aandrijft", color: "from-yellow-400 to-blue-600" },
-    { word: "Hartslag", description: "De biologische generator van ons bestaan", color: "from-red-400 to-pink-600" },
-    { word: "Ademhaling", description: "De constante energie-uitwisseling", color: "from-purple-400 to-indigo-600" },
-    { word: "Celkracht", description: "De fundamentele energiebron van leven", color: "from-orange-400 to-amber-600" },
-    { word: "Levenskracht", description: "De allesomvattende kracht van bestaan", color: "from-pink-400 to-rose-600" }
-  ];
+  { 
+    word: "Energie", 
+    description: "De fundamentele kracht waaruit alles ontstaat", 
+    color: "from-cyan-400 to-blue-600" 
+  },
+  { 
+    word: "Polariteit", 
+    description: "De tweeledige beweging waardoor bewustzijn zichzelf ervaart", 
+    color: "from-blue-400 to-indigo-600" 
+  },
+  { 
+    word: "Balans", 
+    description: "Het natuurlijke evenwicht tussen groeiende en krimpende energie", 
+    color: "from-teal-400 to-cyan-600" 
+  },
+  { 
+    word: "Bewustzijn", 
+    description: "De onderliggende eenheid die alle ervaring doordringt", 
+    color: "from-purple-400 to-fuchsia-600" 
+  },
+  { 
+    word: "Liefde", 
+    description: "De grotere stroming die alles verbindt en laat groeien", 
+    color: "from-pink-400 to-red-600" 
+  },
+  { 
+    word: "Transformatie", 
+    description: "Het proces van verandering, loslaten en innerlijke verschuiving", 
+    color: "from-amber-400 to-orange-600" 
+  },
+  { 
+    word: "Expansie", 
+    description: "De beweging van groei, creatie en verruiming van energie", 
+    color: "from-green-400 to-emerald-600" 
+  }
+];
+
 
   return (
     <>
@@ -185,7 +216,7 @@ const Energie = () => {
         }
       `}</style>
       </div>
-      {/* Law of One Dialog */}
+      {/*Dialog */}
       <Dialog open={showDialog} onOpenChange={setShowDialog}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
