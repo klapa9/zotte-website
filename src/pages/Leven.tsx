@@ -192,7 +192,7 @@ const Leven = () => {
               <p>
                 Alles in het universum is één bewustzijn. Elke ziel ontwikkelt zich
                 door verschillende niveaus en kiest daarbij een duidelijke richting
-                van groei. Deze keuze neemt iedereen op een bepaald moment in zijn of haar leven.
+                van groei. Deze keuze neemt iedereen op een bepaald moment in zijn of haar leven(s).
               </p>
             </div>
 
