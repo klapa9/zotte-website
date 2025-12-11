@@ -179,14 +179,14 @@ const ZiekZot = () => {
 
             {/* Call to Action */}
             <div className="text-center py-12">
-              <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-2 transition-all duration-500 cursor-pointer active:scale-95">
+              <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
                   Probeer eens 1 of meerdere maaltijden over te slaan.
                 </h2>
                 <p className="text-xl md:text-2xl text-white mb-6 hover:text-pink-200 transition-colors duration-300">
                   Experimenteer met je lichaam.
                 </p>
-                <div className="inline-block transform hover:scale-110 hover:rotate-6 transition-all duration-300 cursor-pointer active:scale-95">
+                <div className="inline-block transform hover:scale-110 hover:rotate-6 transition-all duration-300 active:scale-95">
                   <p className="text-3xl md:text-5xl font-black text-red-400 hover:text-red-300 transition-colors duration-300">
                     Je zal verbaast zijn wat je aankan.
                   </p>
