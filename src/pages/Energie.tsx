@@ -26,18 +26,13 @@ const Energie = () => {
 
   const energyWords = [
   { 
-    word: "Energie", 
-    description: "De fundamentele kracht waaruit alles ontstaat", 
-    color: "from-cyan-400 to-blue-600" 
-  },
-  { 
     word: "Polariteit", 
     description: "De tweeledige beweging waardoor bewustzijn zichzelf ervaart", 
     color: "from-blue-400 to-indigo-600" 
   },
   { 
     word: "Balans", 
-    description: "Het natuurlijke evenwicht tussen groeiende en krimpende energie", 
+    description: "Het natuurlijke evenwicht binnen energie", 
     color: "from-teal-400 to-cyan-600" 
   },
   { 
@@ -134,7 +129,7 @@ const Energie = () => {
               {energyWords.map((energy, index) => (
                 <div
                   key={index}
-                  className={`bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-3 transition-all duration-500 ${index === activeWord ? 'ring-4 ring-white ring-opacity-50' : ''}`}
+                  className={`bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-3 transition-all duration-500 cursor-pointer ${index === activeWord ? 'ring-4 ring-white ring-opacity-50' : ''}`}
                   onMouseEnter={() => setActiveWord(index)}
                   onClick={() => setShowDialog(true)}
                 >
@@ -173,7 +168,7 @@ const Energie = () => {
             </div>
 
             <div className="bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
-              <h2 className="text-4xl md:text-5xl font-black text-purple-400 mb-6">
+              <h2 className="text-4xl md:text-5xl font-black text-purple-600 mb-6">
                 Je geloof bepaalt je limieten.
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
