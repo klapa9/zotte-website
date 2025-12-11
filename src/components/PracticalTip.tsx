@@ -92,7 +92,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
               </p>
             </>
           ),
-          link: { to: "/ziekzot", text: "Je hoeft niet ziek te zijn in je leven. →", color: "cyan" }
+          link: { to: "/energie", text: "Je bent energie! →", color: "cyan" }
         };
 
       case 'energie':
@@ -120,7 +120,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
               </p>
             </>
           ),
-          link: { to: "/weeszot", text: "Volg je enthousiasme! →", color: "green" }
+          link: { to: "/ziekzot", text: "krijg energie door te vasten. →", color: "green" }
         };
 
       case 'ziekzot':
@@ -177,7 +177,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
               </p>
             </>
           ),
-          link: { to: "/energie", text: "Krijg meer energie →", color: "purple" }
+          link: { to: "/weeszot", text: "Volg je enthousiasme →", color: "purple" }
         };
     }
   };
