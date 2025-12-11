@@ -12,12 +12,12 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
           title: "🎯 Praktische Tip",
           content: (
             <>
-              <p className="hover:text-orange-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-orange-200 transition-colors duration-300">
                 <strong>Start met een klein beetje.</strong> Je hoeft geen hele bitcoin te kopen.
                 1 bitcoin is 100 miljoen sats (satoshis) - de kleinste eenheid.
                 Begin met een paar euro aan sats - het gaat om het principe en de gewenning.
               </p>
-              <p className="hover:text-orange-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-orange-200 transition-colors duration-300">
                 <strong>Automatiseer je spaarboekje.</strong> Koop elke week of maand automatisch een vast bedrag aan sats.
                 Ik raad deze dienst aan: <a
                   href="https://strike.me/"
@@ -26,12 +26,12 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
                   className="underline font-bold"
                 >Strike</a>
               </p>
-              <p className="hover:text-orange-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-orange-200 transition-colors duration-300">
                 <strong>Heb je veel sats: gebruik een hardware wallet.</strong>
                 Een Ledger of Trezor hardware wallet kost minder dan 100€ en beschermt je tegen de meeste risico's.
                 Leer dit eerst goed kennen voordat je grote bedragen erop zet.
               </p>
-              <p className="hover:text-orange-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-orange-200 transition-colors duration-300">
                 <strong>Vergeet de prijs.</strong> Focus op de lange termijn, niet op de huidige koers.
                 Over 5-10 jaar maakt het niet uit of je 2000 of 1000 satoshis kocht per euro.
               </p>
@@ -45,22 +45,22 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
           title: "🎯 Praktische Tip",
           content: (
             <>
-              <p className="hover:text-yellow-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-yellow-200 transition-colors duration-300">
                 <strong>Je eigen angst staat vaak in je weg.</strong> Angst is een beschermingsmechanisme,
                 maar meestal beschermt het je tegen dingen die helemaal niet gevaarlijk zijn.
                 Het houdt je klein en veilig, maar voorkomt ook dat je groeit.
               </p>
-              <p className="hover:text-yellow-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-yellow-200 transition-colors duration-300">
                 <strong>Overwin angst stap per stap.</strong> Begin klein. Heb je angst om te spreken voor groepen?
                 Oefen eerst voor de spiegel, dan voor één vriend, dan drie vrienden. Elke kleine stap
                 bouwt zelfvertrouwen op en verkleint de angst.
               </p>
-              <p className="hover:text-yellow-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-yellow-200 transition-colors duration-300">
                 <strong>Angst verdwijnt niet door het te ontwijken.</strong> Integendeel - hoe meer je het vermijdt,
                 hoe sterker het wordt. De enige manier om angst te overwinnen is er recht op af te bewegen,
                 zelfs als je trilt en zweet. De angst verdwijnt als je door de waas heen breekt.
               </p>
-              <p className="hover:text-yellow-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-yellow-200 transition-colors duration-300">
                 <strong>Visualiseer je succes.</strong> Stel je voor dat je de angst hebt overwonnen.
                 Hoe voelt dat? Vrij, krachtig, levend. Houd dat gevoel vast. Dat is je bestemming,
                 niet de angst die je nu voelt. Elke stap in die richting is een overwinning.
@@ -75,17 +75,17 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
           title: "🎯 Praktische Tip",
           content: (
             <>
-              <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-cyan-200 transition-colors duration-300">
                 <strong>Je moet niets forceren.</strong> Iedereen leeft zijn leven.
                 Het universum heeft een natuurlijk ritme. Probeer niet te hard te sturen.
                 Vertrouw op het proces en laat dingen op hun tijd gebeuren.
               </p>
-              <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-cyan-200 transition-colors duration-300">
                 <strong>Liefde is loslaten.</strong> Als je echt van iets of iemand houdt,
                 laat het dan vrij. Dwing geen situaties of relaties.
                 Ware liefde floreert in vrijheid, niet in controle.
               </p>
-              <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-cyan-200 transition-colors duration-300">
                 <strong>Goed leven is balanceren.</strong> Zoek in alles naar balans:
                 werk en rust, geven en nemen, actie en reflectie.
                 Te veel van iets goeds kan schadelijk zijn.
@@ -100,22 +100,22 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
           title: "🎯 Praktische Tip",
           content: (
             <>
-              <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-green-200 transition-colors duration-300">
                 <strong>Angst Blokkeert Energie: </strong>
                   Het blokkeert de natuurlijke stroom van energie in ons lichaam.
                   Wanneer we bang zijn, sluiten we ons af van onze kracht.
                   Door angst los te laten, bevrijden we onze energie.
               </p>
-              <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-green-200 transition-colors duration-300">
                   <strong>Liefde Vermenigvuldigt Energie: </strong>
                   Wanneer je handelt vanuit liefde, stroomt je energie vrijelijk.
                   Liefde opent je hart en geest, waardoor je meer energie aantrekt.
                   Het is de ultieme krachtbron die ons verbindt met alles om ons heen.
               </p>
-              <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-green-200 transition-colors duration-300">
                 <strong>Overwin je angst en voel het verschil.</strong>
               </p>
-              <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-green-200 transition-colors duration-300">
                 <strong>Richt je aandacht op wat je vreugde brengt en zie je energie vermenigvuldigen.</strong>
               </p>
             </>
@@ -128,19 +128,19 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
           title: "🎯 Praktische Tip",
           content: (
             <>
-              <p className="hover:text-red-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-red-200 transition-colors duration-300">
                 <strong>De natuur kan je genezen.</strong> Je lichaam is een prachtige zelfgenezende machine
                 wanneer je het de juiste omstandigheden geeft. De natuur biedt alles wat je nodig hebt.
               </p>
-              <p className="hover:text-red-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-red-200 transition-colors duration-300">
                 <strong>Onze natuurlijke staat van zijn is zonder voeding in ons lichaam.</strong> 
                 Ons lichaam is perfect ontworpen om periodes zonder voeding te overleven en zelfs te floreren.
               </p>
-              <p className="hover:text-red-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-red-200 transition-colors duration-300">
                 Heb je het te lastig om te vasten? Begin klein. Probeer eerst 12 uur, dan 16 uur.
                 Bouw het langzaam op. Luister naar je lichaam, maar daag het ook uit.
               </p>
-              <p className="hover:text-red-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-red-200 transition-colors duration-300">
                 <strong>Je gedachten beïnvloeden je genezing.</strong> Negatieve gedachten en emoties
                 creëren stress, wat je energie ondermijnt. Cultiveer positieve gedachten,
                 dankbaarheid, en liefde om je te ondersteunen.
@@ -155,22 +155,22 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
           title: "🎯 Praktische Tip",
           content: (
             <>
-              <p className="hover:text-purple-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-purple-200 transition-colors duration-300">
                 <strong>Je leven is de spiegel van je onderbewustzijn.</strong>
                 Alles wat je ervaart - problemen, successen, relaties, gebeurtenissen -
                 is een reflectie van wat diep vanbinnen in je leeft.
               </p>
-              <p className="hover:text-purple-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-purple-200 transition-colors duration-300">
                 Wanneer je herhaaldelijk dezelfde problemen tegenkomt, kijk dan niet
                 naar buiten, maar naar binnen. <strong>Elk probleem kan je inwendig oplossen.</strong>
                 De oplossing zit nooit in de buitenwereld, maar in jouw bewustzijn.
               </p>
-              <p className="hover:text-purple-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-purple-200 transition-colors duration-300">
                 Dit is de meest krachtige kennis die je kunt bezitten. Je hoeft niet
                 te wachten op externe veranderingen. Verander je innerlijke wereld,
                 en de buitenwereld volgt automatisch.
               </p>
-              <p className="hover:text-purple-200 transition-colors duration-300 cursor-pointer">
+              <p className="hover:text-purple-200 transition-colors duration-300">
                 Werk met je onderbewustzijn: visualisatie, affirmaties, meditatie.
                 Herprogrammeer de diepe lagen die je realiteit creëren.
                 De resultaten zullen je verbazen - het is bijna magisch.

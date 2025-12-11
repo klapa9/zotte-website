@@ -103,16 +103,16 @@ const WeesZot = () => {
                   Laat verwachtingen los en vertrouw het leven.
                 </h2>
                 <div className="space-y-4 text-white text-lg md:text-xl">
-                  <p className="hover:text-indigo-200 transition-colors duration-300 cursor-pointer">
+                  <p className="hover:text-indigo-200 transition-colors duration-300">
                     Vertrouw dat het universum je altijd ondersteunt.
                     Wanneer je loslaat wat je denkt nodig te hebben,
                     maak je ruimte voor iets beters.
                   </p>
-                  <p className="hover:text-purple-200 transition-colors duration-300 cursor-pointer">
+                  <p className="hover:text-purple-200 transition-colors duration-300">
                     Je enthousiasme en intuïtie zijn de perfecte gidsen.
                     Ze leiden je naar onverwachte kansen en magische ervaringen.
                   </p>
-                  <p className="hover:text-pink-200 transition-colors duration-300 cursor-pointer">
+                  <p className="hover:text-pink-200 transition-colors duration-300">
                     Geloof in jezelf en in het proces.
                     Durf gek te zijn, zonder angst of verwachtingen.
                     Geef je over aan het avontuur van het leven.
