@@ -169,7 +169,7 @@ const OpenJeGeest = () => {
 
             {/* Final Call to Action */}
             <div className="text-center py-12">
-              <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-3xl p-8 md:p-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 cursor-pointer active:scale-95">
+              <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-3xl p-8 md:p-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-110 hover:rotate-3 transition-all duration-300">
                   Focus 
                 </h2>
