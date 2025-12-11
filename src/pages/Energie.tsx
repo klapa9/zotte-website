@@ -118,7 +118,7 @@ const Energie = () => {
             {/* Featured Word */}
             <div className="text-center mb-20">
               <div className="inline-block">
-                <h2 className={`text-6xl md:text-8xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-r ${energyWords[activeWord].color} transition-all duration-1000 hover:scale-105 cursor-pointer transition-transform duration-300`}
+                <h2 className={`text-6xl md:text-8xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-r ${energyWords[activeWord].color} transition-all duration-1000 hover:scale-105 transition-transform duration-300`}
                   onClick={() => setShowDialog(true)}
                 >
                   {energyWords[activeWord].word}
@@ -134,7 +134,7 @@ const Energie = () => {
               {energyWords.map((energy, index) => (
                 <div
                   key={index}
-                  className={`bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-3 transition-all duration-500 cursor-pointer ${index === activeWord ? 'ring-4 ring-white ring-opacity-50' : ''}`}
+                  className={`bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-3 transition-all duration-500 ${index === activeWord ? 'ring-4 ring-white ring-opacity-50' : ''}`}
                   onMouseEnter={() => setActiveWord(index)}
                   onClick={() => setShowDialog(true)}
                 >
@@ -149,21 +149,21 @@ const Energie = () => {
             </div>
 
             {/* Energy Explanation */}
-            <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 cursor-pointer active:scale-95">
+            <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
                 We hebben een Elektrisch Lichaam
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
-                <p className="hover:text-green-200 transition-colors duration-300 cursor-pointer">
+                <p className="hover:text-green-200 transition-colors duration-300">
                   <strong>Wij zijn generatoren van energie.</strong> Ons lichaam is een elektro-chemisch systeem dat constant energie genereert en gebruikt.
                   Elke hartslag, elke gedachte, elke beweging - het zijn allemaal energetische signalen.
                 </p>
-                <p className="hover:text-blue-200 transition-colors duration-300 cursor-pointer">
+                <p className="hover:text-blue-200 transition-colors duration-300">
                   Energie is de <strong>communicatietaal van ons lichaam</strong>.
                   Onze zenuwen sturen elektrische pulsen met ongelofelijke snelheid - sneller dan elk computernetwerk.
                   Onze hersenen zijn een elektrisch orgaan miljarden synapsen sterk.
                 </p>
-                <p className="hover:text-cyan-200 transition-colors duration-300 cursor-pointer">
+                <p className="hover:text-cyan-200 transition-colors duration-300">
                   Energie stroomt door ons heen en verbindt ons met alles om ons heen.
                   We zijn niet alleen fysieke wezens, maar ook energetische wezens.
                   Door ons bewust te worden van deze energie kunnen we onze gezondheid,
@@ -172,7 +172,7 @@ const Energie = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 cursor-pointer active:scale-95">
+            <div className="bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
               <h2 className="text-4xl md:text-5xl font-black text-purple-400 mb-6">
                 Je geloof bepaalt je limieten.
               </h2>
