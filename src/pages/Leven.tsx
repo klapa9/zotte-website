@@ -81,7 +81,7 @@ const Leven = () => {
                 <p>
                   Jouw reden om te leven is uniek. Het is jouw persoonlijke missie.
                   Ontdek wat jou drijft. Wat jou gelukkig maakt.
-                  En leef daarnaar. Dat is de sleutel tot een vervuld leven.
+                  En leef daarnaar. We zijn hier met een reden.
                 </p>
                 
               </div>
