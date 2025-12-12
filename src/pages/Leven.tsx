@@ -74,7 +74,11 @@ const Leven = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Er is 1 oneindig bewustzijn die alles ervaart. Wij zijn een deel van dat bewustzijn.
+                  Er is 1 oneindig bewustzijn die alles ervaart. Dit heeft vele namen: God, het Universum, de Bron, het Al, het Ene.
+                  Het is de schepper en de schepping. Het is alles wat is, was en zal zijn.
+                </p>
+                <p>
+                  Wij zijn een deel van dat bewustzijn.
                   We zijn oneindige wezens die een fysieke ervaring aangaan op deze planeet.
                   We zijn hier om te groeien, te ervaren en te leren.
                 </p>
