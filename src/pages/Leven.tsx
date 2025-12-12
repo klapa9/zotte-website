@@ -11,7 +11,7 @@ import { Button } from '@/components/ui/button';
 const Leven = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [showLawOfOneDialog, setShowLawOfOneDialog] = useState(false);
-  const [showDialog2, setshowDialog2] = useState(false);
+  const [showDialog2, setShowDialog2] = useState(false);
 
   useSeoMeta({
     title: 'L E V E N ? - De Grote Vragen',
@@ -286,7 +286,7 @@ const Leven = () => {
         </DialogContent>
       </Dialog>
       {/* Law of One Dialog */}
-      <Dialog open={showDialog2} onOpenChange={setshowDialog2}>
+      <Dialog open={showDialog2} onOpenChange={setShowDialog2}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
@@ -322,7 +322,7 @@ const Leven = () => {
             {/* Sluit knop */}
             <div className="text-center pt-4">
               <Button
-                onClick={() => setshowDialog2(false)}
+                onClick={() => setShowDialog2(false)}
                 className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 Sluiten
