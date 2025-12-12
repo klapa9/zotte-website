@@ -66,20 +66,16 @@ const Leven = () => {
         {/* Main Content */}
         <div className="flex-1 px-4 pb-16">
           <div className="max-w-6xl mx-auto space-y-20">
-            {/* Waarom leef je? */}
+            {/* God? */}
             <div className="bg-white bg-opacity-5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-cyan-400 border-opacity-30 transform hover:scale-105 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-cyan-400 mb-6">
-                Waarom leef je?
+                God?
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Er is 1 bewustzijn die alles ervaart. Wij zijn een deel van dat bewustzijn.
-                  Je leeft om te ervaren. Om te groeien. Om te leren.
-                </p>
-                <p>
-                  Je leeft om lief te hebben. Om te leren. Om te creëren.
-                  Om anderen te helpen. Om de wereld een beetje beter te maken.
-                  Of misschien is het simpelweg: omdat het leuk is.
+                  Er is 1 oneindig bewustzijn die alles ervaart. Wij zijn een deel van dat bewustzijn.
+                  We zijn oneindige wezens die een fysieke ervaring aangaan op deze planeet.
+                  We zijn hier om te groeien, te ervaren en te leren.
                 </p>
                 <p>
                   Jouw reden om te leven is uniek. Het is jouw persoonlijke missie.
@@ -90,7 +86,7 @@ const Leven = () => {
               </div>
             </div>
 
-            {/* Wat is belangrijk in je leven? */}
+            {/* Het spel van het leven */}
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 md:p-12 transform hover:rotate-1 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
                 Het spel van het leven
@@ -117,7 +113,7 @@ const Leven = () => {
             {/* Hoe kan je beter leven? */}
             <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-blue-400 border-opacity-30 transform hover:-rotate-1 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-blue-400 mb-6">
-                Hoe kan je beter leven?
+                We volgen een stroom.
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
@@ -131,9 +127,8 @@ const Leven = () => {
                   We leren dat we allemaal verbonden zijn. Dat we allemaal één zijn.
                 </p>
                 <p>
-                  Als je beter wilt leven, stem je dan af op deze stroom.
-                  Kies bewust voor groei, liefde en verbinding.
-                  Dit is de weg naar een vervuld en betekenisvol leven.
+                  Als je deze stroom wilt volgen, kies bewust voor groei, liefde en verbinding.
+                  Dit is de weg waar we allemaal naartoe evolueren.
                 </p>
                 <div className="mt-6">
                     <Button
@@ -249,6 +244,12 @@ const Leven = () => {
                 spirituele vooruitgang. Elk pad biedt unieke lessen en
                 leidt uiteindelijk naar dezelfde bron. Er is geen moreel
                 oordeel - beide zijn geldige keuzes voor bewustzijnsontwikkeling.
+              </p>
+              <p>
+                Hier op aarde is de meerderheid van zielen bezig met het STO-pad,
+                wat leidt tot meer liefde en samenwerking. Echter, er zijn ook
+                zielen die het STS-pad volgen, wat uitdagingen en conflicten
+                kan veroorzaken.
               </p>
             </div>
 
