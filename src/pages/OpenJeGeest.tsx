@@ -104,23 +104,6 @@ const OpenJeGeest = () => {
               </div>
             </div>
 
-            {/* What does it mean? */}
-            <div className="bg-white bg-opacity-5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-purple-400 border-opacity-30">
-              <h2 className="text-4xl md:text-5xl font-black text-purple-400 mb-6">
-                Wees bescheiden.
-              </h2>
-              <div className="space-y-4 text-white text-lg md:text-xl">
-                <p>
-                  Je denkt dat je de wereld begrijpt. Je hebt je theorieën, je overtuigingen,
-                  je zekerheden. Enkel door bescheidenheid kan je werkelijk leren.
-                </p>
-                <p>
-                  De werkelijkheid is veel mooier, complexer, en wonderlijker
-                  dan we beseffen.
-                </p>
-              </div>
-            </div>
-
             {/* Open Geest Section */}
             <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-8 md:p-12 transform hover:scale-105 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
@@ -141,6 +124,31 @@ const OpenJeGeest = () => {
                   Een open geest is de sleutel tot groei. Zonder openheid
                   blijf je vastzitten in dezelfde denkkaders,
                   dezelfde beperkingen, dezelfde realiteit.
+                </p>
+              </div>
+            </div>
+
+            {/* What does it mean? */}
+            <div className="bg-white bg-opacity-5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-purple-400 border-opacity-30">
+              <h2 className="text-4xl md:text-5xl font-black text-purple-400 mb-6">
+                Je bent de schepper van je eigen werkelijkheid
+              </h2>
+              <div className="space-y-4 text-white text-lg md:text-xl">
+                <p>
+                  Jij bepaalt waar je je op focust.
+                  Je gedachten creëren je ervaring.
+                  Wat jij gelooft, wordt jouw waarheid.
+                </p>
+                <p>
+                  Dus als je je geest opent voor nieuwe ideëen,
+                  als je bereid bent om anders te denken,
+                  dan verander je niet alleen jezelf,
+                  maar ook de wereld om je heen.
+                </p>
+                <p>
+                  Vergeet dus de beperkingen die je jezelf hebt opgelegd.
+                  Jij bent geen slachtoffer van de realiteit.
+                  Jij bent de schepper van je eigen werkelijkheid.
                 </p>
               </div>
             </div>
