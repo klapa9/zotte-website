@@ -159,14 +159,10 @@ const Leven = () => {
                 </h2>
                 <p className="text-white text-lg md:text-xl">
                   Wij zijn de scheppers van onze eigen realiteit.
-                  Door bewust te kiezen wat we willen ervaren,
-                  kunnen we een leven creëren dat vervullend en betekenisvol is.
                 </p>
-                <p>
+                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
                   Geloof in je kracht om je leven te vormen.
-                  Omarm de uitdagingen als kansen om te groeien.
-                  En leef een leven dat resoneert met jouw diepste waarden en verlangens.
-                </p>
+                </h2>
               </div>
             </div>
           </div>
