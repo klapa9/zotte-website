@@ -175,7 +175,13 @@ const WeesZot = () => {
               <div className="mb-4 pl-4 border-l-4 border-teal-400">
                 <h4 className="text-xl font-bold text-teal-300 mb-2">Hoe kan je zeker zijn?</h4>
                 <p className="mb-2">
-                  Het is eerst een kwestie van vertrouwen hebben.
+                  Als je enthousiasme gebaseerd is op angst, onzekerheid of
+                  sociale druk, is het waarschijnlijk niet de stem van je ziel.
+                  Echte enthousiasme voelt licht, vreugdevol en opwindend,
+                  zelfs als het eng is.
+                </p>
+                <p className="mb-2">
+                  Het is ook een kwestie van vertrouwen hebben.
                   Door te oefenen in het volgen van je enthousiasme,
                   ontwikkel je een dieper vertrouwen in je intuïtie.
                   Na verloop van tijd wordt het duidelijker welke keuzes
