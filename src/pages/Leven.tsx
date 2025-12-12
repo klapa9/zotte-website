@@ -73,17 +73,18 @@ const Leven = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Dit is misschien wel de meest fundamentele vraag die je jezelf kunt stellen.
-                  Het antwoord bepaalt alles: je keuzes, je prioriteiten, je geluk.
+                  Er is 1 bewustzijn die alles ervaart. Wij zijn een deel van dat bewustzijn.
+                  Je leeft om te ervaren. Om te groeien. Om te leren.
                 </p>
                 <p>
-                  Misschien leef je om lief te hebben. Om te leren. Om te creëren.
+                  Je leeft om lief te hebben. Om te leren. Om te creëren.
                   Om anderen te helpen. Om de wereld een beetje beter te maken.
                   Of misschien is het simpelweg: omdat het leuk is.
                 </p>
                 <p>
-                  Het mooie is: er is geen juist antwoord. Jouw antwoord is het juiste antwoord.
-                  Maar de vraag stellen? Dat is de eerste stap naar een bewust leven.
+                  Jouw reden om te leven is uniek. Het is jouw persoonlijke missie.
+                  Ontdek wat jou drijft. Wat jou gelukkig maakt.
+                  En leef daarnaar. Dat is de sleutel tot een vervuld leven.
                 </p>
                 
               </div>
@@ -92,12 +93,13 @@ const Leven = () => {
             {/* Wat is belangrijk in je leven? */}
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 md:p-12 transform hover:rotate-1 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-                Wat is belangrijk in je leven?
+                Het spel van het leven
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Tijd, aandacht, energie. Dat zijn je meest waardevolle bezittingen.
-                  Waar geef je ze aan? Dat zegt alles over wat echt belangrijk voor je is.
+                  We zijn oneindige wezens die een tijdelijk spel spelen.
+                  Het is een open spel met talloze mogelijkheden.
+                  Jij bepaalt wat belangrijk is in jouw spel.
                 </p>
                 <p>
                   Is het geld? Status? Relaties? Persoonlijke groei? Vrijheid?
@@ -105,9 +107,9 @@ const Leven = () => {
                   maar voor jou alles betekent.
                 </p>
                 <p>
-                  De kunst is om te leven in overeenstemming met wat belangrijk is.
-                  Niet praten over wat belangrijk is, maar er ook echt naar handelen.
-                  Dat is de uitdaging. En de beloning.
+                  Wat je ook kiest, zorg dat het resoneert met jouw diepste waarden.
+                  Dat het jou energie geeft. Dat het jou motiveert om elke dag
+                  het beste uit jezelf te halen.
                 </p>
               </div>
             </div>
@@ -119,17 +121,19 @@ const Leven = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Beter leven is persoonlijk. 
-                  Kies wat beter voor jou betekent en handel daarnaar.
+                  We zijn oneindige wezens die de ervaring van limietatie
+                  en groei aangaan op deze planeet. De limieten die je ervaart
+                  zijn illusies die je uitdagen om te groeien.
                 </p>
                 <p>
-                  Handel naar jouw keuzes. Kleine stappen, consequent uitgevoerd.
-                  Je ontwikkelt discipline door actie te ondernemen.
-                  Laat perfectie los en focus op vooruitgang.
+                  Nu zijn we terug aan het ontdekken wie we werkelijk zijn.
+                  We zijn aan het ontwaken uit een lange droom van afgescheidenheid.
+                  We leren dat we allemaal verbonden zijn. Dat we allemaal één zijn.
                 </p>
                 <p>
-                  Accepteer het als je fouten maakt,
-                  maar weet dat je wel elke dag een beetje beter probeert te worden.
+                  Als je beter wilt leven, stem je dan af op deze stroom.
+                  Kies bewust voor groei, liefde en verbinding.
+                  Dit is de weg naar een vervuld en betekenisvol leven.
                 </p>
                 <div className="mt-6">
                     <Button
@@ -192,7 +196,8 @@ const Leven = () => {
               <p>
                 Alles in het universum is één bewustzijn. Elke ziel ontwikkelt zich
                 door verschillende niveaus en kiest daarbij een duidelijke richting
-                van groei. Deze keuze neemt iedereen op een bepaald moment in zijn of haar leven(s).
+                van groei. We zijn op een punt in onze evolutie waar we moeten kiezen
+                welk pad we willen volgen.
               </p>
             </div>
 
