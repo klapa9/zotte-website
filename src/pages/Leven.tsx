@@ -187,7 +187,7 @@ const Leven = () => {
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              De Wet van Eénheid
+              De keuze van je evolutionaire pad
             </DialogTitle>
           </DialogHeader>
           <div className="space-y-6 text-lg">
@@ -195,10 +195,18 @@ const Leven = () => {
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
               <h3 className="text-2xl font-black text-cyan-300 mb-3">Alles is Één Bewustzijn</h3>
               <p>
-                Alles in het universum is één bewustzijn. Elke ziel ontwikkelt zich
-                door verschillende niveaus en kiest daarbij een duidelijke richting
-                van groei. We zijn op een punt in onze evolutie waar we moeten kiezen
-                welk pad we willen volgen.
+                De evolutionaire reis die God onderneemt, begint met zichzelf te splitsen in
+                talloze zielen die afzonderlijke ervaringen opdoen. Elke ziel kiest een pad
+                van groei en bewustzijnsontwikkeling.
+              </p>
+              <p>
+                Een belangrijke stap is vergeten wie hij werkelijk is.
+                Dit stelt de ziel in staat om volledig op te gaan in haar ervaringen
+                zonder de beperkingen van haar ware aard.
+              </p>
+              <p>
+                uiteindelijk zal elke ziel terugkeren tot een geheel, verrijkt met de lessen
+                en ervaringen die zij heeft opgedaan.
               </p>
             </div>
 
@@ -206,7 +214,9 @@ const Leven = () => {
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
               <h3 className="text-2xl font-black text-blue-300 mb-3">Twee Evolutionaire Paden</h3>
               <p className="mb-4">
-                Er bestaan maar twee evolutionaire paden waar je tussen kunt kiezen:
+                We zijn op een punt in onze spirituele evolutie waar we
+                een keuze moeten maken tussen twee fundamentele paden:
+                Service to Others (STO) en Service to Self (STS).
               </p>
 
               {/* Service to Others */}
