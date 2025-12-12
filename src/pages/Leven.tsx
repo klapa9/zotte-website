@@ -302,8 +302,7 @@ const Leven = () => {
                 Alles in het universum is één bewustzijn. Dat is de kern van de Wet van Eénheid.
               </p>
               <p className="mt-3">
-                Deze Eenheid is deze niet slechts een idee maar de
-                onderliggende structuur van alle ervaring. Alles wat wij als gescheiden zien,
+                Deze Eenheid is de onderliggende structuur van alle ervaring. Alles wat wij als gescheiden zien,
                 zijn verschillende uitdrukkingen van dezelfde Oneindige Bron.
               </p>
             </div>
@@ -316,6 +315,15 @@ const Leven = () => {
                 Als alles één is, dan is alles wat je anderen aandoet ook iets dat je
                 uiteindelijk aan jezelf doet. Elke keuze, elke gedachte, elke interactie is
                 een vorm van zelfontdekking.
+              </p>
+              <p className="mb-3">
+                Dit betekent dat door anderen te helpen, je ook jezelf helpt.
+                Door liefde en compassie te tonen, vergroot je ook jouw eigen ervaring van liefde.
+                Door bewust te kiezen voor positiviteit, verhoog je ook jouw eigen vibratie.
+              </p>
+              <p>
+                Jouw acties hebben een ripple-effect dat verder reikt dan je kunt zien.
+                Wat je aan de wereld geeft, komt uiteindelijk bij jou terug.
               </p>
             </div>
 
