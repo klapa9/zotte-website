@@ -93,14 +93,13 @@ const Leven = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  We zijn oneindige wezens die een tijdelijk spel spelen.
-                  Het is een open spel met talloze mogelijkheden.
+                  Het is een open spel met talloze mogelijkheden en enkele regels.
                   Jij bepaalt wat belangrijk is in jouw spel.
                 </p>
                 <p>
-                  Is het geld? Status? Relaties? Persoonlijke groei? Vrijheid?
-                  Of misschien iets heel anders? Iets wat niemand anders begrijpt,
-                  maar voor jou alles betekent.
+                  De regels zijn er om ons te limiteren en uit te dagen.
+                  Ze zijn er om ons te laten groeien.
+                  Ze zijn er om ons te laten kiezen wat we willen ervaren.                  
                 </p>
                 <p>
                   Wat je ook kiest, zorg dat het resoneert met jouw diepste waarden.
@@ -113,22 +112,24 @@ const Leven = () => {
             {/* Hoe kan je beter leven? */}
             <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-blue-400 border-opacity-30 transform hover:-rotate-1 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-blue-400 mb-6">
-                We volgen een stroom.
+                De spelregels van het leven
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  We zijn oneindige wezens die de ervaring van limietatie
-                  en groei aangaan op deze planeet. De limieten die je ervaart
-                  zijn illusies die je uitdagen om te groeien.
+                  De limieten die je ervaart zijn illusies die je uitdagen om te groeien.
+                  We bepalen samen de realiteit die we ervaren.
+                  We zijn in staat om onze werkelijkheid te veranderen door onze keuzes en intenties.
+                  Waar we in geloven, creëeren we.
                 </p>
                 <p>
-                  Nu zijn we terug aan het ontdekken wie we werkelijk zijn.
+                  De grootste illusie (spelregel) waar we momenteel in geloven is dat we afgescheiden zijn van elkaar en van het universum.
+                  Dat we alleen zijn. Dat we machteloos zijn.
+                  Dit is niet waar.
+                </p>
+                <p>
+                  We zijn aan het ontdekken wie we werkelijk zijn.
                   We zijn aan het ontwaken uit een lange droom van afgescheidenheid.
                   We leren dat we allemaal verbonden zijn. Dat we allemaal één zijn.
-                </p>
-                <p>
-                  Als je deze stroom wilt volgen, kies bewust voor groei, liefde en verbinding.
-                  Dit is de weg waar we allemaal naartoe evolueren.
                 </p>
                 <div className="mt-6">
                     <Button
@@ -147,15 +148,17 @@ const Leven = () => {
             <div className="text-center py-12">
               <div className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-3xl p-8 md:p-12 transform hover:scale-105 hover:rotate-3 transition-all duration-500 active:scale-95">
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
-                  Het leven is een reis
+                  Jouw Leven, Jouw Keuze
                 </h2>
-                <p className="text-xl md:text-2xl text-white mb-6 hover:scale-105 hover:rotate-1 transition-all duration-300">
-                  Geen bestemming, maar een constante ontdekkingstocht
+                <p className="text-white text-lg md:text-xl">
+                  Wij zijn de scheppers van onze eigen realiteit.
+                  Door bewust te kiezen wat we willen ervaren,
+                  kunnen we een leven creëren dat vervullend en betekenisvol is.
                 </p>
-                <p className="text-lg md:text-xl text-white opacity-90 hover:opacity-100 transition-opacity duration-300">
-                  Elke vraag leidt naar nieuwe inzichten.
-                  Elk inzicht leidt naar nieuwe vragen.
-                  En zo groei je, stap voor stap, dag na dag.
+                <p>
+                  Geloof in je kracht om je leven te vormen.
+                  Omarm de uitdagingen als kansen om te groeien.
+                  En leef een leven dat resoneert met jouw diepste waarden en verlangens.
                 </p>
               </div>
             </div>
