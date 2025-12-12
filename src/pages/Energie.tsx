@@ -169,20 +169,17 @@ const Energie = () => {
 
             <div className="bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
               <h2 className="text-4xl md:text-5xl font-black text-purple-600 mb-6">
-                Je geloof bepaalt je limieten.
+                Balanceer je Energie
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Alles waar jij in gelooft, zorgt voor jouw werkelijkheid. Als jij gelooft dat iets onmogelijk is,
-                  dan zal je manieren vinden om dat te bevestigen.
+                  Alle energie is polair, er is altijd een positieve en een negatieve kant.
+                  Deze polariteit is essentieel voor balans en groei.
                 </p>
                 <p>
-                  Als je gelooft dat je onbegrensde energie hebt, dan zal je manieren vinden om dat te ervaren.
-                  Jouw overtuigingen bepalen jouw energieniveau.
-                </p>
-                <p>
-                  Eerst moet je beseffen dat jouw energie grenzeloos is.
-                  Dan moet je handelen vanuit die overtuiging.
+                  De kunst is om je energie in balans te houden.
+                  Te veel focus op de ene kant kan leiden tot uitputting of stagnatie.
+                  Te veel focus op de andere kant kan leiden tot chaos of destructie.
                 </p>
               </div>
             </div>
