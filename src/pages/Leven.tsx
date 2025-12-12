@@ -193,7 +193,7 @@ const Leven = () => {
           <div className="space-y-6 text-lg">
             {/* Introductie */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-cyan-300 mb-3">Alles is Één Bewustzijn</h3>
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">De evolutionaire reis van God</h3>
               <p>
                 De evolutionaire reis die God onderneemt, begint met zichzelf te splitsen in
                 talloze zielen die afzonderlijke ervaringen opdoen. Elke ziel kiest een pad
