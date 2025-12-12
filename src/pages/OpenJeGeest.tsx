@@ -153,6 +153,28 @@ const OpenJeGeest = () => {
               </div>
             </div>
 
+            {/* Geloof Section */}
+              <div className="bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
+              <h2 className="text-4xl md:text-5xl font-black text-purple-600 mb-6">
+                Je geloof bepaalt je limieten.
+              </h2>
+              <div className="space-y-4 text-white text-lg md:text-xl">
+                <p>
+                  Alles waar jij in gelooft, zorgt voor jouw werkelijkheid. Als jij gelooft dat iets onmogelijk is,
+                  dan zal je manieren vinden om dat te bevestigen.
+                </p>
+                <p>
+                  Als je gelooft dat je iets kan, dan zal je manieren vinden om dat te ervaren.
+                  Jouw overtuigingen bepalen jouw ervaring.
+                </p>
+                <p>
+                  Dat is gemakkelijker gezegd dan gedaan, want je moet het <strong>echt geloven!</strong>
+                  Daarom heb je een open geest nodig. Om je oude overtuigingen los te laten
+                  en nieuwe mogelijkheden te omarmen.
+                </p>
+              </div>
+            </div>
+
             {/* Examples of Mind-Blowing Ideas */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {ideas.map((idea, index) => (
