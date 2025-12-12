@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 const Leven = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [showLawOfOneDialog, setShowLawOfOneDialog] = useState(false);
+  const [showDialog2, setshowDialog2] = useState(false);
 
   useSeoMeta({
     title: 'L E V E N ? - De Grote Vragen',
@@ -106,13 +107,19 @@ const Leven = () => {
                   Dat het jou energie geeft. Dat het jou motiveert om elke dag
                   het beste uit jezelf te halen.
                 </p>
+                <Button
+                      onClick={() => setShowLawOfOneDialog(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      ✨ De spelregels van het leven
+                    </Button>
               </div>
             </div>
 
             {/* Hoe kan je beter leven? */}
             <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-blue-400 border-opacity-30 transform hover:-rotate-1 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-blue-400 mb-6">
-                De spelregels van het leven
+                We zijn één
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
@@ -282,6 +289,53 @@ const Leven = () => {
           </div>
         </DialogContent>
       </Dialog>
+      {/* Law of One Dialog */}
+      <Dialog open={showDialog2} onOpenChange={setshowDialog2}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
+          <DialogHeader>
+            <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
+              De wet van éénheid
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-6 text-lg">
+
+            {/* Introductie */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">The law of one</h3>
+              <p>
+                Alles in het universum is één bewustzijn. Dat is de kern van de Wet van Eénheid.
+              </p>
+              <p className="mt-3">
+                Deze Eenheid is deze niet slechts een idee maar de
+                onderliggende structuur van alle ervaring. Alles wat wij als gescheiden zien,
+                zijn verschillende uitdrukkingen van dezelfde Oneindige Bron.
+              </p>
+            </div>
+
+            
+            {/* Toepassing op het dagelijkse leven */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">Wat betekent dit voor jou?</h3>
+              <p className="mb-3">
+                Als alles één is, dan is alles wat je anderen aandoet ook iets dat je
+                uiteindelijk aan jezelf doet. Elke keuze, elke gedachte, elke interactie is
+                een vorm van zelfontdekking.
+              </p>
+            </div>
+
+            {/* Sluit knop */}
+            <div className="text-center pt-4">
+              <Button
+                onClick={() => setshowDialog2(false)}
+                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Sluiten
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
     </>
   );
 };
