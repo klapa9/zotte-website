@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 const ZiekZot = () => {
   const [glitchMode, setGlitchMode] = useState(false);
   const [showDialog, setShowDialog] = useState(false);
+  const [showDialog2, setShowDialog2] = useState(false);
 
   useSeoMeta({
     title: 'Ziek Zot! - De Waarheid over Ziekte en Gekte',
@@ -121,6 +122,12 @@ const ZiekZot = () => {
                   Je hoeft niet meteen all in te gaan. Begin met af en toe te vasten.
                   Geef je lichaam rust. Laat het reinigen.
                 </p>
+                <Button
+                      onClick={() => setShowDialog2(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      ✨ Succesvol vasten!
+                </Button>
               </div>
             </div>
 
@@ -305,6 +312,69 @@ const ZiekZot = () => {
             <div className="text-center pt-4">
               <Button
                 onClick={() => setShowDialog(false)}
+                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Sluiten
+              </Button>
+            </div>
+
+          </div>
+        </DialogContent>
+      </Dialog>
+      {/* Dialog */}
+      <Dialog open={showDialog2} onOpenChange={setShowDialog2}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
+          <DialogHeader>
+            <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
+              Succesvol vasten
+            </DialogTitle>
+          </DialogHeader>
+
+          <div className="space-y-6 text-lg">
+
+            {/* Introductie */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">
+                Vasten is:
+              </h3>
+              <p>
+                Niet eten en drinken voor een bepaalde periode om het lichaam te laten reinigen en helen.
+                Geen medicatie gebruiken die het natuurlijke reinigingsproces verstoort.
+                Niets innemen in het lichaam dat het vasten onderbreekt.
+              </p>
+            </div>
+            
+
+            {/* Het Lichaam */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-blue-300 mb-3">
+                Fase 1: Detoxificatie
+              </h3>
+              <p className="mb-4">
+                In de eerste dagen van het vasten begint het lichaam met het opruimen van gifstoffen.
+                Oude cellen worden afgebroken en schadelijke stoffen worden via urine, zweet en ontlasting uitgescheiden.
+                Dit kan gepaard gaan met hoofdpijn, vermoeidheid, misselijkheid of stemmingswisselingen.
+                Dit is normaal en een teken dat het lichaam aan het reinigen is.
+              </p>
+              <p>
+                Zout water helpt het lichaam bij dit proces.
+                Het lichaam gebruikt dit water om afvalstoffen uit de cellen weg te voeren.
+                En uit te stoten via de natuurlijke uitscheidingswegen.
+              </p>
+              <p>
+                Het beste zout is keltisch zeezout, omdat deze de natuurlijke mineralen bevat die het lichaam nodig heeft.
+                De verhouding is 9 gram zout op 1 liter water.
+                Elke keer je een negatief gevoel ervaart, drink je minstens een glas van dit zoutwater.
+                Er is geen limiet aan hoeveel je mag drinken. 
+                Hou rekening dat je niet veel later gaat diaree hebben of moet urineren. (Dit is een goed teken!)
+              </p>
+
+            </div>
+
+            {/* Sluit knop */}
+            <div className="text-center pt-4">
+              <Button
+                onClick={() => setShowDialog2(false)}
                 className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 Sluiten
