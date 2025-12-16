@@ -8,6 +8,7 @@ import AudioPlayer from '@/components/AudioPlayer';
 
 const ZiekZot = () => {
   const [glitchMode, setGlitchMode] = useState(false);
+  const [showDialog, setShowDialog] = useState(false);
 
   useSeoMeta({
     title: 'Ziek Zot! - De Waarheid over Ziekte en Gekte',
@@ -145,6 +146,12 @@ const ZiekZot = () => {
                   Zonlicht, lucht, en de energie van de aarde voeden je cellen.
                   Je wordt een autonoom wezen dat niet langer afhankelijk is van voedsel.
                 </p>
+                <Button
+                      onClick={() => setShowDialog(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      ✨ Ons Mentaal spiritueel lichaam.
+                </Button>
               </div>
             </div>
 
@@ -218,6 +225,95 @@ const ZiekZot = () => {
         }
       `}</style>
       </div>
+
+      {/* Dialog */}
+      <Dialog open={showDialog} onOpenChange={setShowDialog}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
+          <DialogHeader>
+            <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
+              Mind / Body / Spirit
+            </DialogTitle>
+          </DialogHeader>
+
+          <div className="space-y-6 text-lg">
+
+            {/* Introductie */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">
+                Bewustzijn / Lichaam / Ziel
+              </h3>
+              <p>
+                De mens is één geïntegreerd geheel van bewustzijn, lichaam en ziel.
+                Deze drie lagen vormen samen de manier waarop het leven wordt ervaren.
+                Wat zich aandient in het lichaam heeft zijn oorsprong in bewustzijn en ziel,
+                en wat innerlijk beweegt vindt uiteindelijk zijn weg naar het fysieke bestaan.
+              </p>
+            </div>
+            
+
+            {/* Het Lichaam */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-blue-300 mb-3">
+                Het Lichaam
+              </h3>
+              <p className="mb-4">
+                Het lichaam is het instrument waarmee bewustzijn zichzelf ervaart
+                binnen deze realiteit. Het maakt voelen, handelen, grenzen, verlangens en keuzes zichtbaar.
+              </p>
+
+              <div className="mb-4 pl-4 border-l-4 border-teal-400">
+                <h4 className="text-xl font-bold text-teal-300 mb-2">
+                  Energie en innerlijke balans
+                </h4>
+                <p className="mb-2">
+                  Het lichaam functioneert als een energiesysteem.
+                  Wanneer overtuigingen, emoties en intenties in harmonie zijn, stroomt energie vrij en wordt gezondheid ervaren.
+                  Spanningen, vermoeidheid of pijn wijzen op plaatsen waar innerlijke delen niet in lijn zijn.
+                </p>
+                <p className="mb-3">
+                Het lichaam is niet de ware identiteit, maar een tijdelijk gekozen vorm.
+                Toch is het heilig, omdat het het bewustzijn de mogelijkheid geeft zichzelf te ervaren.
+              </p>
+
+              </div>
+            </div>
+
+            {/* Katalysatoren */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">
+                Katalysatoren in het dagelijks leven
+              </h3>
+              <p className="mb-3">
+                Alles wat sterke emotionele of fysieke reacties oproept in je leven, functioneert als katalysator.
+                Dit kunnen gebeurtenissen zijn, relaties, lichamelijke klachten of terugkerende patronen.
+              </p>
+              <p className="mb-3">
+                Een katalysator legt iets bloot: een overtuiging, een angst, een verlangen of een innerlijk conflict.
+                Het lichaam speelt hierin een sleutelrol, omdat het spanning of ongemak direct voelbaar maakt.
+              </p>
+              <p>
+                Praktisch betekent dit:
+                Elke emotionele of fysieke trigger kan worden benaderd met de vraag:
+                <em>“Wat wil dit mij laten zien?”</em>
+                Op die manier zorgt een katalysator voor zelfinzicht waarmee innerlijke heling kan plaatsvinden.
+              </p>
+            </div>
+            
+
+            {/* Sluit knop */}
+            <div className="text-center pt-4">
+              <Button
+                onClick={() => setShowDialog(false)}
+                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Sluiten
+              </Button>
+            </div>
+
+          </div>
+        </DialogContent>
+      </Dialog>
+
     </>
   );
 };
