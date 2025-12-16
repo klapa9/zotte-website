@@ -294,7 +294,6 @@ const ZiekZot = () => {
                 Het lichaam speelt hierin een sleutelrol, omdat het spanning of ongemak direct voelbaar maakt.
               </p>
               <p>
-                Praktisch betekent dit:
                 Elke emotionele of fysieke trigger kan worden benaderd met de vraag:
                 <em>“Wat wil dit mij laten zien?”</em>
                 Op die manier zorgt een katalysator voor zelfinzicht waarmee innerlijke heling kan plaatsvinden.
