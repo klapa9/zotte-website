@@ -348,7 +348,7 @@ const ZiekZot = () => {
             {/* Het Lichaam */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
               <h3 className="text-2xl font-black text-blue-300 mb-3">
-                Fase 1: Detoxificatie
+                Detoxificatie
               </h3>
               <p className="mb-4">
                 In de eerste dagen van het vasten begint het lichaam met het opruimen van gifstoffen.
