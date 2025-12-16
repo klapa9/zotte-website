@@ -124,24 +124,7 @@ const Energie = () => {
               </div>
             </div>
 
-            {/* All Energy Words Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-              {energyWords.map((energy, index) => (
-                <div
-                  key={index}
-                  className={`bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-3 transition-all duration-500 cursor-pointer ${index === activeWord ? 'ring-4 ring-white ring-opacity-50' : ''}`}
-                  onMouseEnter={() => setActiveWord(index)}
-                  onClick={() => setShowDialog(true)}
-                >
-                  <h3 className={`text-3xl md:text-4xl font-black mb-3 text-transparent bg-clip-text bg-gradient-to-r ${energy.color}`}>
-                    {energy.word}
-                  </h3>
-                  <p className="text-white text-lg">
-                    {energy.description}
-                  </p>
-                </div>
-              ))}
-            </div>
+            
 
             {/* Energy Explanation */}
             <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
