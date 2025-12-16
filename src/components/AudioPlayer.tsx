@@ -262,7 +262,7 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
 
       {/* Welcome Message (only shows when not playing) */}
       {!isPlaying && isLoaded && (
-        <div className="fixed top-20 left-4 z-40 bg-black bg-opacity-80 backdrop-blur-md rounded-2xl p-4 max-w-xs animate-fade-in">
+        <div className="hidden md:flex fixed top-20 left-4 z-40 bg-black bg-opacity-80 backdrop-blur-md rounded-2xl p-4 max-w-xs animate-fade-in">
           <p className="text-white text-sm">
             🎵 Muziek beschikbaar - klik om af te spelen
           </p>
