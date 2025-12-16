@@ -146,40 +146,46 @@ const Energie = () => {
             {/* Energy Explanation */}
             <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
-                We hebben een Elektrisch Lichaam
+                Alles is Energie en Frequentie
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p className="hover:text-green-200 transition-colors duration-300">
-                  <strong>Wij zijn generatoren van energie.</strong> Ons lichaam is een elektro-chemisch systeem dat constant energie genereert en gebruikt.
-                  Elke hartslag, elke gedachte, elke beweging - het zijn allemaal energetische signalen.
+                  <strong>Alles wat bestaat is energie in beweging.</strong>
+                  Bewustzijn, lichaam en ziel zijn geen vaste vormen, maar dynamische energievelden die voortdurend trillen op een bepaalde frequentie.
                 </p>
-                <p className="hover:text-blue-200 transition-colors duration-300">
-                  Energie is de <strong>communicatietaal van ons lichaam</strong>.
-                  Onze zenuwen sturen elektrische pulsen met ongelofelijke snelheid - sneller dan elk computernetwerk.
-                  Onze hersenen zijn een elektrisch orgaan miljarden synapsen sterk.
-                </p>
+
                 <p className="hover:text-cyan-200 transition-colors duration-300">
-                  Energie stroomt door ons heen en verbindt ons met alles om ons heen.
-                  We zijn niet alleen fysieke wezens, maar ook energetische wezens.
-                  Door ons bewust te worden van deze energie kunnen we onze gezondheid,
-                  ons welzijn, en onze levenskwaliteit drastisch verbeteren.
+                  Frequentie bepaalt ervaring:
+                  Een lage, geblokkeerde frequentie wordt ervaren als zwaarte, weerstand of vermoeidheid.
+                  Een hoge, coherente frequentie wordt ervaren als helderheid, vitaliteit en verbinding.
+                </p>
+
+                <p className="hover:text-teal-200 transition-colors duration-300">
+                  Door bewust te worden van je innerlijke staat,
+                  verander je automatisch de frequentie waarop je lichaam en bewustzijn functioneren.
+                  Praktijken zoals meditatie, ademhaling, beweging en liefdevolle verbinding verhogen je frequentie,
+                  waardoor energie vrijer kan stromen.
                 </p>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
               <h2 className="text-4xl md:text-5xl font-black text-purple-600 mb-6">
-                Balanceer je Energie
+                Zoek Energetische Balans
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Alle energie is polair, er is altijd een positieve en een negatieve kant.
-                  Deze polariteit is essentieel voor balans en groei.
+                  Energie beweegt altijd tussen twee polen.
+                  Actie en rust, expansie en contractie, geven en ontvangen.
+                  Deze polariteit is essentieel voor het leven zelf.
                 </p>
+
                 <p>
-                  De kunst is om je energie in balans te houden.
-                  Te veel focus op de ene kant kan leiden tot uitputting of stagnatie.
-                  Te veel focus op de andere kant kan leiden tot chaos of destructie.
+                  Praktisch betekent dit:
+                  Leer luisteren naar je lichaam en emoties om te voelen waar energie vastzit.
+                  Zoek activiteiten die je energie geven in plaats van kosten.
+                  Creëer ritmes van inspanning en ontspanning om balans te behouden.
+                
                 </p>
               </div>
             </div>
@@ -208,76 +214,101 @@ const Energie = () => {
         }
       `}</style>
       </div>
-      {/*Dialog */}
+      {/* Dialog */}
       <Dialog open={showDialog} onOpenChange={setShowDialog}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              Energie
+              Frequentie van Bewustzijn
             </DialogTitle>
           </DialogHeader>
+
           <div className="space-y-6 text-lg">
+
             {/* Introductie */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-cyan-300 mb-3">Energie</h3>
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">
+                Het bewustzijn kan ervaren worden als verschillende frequentiebanden of densiteiten.
+              </h3>
               <p>
-                Energie is de fundamentele bouwsteen van het universum. Het manifesteert zich
-                in verschillende vormen zoals materie, licht, warmte, en elektromagnetisme.
-                Alles wat bestaat is een vorm van energie in verschillende trillingstoestanden.
-                
+                De realiteit bestaat uit opeenvolgende densiteiten van bewustzijn.
+                Elke densiteit vertegenwoordigt een specifieke trilling, ervaringsvorm en mate van zelfbewustzijn.
+                Hogere densiteiten zijn minder fysiek en meer bewustzijnsgericht, lagere densiteiten zijn compacter en meer materieel.
               </p>
             </div>
 
-            {/* Polariteit */}
+            {/* Polariteit / Overzicht densiteiten */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-blue-300 mb-3">Polariteit</h3>
+              <h3 className="text-2xl font-black text-blue-300 mb-3">
+                De Opeenvolging van Densiteiten
+              </h3>
               <p className="mb-4">
-                Alles in het universum is één bewustzijn. Om zichzelf te ervaren,
-                splitst dit bewustzijn zich op in polariteiten zoals licht en donker,
-                goed en kwaad, mannelijk en vrouwelijk. Deze dualiteit is essentieel.
+                Bewustzijn ontwikkelt zich stap voor stap.
+                Elke densiteit bouwt voort op de vorige en bereidt voor op de volgende.
               </p>
 
               <div className="mb-4 pl-4 border-l-4 border-teal-400">
-                <h4 className="text-xl font-bold text-teal-300 mb-2">Energie balans: (STO)</h4>
+                <h4 className="text-xl font-bold text-teal-300 mb-2">
+                  Overzicht
+                </h4>
                 <p className="mb-2">
-                  Er is een positieve groeiende energie en een negatieve krimpende energie.
-                  Er is altijd een balans tussen deze twee krachten.
+                  <strong>1e densiteit:</strong> elementair bewustzijn: aarde, water, vuur, lucht.
+                  Bestaan zonder zelfbesef.
                 </p>
                 <p className="mb-2">
-                  Positieve energie brengt expansie, creatie, en verbinding.
-                  Negatieve energie brengt introspectie, loslaten, en transformatie.
+                  <strong>2e densiteit:</strong> groeiend leven: planten en dieren.
+                  Bewustzijn ontwikkelt beweging en instinct.
+                </p>
+                <p className="mb-2">
+                  <strong>3e densiteit:</strong> zelfbewustzijn: de mens.
+                  Keuze, identiteit en morele richting ontstaan.
+                </p>
+                <p className="mb-2">
+                  <strong>4e densiteit:</strong> hartbewustzijn.
+                  Collectieve verbinding, empathie en transparantie.
+                </p>
+                <p className="mb-2">
+                  <strong>5e densiteit:</strong> wijsheid en inzicht.
+                  Individualiteit zonder afscheiding.
                 </p>
                 <p>
-                  Door bewust te kiezen welke energie je voedt, kun je je ervaring
-                  van het leven vormgeven.
+                  <strong>6e densiteit:</strong> eenheid van liefde en wijsheid.
+                  Integratie van alle tegenstellingen.
                 </p>
-                
               </div>
-
-             
             </div>
 
-            {/* Geen Goed of Fout */}
+            {/* Geen Goed of Fout / Polariteit */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-cyan-300 mb-3">Geen Goed of Fout</h3>
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">
+                Onze Densiteit
+              </h3>
               <p>
-                positieve en negatieve energie zijn beide noodzakelijk voor balans.
-                Er is geen inherent goed of fout in energie; het is de intentie en het
-                bewustzijn erachter dat betekenis geeft.
-                Beide polariteiten zijn aspecten van hetzelfde geheel.
+                We bevinden ons in de 3e densiteit, gekenmerkt door zelfbewustzijn en keuzevrijheid.
+                Hier ervaren we dualiteit: goed en kwaad, licht en donker, ik en jij.
+              </p>
+              <p>
+                Deze polariteit is essentieel voor groei.
+                Het daagt ons uit om bewust te kiezen wie we willen zijn en hoe we met anderen omgaan.
+              </p>
+              <p>
+                We zijn momenteel bezig met de overgang naar de 4e densiteit, waar verbinding en liefde centraal staan.
+                Dit proces vereist het loslaten van oude patronen en het omarmen van eenheid.
               </p>
             </div>
 
-            {/* Liefde */}
+            {/* Liefde / Evolutie */}
             <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-white mb-3">Liefde is de grotere stroming.</h3>
+              <h3 className="text-2xl font-black text-white mb-3">
+                Evolutie richting Eenheid
+              </h3>
               <p className="mb-3">
-                Als je mee met de stroom van liefde gaat, krijg je energie.
-                Je ervaart expansie, vreugde, en verbinding. Je groeit en evolueert.
+                Naarmate bewustzijn evolueert, vervaagt polariteit geleidelijk.
+                Hogere densiteiten integreren dualiteit in eenheid.
               </p>
               <p className="mb-3">
-                Als je tegen de stroom in gaat, kost het je energie.
-                Je ervaart weerstand, frustratie, en isolatie. Je krimpt en stagneert.
+                Uiteindelijk keert bewustzijn terug naar volledige eenheid,
+                verrijkt door alle ervaringen die in afzondering zijn opgedaan.
               </p>
             </div>
 
@@ -290,9 +321,12 @@ const Energie = () => {
                 Sluiten
               </Button>
             </div>
+
           </div>
         </DialogContent>
       </Dialog>
+
+
     </>
   );
 };

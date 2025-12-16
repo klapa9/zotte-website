@@ -102,11 +102,6 @@ const Leven = () => {
                   Jij bepaalt wat belangrijk is in jouw spel.
                 </p>
                 <p>
-                  De regels zijn er om ons te limiteren en uit te dagen.
-                  Ze zijn er om ons te laten groeien.
-                  Ze zijn er om ons te laten kiezen wat we willen ervaren.                  
-                </p>
-                <p>
                   Wat je ook kiest, zorg dat het resoneert met jouw diepste waarden.
                   Dat het jou energie geeft. Dat het jou motiveert om elke dag
                   het beste uit jezelf te halen.
@@ -115,7 +110,7 @@ const Leven = () => {
                       onClick={() => setShowDialog2(true)}
                       className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
                     >
-                      ✨ Uiteindelijk is er maar één regel
+                      ✨ De wet van éénheid
                     </Button>
               </div>
             </div>
@@ -133,14 +128,17 @@ const Leven = () => {
                   Waar we in geloven, creëeren we.
                 </p>
                 <p>
-                  De grootste illusie (spelregel) waar we momenteel in geloven is dat we afgescheiden zijn van elkaar en van het universum.
-                  Dat we alleen zijn. Dat we machteloos zijn.
+                  De grootste illusie waar we momenteel in geloven is dat we afgescheiden zijn van elkaar en van het universum.
+                  Dat we alleen zijn.
                   Dit is niet waar.
                 </p>
-                <p>
-                  We zijn aan het ontdekken wie we werkelijk zijn.
-                  We zijn aan het ontwaken uit een lange droom van afgescheidenheid.
-                  We leren dat we allemaal verbonden zijn. Dat we allemaal één zijn.
+                <p className="mb-3">
+                  Naarmate bewustzijn evolueert, vervaagt polariteit geleidelijk.
+                  Hoger bewustzijn integreert dualiteit in eenheid.
+                </p>
+                <p className="mb-3">
+                  Uiteindelijk keert bewustzijn terug naar volledige eenheid,
+                  verrijkt door alle ervaringen die in afzondering zijn opgedaan.
                 </p>
                 <div className="mt-6">
                     <Button
