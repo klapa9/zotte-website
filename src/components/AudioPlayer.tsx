@@ -176,7 +176,8 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
       />
 
       {/* Floating Audio Controls */}
-      <div className="fixed top-4 right-4 z-50 bg-black bg-opacity-80 backdrop-blur-md rounded-full p-3 flex items-center gap-2 shadow-lg border border-white border-opacity-20">
+      <div className="hidden md:flex fixed top-4 right-4 z-50 bg-black bg-opacity-80 backdrop-blur-md rounded-full p-3 items-center gap-2 shadow-lg border border-white border-opacity-20">
+
         {/* Play/Pause Button */}
         <button
           onClick={togglePlay}
