@@ -149,6 +149,12 @@ const Energie = () => {
                   Praktijken zoals meditatie, ademhaling, beweging en liefdevolle verbinding verhogen je frequentie,
                   waardoor energie vrijer kan stromen.
                 </p>
+                <Button
+                      onClick={() => setShowDialog(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      ✨ Frequentie
+                </Button>
               </div>
             </div>
 
@@ -170,12 +176,7 @@ const Energie = () => {
                   Creëer ritmes van inspanning en ontspanning om balans te behouden.
                 
                 </p>
-                <Button
-                      onClick={() => setShowDialog(true)}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                    >
-                      ✨ Frequentie
-                </Button>
+                
               </div>
             </div>
 
