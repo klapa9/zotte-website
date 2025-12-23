@@ -28,7 +28,7 @@ const Navigation = ({ className = '' }: NavigationProps) => {
     { key: 'leven', label: 'Leven', icon: '❓', href: '/leven' },
     { key: 'energie', label: 'Energie', icon: '⚡', href: '/energie' },
     { key: 'ziekzot', label: 'Ziek Zot', icon: '🤪', href: '/ziekzot' },
-    { key: 'geld', label: 'Geld', icon: '₿', href: '/geld' },
+    //{ key: 'geld', label: 'Geld', icon: '₿', href: '/geld' },
   ];
 
   const getItemColor = (itemKey: string) => {

@@ -89,15 +89,15 @@ const Index = () => {
       icon: "🎪",
       questions: ["Nooit meer ziek?", "Wat kan je lichaam aan", "Kan je jezelf genezen?"]
     },
-    {
-      title: "GELD",
-      subtitle: "Bitcoin is magisch internet geld.",
-      description: "De scheiding van staat en geld. Bereik financiële vrijheid, en ontdek globale samenwerking via Bitcoin.",
-      route: "/geld",
-      gradient: "from-amber-600 via-orange-600 to-yellow-600",
-      icon: "₿",
-      questions: ["Wat is echt geld?", "Bescherm je koopkracht", "Is het huidige systeem duurzaam?"]
-    }
+    // {
+    //   title: "GELD",
+    //   subtitle: "Bitcoin is magisch internet geld.",
+    //   description: "De scheiding van staat en geld. Bereik financiële vrijheid, en ontdek globale samenwerking via Bitcoin.",
+    //   route: "/geld",
+    //   gradient: "from-amber-600 via-orange-600 to-yellow-600",
+    //   icon: "₿",
+    //   questions: ["Wat is echt geld?", "Bescherm je koopkracht", "Is het huidige systeem duurzaam?"]
+    // }
   ];
 
   return (
