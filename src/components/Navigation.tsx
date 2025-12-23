@@ -27,7 +27,7 @@ const Navigation = ({ className = '' }: NavigationProps) => {
     { key: 'weeszot', label: 'Wees Zot', icon: '🌟', href: '/weeszot' },
     { key: 'leven', label: 'Leven', icon: '❓', href: '/leven' },
     { key: 'energie', label: 'Energie', icon: '⚡', href: '/energie' },
-    { key: 'ziekzot', label: 'Ziek Zot', icon: '🤪', href: '/ziekzot' },
+    { key: 'ziekzot', label: 'Ziek Zot', icon: '🌿', href: '/ziekzot' },
     //{ key: 'geld', label: 'Geld', icon: '₿', href: '/geld' },
   ];
 
