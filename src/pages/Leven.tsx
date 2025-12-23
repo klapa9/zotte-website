@@ -94,24 +94,29 @@ const Leven = () => {
             {/* Het spel van het leven */}
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 md:p-12 transform hover:rotate-1 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-                Het spel van het leven
+                Het leven
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Het is een open spel met talloze mogelijkheden en enkele regels.
-                  Jij bepaalt wat belangrijk is in jouw spel.
+                  Wie je bent of wilt zijn, hangt af van de keuzes die je maakt.
+                  Je kunt kiezen om een leven te leiden dat gericht is op het dienen van anderen,
+                  door liefde, compassie en samenwerking te bevorderen.
+                  Of je kunt kiezen voor een pad dat gericht is op het dienen van jezelf,
+                  door macht, controle en zelfverheffing na te streven.
                 </p>
                 <p>
                   Wat je ook kiest, zorg dat het resoneert met jouw diepste waarden.
                   Dat het jou energie geeft. Dat het jou motiveert om elke dag
                   het beste uit jezelf te halen.
                 </p>
+                
                 <Button
-                      onClick={() => setShowDialog2(true)}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                    >
-                      ✨ De wet van éénheid
-                    </Button>
+                  onClick={() => setShowLawOfOneDialog(true)}
+                  className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                >
+                  ✨ Er is een keuze!
+                </Button>
+                
               </div>
             </div>
 
@@ -141,11 +146,11 @@ const Leven = () => {
                   verrijkt door alle ervaringen die in afzondering zijn opgedaan.
                 </p>
                 <div className="mt-6">
-                    <Button
-                      onClick={() => setShowLawOfOneDialog(true)}
+                  <Button
+                      onClick={() => setShowDialog2(true)}
                       className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
                     >
-                      ✨ Er is een keuze!
+                      ✨ De wet van éénheid
                     </Button>
                   </div>
               </div>
