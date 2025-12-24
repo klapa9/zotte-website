@@ -109,35 +109,6 @@ const ZiekZot = () => {
                   Dat er mensen zijn die meerdere jaren zonder eten of drinken kunnen overleven?
                 </p>
                 <p>
-                  Ons lichaam kan leven van kosmische energie,
-                  van zonlicht en de levenskracht in de lucht die we inademen.
-                  We hebben geen voedsel nodig omdat onze cellen direct energie uit het universum kunnen trekken.
-                </p>
-                <p>
-                  Dit vergt een aanpassing, allereerst mentaal en emotioneel.
-                  Je moet geloven dat je lichaam dit kan. Dat je lichaam weet hoe het zichzelf kan genezen en voeden.
-                  Vasten is de sleutel om deze vermogens te activeren.
-                </p>
-                <p>
-                  Je hoeft niet meteen all in te gaan. Begin met af en toe te vasten.
-                  Geef je lichaam rust. Laat het reinigen.
-                </p>
-                <Button
-                      onClick={() => setShowDialog2(true)}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                    >
-                      ✨ Succesvol vasten!
-                </Button>
-              </div>
-            </div>
-
-            {/* How Fasting Works */}
-            <div className="bg-gradient-to-r from-pink-600 to-red-600 rounded-3xl p-8 md:p-12 transform hover:rotate-1 transition-all duration-500">
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-                Hoe Vasten Werkt
-              </h2>
-              <div className="space-y-4 text-white text-lg md:text-xl">
-                <p>
                   Wanneer je stopt met eten schakelt je lichaam over
                   van spijsvertering naar zelfreiniging en celvernieuwing. Dit heet autofagie.
                   Oude, zieke cellen worden opgeruimd en vervangen door nieuwe, gezonde cellen.
@@ -151,9 +122,45 @@ const ZiekZot = () => {
                   Maar, zodra de reiniging voorbij is, voel je je lichter, helderder en energieker dan ooit tevoren.
                 </p>
                 <p>
-                  Nog later leert je lichaam om energie direct uit de omgeving te halen.
+                  Je hoeft niet meteen all in te gaan. Begin met af en toe te vasten.
+                  Geef je lichaam rust. Laat het reinigen.
+                </p>
+                
+                <Button
+                      onClick={() => setShowDialog2(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      ✨ Succesvol vasten!
+                </Button>
+              </div>
+            </div>
+
+            {/* How Fasting Works */}
+            <div className="bg-gradient-to-r from-pink-600 to-red-600 rounded-3xl p-8 md:p-12 transform hover:rotate-1 transition-all duration-500">
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+                Extreem vasten
+              </h2>
+              <div className="space-y-4 text-white text-lg md:text-xl">
+                
+                <p>
+                  Als je dit wilt kan je je lichaam trainen om energie direct uit de omgeving te halen.
                   Zonlicht, lucht, en de energie van de aarde voeden je cellen.
-                  Je wordt een autonoom wezen dat niet langer afhankelijk is van voedsel.
+                  Je wordt een autonoom wezen dat niet langer afhankelijk is van zaken die je normaal nodig hebt.
+                </p>
+                <p>
+                  Er zijn mensen die al jaren leven zonder voedsel, water en slaap.
+                  Ze zijn gezond, energiek, en stralen vitaliteit uit.
+                  Dit is mogelijk door het lichaam te herprogrammeren.
+                </p>
+                <p>
+                  Ons lichaam kan leven van kosmische energie,
+                  van zonlicht en de levenskracht in de lucht die we inademen.
+                  We hebben geen extra energie nodig als we ons lichaam in lijn brengen met ons ware zelf.
+                </p>
+                <p>
+                  Dit vergt een aanpassing, allereerst mentaal en emotioneel.
+                  Je moet geloven dat je lichaam dit kan. Dat je lichaam weet hoe het zichzelf kan genezen en voeden.
+                  Vasten is de sleutel om deze vermogens te activeren.
                 </p>
                 <Button
                       onClick={() => setShowDialog(true)}
