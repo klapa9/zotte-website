@@ -30,15 +30,6 @@ const Index = () => {
   // Content sections for the site
   const siteSections = [
     {
-      title: "WEES ZOT",
-      subtitle: "Durf gek te zijn",
-      description: "Volg je enthousiasme, vertrouw je intuïtie en durf anders te zijn. De wereld heeft jouw zotte ideeën nodig!",
-      route: "/weeszot",
-      gradient: "from-yellow-400 via-pink-500 to-purple-600",
-      icon: "🎭",
-      questions: ["Van waar komt je buikgevoel?", "Ben je bang of uniek?", "Durf jij jezelf zijn?"]
-    },
-    {
       title: "OPEN JE GEEST",
       subtitle: "Blaas je ideeën op",
       description: "Alles is veel zotter dan je denkt! Quantumfysica, bewustzijn, parallelle werelden ...",
@@ -46,7 +37,16 @@ const Index = () => {
       gradient: "from-purple-600 to-indigo-800",
       icon: "🌌",
       questions: ["Wat is echt?", "Hoe zot is de werkelijkheid?", "Durf jij te denken?"]
-    },    
+    },  
+    {
+      title: "WEES ZOT",
+      subtitle: "Durf gek te zijn",
+      description: "Volg je enthousiasme, vertrouw je intuïtie en durf anders te zijn. De wereld heeft jouw zotte ideeën nodig!",
+      route: "/weeszot",
+      gradient: "from-yellow-400 via-pink-500 to-purple-600",
+      icon: "🎭",
+      questions: ["Van waar komt je buikgevoel?", "Ben je bang of uniek?", "Durf jij jezelf zijn?"]
+    },      
     {
       title: "LEVEN?",
       subtitle: "De fundamentele vragen",
