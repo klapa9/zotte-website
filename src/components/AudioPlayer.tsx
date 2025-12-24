@@ -27,7 +27,7 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
       case 'weeszot': return '/weeszot.mp3';
       case 'geld': return '/btc2.mp3';
       case 'ziekzot': return '/heal2.mp3';
-      default: return '/startpagina2.mp3';
+      default: return '/index.mp3';
     }
   };
 
