@@ -146,7 +146,7 @@ const Liefde = () => {
           </div>
         </div>
 
-        <AudioPlayer audioFile="/Energy2.mp3" />
+        <AudioPlayer pageType="liefde" />
         <Navigation />
 
 
