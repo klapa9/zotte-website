@@ -73,8 +73,8 @@ const Index = () => {
     },
     {
       title: "Liefde",
-      subtitle: "De basisfrequentie",
-      description: "Liefde is de kracht die alles verbindt.",
+      subtitle: "Liefde is de kracht die alles verbindt.",
+      description: "Liefde is de energie die resoneert met alles wat leeft.",
       route: "/liefde",
       gradient: "from-green-400 to-blue-600",
       icon: "❤️",

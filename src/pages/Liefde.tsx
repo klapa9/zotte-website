@@ -91,7 +91,7 @@ const Liefde = () => {
                   Een hoge, coherente frequentie wordt ervaren als helderheid, vitaliteit en verbinding.
                 </p>
                 <p>
-                  Liefde is de basisfrequentie van het universum.
+                  Liefde is de energie die resoneert met alles wat leeft.
                 </p>
 
                 
