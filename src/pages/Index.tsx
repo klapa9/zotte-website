@@ -72,13 +72,13 @@ const Index = () => {
       questions: ["Waarom ben je hier?", "Wat geeft richting?", "Hoe leef je voluit?"]
     },
     {
-      title: "ENERGIE",
-      subtitle: "Onbegrensde kracht",
-      description: "Ontdek de bron van vitale kracht. Alles is energie. Jouw energiereserve is oneindig!",
-      route: "/energie",
+      title: "Liefde",
+      subtitle: "De basis van alles",
+      description: "Liefde is de kracht die alles verbindt.",
+      route: "/liefde",
       gradient: "from-green-400 to-blue-600",
-      icon: "⚡",
-      questions: ["Vanwaar komt je energie?", "Hoe vergroot je je energie?", "Ontdek de stroom van het leven."]
+      icon: "❤️",
+      questions: ["Wat is de kracht van liefde?", "Is liefde de volgende stap in onze evolutie?", "Ontdek de stroom van het leven."]
     },
     {
       title: "ZIEK ZOT",
