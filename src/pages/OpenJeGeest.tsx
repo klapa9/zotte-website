@@ -168,7 +168,7 @@ const OpenJeGeest = () => {
                   Jouw overtuigingen bepalen jouw ervaring.
                 </p>
                 <p>
-                  Dat is gemakkelijker gezegd dan gedaan, want je moet het <strong>echt geloven!</strong>
+                  Dat is gemakkelijker gezegd dan gedaan, want je moet het <strong>echt geloven! </strong>
                   Daarom heb je een open geest nodig. Om je oude overtuigingen los te laten
                   en nieuwe mogelijkheden te omarmen.
                 </p>

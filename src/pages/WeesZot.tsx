@@ -121,7 +121,7 @@ const WeesZot = () => {
                     onClick={() => setShowDialog2(true)}
                     className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
                   >
-                    💡 Van waar komt je enthousiasme?
+                    💡 Hoe manifesteer je jouw realiteit?
                   </Button>
                 </div>
               </div>
@@ -136,7 +136,7 @@ const WeesZot = () => {
                   Dus... wees zot!
                 </h2>
                 <p className="text-xl md:text-2xl text-white font-light mb-8">
-                  De wereld wacht op jouw gekke ideëen
+                  Wees niet bang om anders te zijn.
                 </p>
                 <div className="inline-block">
                   <p className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
@@ -156,7 +156,7 @@ const WeesZot = () => {
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              Hoe werkt het?
+              Hoe manifesteer je jouw realiteit?
             </DialogTitle>
           </DialogHeader>
 
@@ -174,7 +174,23 @@ const WeesZot = () => {
                 Wat je ervaart, is altijd een match met wie je bent.
               </p>
             </div>
-            
+
+            {/*innerlijke staat */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">
+                Innerlijke staat
+              </h3>
+              <p>
+                Start met het afstemmen van je gedachten, gevoelens en overtuigingen
+                op de realiteit die je wilt ervaren.
+                Dan belichaam je de persoon die al leeft in die realiteit.
+                Jouw innerlijke staat van zijn trekt een bijpassende realiteit aan.
+                Door je gedachten, gevoelens en overtuigingen
+                in lijn te brengen met je gewenste uitkomst,
+                verschuift je ervaring automatisch mee.
+              </p>
+            </div>
+
             {/* Actie */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
               <h3 className="text-2xl font-black text-cyan-300 mb-3">
@@ -182,7 +198,6 @@ const WeesZot = () => {
               </h3>
               <p>
                 Afstemming zonder actie blijft een innerlijke beweging.
-                Actie zonder afstemming voelt als strijd.
                 Door te handelen vanuit enthousiasme
                 stap je daadwerkelijk de realiteit binnen
                 die al op je wacht.

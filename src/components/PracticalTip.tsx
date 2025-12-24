@@ -67,7 +67,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
               </p>
             </>
           ),
-          link: { to: "/geld", text: "Geld is een hulpmiddel  →", color: "yellow" }
+          link: { to: "/leven", text: "Wat is je levensdoel? →", color: "orange" }
         };
 
       case 'leven':
