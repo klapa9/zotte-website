@@ -73,7 +73,7 @@ const Index = () => {
     },
     {
       title: "Liefde",
-      subtitle: "De basis van alles",
+      subtitle: "De basisfrequentie",
       description: "Liefde is de kracht die alles verbindt.",
       route: "/liefde",
       gradient: "from-green-400 to-blue-600",
