@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 interface PracticalTipProps {
-  pageType: 'weeszot' | 'leven' | 'Liefde' | 'ziekzot' | 'openjegeest' | 'geld';
+  pageType: 'weeszot' | 'leven' | 'liefde' | 'ziekzot' | 'openjegeest' | 'geld';
 }
 
 const PracticalTip = ({ pageType }: PracticalTipProps) => {
@@ -92,10 +92,10 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
               </p>
             </>
           ),
-          link: { to: "/Liefde", text: "Liefde is de grotere stroming! →", color: "cyan" }
+          link: { to: "/liefde", text: "Liefde is de grotere stroming! →", color: "cyan" }
         };
 
-      case 'Liefde':
+      case 'liefde':
         return {
           title: "🎯 Praktische Tip",
           content: (
@@ -188,7 +188,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
       case 'geld': return 'from-amber-600 to-orange-600';
       case 'weeszot': return 'from-orange-600 to-yellow-600';
       case 'leven': return 'from-cyan-600 to-teal-600';
-      case 'Liefde': return 'from-green-600 to-emerald-600';
+      case 'liefde': return 'from-green-600 to-emerald-600';
       case 'ziekzot': return 'from-red-600 to-rose-600';
       case 'openjegeest': return 'from-purple-600 to-indigo-600';
       default: return 'from-gray-600 to-gray-700';
