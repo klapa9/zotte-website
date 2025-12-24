@@ -140,7 +140,7 @@ const Liefde = () => {
               </div>
             </div>
 
-            <PracticalTip pageType="energie" />
+            <PracticalTip pageType="liefde" />
 
             {/* Energy Flow */}
           </div>

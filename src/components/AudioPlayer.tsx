@@ -21,7 +21,7 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
   const getAudioFile = () => {
     if (audioFile) return audioFile;
     switch (pageType) {
-      case 'energie': return '/Energy.mp3';
+      case 'liefde': return '/liefde.mp3';
       case 'openjegeest': return '/Open_Je_Geest_1.mp3';
       case 'leven': return '/leven4.mp3';
       case 'weeszot': return '/weeszot.mp3';

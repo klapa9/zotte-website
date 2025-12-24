@@ -116,11 +116,11 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
                 <strong>Overwin je angst en voel het verschil.</strong>
               </p>
               <p className="hover:text-green-200 transition-colors duration-300">
-                <strong>Richt je aandacht op wat je vreugde brengt en zie je energie vermenigvuldigen.</strong>
+                <strong>Hou van anderen als jezelf!</strong>
               </p>
             </>
           ),
-          link: { to: "/ziekzot", text: "krijg energie door te vasten. →", color: "green" }
+          link: { to: "/ziekzot", text: "Genees jezelf. →", color: "green" }
         };
 
       case 'ziekzot':
