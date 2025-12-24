@@ -156,7 +156,7 @@ const WeesZot = () => {
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              Volg je hoogste opwinding.
+              Hoe werkt het?
             </DialogTitle>
           </DialogHeader>
 
@@ -164,27 +164,57 @@ const WeesZot = () => {
             {/* Introductie */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
               <h3 className="text-2xl font-black text-cyan-300 mb-3">
-                Bewustzijn creëert ervaring
+                Alles bestaat al
               </h3>
               <p>
-                Je bent een bewust wezen dat zichzelf ervaart via een menselijk perspectief.
-                De werkelijkheid die je ervaart is een directe weerspiegeling van je overtuigingen,
-                definities en keuzes. Je verschuift voortdurend tussen parallelle realiteiten,
-                afhankelijk van waar je aandacht, overtuiging en energie liggen.
+                Alle mogelijke realiteiten bestaan tegelijkertijd.
+                Je creëert niets vanuit het niets;
+                je verplaatst je bewustzijn naar de realiteit
+                die overeenkomt met jouw innerlijke staat.
+                Wat je ervaart, is altijd een match met wie je bent.
+              </p>
+            </div>
+            
+            {/* Actie */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">
+                Actie verankert de realiteit
+              </h3>
+              <p>
+                Afstemming zonder actie blijft een innerlijke beweging.
+                Actie zonder afstemming voelt als strijd.
+                Door te handelen vanuit enthousiasme
+                stap je daadwerkelijk de realiteit binnen
+                die al op je wacht.
               </p>
             </div>
 
-            {/* Vertrouwen & loslaten */}
+            {/* Loslaten */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
               <h3 className="text-2xl font-black text-blue-300 mb-3">
-                Vertrouwen zonder verwachtingen
+                Laat de vorm los
               </h3>
               <p>
-                Heb duidelijke voorkeuren, maar geen eisen aan de uitkomst.
-                Vertrouwen betekent volledig deelnemen aan het leven,
-                terwijl je de vorm loslaat waarin het resultaat verschijnt.
-                Het leven werkt altijd in je voordeel,
-                ook wanneer het pad anders loopt dan je had bedacht.
+                Je mag een duidelijke voorkeur hebben,
+                maar geen gehechtheid aan hoe of wanneer iets verschijnt.
+                Vertrouwen betekent weten
+                dat het leven je altijd precies brengt
+                wat het meest in lijn is met je groei.
+              </p>
+            </div>
+
+            {/* Feedback */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">
+                Alles is feedback
+              </h3>
+              <p>
+                Wat ongemakkelijk of pijnlijk voelt,
+                is geen fout.
+                Het is feedback die laat zien
+                waar een overtuiging niet meer klopt.
+                Wanneer je de betekenis verschuift,
+                verschuift je ervaring vanzelf mee.
               </p>
             </div>
 
@@ -200,6 +230,7 @@ const WeesZot = () => {
           </div>
         </DialogContent>
       </Dialog>
+
 
       {/* Dialog */}
       <Dialog open={showDialog} onOpenChange={setShowDialog}>
