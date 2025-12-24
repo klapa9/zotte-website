@@ -6,7 +6,7 @@ import { NIP19Page } from "./pages/NIP19Page";
 import NotFound from "./pages/NotFound";
 import WeesZot from "./pages/WeesZot";
 import Leven from "./pages/Leven";
-import Energie from "./pages/Energie";
+import Energie from "./pages/Liefde";
 import ZiekZot from "./pages/ZiekZot";
 import OpenJeGeest from "./pages/OpenJeGeest";
 import Geld from "./pages/Geld";

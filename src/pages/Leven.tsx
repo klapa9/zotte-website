@@ -91,7 +91,7 @@ const Leven = () => {
               </div>
             </div>
 
-            {/* Het spel van het leven */}
+            {/* Het leven */}
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 md:p-12 transform hover:rotate-1 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
                 Het leven
@@ -116,7 +116,7 @@ const Leven = () => {
                 >
                   ✨ Er is een keuze!
                 </Button>
-                
+
               </div>
             </div>
 
@@ -316,7 +316,7 @@ const Leven = () => {
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
               <h3 className="text-2xl font-black text-cyan-300 mb-3">De wet van éénheid</h3>
               <p>
-                Alles in het universum is één bewustzijn. Dat is de kern van de Wet van Eénheid.
+                Alles in het universum is één bewustzijn.
               </p>
               <p className="mt-3">
                 Deze Eenheid is de onderliggende structuur van alle ervaring. Alles wat wij als gescheiden zien,

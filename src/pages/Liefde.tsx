@@ -8,13 +8,14 @@ import AudioPlayer from '@/components/AudioPlayer';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 
-const Energie = () => {
+const Liefde = () => {
   const [activeWord, setActiveWord] = useState(0);
   const [showDialog, setShowDialog] = useState(false);
+  const [showDialog2, setShowDialog2] = useState(false);
 
   useSeoMeta({
-    title: 'ENERGIE - De Kracht van het Leven',
-    description: 'Ontdek de verschillende vormen van energie.',
+    title: 'Liefde - De Kracht van het Leven',
+    description: 'Ontdek de verschillende vormen van Liefde.',
   });
 
   useEffect(() => {
@@ -24,40 +25,7 @@ const Energie = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const energyWords = [
-  { 
-    word: "Polariteit", 
-    description: "De tweeledige beweging waardoor bewustzijn zichzelf ervaart", 
-    color: "from-blue-400 to-indigo-600" 
-  },
-  { 
-    word: "Balans", 
-    description: "Het natuurlijke evenwicht binnen energie", 
-    color: "from-teal-400 to-cyan-600" 
-  },
-  { 
-    word: "Bewustzijn", 
-    description: "De onderliggende eenheid die alle ervaring doordringt", 
-    color: "from-purple-400 to-fuchsia-600" 
-  },
-  { 
-    word: "Liefde", 
-    description: "De grotere stroming die alles verbindt en laat groeien", 
-    color: "from-pink-400 to-red-600" 
-  },
-  { 
-    word: "Transformatie", 
-    description: "Het proces van verandering, loslaten en innerlijke verschuiving", 
-    color: "from-amber-400 to-orange-600" 
-  },
-  { 
-    word: "Expansie", 
-    description: "De beweging van groei, creatie en verruiming van energie", 
-    color: "from-green-400 to-emerald-600" 
-  }
-];
-
-
+  
   return (
     <>
       <CursorStyles />
@@ -100,7 +68,7 @@ const Energie = () => {
         {/* Header */}
         <div className="py-16 px-4 text-center">
           <h1 className="text-8xl md:text-9xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-teal-500 to-blue-600">
-            ENERGIE
+            Liefde
           </h1>
           <p className="text-2xl md:text-3xl text-white font-bold">
             De kracht die alles beweegt
@@ -110,26 +78,12 @@ const Energie = () => {
         {/* Main Content */}
         <div className="flex-1 px-4 pb-16">
           <div className="max-w-6xl mx-auto">
-            {/* Featured Word */}
-            <div className="text-center mb-20">
-              <div className="inline-block">
-                <h2 className={`text-6xl md:text-8xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-r ${energyWords[activeWord].color} transition-all duration-1000 hover:scale-105 transition-transform duration-300`}
-                  onClick={() => setShowDialog(true)}
-                >
-                  {energyWords[activeWord].word}
-                </h2>
-                <p className="text-xl md:text-2xl text-white opacity-90">
-                  {energyWords[activeWord].description}
-                </p>
-              </div>
-            </div>
-
-            
+                        
 
             {/* Energy Explanation */}
             <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
-                Alles is Energie en Frequentie
+                Liefde is de grotere stroming.
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p className="hover:text-green-200 transition-colors duration-300">
@@ -142,13 +96,11 @@ const Energie = () => {
                   Een lage, geblokkeerde frequentie wordt ervaren als zwaarte, weerstand of vermoeidheid.
                   Een hoge, coherente frequentie wordt ervaren als helderheid, vitaliteit en verbinding.
                 </p>
-
-                <p className="hover:text-teal-200 transition-colors duration-300">
-                  Door bewust te worden van je innerlijke staat,
-                  verander je automatisch de frequentie waarop je lichaam en bewustzijn functioneren.
-                  Praktijken zoals meditatie, ademhaling, beweging en liefdevolle verbinding verhogen je frequentie,
-                  waardoor energie vrijer kan stromen.
+                <p>
+                  Liefde is de basisfrequentie van het universum.
                 </p>
+
+                
                 <Button
                       onClick={() => setShowDialog(true)}
                       className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
@@ -160,22 +112,30 @@ const Energie = () => {
 
             <div className="bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
               <h2 className="text-4xl md:text-5xl font-black text-purple-600 mb-6">
-                Zoek Energetische Balans
+                Verander je frequentie.
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
-                <p>
-                  Energie beweegt altijd tussen twee polen.
-                  Actie en rust, expansie en contractie, geven en ontvangen.
-                  Deze polariteit is essentieel voor het leven zelf.
+                <p className="hover:text-teal-200 transition-colors duration-300">
+                  Door bewust te worden van je innerlijke staat,
+                  verander je automatisch de frequentie waarop je lichaam en bewustzijn functioneren.
+                  Praktijken zoals meditatie, ademhaling, beweging en liefdevolle verbinding veranderen je frequentie,
+                  waardoor je meer in lijn komt met de stroom van het leven.
                 </p>
-
-                <p>
-                  Praktisch betekent dit:
-                  Leer luisteren naar je lichaam en emoties om te voelen waar energie vastzit.
-                  Zoek activiteiten die je energie geven in plaats van kosten.
-                  Creëer ritmes van inspanning en ontspanning om balans te behouden.
-                
+                <p className="hover:text-teal-200 transition-colors duration-300">
+                  Handel liefdevol tegenover jezelf.
+                  Op die manier verhoog je jouw frequentie
+                  en die van de wereld rondom jou.
                 </p>
+                <p className="hover:text-teal-200 transition-colors duration-300">
+                  Handel tegenover elke mens, dier en plant met liefde.
+                  Alsof je handelt tegenover jezelf.
+                </p>
+                <Button
+                      onClick={() => setShowDialog2(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      ✨ De boodschap van Liefde
+                </Button>
                 
               </div>
             </div>
@@ -315,10 +275,59 @@ const Energie = () => {
           </div>
         </DialogContent>
       </Dialog>
+      {/* Dialog2 */}
+      <Dialog open={showDialog2} onOpenChange={setShowDialog2}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
+          <DialogHeader>
+            <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
+              De boodschap van Liefde
+            </DialogTitle>
+          </DialogHeader>
+
+          <div className="space-y-6 text-lg">
+
+            {/* Introductie */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">
+                De boodschap van Liefde is "Heb anderen lief zoals jezelf".
+              </h3>
+              <p>
+                Jesus bracht de boodschap van Liefde als de hoogste wet.
+                Het betekent dat we anderen behandelen met dezelfde zorg, respect en compassie als we voor onszelf wensen.
+                Het betekent ook het erkennen van de goddelijkheid in ieder leven,
+                omdat we allemaal deel uitmaken van hetzelfde universele bewustzijn.
+              </p>
+            </div>
+         
+            
+            {/* Liefde / Evolutie */}
+            <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-white mb-3">
+                Liefde is de sleutel tot transformatie.
+              </h3>
+              <p className="mb-3">
+                Op dit moment van wereldwijde verandering is het essentieel om de kracht van Liefde te omarmen.
+                Door liefdevol te handelen, verhogen we onze eigen frequentie en dragen we bij aan de collectieve verschuiving naar eenheid en harmonie.
+              </p>
+            </div>
+
+            {/* Sluit knop */}
+            <div className="text-center pt-4">
+              <Button
+                onClick={() => setShowDialog2(false)}
+                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Sluiten
+              </Button>
+            </div>
+
+          </div>
+        </DialogContent>
+      </Dialog>
 
 
     </>
   );
 };
 
-export default Energie;
+export default Liefde;

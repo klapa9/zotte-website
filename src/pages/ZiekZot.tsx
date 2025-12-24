@@ -78,9 +78,7 @@ const ZiekZot = () => {
           <h1 className={`text-8xl md:text-9xl font-black mb-6 text-white ${glitchMode ? 'animate-glitch' : ''}`}>
             ZIEK ZOT!
           </h1>
-          <p className="text-2xl md:text-3xl text-pink-300 font-bold">
-            Er is een andere weg
-          </p>
+          
         </div>
 
         {/* Main Content */}
@@ -93,20 +91,16 @@ const ZiekZot = () => {
                   Elke ziekte is geneesbaar
                 </p>
               </div>
-              <p className="text-2xl md:text-3xl text-white font-light">
-                Door de kracht van vasten en de natuur
-              </p>
             </div>
 
             {/* The Breatharian Way */}
             <div className="bg-black bg-opacity-30 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-red-400 border-opacity-30">
               <h2 className="text-4xl md:text-5xl font-black text-red-400 mb-6">
-                De Weg van Vasten
+                Genees jezelf!
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Wat als ik je vertel dat je lichaam niet constant hoeft te eten om te overleven?
-                  Dat er mensen zijn die meerdere jaren zonder eten of drinken kunnen overleven?
+                  Vasten is de meest krachtige manier om je lichaam te laten genezen.
                 </p>
                 <p>
                   Wanneer je stopt met eten schakelt je lichaam over
@@ -135,10 +129,10 @@ const ZiekZot = () => {
               </div>
             </div>
 
-            {/* How Fasting Works */}
+            {/* Autonomie */}
             <div className="bg-gradient-to-r from-pink-600 to-red-600 rounded-3xl p-8 md:p-12 transform hover:rotate-1 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-                Extreem vasten
+                Autonomie
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 
