@@ -16,31 +16,16 @@ const Index = () => {
   });
 
   useEffect(() => {
-
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-
-      // Determine which section is in view
-      const sections = document.querySelectorAll('.section-trigger');
-      sections.forEach((section, index) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-          setActiveSection(index);
-        }
-      });
-    };
-
     const glitchInterval = setInterval(() => {
       setIsGlitching(true);
       setTimeout(() => setIsGlitching(false), 300);
     }, 4000);
 
-    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
       clearInterval(glitchInterval);
     };
   }, []);
+
 
   // Content sections for the site
   const siteSections = [
