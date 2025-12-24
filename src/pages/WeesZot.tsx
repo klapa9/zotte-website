@@ -11,6 +11,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 const WeesZot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [showDialog, setShowDialog] = useState(false);
+  const [showDialog2, setShowDialog2] = useState(false);
 
   useSeoMeta({
     title: 'Wees Zot! - Durf Gek te Zijn',
@@ -113,10 +114,15 @@ const WeesZot = () => {
                     Ze leiden je naar onverwachte kansen en magische ervaringen.
                   </p>
                   <p className="hover:text-pink-200 transition-colors duration-300">
-                    Geloof in jezelf en in het proces.
-                    Durf gek te zijn, zonder angst of verwachtingen.
-                    Geef je over aan het avontuur van het leven.
+                    Onderneem actie vanuit je enthousiasme,
+                    en zie hoe het leven zich op wonderbaarlijke wijze ontvouwt.
                   </p>
+                  <Button
+                    onClick={() => setShowDialog2(true)}
+                    className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                  >
+                    💡 Van waar komt je enthousiasme?
+                  </Button>
                 </div>
               </div>
 
@@ -144,6 +150,57 @@ const WeesZot = () => {
           <Navigation />
         </div>
       </div>
+
+      {/* Dialog */}
+      <Dialog open={showDialog2} onOpenChange={setShowDialog2}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
+          <DialogHeader>
+            <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
+              Volg je hoogste opwinding.
+            </DialogTitle>
+          </DialogHeader>
+
+          <div className="space-y-6 text-lg">
+            {/* Introductie */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">
+                Bewustzijn creëert ervaring
+              </h3>
+              <p>
+                Je bent een bewust wezen dat zichzelf ervaart via een menselijk perspectief.
+                De werkelijkheid die je ervaart is een directe weerspiegeling van je overtuigingen,
+                definities en keuzes. Je verschuift voortdurend tussen parallelle realiteiten,
+                afhankelijk van waar je aandacht, overtuiging en energie liggen.
+              </p>
+            </div>
+
+            {/* Vertrouwen & loslaten */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-blue-300 mb-3">
+                Vertrouwen zonder verwachtingen
+              </h3>
+              <p>
+                Heb duidelijke voorkeuren, maar geen eisen aan de uitkomst.
+                Vertrouwen betekent volledig deelnemen aan het leven,
+                terwijl je de vorm loslaat waarin het resultaat verschijnt.
+                Het leven werkt altijd in je voordeel,
+                ook wanneer het pad anders loopt dan je had bedacht.
+              </p>
+            </div>
+
+            {/* Sluit knop */}
+            <div className="text-center pt-4">
+              <Button
+                onClick={() => setShowDialog2(false)}
+                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Sluiten
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
       {/* Dialog */}
       <Dialog open={showDialog} onOpenChange={setShowDialog}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
