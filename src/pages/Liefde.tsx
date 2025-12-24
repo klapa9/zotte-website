@@ -8,8 +8,7 @@ import AudioPlayer from '@/components/AudioPlayer';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 
-const liefde = () => {
-  const [activeWord, setActiveWord] = useState(0);
+const Liefde = () => {
   const [showDialog, setShowDialog] = useState(false);
   const [showDialog2, setShowDialog2] = useState(false);
 
@@ -18,12 +17,7 @@ const liefde = () => {
     description: 'Hou van anderen als jezelf',
   });
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveWord((prev) => (prev + 1) % energyWords.length);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
+  
 
   
   return (
@@ -330,4 +324,4 @@ const liefde = () => {
   );
 };
 
-export default liefde;
+export default Liefde;

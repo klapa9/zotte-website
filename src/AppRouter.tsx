@@ -6,7 +6,7 @@ import { NIP19Page } from "./pages/NIP19Page";
 import NotFound from "./pages/NotFound";
 import WeesZot from "./pages/WeesZot";
 import Leven from "./pages/Leven";
-import liefde from "./pages/Liefde";
+import Liefde from "./pages/Liefde";
 import ZiekZot from "./pages/ZiekZot";
 import OpenJeGeest from "./pages/OpenJeGeest";
 import Geld from "./pages/Geld";
@@ -22,7 +22,7 @@ export function AppRouter() {
         <Route path="/geld" element={<Geld />} />
         <Route path="/weeszot" element={<WeesZot />} />
         <Route path="/leven" element={<Leven />} />
-        <Route path="/liefde" element={<liefde />} />
+        <Route path="/liefde" element={<Liefde />} />
         <Route path="/ziekzot" element={<ZiekZot />} />
         <Route path="/openjegeest" element={<OpenJeGeest />} />
         {/* NIP-19 route for npub1, note1, naddr1, nevent1, nprofile1 */}
