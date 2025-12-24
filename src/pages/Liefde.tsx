@@ -81,7 +81,7 @@ const Liefde = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p className="hover:text-green-200 transition-colors duration-300">
-                  <strong>Alles wat bestaat is energie in beweging.</strong>
+                  <strong>Alles wat bestaat is energie in beweging. </strong>
                   Bewustzijn, lichaam en ziel zijn geen vaste vormen, maar dynamische energievelden die voortdurend trillen op een bepaalde frequentie.
                 </p>
 
