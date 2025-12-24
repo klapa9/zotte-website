@@ -12,7 +12,7 @@ const Navigation = ({ className = '' }: NavigationProps) => {
     const path = location.pathname;
     if (path === '/weeszot' || path.includes('weeszot')) return 'weeszot';
     if (path === '/leven' || path.includes('leven')) return 'leven';
-    if (path === '/energie' || path.includes('energie')) return 'energie';
+    if (path === '/liefde' || path.includes('liefde')) return 'liefde';
     if (path === '/ziekzot' || path.includes('ziekzot')) return 'ziekzot';
     if (path === '/openjegeest' || path.includes('openjegeest')) return 'openjegeest';
     if (path === '/geld' || path.includes('geld')) return 'geld';
@@ -26,7 +26,7 @@ const Navigation = ({ className = '' }: NavigationProps) => {
     { key: 'openjegeest', label: 'Open Geest', icon: '🧠', href: '/openjegeest' },
     { key: 'weeszot', label: 'Wees Zot', icon: '🌟', href: '/weeszot' },
     { key: 'leven', label: 'Leven', icon: '❓', href: '/leven' },
-    { key: 'energie', label: 'Energie', icon: '⚡', href: '/energie' },
+    { key: 'liefde', label: 'liefde', icon: '❤️', href: '/liefde' },
     { key: 'ziekzot', label: 'Ziek Zot', icon: '🌿', href: '/ziekzot' },
     //{ key: 'geld', label: 'Geld', icon: '₿', href: '/geld' },
   ];
@@ -40,7 +40,7 @@ const Navigation = ({ className = '' }: NavigationProps) => {
           return 'text-yellow-300 hover:text-yellow-200';
         case 'leven':
           return 'text-cyan-300 hover:text-cyan-200';
-        case 'energie':
+        case 'liefde':
           return 'text-green-300 hover:text-green-200';
         case 'ziekzot':
           return 'text-pink-300 hover:text-pink-200';
@@ -62,7 +62,7 @@ const Navigation = ({ className = '' }: NavigationProps) => {
           return 'bg-yellow-600 bg-opacity-30 border-yellow-400';
         case 'leven':
           return 'bg-cyan-600 bg-opacity-30 border-cyan-400';
-        case 'energie':
+        case 'liefde':
           return 'bg-green-600 bg-opacity-30 border-green-400';
         case 'ziekzot':
           return 'bg-pink-600 bg-opacity-30 border-pink-400';
