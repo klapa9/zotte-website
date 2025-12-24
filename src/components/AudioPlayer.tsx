@@ -23,10 +23,10 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
     switch (pageType) {
       case 'energie': return '/Energy.mp3';
       case 'openjegeest': return '/Open_Je_Geest_1.mp3';
-      case 'leven': return '/sun.mp3';
-      case 'weeszot': return '/Wees_Zot.mp3';
+      case 'leven': return '/leven4.mp3';
+      case 'weeszot': return '/weeszot.mp3';
       case 'geld': return '/btc2.mp3';
-      case 'ziekzot': return '/vasten.mp3';
+      case 'ziekzot': return '/heal2.mp3';
       default: return '/startpagina2.mp3';
     }
   };
