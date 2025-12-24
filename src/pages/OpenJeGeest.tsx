@@ -180,11 +180,28 @@ const OpenJeGeest = () => {
               {ideas.map((idea, index) => (
                 <div
                   key={index}
-                  className="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-3 transition-all duration-500 cursor-pointer"
-                  onClick={() => {
-                    handleSelect(index);
-                  }}
+                  className="relative bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 transform hover:scale-105 hover:rotate-3 transition-all duration-500 cursor-pointer"
+                  onClick={() => handleSelect(index)}
                 >
+                  {/* Info icon (gebruikt dezelfde klik als de kaart) */}
+                  <div
+                    className="absolute top-4 right-4 text-white/70 hover:text-yellow-400 transition pointer-events-none"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="12" y1="16" x2="12" y2="12" />
+                      <line x1="12" y1="8" x2="12.01" y2="8" />
+                    </svg>
+                  </div>
+
                   <h3 className="text-2xl font-black text-yellow-400 mb-3">
                     {idea.title}
                   </h3>
@@ -194,6 +211,7 @@ const OpenJeGeest = () => {
                 </div>
               ))}
             </div>
+            
 
             <PracticalTip pageType="openjegeest" />
 
