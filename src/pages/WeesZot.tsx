@@ -218,21 +218,6 @@ const WeesZot = () => {
               </p>
             </div>
 
-            {/* Feedback */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-cyan-300 mb-3">
-                Alles is feedback
-              </h3>
-              <p>
-                Wat ongemakkelijk of pijnlijk voelt,
-                is geen fout.
-                Het is feedback die laat zien
-                waar een overtuiging niet meer klopt.
-                Wanneer je de betekenis verschuift,
-                verschuift je ervaring vanzelf mee.
-              </p>
-            </div>
-
             {/* Sluit knop */}
             <div className="text-center pt-4">
               <Button
