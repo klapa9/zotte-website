@@ -66,7 +66,7 @@ const WeesZot = () => {
               WEES ZOT!
             </h1>
             <p className="text-2xl md:text-3xl text-white font-bold mb-4">
-              Durf gek te zijn, want de wereld heeft gekke mensen nodig
+              Durf jezelf te zijn!
             </p>
           </div>
 
