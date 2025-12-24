@@ -72,6 +72,7 @@ const Liefde = () => {
         {/* Main Content */}
         <div className="flex-1 px-4 pb-16">
           <div className="max-w-6xl mx-auto">
+            
                         
 
             {/* Energy Explanation */}
@@ -131,6 +132,27 @@ const Liefde = () => {
                       ✨ De boodschap van Liefde
                 </Button>
                 
+              </div>
+            </div>
+
+            {/* Dankbaarheid en vergeving */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
+                Liefde begint bij Dankbaarheid en Vergeving.
+              </h2>
+              <div className="space-y-4 text-white text-lg md:text-xl">
+                <p className="hover:text-yellow-200 transition-colors duration-300">
+                  Door dankbaarheid te cultiveren voor wat je hebt,
+                  verhoog je je eigen vibratie en trek je meer positieve ervaringen aan.
+                </p>
+                <p className="hover:text-yellow-200 transition-colors duration-300">
+                  Vergeving bevrijdt je van negatieve energieën en patronen.
+                  Zelfs als iemand je pijn heeft gedaan,
+                  door hen te vergeven, bevrijd je jezelf van de last van wrok en boosheid.
+                </p>
+                <p className="hover:text-yellow-200 transition-colors duration-300">
+                  Samen vormen dankbaarheid en vergeving de basis voor een liefdevol leven.
+                </p>
               </div>
             </div>
 
