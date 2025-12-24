@@ -135,26 +135,7 @@ const Liefde = () => {
               </div>
             </div>
 
-            {/* Dankbaarheid en vergeving */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
-                Liefde begint bij Dankbaarheid en Vergeving.
-              </h2>
-              <div className="space-y-4 text-white text-lg md:text-xl">
-                <p className="hover:text-yellow-200 transition-colors duration-300">
-                  Door dankbaarheid te cultiveren voor wat je hebt,
-                  verhoog je je eigen vibratie en trek je meer positieve ervaringen aan.
-                </p>
-                <p className="hover:text-yellow-200 transition-colors duration-300">
-                  Vergeving bevrijdt je van negatieve energieën en patronen.
-                  Zelfs als iemand je pijn heeft gedaan,
-                  door hen te vergeven, bevrijd je jezelf van de last van wrok en boosheid.
-                </p>
-                <p className="hover:text-yellow-200 transition-colors duration-300">
-                  Samen vormen dankbaarheid en vergeving de basis voor een liefdevol leven.
-                </p>
-              </div>
-            </div>
+            
 
             <PracticalTip pageType="liefde" />
 
@@ -314,7 +295,22 @@ const Liefde = () => {
                 omdat we allemaal deel uitmaken van hetzelfde universele bewustzijn.
               </p>
             </div>
-         
+
+            {/* Dankbaarheid en vergeving */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-blue-300 mb-3">
+                Dankbaarheid en Vergeving
+              </h3>
+              <p className="mb-4">
+                Dankbaarheid en vergeving voor onszelf en anderen zijn fundamentele aspecten van liefdevol leven.
+                Door dankbaar te zijn, verhogen we onze frequentie en openen we ons hart.
+                Vergeving bevrijdt ons van wrok en pijn, waardoor we in vrede kunnen leven.
+              </p>
+              <p>
+                Dit is dan ook door Jezus benadrukt als essentieel voor spirituele groei en harmonie.
+              </p>
+            </div>
+                     
             
             {/* Liefde / Evolutie */}
             <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-6 border border-cyan-400 border-opacity-30">
