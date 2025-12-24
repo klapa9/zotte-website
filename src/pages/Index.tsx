@@ -53,7 +53,7 @@ const Index = () => {
       description: "Waarom leef je? Wat is echt belangrijk? Hoe kan je beter leven? Duik diep in de betekenis van bestaan.",
       route: "/leven",
       gradient: "from-blue-400 via-purple-500 to-pink-600",
-      icon: "🌱",
+      icon: "❓",
       questions: ["Waarom ben je hier?", "Wat geeft richting?", "Hoe leef je voluit?"]
     },
     {
@@ -71,7 +71,7 @@ const Index = () => {
       description: "Ziek zijn is zot! Beter om gewoon niet zot ziek te zijn.",
       route: "/ziekzot",
       gradient: "from-red-600 to-pink-600",
-      icon: "🎪",
+      icon: "🌿",
       questions: ["Nooit meer ziek?", "Wat kan je lichaam aan", "Kan je jezelf genezen?"]
     },
     // {
