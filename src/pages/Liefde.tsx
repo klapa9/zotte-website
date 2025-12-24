@@ -8,14 +8,14 @@ import AudioPlayer from '@/components/AudioPlayer';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 
-const Liefde = () => {
+const liefde = () => {
   const [activeWord, setActiveWord] = useState(0);
   const [showDialog, setShowDialog] = useState(false);
   const [showDialog2, setShowDialog2] = useState(false);
 
   useSeoMeta({
     title: 'Liefde - De Kracht van het Leven',
-    description: 'Ontdek de verschillende vormen van Liefde.',
+    description: 'Hou van anderen als jezelf',
   });
 
   useEffect(() => {
@@ -330,4 +330,4 @@ const Liefde = () => {
   );
 };
 
-export default Liefde;
+export default liefde;
