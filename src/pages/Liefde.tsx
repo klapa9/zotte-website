@@ -289,7 +289,7 @@ const Liefde = () => {
                 De boodschap van Liefde is "Heb anderen lief zoals jezelf".
               </h3>
               <p>
-                Jesus bracht de boodschap van Liefde als de hoogste wet.
+                Jezus Christus bracht deze boodschap van Liefde als de hoogste wet.
                 Het betekent dat we anderen behandelen met dezelfde zorg, respect en compassie als we voor onszelf wensen.
                 Het betekent ook het erkennen van de goddelijkheid in ieder leven,
                 omdat we allemaal deel uitmaken van hetzelfde universele bewustzijn.
