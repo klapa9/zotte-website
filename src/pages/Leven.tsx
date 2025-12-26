@@ -91,6 +91,37 @@ const Leven = () => {
               </div>
             </div>
 
+            {/* De Evolutionaire Reis van God */}
+            <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 mb-12 border border-blue-400 border-opacity-30 transform hover:-rotate-1 transition-all duration-500">
+              <h2 className="text-4xl md:text-5xl font-black text-blue-400 mb-6">
+                De Evolutionaire Reis van God
+              </h2>
+              <div className="space-y-4 text-white text-lg md:text-xl">
+                <p>
+                  De evolutionaire reis die God onderneemt, begint met zichzelf te splitsen in
+                  talloze zielen die afzonderlijke ervaringen opdoen. Elke ziel kiest een pad
+                  van groei en bewustzijnsontwikkeling.
+                </p>
+                <p>
+                  Een belangrijke stap is vergeten wie hij werkelijk is.
+                  Dit stelt de ziel in staat om volledig op te gaan in haar ervaringen
+                  zonder de beperkingen van haar ware aard.
+                </p>
+                <p>
+                  uiteindelijk zal elke ziel terugkeren tot een geheel, verrijkt met de lessen
+                  en ervaringen die zij heeft opgedaan.
+                </p>
+                <div className="mt-6">
+                  <Button
+                      onClick={() => setShowDialog(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      ✨ De wet van éénheid
+                    </Button>
+                  </div>
+              </div>
+            </div>
+
             {/* Energie en beweging */}
             <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
@@ -123,36 +154,7 @@ const Leven = () => {
               </div>
             </div>
 
-            {/* De Evolutionaire Reis van God */}
-            <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 mb-12 border border-blue-400 border-opacity-30 transform hover:-rotate-1 transition-all duration-500">
-              <h2 className="text-4xl md:text-5xl font-black text-blue-400 mb-6">
-                De Evolutionaire Reis van God
-              </h2>
-              <div className="space-y-4 text-white text-lg md:text-xl">
-                <p>
-                  De evolutionaire reis die God onderneemt, begint met zichzelf te splitsen in
-                  talloze zielen die afzonderlijke ervaringen opdoen. Elke ziel kiest een pad
-                  van groei en bewustzijnsontwikkeling.
-                </p>
-                <p>
-                  Een belangrijke stap is vergeten wie hij werkelijk is.
-                  Dit stelt de ziel in staat om volledig op te gaan in haar ervaringen
-                  zonder de beperkingen van haar ware aard.
-                </p>
-                <p>
-                  uiteindelijk zal elke ziel terugkeren tot een geheel, verrijkt met de lessen
-                  en ervaringen die zij heeft opgedaan.
-                </p>
-                <div className="mt-6">
-                  <Button
-                      onClick={() => setShowDialog(true)}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                    >
-                      ✨ De wet van éénheid
-                    </Button>
-                  </div>
-              </div>
-            </div>
+            
             
 
             
@@ -163,13 +165,13 @@ const Leven = () => {
             <div className="text-center py-12">
               <div className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-3xl p-8 md:p-12 transform hover:scale-105 hover:rotate-3 transition-all duration-500 active:scale-95">
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
-                  Jouw Leven, Jouw Keuze
+                  We zijn een deel van God
                 </h2>
                 <p className="text-white text-lg md:text-xl">
-                  Wij zijn de scheppers van onze eigen realiteit.
+                  Allemaal verbonden.
                 </p>
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
-                  Geloof in je kracht om je leven te vormen.
+                  We zijn hier met een reden!
                 </h2>
               </div>
             </div>
@@ -197,7 +199,7 @@ const Leven = () => {
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              Frequentie van Bewustzijn
+              Frequenties van Bewustzijn
             </DialogTitle>
           </DialogHeader>
 

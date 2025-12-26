@@ -73,30 +73,28 @@ const Liefde = () => {
         {/* Main Content */}
         <div className="flex-1 px-4 pb-16">
           <div className="max-w-6xl mx-auto">
-            
-                        
-
-            
-
+            {/* Karma */}
             <div className="bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
               <h2 className="text-4xl md:text-5xl font-black text-purple-600 mb-6">
-                Verander je frequentie.
+                Karma
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p className="hover:text-teal-200 transition-colors duration-300">
-                  Door bewust te worden van je innerlijke staat,
-                  verander je automatisch de frequentie waarop je lichaam en bewustzijn functioneren.
-                  Praktijken zoals meditatie, ademhaling, beweging en liefdevolle verbinding veranderen je frequentie,
-                  waardoor je meer in lijn komt met de stroom van het leven.
+                  Karma is de universele wet van oorzaak en gevolg.
+                  Elke actie die je onderneemt, elke gedachte die je denkt,
+                  zendt energie uit die uiteindelijk naar je terugkeert.
                 </p>
                 <p className="hover:text-teal-200 transition-colors duration-300">
-                  Handel liefdevol tegenover jezelf.
-                  Op die manier verhoog je jouw frequentie
-                  en die van de wereld rondom jou.
+                  Daarom is het zo belangrijk om bewust te kiezen voor liefdevolle
+                  en positieve handelingen. Wat je uitzendt, komt naar je terug.
                 </p>
                 <p className="hover:text-teal-200 transition-colors duration-300">
-                  Handel tegenover elke mens, dier en plant met liefde.
-                  Alsof je handelt tegenover jezelf.
+                  Dit is niet altijd onmiddellijk zichtbaar, maar op de lange termijn
+                  zal de energie die je hebt gecreëerd, zich manifesteren in je leven.
+                </p>
+                <p className="hover:text-teal-200 transition-colors duration-300">
+                  Een van de krachtigste emoties die je kunt cultiveren is dankbaarheid.
+                  Dankbaarheid trekt meer positieve ervaringen aan dan welke andere emotie dan ook.
                 </p>
                 <Button
                       onClick={() => setShowDialog2(true)}
@@ -111,29 +109,31 @@ const Liefde = () => {
             {/* De Evolutionaire Reis van God */}
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 md:p-12 transform hover:rotate-1 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-                De Evolutionaire Reis van God
+                Vergiffenis
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                De evolutionaire reis die God onderneemt, begint met zichzelf te splitsen in
-                talloze zielen die afzonderlijke ervaringen opdoen. Elke ziel kiest een pad
-                van groei en bewustzijnsontwikkeling.
-              </p>
-              <p>
-                Een belangrijke stap is vergeten wie hij werkelijk is.
-                Dit stelt de ziel in staat om volledig op te gaan in haar ervaringen
-                zonder de beperkingen van haar ware aard.
-              </p>
-              <p>
-                uiteindelijk zal elke ziel terugkeren tot een geheel, verrijkt met de lessen
-                en ervaringen die zij heeft opgedaan.
-              </p>
+                  Vergiffenis is een essentieel aspect van liefdevolle relaties.
+                  Het stelt ons in staat om los te laten wat ons vasthoudt
+                  en ruimte te maken voor genezing en groei.
+                </p>
+                <p>
+                  Door te vergeven, bevrijden we onszelf van de last van wrok en pijn.
+                  Het is een daad van zelfliefde en compassie die ons in staat stelt
+                  om verder te gaan en liefdevolle verbindingen te cultiveren.
+                </p>
+                <p>
+                  Zelfs de ergste fouten kunnen worden vergeven wanneer we de moed hebben
+                  om los te laten en liefde te omarmen.
+                  Dit betekent niet dat we het gedrag goedkeuren, maar dat we kiezen
+                  voor vrede en begrip boven wrok en haat.
+                </p>
                 
                 <Button
                   onClick={() => setShowDialog(true)}
                   className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
                 >
-                  ✨Een keuze met betekenis!
+                  ✨ De keuze van je spirituele pad
                 </Button>
 
               </div>
@@ -173,35 +173,17 @@ const Liefde = () => {
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              De keuze van je evolutionaire pad
+              De keuze van je spirituele pad
             </DialogTitle>
           </DialogHeader>
           <div className="space-y-6 text-lg">
-            {/* Introductie */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-cyan-300 mb-3">De evolutionaire reis van God</h3>
-              <p>
-                De evolutionaire reis die God onderneemt, begint met zichzelf te splitsen in
-                talloze zielen die afzonderlijke ervaringen opdoen. Elke ziel kiest een pad
-                van groei en bewustzijnsontwikkeling.
-              </p>
-              <p>
-                Een belangrijke stap is vergeten wie hij werkelijk is.
-                Dit stelt de ziel in staat om volledig op te gaan in haar ervaringen
-                zonder de beperkingen van haar ware aard.
-              </p>
-              <p>
-                uiteindelijk zal elke ziel terugkeren tot een geheel, verrijkt met de lessen
-                en ervaringen die zij heeft opgedaan.
-              </p>
-            </div>
-
+            
             {/* De Twee Paden */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
               <h3 className="text-2xl font-black text-blue-300 mb-3">Twee Evolutionaire Paden</h3>
               <p className="mb-4">
                 We zijn op een punt in onze spirituele evolutie waar we
-                een keuze kunnen maken tussen twee fundamentele paden:
+                een keuze moeten maken tussen twee fundamentele paden:
                 Service to Others (STO) en Service to Self (STS).
               </p>
 
