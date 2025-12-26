@@ -101,22 +101,20 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
           content: (
             <>
               <p className="hover:text-green-200 transition-colors duration-300">
-                <strong>Angst Blokkeert Energie: </strong>
-                  Het blokkeert de natuurlijke stroom van energie in ons lichaam.
-                  Wanneer we bang zijn, sluiten we ons af van onze kracht.
-                  Door angst los te laten, bevrijden we onze energie.
+                <strong>Vergeef de fouten van anderen en jezelf. </strong>
+                Door te vergeven bevrijd je jezelf van wrok en negativiteit.
               </p>
               <p className="hover:text-green-200 transition-colors duration-300">
-                  <strong>Liefde Vermenigvuldigt Energie: </strong>
-                  Wanneer je handelt vanuit liefde, stroomt je energie vrijelijk.
-                  Liefde opent je hart en geest, waardoor je meer energie aantrekt.
-                  Het is de ultieme krachtbron die ons verbindt met alles om ons heen.
+                <strong>Je bent het waard om geliefd te worden. </strong>Je kunt anderen niet echt liefhebben
+                als je niet eerst van jezelf houdt.                
               </p>
               <p className="hover:text-green-200 transition-colors duration-300">
-                <strong>Overwin je angst en voel het verschil.</strong>
+                <strong>Hou van anderen als jezelf! </strong>Behandel alle anderen met hetzelfde respect,
+                geduld en vriendelijkheid als je voor jezelf zou willen.
               </p>
               <p className="hover:text-green-200 transition-colors duration-300">
-                <strong>Hou van anderen als jezelf!</strong>
+                <strong>Wat je geeft, krijg je terug. </strong>
+                Wanneer je liefdevol bent naar anderen, open je jezelf om liefde te ontvangen.
               </p>
             </>
           ),
