@@ -92,50 +92,44 @@ const Liefde = () => {
                   Dit is niet altijd onmiddellijk zichtbaar, maar op de lange termijn
                   zal de energie die je hebt gecreëerd, zich manifesteren in je leven.
                 </p>
-                <p className="hover:text-teal-200 transition-colors duration-300">
-                  Een van de krachtigste emoties die je kunt cultiveren is dankbaarheid.
-                  Dankbaarheid trekt meer positieve ervaringen aan dan welke andere emotie dan ook.
-                </p>
                 <Button
                       onClick={() => setShowDialog2(true)}
                       className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
                     >
-                      ✨ De boodschap van Liefde
+                      ✨ Dankbaarheid!
                 </Button>
                 
               </div>
             </div>
 
-            {/* De Evolutionaire Reis van God */}
+            {/* De boodschap van liefde */}
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 md:p-12 transform hover:rotate-1 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-                Vergiffenis
+                Heb anderen lief zoals jezelf.
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
-                <p>
-                  Vergiffenis is een essentieel aspect van liefdevolle relaties.
-                  Het stelt ons in staat om los te laten wat ons vasthoudt
-                  en ruimte te maken voor genezing en groei.
-                </p>
-                <p>
-                  Door te vergeven, bevrijden we onszelf van de last van wrok en pijn.
-                  Het is een daad van zelfliefde en compassie die ons in staat stelt
-                  om verder te gaan en liefdevolle verbindingen te cultiveren.
-                </p>
-                <p>
-                  Zelfs de ergste fouten kunnen worden vergeven wanneer we de moed hebben
-                  om los te laten en liefde te omarmen.
-                  Dit betekent niet dat we het gedrag goedkeuren, maar dat we kiezen
-                  voor vrede en begrip boven wrok en haat.
-                </p>
+              <p>
+                Als aan Jezus Christus werd gevraagd wat de hoogste wet was, antwoordde hij met het gebod:
+                "Heb anderen lief zoals jezelf".
+              </p>
+              <p>
+                Deze eenvoudige maar diepgaande uitspraak vat de essentie van liefde samen.
+                Het betekent ten eerste dat we van onszelf moeten houden en ons eigen welzijn moeten koesteren.
+                We kunnen anderen niet echt liefhebben als we niet eerst van onszelf houden.
+              </p>
+              <p>
+                Het betekent ook dat we anderen behandelen met dezelfde zorg, respect en compassie als we voor onszelf wensen.
+                Het betekent het erkennen van de goddelijkheid in ieder leven,
+                omdat we allemaal deel uitmaken van hetzelfde universele bewustzijn.
+              </p>
                 
-                <Button
-                  onClick={() => setShowDialog(true)}
-                  className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                >
-                  ✨ De keuze van je spirituele pad
-                </Button>
-
+              <Button
+                onClick={() => setShowDialog(true)}
+                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                ✨ Vergiffenis
+              </Button>
+              
               </div>
             </div>
 
@@ -168,86 +162,32 @@ const Liefde = () => {
 
        
 
-      {/* Law of One Dialog */}
+      {/* Vergiffenis */}
       <Dialog open={showDialog} onOpenChange={setShowDialog}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              De keuze van je spirituele pad
+              Vergiffenis
             </DialogTitle>
           </DialogHeader>
           <div className="space-y-6 text-lg">
-            
-            {/* De Twee Paden */}
+          
+            {/*  */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-blue-300 mb-3">Twee Evolutionaire Paden</h3>
+              <h3 className="text-2xl font-black text-blue-300 mb-3">De kracht van Vergiffenis</h3>
               <p className="mb-4">
-                We zijn op een punt in onze spirituele evolutie waar we
-                een keuze moeten maken tussen twee fundamentele paden:
-                Service to Others (STO) en Service to Self (STS).
-              </p>
-
-              {/* Service to Others */}
-              <div className="mb-4 pl-4 border-l-4 border-teal-400">
-                <h4 className="text-xl font-bold text-teal-300 mb-2">Service to Others (STO)</h4>
-                <p className="mb-2">
-                  Het STO-pad is gericht op liefde, samenwerking en het verhogen
-                  van het welzijn van anderen. Een ziel volgt dit pad wanneer
-                  zij meer dan 51% van haar intentie wijdt aan het dienen van anderen.
-                </p>
-                <ul className="list-disc list-inside space-y-1 text-teal-200">
-                  <li>Liefde en compassie als drijfveer</li>
-                  <li>Samenwerking en harmonie</li>
-                  <li>Welzijn van anderen verhogen</li>
-                  <li>Intentie gericht op dienstbaarheid (meer dan 51%)</li>
-                </ul>
-              </div>
-
-              {/* Service to Self */}
-              <div className="pl-4 border-l-4 border-purple-400">
-                <h4 className="text-xl font-bold text-purple-300 mb-2">Service to Self (STS)</h4>
-                <p className="mb-2">
-                  Het STS-pad draait om macht, controle en zelfverheffing.
-                  Een ziel kiest dit pad wanneer zij meer dan 95% van haar energie
-                  richt op het dienen van zichzelf.
-                </p>
-                <ul className="list-disc list-inside space-y-1 text-purple-200">
-                  <li>Macht en controle als focus</li>
-                  <li>Zelfverheffing en autonomie</li>
-                  <li>Persoonlijke krachtontwikkeling</li>
-                  <li>Energie gericht op zelf (meer dan 95%)</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Geen Goed of Fout */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-cyan-300 mb-3">Geen Goed of Fout</h3>
-              <p>
-                Beide paden zijn volwaardige en legitieme routes van
-                spirituele vooruitgang. Elk pad biedt unieke lessen en
-                leidt uiteindelijk naar dezelfde bron. Er is geen moreel
-                oordeel - beide zijn geldige keuzes voor bewustzijnsontwikkeling.
+                De beste vorm van zelfliefde is vergiffenis.
+                Vergiffenis bevrijdt ons van de last van wrok en negatieve emoties die ons innerlijke vrede ontnemen.
+                Het stelt ons in staat om verder te gaan en ruimte te maken voor liefde en positiviteit in ons leven.
               </p>
               <p>
-                Hier op aarde is de meerderheid van zielen bezig met het STO-pad,
-                wat leidt tot meer liefde en samenwerking. Echter, er zijn ook
-                zielen die het STS-pad volgen, wat uitdagingen en conflicten
-                kan veroorzaken.
+                Door te vergeven, bevrijden we onszelf van de ketenen van het verleden en openen we ons hart voor nieuwe mogelijkheden.
+                Dit is een krachtige stap in het proces van spirituele groei en innerlijke vrede.
               </p>
-            </div>
-
-            {/* De Keuze */}
-            <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-white mb-3">Je moet nog niet kiezen</h3>
-              <p className="mb-3">
-                Je kan ook nog niet kiezen. Veel zielen hebben nog niet gekozen.
-                Het is een proces van zelfontdekking en groei.
-                Uiteindelijk zal iedereen een duidelijke keuze maken.
-              </p>
-              <p className="mb-3">
-                Hoe duidelijker jouw keuze en overeenkomstige acties
-                hoe sneller je spiritueel groeit.
+              <p>
+                Vergiffenis betekent niet dat we de fouten van anderen goedkeuren,
+                maar dat we ervoor kiezen om los te laten wat ons pijn doet,
+                zodat we kunnen genezen en verder kunnen gaan met ons leven.
               </p>
             </div>
 
@@ -270,7 +210,7 @@ const Liefde = () => {
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              De boodschap van Liefde
+              Dankbaarheid
             </DialogTitle>
           </DialogHeader>
 
@@ -278,41 +218,25 @@ const Liefde = () => {
 
             {/* Introductie */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-cyan-300 mb-3">
-                De boodschap van Liefde is "Heb anderen lief zoals jezelf".
-              </h3>
-              <p>
-                Jezus Christus bracht deze boodschap van Liefde als de hoogste wet.
-                Het betekent dat we anderen behandelen met dezelfde zorg, respect en compassie als we voor onszelf wensen.
-                Het betekent ook het erkennen van de goddelijkheid in ieder leven,
-                omdat we allemaal deel uitmaken van hetzelfde universele bewustzijn.
-              </p>
+              
             </div>
 
             {/* Dankbaarheid en vergeving */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
               <h3 className="text-2xl font-black text-blue-300 mb-3">
-                Dankbaarheid en Vergeving
+                Dankbaarheid
               </h3>
               <p className="mb-4">
-                Dankbaarheid en vergeving voor onszelf en anderen zijn fundamentele aspecten van liefdevol leven.
-                Door dankbaar te zijn, verhogen we onze frequentie en openen we ons hart.
-                Vergeving bevrijdt ons van wrok en pijn, waardoor we in vrede kunnen leven.
+                Dankbaarheid is de krachtigste emotie die ons verbindt met de overvloed van het universum.
+                Dankbaarheid opent ons hart en trekt meer positieve ervaringen aan.
               </p>
               <p>
-                Dit is dan ook door Jezus benadrukt als essentieel voor spirituele groei en harmonie.
+                Door dankbaarheid te cultiveren, erkennen we de zegeningen in ons leven,
+                hoe klein ook, en versterken we onze verbinding met liefde en vreugde.
               </p>
-            </div>
-                     
-            
-            {/* Liefde / Evolutie */}
-            <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-white mb-3">
-                Liefde is de sleutel tot transformatie.
-              </h3>
-              <p className="mb-3">
-                Op dit moment van wereldwijde verandering is het essentieel om de kracht van Liefde te omarmen.
-                Door liefdevol te handelen, verhogen we onze eigen frequentie en dragen we bij aan de collectieve verschuiving naar eenheid en harmonie.
+              <p>
+                Dankbaarheid helpt ook om onze zelfwaarde te verhogen,
+                omdat we ons bewust worden van de waarde die we in ons leven hebben.
               </p>
             </div>
 
