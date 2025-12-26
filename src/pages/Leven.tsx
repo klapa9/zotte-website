@@ -91,6 +91,38 @@ const Leven = () => {
               </div>
             </div>
 
+            {/* Energie en beweging */}
+            <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
+                Alles is energie in beweging.
+              </h2>
+              <div className="space-y-4 text-white text-lg md:text-xl">
+                <p className="hover:text-green-200 transition-colors duration-300">
+                  Er bestaan geen vaste vormen. Er zijn alleen dynamische energievelden die voortdurend trillen op een bepaalde frequentie.
+                </p>
+
+                <p className="hover:text-cyan-200 transition-colors duration-300">
+                  Alles in het universum is in beweging, van de kleinste deeltjes tot de grootste structuren.
+                  De frequentie van de beweging bepaalt hoe bewustzijn de realiteit ervaart.
+                  Een lage frequentie wordt ervaren als zwaarte, materieel, eindig,..
+                  Een hoge frequentie wordt ervaren als immaterieel, licht, oneindig,..
+                </p>
+                <p>
+                  Het verhogen van frequentie wordt gezien als spirituele evolutie.
+                  Als we onze frequentie verhogen, openen we ons voor hogere niveaus van bewustzijn en ervaring.
+                  Dit stelt ons in staat om dieper contact te maken met ons ware zelf en met het universum.                 
+                </p>
+
+                
+                <Button
+                      onClick={() => setShowDialog2(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      ✨ Spirituele evolutie
+                </Button>
+              </div>
+            </div>
+
             {/* Wat is belangrijk? */}
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 md:p-12 transform hover:rotate-1 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
@@ -122,34 +154,7 @@ const Leven = () => {
 
               </div>
             </div>
-            {/* Energie en beweging */}
-            <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
-                Alles wat bestaat is energie in beweging.
-              </h2>
-              <div className="space-y-4 text-white text-lg md:text-xl">
-                <p className="hover:text-green-200 transition-colors duration-300">
-                  Bewustzijn, lichaam en ziel zijn geen vaste vormen, maar dynamische energievelden die voortdurend trillen op een bepaalde frequentie.
-                </p>
-
-                <p className="hover:text-cyan-200 transition-colors duration-300">
-                  Frequentie bepaalt ervaring:
-                  Een lage, geblokkeerde frequentie wordt ervaren als zwaarte, weerstand of vermoeidheid.
-                  Een hoge, coherente frequentie wordt ervaren als helderheid, vitaliteit en verbinding.
-                </p>
-                <p>
-                  Liefde is de energie die resoneert met alles wat leeft.
-                </p>
-
-                
-                <Button
-                      onClick={() => setShowDialog2(true)}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                    >
-                      ✨ Frequentie
-                </Button>
-              </div>
-            </div>
+            
 
             
 

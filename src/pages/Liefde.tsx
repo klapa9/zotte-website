@@ -76,7 +76,7 @@ const Liefde = () => {
                         
 
             {/* We zijn één */}
-            <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-blue-400 border-opacity-30 transform hover:-rotate-1 transition-all duration-500">
+            <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 mb-12 border border-blue-400 border-opacity-30 transform hover:-rotate-1 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-blue-400 mb-6">
                 We zijn één
               </h2>
