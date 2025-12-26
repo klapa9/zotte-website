@@ -74,7 +74,7 @@ const Leven = () => {
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Er is 1 oneindig bewustzijn die alles ervaart. Dit heeft vele namen: God, Allah, het Universum, de Bron, brahmana, Tao...
+                  Er is 1 oneindig bewustzijn die alles ervaart. Dit heeft vele namen: God, Allah, het Universum, de Bron, Brahmana, Tao...
                   Het is de schepper en de schepping. Het is alles wat is, was en zal zijn.
                 </p>
                 <p>
