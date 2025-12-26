@@ -91,14 +91,17 @@ const Leven = () => {
               </div>
             </div>
 
-            {/* Het leven */}
+            {/* Wat is belangrijk? */}
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 md:p-12 transform hover:rotate-1 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-                Het leven
+                Wat is belangrijk?
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
                   Wie je bent of wilt zijn, hangt af van de keuzes die je maakt.
+                  Als je een leven wilt leiden dat betekenisvol is, moet je bewust kiezen wat belangrijk voor je is:
+                </p>
+                <p>
                   Je kunt kiezen om een leven te leiden dat gericht is op het dienen van anderen,
                   door liefde, compassie en samenwerking te bevorderen.
                   Of je kunt kiezen voor een pad dat gericht is op het dienen van jezelf,
@@ -114,13 +117,13 @@ const Leven = () => {
                   onClick={() => setShowLawOfOneDialog(true)}
                   className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
                 >
-                  ✨ Er is een keuze!
+                  ✨Een keuze met betekenis!
                 </Button>
 
               </div>
             </div>
 
-            {/* Hoe kan je beter leven? */}
+            {/* We zijn één */}
             <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-blue-400 border-opacity-30 transform hover:-rotate-1 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-blue-400 mb-6">
                 We zijn één
@@ -222,7 +225,7 @@ const Leven = () => {
               <h3 className="text-2xl font-black text-blue-300 mb-3">Twee Evolutionaire Paden</h3>
               <p className="mb-4">
                 We zijn op een punt in onze spirituele evolutie waar we
-                een keuze moeten maken tussen twee fundamentele paden:
+                een keuze kunnen maken tussen twee fundamentele paden:
                 Service to Others (STO) en Service to Self (STS).
               </p>
 
