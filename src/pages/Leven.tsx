@@ -122,42 +122,36 @@ const Leven = () => {
 
               </div>
             </div>
-
-            {/* We zijn één */}
-            <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-blue-400 border-opacity-30 transform hover:-rotate-1 transition-all duration-500">
-              <h2 className="text-4xl md:text-5xl font-black text-blue-400 mb-6">
-                We zijn één
+            {/* Energie en beweging */}
+            <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
+                Alles wat bestaat is energie in beweging.
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
-                <p>
-                  De limieten die je ervaart zijn illusies die je uitdagen om te groeien.
-                  We bepalen samen de realiteit die we ervaren.
-                  We zijn in staat om onze werkelijkheid te veranderen door onze keuzes en intenties.
-                  Waar we in geloven, creëeren we.
+                <p className="hover:text-green-200 transition-colors duration-300">
+                  Bewustzijn, lichaam en ziel zijn geen vaste vormen, maar dynamische energievelden die voortdurend trillen op een bepaalde frequentie.
+                </p>
+
+                <p className="hover:text-cyan-200 transition-colors duration-300">
+                  Frequentie bepaalt ervaring:
+                  Een lage, geblokkeerde frequentie wordt ervaren als zwaarte, weerstand of vermoeidheid.
+                  Een hoge, coherente frequentie wordt ervaren als helderheid, vitaliteit en verbinding.
                 </p>
                 <p>
-                  De grootste illusie waar we momenteel in geloven is dat we afgescheiden zijn van elkaar en van het universum.
-                  Dat we alleen zijn.
-                  Dit is niet waar.
+                  Liefde is de energie die resoneert met alles wat leeft.
                 </p>
-                <p className="mb-3">
-                  Naarmate bewustzijn evolueert, vervaagt polariteit geleidelijk.
-                  Hoger bewustzijn integreert dualiteit in eenheid.
-                </p>
-                <p className="mb-3">
-                  Uiteindelijk keert bewustzijn terug naar volledige eenheid,
-                  verrijkt door alle ervaringen die in afzondering zijn opgedaan.
-                </p>
-                <div className="mt-6">
-                  <Button
+
+                
+                <Button
                       onClick={() => setShowDialog2(true)}
                       className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
                     >
-                      ✨ De wet van éénheid
-                    </Button>
-                  </div>
+                      ✨ Frequentie
+                </Button>
               </div>
             </div>
+
+            
 
             <PracticalTip pageType="leven" />
 
@@ -305,45 +299,104 @@ const Leven = () => {
           </div>
         </DialogContent>
       </Dialog>
-      {/* Law of One Dialog */}
+      
+     {/* Dialog */}
       <Dialog open={showDialog2} onOpenChange={setShowDialog2}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              De wet van éénheid
+              Frequentie van Bewustzijn
             </DialogTitle>
           </DialogHeader>
+
           <div className="space-y-6 text-lg">
 
             {/* Introductie */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-cyan-300 mb-3">De wet van éénheid</h3>
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">
+                Het bewustzijn kan ervaren worden als verschillende frequentiebanden of densiteiten.
+              </h3>
               <p>
-                Alles in het universum is één bewustzijn.
+                De realiteit bestaat uit opeenvolgende densiteiten van bewustzijn.
+                Elke densiteit vertegenwoordigt een specifieke trilling, ervaringsvorm en mate van zelfbewustzijn.
+                Hogere densiteiten zijn minder fysiek en meer bewustzijnsgericht, lagere densiteiten zijn compacter en meer materieel.
               </p>
-              <p className="mt-3">
-                Deze Eenheid is de onderliggende structuur van alle ervaring. Alles wat wij als gescheiden zien,
-                zijn verschillende uitdrukkingen van dezelfde Oneindige Bron.
+            </div>
+
+            {/* Polariteit / Overzicht densiteiten */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-blue-300 mb-3">
+                De Opeenvolging van Densiteiten
+              </h3>
+              <p className="mb-4">
+                Bewustzijn ontwikkelt zich stap voor stap.
+                Elke densiteit bouwt voort op de vorige en bereidt voor op de volgende.
+              </p>
+
+              <div className="mb-4 pl-4 border-l-4 border-teal-400">
+                <h4 className="text-xl font-bold text-teal-300 mb-2">
+                  Overzicht
+                </h4>
+                <p className="mb-2">
+                  <strong>1e densiteit:</strong> elementair bewustzijn: aarde, water, vuur, lucht.
+                  Bestaan zonder zelfbesef.
+                </p>
+                <p className="mb-2">
+                  <strong>2e densiteit:</strong> groeiend leven: planten en dieren.
+                  Bewustzijn ontwikkelt beweging en instinct.
+                </p>
+                <p className="mb-2">
+                  <strong>3e densiteit:</strong> zelfbewustzijn: de mens.
+                  Keuze, identiteit en morele richting ontstaan.
+                </p>
+                <p className="mb-2">
+                  <strong>4e densiteit:</strong> hartbewustzijn.
+                  Collectieve verbinding, empathie en transparantie.
+                </p>
+                <p className="mb-2">
+                  <strong>5e densiteit:</strong> wijsheid en inzicht.
+                  Individualiteit zonder afscheiding.
+                </p>
+                <p>
+                  <strong>6e densiteit:</strong> eenheid van liefde en wijsheid.
+                  Integratie van alle tegenstellingen.
+                </p>
+              </div>
+            </div>
+
+            {/* Geen Goed of Fout / Polariteit */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">
+                Onze Densiteit
+              </h3>
+              <p>
+                We bevinden ons in de 3e densiteit, gekenmerkt door zelfbewustzijn en keuzevrijheid.
+                Hier ervaren we dualiteit: goed en kwaad, licht en donker, ik en jij.
+              </p>
+              <p>
+                Deze polariteit is essentieel voor groei.
+                Het daagt ons uit om bewust te kiezen wie we willen zijn en hoe we met anderen omgaan.
+              </p>
+              <p>
+                We zijn momenteel bezig met de overgang naar de 4e densiteit, waar verbinding en liefde centraal staan.
+                Dit proces vereist het loslaten van oude patronen en het omarmen van eenheid.
               </p>
             </div>
 
             
-            {/* Toepassing op het dagelijkse leven */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-cyan-300 mb-3">Wat betekent dit voor jou?</h3>
+
+            {/* Liefde / Evolutie */}
+            <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-white mb-3">
+                Evolutie richting Eenheid
+              </h3>
               <p className="mb-3">
-                Als alles één is, dan is alles wat je anderen aandoet ook iets dat je
-                uiteindelijk aan jezelf doet. Elke keuze, elke gedachte, elke interactie is
-                een vorm van zelfontdekking.
+                Naarmate bewustzijn evolueert, vervaagt polariteit geleidelijk.
+                Hogere densiteiten integreren dualiteit in eenheid.
               </p>
               <p className="mb-3">
-                Dit betekent dat door anderen te helpen, je ook jezelf helpt.
-                Door liefde en compassie te tonen, vergroot je ook jouw eigen ervaring van liefde.
-                Door bewust te kiezen voor positiviteit, verhoog je ook jouw eigen vibratie.
-              </p>
-              <p>
-                Jouw acties hebben een ripple-effect dat verder reikt dan je kunt zien.
-                Wat je aan de wereld geeft, komt uiteindelijk bij jou terug.
+                Uiteindelijk keert bewustzijn terug naar volledige eenheid,
+                verrijkt door alle ervaringen die in afzondering zijn opgedaan.
               </p>
             </div>
 
@@ -356,6 +409,7 @@ const Leven = () => {
                 Sluiten
               </Button>
             </div>
+
           </div>
         </DialogContent>
       </Dialog>
