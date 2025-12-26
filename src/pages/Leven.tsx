@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 
 const Leven = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [showLawOfOneDialog, setShowLawOfOneDialog] = useState(false);
+  const [showDialog, setShowDialog] = useState(false);
   const [showDialog2, setShowDialog2] = useState(false);
 
   useSeoMeta({
@@ -123,35 +123,39 @@ const Leven = () => {
               </div>
             </div>
 
-            {/* Wat is belangrijk? */}
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 md:p-12 transform hover:rotate-1 transition-all duration-500">
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-                Wat is belangrijk?
+            {/* We zijn één */}
+            <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 mb-12 border border-blue-400 border-opacity-30 transform hover:-rotate-1 transition-all duration-500">
+              <h2 className="text-4xl md:text-5xl font-black text-blue-400 mb-6">
+                We zijn één
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  Wie je bent of wilt zijn, hangt af van de keuzes die je maakt.
-                  Als je een leven wilt leiden dat betekenisvol is, moet je bewust kiezen wat belangrijk voor je is:
+                  De limieten die je ervaart zijn illusies die je uitdagen om te groeien.
+                  We bepalen samen de realiteit die we ervaren.
+                  We zijn in staat om onze werkelijkheid te veranderen door onze keuzes en intenties.
+                  Waar we in geloven, creëeren we.
                 </p>
                 <p>
-                  Je kunt kiezen om een leven te leiden dat gericht is op het dienen van anderen,
-                  door liefde, compassie en samenwerking te bevorderen.
-                  Of je kunt kiezen voor een pad dat gericht is op het dienen van jezelf,
-                  door macht, controle en zelfverheffing na te streven.
+                  De grootste illusie waar we momenteel in geloven is dat we afgescheiden zijn van elkaar en van het Universum.
+                  Dat we alleen zijn.
+                  Dit is niet waar.
                 </p>
-                <p>
-                  Wat je ook kiest, zorg dat het resoneert met jouw diepste waarden.
-                  Dat het jou energie geeft. Dat het jou motiveert om elke dag
-                  het beste uit jezelf te halen.
+                <p className="mb-3">
+                  Naarmate bewustzijn evolueert, vervaagt polariteit geleidelijk.
+                  Hoger bewustzijn integreert dualiteit in eenheid.
                 </p>
-                
-                <Button
-                  onClick={() => setShowLawOfOneDialog(true)}
-                  className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                >
-                  ✨Een keuze met betekenis!
-                </Button>
-
+                <p className="mb-3">
+                  Uiteindelijk keert bewustzijn terug naar volledige eenheid,
+                  verrijkt door alle ervaringen die in afzondering zijn opgedaan.
+                </p>
+                <div className="mt-6">
+                  <Button
+                      onClick={() => setShowDialog(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      ✨ De wet van éénheid
+                    </Button>
+                  </div>
               </div>
             </div>
             
@@ -191,119 +195,7 @@ const Leven = () => {
         }
       `}</style>
       </div>
-      {/* Law of One Dialog */}
-      <Dialog open={showLawOfOneDialog} onOpenChange={setShowLawOfOneDialog}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
-          <DialogHeader>
-            <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              De keuze van je evolutionaire pad
-            </DialogTitle>
-          </DialogHeader>
-          <div className="space-y-6 text-lg">
-            {/* Introductie */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-cyan-300 mb-3">De evolutionaire reis van God</h3>
-              <p>
-                De evolutionaire reis die God onderneemt, begint met zichzelf te splitsen in
-                talloze zielen die afzonderlijke ervaringen opdoen. Elke ziel kiest een pad
-                van groei en bewustzijnsontwikkeling.
-              </p>
-              <p>
-                Een belangrijke stap is vergeten wie hij werkelijk is.
-                Dit stelt de ziel in staat om volledig op te gaan in haar ervaringen
-                zonder de beperkingen van haar ware aard.
-              </p>
-              <p>
-                uiteindelijk zal elke ziel terugkeren tot een geheel, verrijkt met de lessen
-                en ervaringen die zij heeft opgedaan.
-              </p>
-            </div>
-
-            {/* De Twee Paden */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-blue-300 mb-3">Twee Evolutionaire Paden</h3>
-              <p className="mb-4">
-                We zijn op een punt in onze spirituele evolutie waar we
-                een keuze kunnen maken tussen twee fundamentele paden:
-                Service to Others (STO) en Service to Self (STS).
-              </p>
-
-              {/* Service to Others */}
-              <div className="mb-4 pl-4 border-l-4 border-teal-400">
-                <h4 className="text-xl font-bold text-teal-300 mb-2">Service to Others (STO)</h4>
-                <p className="mb-2">
-                  Het STO-pad is gericht op liefde, samenwerking en het verhogen
-                  van het welzijn van anderen. Een ziel volgt dit pad wanneer
-                  zij meer dan 51% van haar intentie wijdt aan het dienen van anderen.
-                </p>
-                <ul className="list-disc list-inside space-y-1 text-teal-200">
-                  <li>Liefde en compassie als drijfveer</li>
-                  <li>Samenwerking en harmonie</li>
-                  <li>Welzijn van anderen verhogen</li>
-                  <li>Intentie gericht op dienstbaarheid (meer dan 51%)</li>
-                </ul>
-              </div>
-
-              {/* Service to Self */}
-              <div className="pl-4 border-l-4 border-purple-400">
-                <h4 className="text-xl font-bold text-purple-300 mb-2">Service to Self (STS)</h4>
-                <p className="mb-2">
-                  Het STS-pad draait om macht, controle en zelfverheffing.
-                  Een ziel kiest dit pad wanneer zij meer dan 95% van haar energie
-                  richt op het dienen van zichzelf.
-                </p>
-                <ul className="list-disc list-inside space-y-1 text-purple-200">
-                  <li>Macht en controle als focus</li>
-                  <li>Zelfverheffing en autonomie</li>
-                  <li>Persoonlijke krachtontwikkeling</li>
-                  <li>Energie gericht op zelf (meer dan 95%)</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Geen Goed of Fout */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-cyan-300 mb-3">Geen Goed of Fout</h3>
-              <p>
-                Beide paden zijn volwaardige en legitieme routes van
-                spirituele vooruitgang. Elk pad biedt unieke lessen en
-                leidt uiteindelijk naar dezelfde bron. Er is geen moreel
-                oordeel - beide zijn geldige keuzes voor bewustzijnsontwikkeling.
-              </p>
-              <p>
-                Hier op aarde is de meerderheid van zielen bezig met het STO-pad,
-                wat leidt tot meer liefde en samenwerking. Echter, er zijn ook
-                zielen die het STS-pad volgen, wat uitdagingen en conflicten
-                kan veroorzaken.
-              </p>
-            </div>
-
-            {/* De Keuze */}
-            <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-white mb-3">Je moet nog niet kiezen</h3>
-              <p className="mb-3">
-                Je kan ook nog niet kiezen. Veel zielen hebben nog niet gekozen.
-                Het is een proces van zelfontdekking en groei.
-                Uiteindelijk zal iedereen een duidelijke keuze maken.
-              </p>
-              <p className="mb-3">
-                Hoe duidelijker jouw keuze en overeenkomstige acties
-                hoe sneller je spiritueel groeit.
-              </p>
-            </div>
-
-            {/* Sluit knop */}
-            <div className="text-center pt-4">
-              <Button
-                onClick={() => setShowLawOfOneDialog(false)}
-                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Sluiten
-              </Button>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
+      
       
      {/* Dialog */}
       <Dialog open={showDialog2} onOpenChange={setShowDialog2}>
@@ -415,6 +307,61 @@ const Leven = () => {
               </Button>
             </div>
 
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* De wet van éénheid */}
+      <Dialog open={showDialog} onOpenChange={setShowDialog}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
+          <DialogHeader>
+            <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
+              De wet van éénheid
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-6 text-lg">
+
+            {/* Introductie */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">De wet van éénheid</h3>
+              <p>
+                Alles in het universum is één bewustzijn.
+              </p>
+              <p className="mt-3">
+                Deze Eenheid is de onderliggende structuur van alle ervaring. Alles wat wij als gescheiden zien,
+                zijn verschillende uitdrukkingen van dezelfde Oneindige Bron.
+              </p>
+            </div>
+
+            
+            {/* Toepassing op het dagelijkse leven */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">Wat betekent dit voor jou?</h3>
+              <p className="mb-3">
+                Als alles één is, dan is alles wat je anderen aandoet ook iets dat je
+                uiteindelijk aan jezelf doet. Elke keuze, elke gedachte, elke interactie is
+                een vorm van zelfontdekking.
+              </p>
+              <p className="mb-3">
+                Dit betekent dat door anderen te helpen, je ook jezelf helpt.
+                Door liefde en compassie te tonen, vergroot je ook jouw eigen ervaring van liefde.
+                Door bewust te kiezen voor positiviteit, verhoog je ook jouw eigen vibratie.
+              </p>
+              <p>
+                Jouw acties hebben een ripple-effect dat verder reikt dan je kunt zien.
+                Wat je aan de wereld geeft, komt uiteindelijk bij jou terug.
+              </p>
+            </div>
+
+            {/* Sluit knop */}
+            <div className="text-center pt-4">
+              <Button
+                onClick={() => setShowDialog(false)}
+                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Sluiten
+              </Button>
+            </div>
           </div>
         </DialogContent>
       </Dialog>

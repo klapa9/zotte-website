@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 const Liefde = () => {
   const [showDialog, setShowDialog] = useState(false);
   const [showDialog2, setShowDialog2] = useState(false);
+  const [showDialog, setShowDialog] = useState(false);
 
   useSeoMeta({
     title: 'Liefde - De Kracht van het Leven',
@@ -75,41 +76,7 @@ const Liefde = () => {
             
                         
 
-            {/* We zijn één */}
-            <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 mb-12 border border-blue-400 border-opacity-30 transform hover:-rotate-1 transition-all duration-500">
-              <h2 className="text-4xl md:text-5xl font-black text-blue-400 mb-6">
-                We zijn één
-              </h2>
-              <div className="space-y-4 text-white text-lg md:text-xl">
-                <p>
-                  De limieten die je ervaart zijn illusies die je uitdagen om te groeien.
-                  We bepalen samen de realiteit die we ervaren.
-                  We zijn in staat om onze werkelijkheid te veranderen door onze keuzes en intenties.
-                  Waar we in geloven, creëeren we.
-                </p>
-                <p>
-                  De grootste illusie waar we momenteel in geloven is dat we afgescheiden zijn van elkaar en van het universum.
-                  Dat we alleen zijn.
-                  Dit is niet waar.
-                </p>
-                <p className="mb-3">
-                  Naarmate bewustzijn evolueert, vervaagt polariteit geleidelijk.
-                  Hoger bewustzijn integreert dualiteit in eenheid.
-                </p>
-                <p className="mb-3">
-                  Uiteindelijk keert bewustzijn terug naar volledige eenheid,
-                  verrijkt door alle ervaringen die in afzondering zijn opgedaan.
-                </p>
-                <div className="mt-6">
-                  <Button
-                      onClick={() => setShowDialog(true)}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                    >
-                      ✨ De wet van éénheid
-                    </Button>
-                  </div>
-              </div>
-            </div>
+            
 
             <div className="bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
               <h2 className="text-4xl md:text-5xl font-black text-purple-600 mb-6">
@@ -141,6 +108,37 @@ const Liefde = () => {
               </div>
             </div>
 
+            {/* De Evolutionaire Reis van God */}
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 md:p-12 transform hover:rotate-1 transition-all duration-500">
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+                De Evolutionaire Reis van God
+              </h2>
+              <div className="space-y-4 text-white text-lg md:text-xl">
+                <p>
+                De evolutionaire reis die God onderneemt, begint met zichzelf te splitsen in
+                talloze zielen die afzonderlijke ervaringen opdoen. Elke ziel kiest een pad
+                van groei en bewustzijnsontwikkeling.
+              </p>
+              <p>
+                Een belangrijke stap is vergeten wie hij werkelijk is.
+                Dit stelt de ziel in staat om volledig op te gaan in haar ervaringen
+                zonder de beperkingen van haar ware aard.
+              </p>
+              <p>
+                uiteindelijk zal elke ziel terugkeren tot een geheel, verrijkt met de lessen
+                en ervaringen die zij heeft opgedaan.
+              </p>
+                
+                <Button
+                  onClick={() => setShowDialog(true)}
+                  className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                >
+                  ✨Een keuze met betekenis!
+                </Button>
+
+              </div>
+            </div>
+
             
 
             <PracticalTip pageType="liefde" />
@@ -168,45 +166,106 @@ const Liefde = () => {
       `}</style>
       </div>
 
-       {/* De wet van éénheid */}
+       
+
+      {/* Law of One Dialog */}
       <Dialog open={showDialog} onOpenChange={setShowDialog}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              De wet van éénheid
+              De keuze van je evolutionaire pad
             </DialogTitle>
           </DialogHeader>
           <div className="space-y-6 text-lg">
-
             {/* Introductie */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-cyan-300 mb-3">De wet van éénheid</h3>
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">De evolutionaire reis van God</h3>
               <p>
-                Alles in het universum is één bewustzijn.
+                De evolutionaire reis die God onderneemt, begint met zichzelf te splitsen in
+                talloze zielen die afzonderlijke ervaringen opdoen. Elke ziel kiest een pad
+                van groei en bewustzijnsontwikkeling.
               </p>
-              <p className="mt-3">
-                Deze Eenheid is de onderliggende structuur van alle ervaring. Alles wat wij als gescheiden zien,
-                zijn verschillende uitdrukkingen van dezelfde Oneindige Bron.
+              <p>
+                Een belangrijke stap is vergeten wie hij werkelijk is.
+                Dit stelt de ziel in staat om volledig op te gaan in haar ervaringen
+                zonder de beperkingen van haar ware aard.
+              </p>
+              <p>
+                uiteindelijk zal elke ziel terugkeren tot een geheel, verrijkt met de lessen
+                en ervaringen die zij heeft opgedaan.
               </p>
             </div>
 
-            
-            {/* Toepassing op het dagelijkse leven */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-cyan-300 mb-3">Wat betekent dit voor jou?</h3>
-              <p className="mb-3">
-                Als alles één is, dan is alles wat je anderen aandoet ook iets dat je
-                uiteindelijk aan jezelf doet. Elke keuze, elke gedachte, elke interactie is
-                een vorm van zelfontdekking.
+            {/* De Twee Paden */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-blue-300 mb-3">Twee Evolutionaire Paden</h3>
+              <p className="mb-4">
+                We zijn op een punt in onze spirituele evolutie waar we
+                een keuze kunnen maken tussen twee fundamentele paden:
+                Service to Others (STO) en Service to Self (STS).
               </p>
-              <p className="mb-3">
-                Dit betekent dat door anderen te helpen, je ook jezelf helpt.
-                Door liefde en compassie te tonen, vergroot je ook jouw eigen ervaring van liefde.
-                Door bewust te kiezen voor positiviteit, verhoog je ook jouw eigen vibratie.
+
+              {/* Service to Others */}
+              <div className="mb-4 pl-4 border-l-4 border-teal-400">
+                <h4 className="text-xl font-bold text-teal-300 mb-2">Service to Others (STO)</h4>
+                <p className="mb-2">
+                  Het STO-pad is gericht op liefde, samenwerking en het verhogen
+                  van het welzijn van anderen. Een ziel volgt dit pad wanneer
+                  zij meer dan 51% van haar intentie wijdt aan het dienen van anderen.
+                </p>
+                <ul className="list-disc list-inside space-y-1 text-teal-200">
+                  <li>Liefde en compassie als drijfveer</li>
+                  <li>Samenwerking en harmonie</li>
+                  <li>Welzijn van anderen verhogen</li>
+                  <li>Intentie gericht op dienstbaarheid (meer dan 51%)</li>
+                </ul>
+              </div>
+
+              {/* Service to Self */}
+              <div className="pl-4 border-l-4 border-purple-400">
+                <h4 className="text-xl font-bold text-purple-300 mb-2">Service to Self (STS)</h4>
+                <p className="mb-2">
+                  Het STS-pad draait om macht, controle en zelfverheffing.
+                  Een ziel kiest dit pad wanneer zij meer dan 95% van haar energie
+                  richt op het dienen van zichzelf.
+                </p>
+                <ul className="list-disc list-inside space-y-1 text-purple-200">
+                  <li>Macht en controle als focus</li>
+                  <li>Zelfverheffing en autonomie</li>
+                  <li>Persoonlijke krachtontwikkeling</li>
+                  <li>Energie gericht op zelf (meer dan 95%)</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Geen Goed of Fout */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">Geen Goed of Fout</h3>
+              <p>
+                Beide paden zijn volwaardige en legitieme routes van
+                spirituele vooruitgang. Elk pad biedt unieke lessen en
+                leidt uiteindelijk naar dezelfde bron. Er is geen moreel
+                oordeel - beide zijn geldige keuzes voor bewustzijnsontwikkeling.
               </p>
               <p>
-                Jouw acties hebben een ripple-effect dat verder reikt dan je kunt zien.
-                Wat je aan de wereld geeft, komt uiteindelijk bij jou terug.
+                Hier op aarde is de meerderheid van zielen bezig met het STO-pad,
+                wat leidt tot meer liefde en samenwerking. Echter, er zijn ook
+                zielen die het STS-pad volgen, wat uitdagingen en conflicten
+                kan veroorzaken.
+              </p>
+            </div>
+
+            {/* De Keuze */}
+            <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-white mb-3">Je moet nog niet kiezen</h3>
+              <p className="mb-3">
+                Je kan ook nog niet kiezen. Veel zielen hebben nog niet gekozen.
+                Het is een proces van zelfontdekking en groei.
+                Uiteindelijk zal iedereen een duidelijke keuze maken.
+              </p>
+              <p className="mb-3">
+                Hoe duidelijker jouw keuze en overeenkomstige acties
+                hoe sneller je spiritueel groeit.
               </p>
             </div>
 
