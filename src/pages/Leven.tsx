@@ -14,7 +14,7 @@ const Leven = () => {
   const [showDialog2, setShowDialog2] = useState(false);
 
   useSeoMeta({
-    title: 'L E V E N ? - De Grote Vragen',
+    title: 'L E V E N - De Grote Vragen',
     description: 'Verken de fundamentele vragen van het leven: waarom leef je, wat is belangrijk, hoe kan je beter leven?',
   });
 
@@ -57,10 +57,10 @@ const Leven = () => {
         {/* Header */}
         <div className="py-16 px-4 text-center">
           <h1 className="text-7xl md:text-9xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600">
-            L E V E N ?
+            L E V E N
           </h1>
           <p className="text-2xl md:text-3xl text-white font-bold">
-            De vragen die alles veranderen
+            Het leven is prachtig!
           </p>
         </div>
 
@@ -70,7 +70,7 @@ const Leven = () => {
             {/* God? */}
             <div className="bg-white bg-opacity-5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-cyan-400 border-opacity-30 transform hover:scale-105 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-cyan-400 mb-6">
-                God?
+                G O D
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
