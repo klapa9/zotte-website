@@ -123,30 +123,25 @@ const Leven = () => {
               </div>
             </div>
 
-            {/* We zijn één */}
+            {/* De Evolutionaire Reis van God */}
             <div className="bg-black bg-opacity-40 backdrop-blur-md rounded-3xl p-8 md:p-12 mb-12 border border-blue-400 border-opacity-30 transform hover:-rotate-1 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-blue-400 mb-6">
-                We zijn één
+                De Evolutionaire Reis van God
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p>
-                  De limieten die je ervaart zijn illusies die je uitdagen om te groeien.
-                  We bepalen samen de realiteit die we ervaren.
-                  We zijn in staat om onze werkelijkheid te veranderen door onze keuzes en intenties.
-                  Waar we in geloven, creëeren we.
+                  De evolutionaire reis die God onderneemt, begint met zichzelf te splitsen in
+                  talloze zielen die afzonderlijke ervaringen opdoen. Elke ziel kiest een pad
+                  van groei en bewustzijnsontwikkeling.
                 </p>
                 <p>
-                  De grootste illusie waar we momenteel in geloven is dat we afgescheiden zijn van elkaar en van het Universum.
-                  Dat we alleen zijn.
-                  Dit is niet waar.
+                  Een belangrijke stap is vergeten wie hij werkelijk is.
+                  Dit stelt de ziel in staat om volledig op te gaan in haar ervaringen
+                  zonder de beperkingen van haar ware aard.
                 </p>
-                <p className="mb-3">
-                  Naarmate bewustzijn evolueert, vervaagt polariteit geleidelijk.
-                  Hoger bewustzijn integreert dualiteit in eenheid.
-                </p>
-                <p className="mb-3">
-                  Uiteindelijk keert bewustzijn terug naar volledige eenheid,
-                  verrijkt door alle ervaringen die in afzondering zijn opgedaan.
+                <p>
+                  uiteindelijk zal elke ziel terugkeren tot een geheel, verrijkt met de lessen
+                  en ervaringen die zij heeft opgedaan.
                 </p>
                 <div className="mt-6">
                   <Button
