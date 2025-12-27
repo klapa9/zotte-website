@@ -166,12 +166,52 @@ const Liefde = () => {
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              Vergiffenis
+              Emoties
             </DialogTitle>
           </DialogHeader>
           <div className="space-y-6 text-lg">
+
+            {/* Training */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-blue-300 mb-3">
+                Train jezelf
+              </h3>
+              <p className="mb-4">
+                Je kunt jezelf trainen om meer liefde, dankbaarheid en vergiffenis te cultiveren
+                door dagelijks bewust aandacht te besteden aan deze emoties.
+              </p>
+              <p>
+                De eerste stap is bewustwording. Zodra je je bewust bent van je gedachten en emoties,
+                kun je ervoor kiezen om ze te veranderen en te transformeren naar positievere gedachten.
+              </p>
+              <p>
+                Let op jezelf gedurende de dag en merk op wanneer je "negatieve" gedachten hebt,
+                zoals oordeel, wrok of ontevredenheid.
+                Vervang deze gedachten bewust door liefdevolle en vergevende gedachten.
+              </p>
+              
+            </div>
+
+            {/* Dankbaarheid */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-blue-300 mb-3">
+                Dankbaarheid
+              </h3>
+              <p className="mb-4">
+                Dankbaarheid is de krachtigste emotie die ons verbindt met de overvloed van het universum.
+                Dankbaarheid opent ons hart en trekt meer positieve ervaringen aan.
+              </p>
+              <p>
+                Door dankbaarheid te cultiveren, erkennen we de zegeningen in ons leven,
+                hoe klein ook, en versterken we onze verbinding met liefde en vreugde.
+              </p>
+              <p>
+                Dankbaarheid helpt ook om onze zelfwaarde te verhogen,
+                omdat we ons bewust worden van de waarde die we in ons leven hebben.
+              </p>
+            </div>
           
-            {/*  */}
+            {/* vergeving */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
               <h3 className="text-2xl font-black text-blue-300 mb-3">De kracht van Vergiffenis</h3>
               <p className="mb-4">
@@ -218,19 +258,60 @@ const Liefde = () => {
             {/* Dankbaarheid en vergeving */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
               <h3 className="text-2xl font-black text-blue-300 mb-3">
-                Dankbaarheid
+                Dienstbaarheid
               </h3>
               <p className="mb-4">
-                Dankbaarheid is de krachtigste emotie die ons verbindt met de overvloed van het universum.
-                Dankbaarheid opent ons hart en trekt meer positieve ervaringen aan.
+                Een andere manier om liefde te cultiveren is door dienstbaarheid aan anderen.
+                Door anderen te helpen en bij te dragen aan hun welzijn,
+                openen we ons hart en versterken we onze verbinding met liefde.
               </p>
               <p>
-                Door dankbaarheid te cultiveren, erkennen we de zegeningen in ons leven,
-                hoe klein ook, en versterken we onze verbinding met liefde en vreugde.
+                Als je intentie is om anderen te dienen zonder iets terug te verwachten,
+                zul je merken dat liefde en dankbaarheid vanzelf naar je toe komen.
               </p>
               <p>
-                Dankbaarheid helpt ook om onze zelfwaarde te verhogen,
-                omdat we ons bewust worden van de waarde die we in ons leven hebben.
+                Groei hierin en probeer meer dan 50% van je tijd en energie te besteden aan het dienen van anderen.
+                Op die manier ervaar je de ware kracht van liefde in actie.
+              </p>
+            </div>
+
+            {/* Ouderschap */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-blue-300 mb-3">
+                Dienstbaarheid
+              </h3>
+              <p className="mb-4">
+                Een andere manier om liefde te cultiveren is door dienstbaarheid aan anderen.
+                Door anderen te helpen en bij te dragen aan hun welzijn,
+                openen we ons hart en versterken we onze verbinding met liefde.
+              </p>
+              <p>
+                Als je intentie is om anderen te dienen zonder iets terug te verwachten,
+                zul je merken dat liefde en dankbaarheid vanzelf naar je toe komen.
+              </p>
+              <p>
+                Groei hierin en probeer meer dan 50% van je tijd en energie te besteden aan het dienen van anderen.
+                Op die manier ervaar je de ware kracht van liefde in actie.
+              </p>
+            </div>
+
+            {/* vrije wil */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-blue-300 mb-3">
+                Vrije wil
+              </h3>
+              <p className="mb-4">
+                Liefde kan niet worden afgedwongen of opgelegd.
+                Het moet vrijelijk worden gegeven en ontvangen.
+                Wanneer we liefde proberen te forceren, creëren we weerstand en blokkades.
+              </p>
+              <p>
+                Echte liefde komt voort uit een plaats van vrijheid en keuze.
+                Het is belangrijk om de vrije wil van anderen te respecteren
+                en liefde te geven zonder verwachtingen of voorwaarden.
+              </p>
+              <p>
+                Door liefde vrijelijk te geven, creëren we een ruimte waarin liefde kan groeien en bloeien.
               </p>
             </div>
 
