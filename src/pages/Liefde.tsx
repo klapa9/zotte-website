@@ -11,7 +11,6 @@ import { Button } from '@/components/ui/button';
 const Liefde = () => {
   const [showDialog, setShowDialog] = useState(false);
   const [showDialog2, setShowDialog2] = useState(false);
-  const [showDialog, setShowDialog] = useState(false);
 
   useSeoMeta({
     title: 'Liefde - De Kracht van het Leven',
