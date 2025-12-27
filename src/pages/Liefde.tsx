@@ -249,7 +249,7 @@ const Liefde = () => {
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              Dankbaarheid
+              Wat kan jij doen?
             </DialogTitle>
           </DialogHeader>
 
@@ -261,27 +261,7 @@ const Liefde = () => {
                 Dienstbaarheid
               </h3>
               <p className="mb-4">
-                Een andere manier om liefde te cultiveren is door dienstbaarheid aan anderen.
-                Door anderen te helpen en bij te dragen aan hun welzijn,
-                openen we ons hart en versterken we onze verbinding met liefde.
-              </p>
-              <p>
-                Als je intentie is om anderen te dienen zonder iets terug te verwachten,
-                zul je merken dat liefde en dankbaarheid vanzelf naar je toe komen.
-              </p>
-              <p>
-                Groei hierin en probeer meer dan 50% van je tijd en energie te besteden aan het dienen van anderen.
-                Op die manier ervaar je de ware kracht van liefde in actie.
-              </p>
-            </div>
-
-            {/* Ouderschap */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-blue-300 mb-3">
-                Dienstbaarheid
-              </h3>
-              <p className="mb-4">
-                Een andere manier om liefde te cultiveren is door dienstbaarheid aan anderen.
+                De manier om liefde te cultiveren is door dienstbaarheid aan anderen.
                 Door anderen te helpen en bij te dragen aan hun welzijn,
                 openen we ons hart en versterken we onze verbinding met liefde.
               </p>
@@ -311,7 +291,8 @@ const Liefde = () => {
                 en liefde te geven zonder verwachtingen of voorwaarden.
               </p>
               <p>
-                Door liefde vrijelijk te geven, creëren we een ruimte waarin liefde kan groeien en bloeien.
+                Hoe pijnlijk het ook kan zijn, soms is de beste manier om liefde te tonen
+                door los te laten en de ander de ruimte te geven om hun eigen pad te volgen.
               </p>
             </div>
 
