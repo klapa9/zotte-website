@@ -102,7 +102,7 @@ const Liefde = () => {
             </div>
 
             {/* De boodschap van liefde */}
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 md:p-12 transform hover:rotate-1 transition-all duration-500">
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 md:p-12 mb-12 transform hover:rotate-1 transition-all duration-500">
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
                 Heb anderen lief zoals jezelf.
               </h2>
@@ -117,7 +117,7 @@ const Liefde = () => {
                 We kunnen anderen niet echt liefhebben als we niet eerst van onszelf houden.
               </p>
               <p>
-                Het betekent ook dat we anderen behandelen met dezelfde zorg, respect en compassie als we voor onszelf wensen.
+                Het betekent ook dat we alle anderen behandelen met dezelfde zorg, respect en compassie als we voor onszelf wensen.
                 Het betekent het erkennen van de goddelijkheid in ieder leven,
                 omdat we allemaal deel uitmaken van hetzelfde universele bewustzijn.
               </p>
