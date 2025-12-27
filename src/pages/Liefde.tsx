@@ -223,7 +223,7 @@ const Liefde = () => {
                 Dat jij ook fouten hebt gemaakt en dat je jezelf moet vergeven om verder te kunnen gaan.
               </p>
               <p>
-                Door dit te cultiveren kies je ervoor om los te laten wat je pijn doet,
+                Door vergiffenis te cultiveren kies je ervoor om los te laten wat je pijn doet,
                 zodat je jezelf geneest en verder kan gaan met je leven.
               </p>
             </div>
@@ -247,7 +247,7 @@ const Liefde = () => {
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              Wat kan jij doen?
+              Dienstbaarheid
             </DialogTitle>
           </DialogHeader>
 
@@ -282,7 +282,7 @@ const Liefde = () => {
                 Dienstbaarheid
               </h3>
               <p className="mb-4">
-                De manier om liefde te cultiveren is door dienstbaarheid aan anderen.
+                De manier om een positieve karmische cyclus te creëren is door dienstbaarheid aan anderen.
                 Door anderen te helpen en bij te dragen aan hun welzijn,
                 openen we ons hart en versterken we onze verbinding met liefde.
               </p>
@@ -291,7 +291,7 @@ const Liefde = () => {
                 zul je merken dat liefde en dankbaarheid vanzelf naar je toe komen.
               </p>
               <p>
-                Groei hierin en probeer meer dan 50% van je tijd en energie te besteden aan het dienen van anderen.
+                Groei hierin en probeer je tijd en energie te besteden aan het dienen van anderen.
                 Op die manier ervaar je de ware kracht van liefde in actie.
               </p>
             </div>
