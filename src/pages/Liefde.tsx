@@ -252,8 +252,7 @@ const Liefde = () => {
           </DialogHeader>
 
           <div className="space-y-6 text-lg">
-            <p className="hover:text-teal-200 transition-colors duration-300">
-
+            
             {/* karma */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
               <h3 className="text-2xl font-black text-blue-300 mb-3">
