@@ -218,14 +218,13 @@ const Liefde = () => {
                 Het stelt ons in staat om verder te gaan en ruimte te maken voor liefde en positiviteit in ons leven.
               </p>
               <p>
-                Door te vergeven, bevrijden we onszelf van de ketenen van het verleden en openen we ons hart voor nieuwe mogelijkheden.
-                Dit is een krachtige stap in het proces van spirituele groei en innerlijke vrede.
+                Vergiffenis betekent niet dat we de fouten van anderen goedkeuren.
+                Het is proberen te begrijpen dat iedereen fouten maakt en dat we allemaal leren en groeien.
+                Dat jij ook fouten hebt gemaakt en dat je jezelf moet vergeven om verder te kunnen gaan.
               </p>
               <p>
-                Vergiffenis betekent niet dat we de fouten van anderen goedkeuren.
-                Het is begrijpen dat we allemaal fouten maken en dat we allemaal een kans verdienen om te groeien en te helen.
-                Het is het kiezen om los te laten wat ons pijn doet,
-                zodat we kunnen genezen en verder kunnen gaan met ons leven.
+                Door dit te cultiveren kies je ervoor om los te laten wat je pijn doet,
+                zodat je jezelf geneest en verder kan gaan met je leven.
               </p>
             </div>
 
