@@ -74,28 +74,37 @@ const Liefde = () => {
           <div className="max-w-6xl mx-auto">
             {/* Karma */}
             <div className="bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl p-8 md:p-12 mb-12 transform hover:scale-105 hover:rotate-2 transition-all duration-500 active:scale-95">
+              <p className="mb-4">
+                
+              </p>
+              <p>
+                
+              </p>
+              <p>
+                
+              </p>
               <h2 className="text-4xl md:text-5xl font-black text-purple-600 mb-6">
-                Karma
+                Train jezelf
               </h2>
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p className="hover:text-teal-200 transition-colors duration-300">
-                  Karma is de universele wet van oorzaak en gevolg.
-                  Elke actie die je onderneemt, elke gedachte die je denkt,
-                  zendt energie uit die uiteindelijk naar je terugkeert.
+                  Je kunt jezelf trainen om meer liefde te cultiveren
+                door dagelijks bewust aandacht te besteden aan je eigen gedachten en emoties.
                 </p>
                 <p className="hover:text-teal-200 transition-colors duration-300">
-                  Daarom is het zo belangrijk om bewust te kiezen voor liefdevolle
-                  en positieve handelingen. Wat je uitzendt, komt naar je terug.
+                  De eerste stap is bewustwording. Zodra je je bewust bent van je gedachten en emoties,
+                  kun je ervoor kiezen om ze te veranderen en te transformeren naar positievere gedachten.
                 </p>
                 <p className="hover:text-teal-200 transition-colors duration-300">
-                  Dit is niet altijd onmiddellijk zichtbaar, maar op de lange termijn
-                  zal de energie die je hebt gecreëerd, zich manifesteren in je leven.
+                  Let op jezelf gedurende de dag en merk op wanneer je "negatieve" gedachten hebt,
+                  zoals oordeel, wrok of ontevredenheid.
+                  Vervang deze gedachten bewust door liefdevolle en vergevende gedachten.
                 </p>
                 <Button
-                      onClick={() => setShowDialog2(true)}
+                      onClick={() => setShowDialog(true)}
                       className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
                     >
-                      ✨ Wat kan jij doen?
+                      ✨ Positieve gedachten!
                 </Button>
                 
               </div>
@@ -123,10 +132,10 @@ const Liefde = () => {
               </p>
                 
               <Button
-                onClick={() => setShowDialog(true)}
+                onClick={() => setShowDialog2(true)}
                 className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
-                ✨ Train jezelf!
+                ✨ Dienstbaarheid
               </Button>
               
               </div>
@@ -166,31 +175,21 @@ const Liefde = () => {
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              Emoties
+              Zelfliefde
             </DialogTitle>
           </DialogHeader>
           <div className="space-y-6 text-lg">
 
-            {/* Training */}
+            {/* Positieve gedachten */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
               <h3 className="text-2xl font-black text-blue-300 mb-3">
-                Train jezelf
+                Emoties voor zelfliefde
               </h3>
               <p className="mb-4">
-                Je kunt jezelf trainen om meer liefde te cultiveren
-                door dagelijks bewust aandacht te besteden aan dankbaarheid en vergeving.
+                Onze gedachten hebben een enorme invloed op onze emoties en ons gedrag.
+                Als je jezelf wilt liefhebben zijn dankbaarheid en vergeving twee van de krachtigste gedachten die je kunt cultiveren.
               </p>
-              <p>
-                De eerste stap is bewustwording. Zodra je je bewust bent van je gedachten en emoties,
-                kun je ervoor kiezen om ze te veranderen en te transformeren naar positievere gedachten.
-              </p>
-              <p>
-                Let op jezelf gedurende de dag en merk op wanneer je "negatieve" gedachten hebt,
-                zoals oordeel, wrok of ontevredenheid.
-                Vervang deze gedachten bewust door liefdevolle en vergevende gedachten.
-              </p>
-              
-            </div>
+            </div>         
 
             {/* Dankbaarheid */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
@@ -198,7 +197,7 @@ const Liefde = () => {
                 Dankbaarheid
               </h3>
               <p className="mb-4">
-                Dankbaarheid is de krachtigste emotie die ons verbindt met de overvloed van het universum.
+                Dankbaarheid is de emotie die ons verbindt met de overvloed van het universum.
                 Dankbaarheid opent ons hart en trekt meer positieve ervaringen aan.
               </p>
               <p>
@@ -213,9 +212,8 @@ const Liefde = () => {
           
             {/* vergeving */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-blue-300 mb-3">De kracht van Vergiffenis</h3>
+              <h3 className="text-2xl font-black text-blue-300 mb-3">Vergiffenis</h3>
               <p className="mb-4">
-                De beste vorm van zelfliefde is vergiffenis.
                 Vergiffenis bevrijdt ons van de last van wrok en negatieve emoties die ons innerlijke vrede ontnemen.
                 Het stelt ons in staat om verder te gaan en ruimte te maken voor liefde en positiviteit in ons leven.
               </p>
@@ -224,8 +222,9 @@ const Liefde = () => {
                 Dit is een krachtige stap in het proces van spirituele groei en innerlijke vrede.
               </p>
               <p>
-                Vergiffenis betekent niet dat we de fouten van anderen goedkeuren,
-                maar dat we ervoor kiezen om los te laten wat ons pijn doet,
+                Vergiffenis betekent niet dat we de fouten van anderen goedkeuren.
+                Het is begrijpen dat we allemaal fouten maken en dat we allemaal een kans verdienen om te groeien en te helen.
+                Het is het kiezen om los te laten wat ons pijn doet,
                 zodat we kunnen genezen en verder kunnen gaan met ons leven.
               </p>
             </div>
@@ -254,8 +253,32 @@ const Liefde = () => {
           </DialogHeader>
 
           <div className="space-y-6 text-lg">
+            <p className="hover:text-teal-200 transition-colors duration-300">
 
-            {/* Dankbaarheid en vergeving */}
+            {/* karma */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-blue-300 mb-3">
+                Karma
+              </h3>
+              <p className="mb-4">
+                Karma is de universele wet van oorzaak en gevolg.
+                Elke actie die je onderneemt, elke gedachte die je denkt,
+                zendt energie uit die uiteindelijk naar je terugkeert.
+              </p>
+              <p>
+                Daarom is belangrijk om bewust te zijn van onze intenties en acties.
+                Wat we in de wereld zetten, zal uiteindelijk onze eigen realiteit vormen.
+              </p>
+              <p>
+                Door liefdevolle daden te verrichten, zoals vriendelijkheid, mededogen en hulp aan anderen,
+                creëren we een positieve karmische cyclus die ons helpt om meer liefde en geluk in ons leven aan te trekken.
+              </p>
+              <p>
+                Dit is niet altijd onmiddellijk zichtbaar, maar op de lange termijn
+                zal de energie die je hebt gecreëerd, zich manifesteren in je leven.
+              </p>
+            </div>
+            
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
               <h3 className="text-2xl font-black text-blue-300 mb-3">
                 Dienstbaarheid
