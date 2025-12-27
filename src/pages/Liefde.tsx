@@ -215,11 +215,6 @@ const Liefde = () => {
 
           <div className="space-y-6 text-lg">
 
-            {/* Introductie */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              
-            </div>
-
             {/* Dankbaarheid en vergeving */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
               <h3 className="text-2xl font-black text-blue-300 mb-3">
