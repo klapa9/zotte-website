@@ -177,8 +177,8 @@ const Liefde = () => {
                 Train jezelf
               </h3>
               <p className="mb-4">
-                Je kunt jezelf trainen om meer liefde, dankbaarheid en vergiffenis te cultiveren
-                door dagelijks bewust aandacht te besteden aan deze emoties.
+                Je kunt jezelf trainen om meer liefde te cultiveren
+                door dagelijks bewust aandacht te besteden aan dankbaarheid en vergeving.
               </p>
               <p>
                 De eerste stap is bewustwording. Zodra je je bewust bent van je gedachten en emoties,
