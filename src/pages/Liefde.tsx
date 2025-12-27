@@ -95,7 +95,7 @@ const Liefde = () => {
                       onClick={() => setShowDialog2(true)}
                       className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
                     >
-                      ✨ Dankbaarheid!
+                      ✨ Wat kan jij doen?
                 </Button>
                 
               </div>
@@ -126,7 +126,7 @@ const Liefde = () => {
                 onClick={() => setShowDialog(true)}
                 className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
-                ✨ Vergiffenis
+                ✨ Train jezelf!
               </Button>
               
               </div>
