@@ -89,15 +89,15 @@ const Liefde = () => {
               <div className="space-y-4 text-white text-lg md:text-xl">
                 <p className="hover:text-teal-200 transition-colors duration-300">
                   Je kunt jezelf trainen om meer liefde te cultiveren
-                door dagelijks bewust aandacht te besteden aan je eigen gedachten en emoties.
+                door dagelijks bewust aandacht te besteden aan je eigen gedachten.
                 </p>
                 <p className="hover:text-teal-200 transition-colors duration-300">
-                  De eerste stap is bewustwording. Zodra je je bewust bent van je gedachten en emoties,
-                  kun je ervoor kiezen om ze te veranderen en te transformeren naar positievere gedachten.
+                  De eerste stap is bewustwording. Luister naar je emoties,
+                  de negatieve emoties zeggen je dat je gedachtes hebt die niet in lijn zijn met liefde.
+                  Vraag jezelf af welke gedachten deze emoties veroorzaken.
                 </p>
                 <p className="hover:text-teal-200 transition-colors duration-300">
-                  Let op jezelf gedurende de dag en merk op wanneer je "negatieve" gedachten hebt,
-                  zoals oordeel, wrok of ontevredenheid.
+                  Let dan op jezelf gedurende de dag en merk op wanneer je deze "negatieve" gedachten hebt.
                   Vervang deze gedachten bewust door liefdevolle en vergevende gedachten.
                 </p>
                 <Button
@@ -183,11 +183,17 @@ const Liefde = () => {
             {/* Positieve gedachten */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
               <h3 className="text-2xl font-black text-blue-300 mb-3">
-                Emoties voor zelfliefde
+                Emoties zijn de waarheid van onze gedachten
               </h3>
               <p className="mb-4">
-                Onze gedachten hebben een enorme invloed op onze emoties en ons gedrag.
-                Als je jezelf wilt liefhebben zijn dankbaarheid en vergeving twee van de krachtigste gedachten die je kunt cultiveren.
+                Emoties zijn krachtige signalen die ons vertellen wat we denken en geloven.
+                Wanneer we een liefdevol beeld hebben over de wereld, ervaren we positieve emoties zoals vreugde, vrede en dankbaarheid.
+                Aan de andere kant, wanneer we op een foute manier denken, ervaren we emoties zoals angst, woede en verdriet.
+              </p>
+              <p className="mb-4">
+                Daarom is het belangrijk om bewust te zijn van onze gedachten en deze te sturen in de richting van liefde en positiviteit.
+                Door onze gedachten te veranderen, denk je meer in lijn met de werkelijkheid van liefde en ervaar je meer positieve emoties.
+                De 2 belangrijkste gedachten die je kan cultiveren zijn dankbaarheid en vergiffenis.
               </p>
             </div>         
 
