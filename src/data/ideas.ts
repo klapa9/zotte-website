@@ -74,5 +74,37 @@ export const ideas: Idea[] = [
       "Dood is geen einde van ervaring"
     ],
     quantumPrinciple: "Observer Effect – de waarneming beïnvloedt de uitkomst"
+  },
+  {
+    title: "Alles beweegt in ritmes en cycli",
+    desc: "De universele ritmes beïnvloeden alles wat we ervaren",
+    longText: [
+        "Alles in het universum beweegt in ritmes en cycli. Van de natuur tot onze menselijke ervaring.",
+        "Niets blijft hetzelfde: er zijn tijden van groei en afname, actie en rust.",
+        "Je kan beter meebewegen met verandering dan er tegen te vechten.",
+        "Laat verwachtingen los en leer de natuurlijke stroom van het leven te volgen."
+    ],
+    bullets: [
+      "Alles beweegt in ritmes",
+      "Verandering is constant",
+      "We kunnen met de stroom van het universum mee gaan"
+    ],
+    quantumPrinciple: "Quantum Resonance – alles vibratieert op een specifieke frequentie"
+  },
+  {
+    title: "Alles wat je uitzendt, keert terug in je ervaringen.",
+    desc: "Je gedachten, gevoelens en acties beïnvloeden je werkelijkheid",
+    longText: [
+        "Alles wat je innerlijk uitzendt, in gedachten, gevoelens of daden, keert terug in je ervaringen.",
+        "Liefde en positieve intenties creëren harmonie in jezelf en in de wereld om je heen.",
+        "Je ervaringen zijn een reflectie van wat je uitzendt.",
+        "Door je bewust te zijn van wat je uitzendt, kan je je werkelijkheid positief beïnvloeden."
+    ],
+    bullets: [
+      "Je gedachten beïnvloeden je acties",
+      "Je acties hebben gevolgen",
+      "Wat je uitzendt, keert terug"
+    ],
+    quantumPrinciple: "Quantum Resonance – alles vibratieert op een specifieke frequentie"
   }
 ];
