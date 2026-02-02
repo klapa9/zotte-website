@@ -62,14 +62,14 @@ export const ideas: Idea[] = [
     title: "Er is leven na de dood",
     desc: "Dood is niet het einde van bewustzijn",
     longText: [
-        "Een aanrader om te bekijken zijn bijna doodservaringen, er zijn duizenden filmpjes te vinden.",
+        "Een aanrader om te bekijken zijn bijna-dood-ervaringen, er zijn duizenden filmpjes te vinden.",
         "Bijna altijd ervaren deze mensen dat ze uit hun lichaam treden en hun eigen lichaam en omgeving kunnen waarnemen vanuit een ander 'lichaam'.",
-        "Er is een hierbij vaak een keuze tussen het vasthouden aan het fysieke bestaan of het loslaten en doorgaan naar een andere vorm van bewustzijnservaring.",
+        "Er is bij een bijna-dood-ervaring heel vaak de keuze tussen het vasthouden aan het fysieke bestaan of het loslaten en doorgaan naar een andere vorm van bewustzijnservaring.",
         "De conclusie die je hieruit haalt is dat bewustzijn blijft bestaan nadat het fysieke lichaam sterft."
     ],
 
     bullets: [
-      "Leven is tijdelijk",
+      "Dit fysieke leven is tijdelijk",
       "Bewustzijn blijft bestaan na de dood",
       "Dood is geen einde van ervaring"
     ],
