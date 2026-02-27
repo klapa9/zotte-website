@@ -14,18 +14,18 @@ const WeesZot = () => {
   const [showDialog2, setShowDialog2] = useState(false);
 
   useSeoMeta({
-    title: 'Wees Zot! - Durf Gek te Zijn',
+    title: 'Wees Zot! - Volg je passie',
     description: 'Ontdek de kracht van het volgen van je enthousiasme en intuïtie.',
   });
 
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+  // useEffect(() => {
+  //   const handleMouseMove = (e: MouseEvent) => {
+  //     setMousePosition({ x: e.clientX, y: e.clientY });
+  //   };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
+  //   window.addEventListener('mousemove', handleMouseMove);
+  //   return () => window.removeEventListener('mousemove', handleMouseMove);
+  // }, []);
 
   const calculateParallax = (x: number, y: number, depth: number) => {
     const centerX = window.innerWidth / 2;
@@ -108,18 +108,14 @@ const WeesZot = () => {
                     Om je eigen realiteit te creëren, begin je met het afstemmen van je innerlijke staat op wat je wilt ervaren.
                     Denk na welke persoon je wilt zijn en belichaam die persoon nu al.
                     Fake it until you make it. 
-                    Je gedachten, gevoelens en overtuigingen vormen een energetisch veld dat een bijpassende realiteit aantrekt.
                   </p>
                   <p className="hover:text-purple-200 transition-colors duration-300">
                     Er zijn veel zaken die je verhinderen om je realiteit te creëren, zoals angst en afleiding.
                     Veel obstakels komen als korte termijn plezier of comfort, maar zijn op lange termijn niet in lijn met je groei.
-                    Wees op je hoede hiervoor en aanvaard korte termijn ongemak ten voordele van je passie en groei.
-                    Als je deze obstakels overwint, zal je beloont worden.
                   </p>
                   <p className="hover:text-pink-200 transition-colors duration-300">
                     Soms moet je ook zaken loslaten die je niet meer dienen, zelfs als ze ooit belangrijk waren.
                     Dit kan een deel van je identiteit zijn, een gewoonte, een baan, of een overtuiging.
-                    Door los te laten wat niet meer in lijn is met je groei, maak je ruimte voor iets beters dat al op je wacht.
                   </p>
                   <Button
                     onClick={() => setShowDialog2(true)}
