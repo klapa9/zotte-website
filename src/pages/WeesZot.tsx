@@ -112,13 +112,13 @@ const WeesZot = () => {
                   </p>
                   <p className="hover:text-purple-200 transition-colors duration-300">
                     Er zijn veel zaken die je verhinderen om je realiteit te creëren, zoals angst en afleiding.
-                    Veel obstakels komen als korte termijn plezier of comfort, maar op lange termijn niet in lijn zijn met je groei.
+                    Veel obstakels komen als korte termijn plezier of comfort, maar zijn op lange termijn niet in lijn met je groei.
                     Wees op je hoede hiervoor en aanvaard korte termijn ongemak ten voordele van je passie en groei.
                     Als je deze obstakels overwint, zal je beloont worden.
                   </p>
                   <p className="hover:text-pink-200 transition-colors duration-300">
                     Soms moet je ook zaken loslaten die je niet meer dienen, zelfs als ze ooit belangrijk waren.
-                    Dit kan een deel van je identiteit zijn, een relatie, een baan, of een overtuiging.
+                    Dit kan een deel van je identiteit zijn, een gewoonte, een baan, of een overtuiging.
                     Door los te laten wat niet meer in lijn is met je groei, maak je ruimte voor iets beters dat al op je wacht.
                   </p>
                   <Button
@@ -171,7 +171,6 @@ const WeesZot = () => {
               <p>
                 Zorg ervoor dat dit in lijn is met je diepste verlangens en waarden.
                 Als je een duidelijk beeld hebt van wat je wilt, is het makkelijker om gefocust te blijven.
-
               </p>
             </div>
 
