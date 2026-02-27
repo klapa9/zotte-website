@@ -372,6 +372,22 @@ const ZiekZot = () => {
 
             </div>
 
+            {/* Mentaliteit */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
+              <h3 className="text-2xl font-black text-blue-300 mb-3">
+                Positiviteit!
+              </h3>
+              <p>
+                Positiviteit is essentieel tijdens het vasten. Je lichaam is bezig met een grote reiniging, en dit kan emotioneel en fysiek uitdagend zijn.
+                Door een positieve mindset te cultiveren, ondersteun je het genezingsproces en maak je het gemakkelijker om door moeilijke momenten heen te komen.
+                Focus op de voordelen van het vasten, deze komen er na de reiniging aan.
+              </p>
+              <p>
+                Omgekeerd kan negativiteit het vasten bemoeilijken. Angst, frustratie, of twijfel kunnen spanning creëren in het lichaam, wat het reinigingsproces verstoort.
+                Wees niet bang en drink voldoende zout water als je je slecht voelt. (3liter per dag is zeker geen overdaad).
+              </p>
+            </div>
+
             {/* Sluit knop */}
             <div className="text-center pt-4">
               <Button
