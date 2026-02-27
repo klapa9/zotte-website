@@ -101,32 +101,34 @@ const WeesZot = () => {
               {/* Dieper Gaan Section */}
               <div className="bg-black bg-opacity-30 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20 transform hover:-rotate-1 hover:scale-105 transition-all duration-500 active:scale-95">
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
-                  Laat verwachtingen los en vertrouw het leven.
+                  Creëer je eigen realiteit
                 </h2>
                 <div className="space-y-4 text-white text-lg md:text-xl">
                   <p className="hover:text-indigo-200 transition-colors duration-300">
-                    Vertrouw dat het universum je altijd ondersteunt.
-                    Wanneer je loslaat wat je denkt nodig te hebben,
-                    maak je ruimte voor iets beters.
+                    Om je eigen realiteit te creëren, begin je met het afstemmen van je innerlijke staat op wat je wilt ervaren.
+                    Denk na welke persoon je wilt zijn en belichaam die persoon nu al.
+                    Fake it until you make it. 
+                    Je gedachten, gevoelens en overtuigingen vormen een energetisch veld dat een bijpassende realiteit aantrekt.
                   </p>
                   <p className="hover:text-purple-200 transition-colors duration-300">
-                    Je enthousiasme en intuïtie zijn de perfecte gidsen.
-                    Ze leiden je naar onverwachte kansen en magische ervaringen.
+                    Er zijn veel zaken die je verhinderen om je realiteit te creëren, zoals angst en afleiding.
+                    Veel obstakels komen als korte termijn plezier of comfort, maar op lange termijn niet in lijn zijn met je groei.
+                    Wees op je hoede hiervoor en aanvaard korte termijn ongemak ten voordele van je passie en groei.
+                    Als je deze obstakels overwint, zal je beloont worden.
                   </p>
                   <p className="hover:text-pink-200 transition-colors duration-300">
-                    Onderneem actie vanuit je enthousiasme,
-                    en zie hoe het leven zich op wonderbaarlijke wijze ontvouwt.
+                    Soms moet je ook zaken loslaten die je niet meer dienen, zelfs als ze ooit belangrijk waren.
+                    Dit kan een deel van je identiteit zijn, een relatie, een baan, of een overtuiging.
+                    Door los te laten wat niet meer in lijn is met je groei, maak je ruimte voor iets beters dat al op je wacht.
                   </p>
                   <Button
                     onClick={() => setShowDialog2(true)}
                     className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
                   >
-                    💡 Manifesteren?
+                    💡 Focus!
                   </Button>
                 </div>
-              </div>
-
-            
+              </div>           
 
               <PracticalTip pageType="weeszot" />
 
@@ -140,7 +142,7 @@ const WeesZot = () => {
                 </p>
                 <div className="inline-block">
                   <p className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
-                    Volg je enthousiasme!
+                    Volg je passie!
                   </p>
                 </div>
               </div>
@@ -156,7 +158,7 @@ const WeesZot = () => {
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              Hoe manifesteer je jouw realiteit?
+              Focus!
             </DialogTitle>
           </DialogHeader>
 
@@ -164,43 +166,35 @@ const WeesZot = () => {
             {/* Introductie */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
               <h3 className="text-2xl font-black text-cyan-300 mb-3">
-                Alles bestaat al
+                Denk goed na wat je wilt bereiken.
               </h3>
               <p>
-                Alle mogelijke realiteiten bestaan tegelijkertijd.
-                Je creëert niets vanuit het niets;
-                je verplaatst je bewustzijn naar de realiteit
-                die overeenkomt met jouw innerlijke staat.
-                Wat je ervaart, is altijd een match met wie je bent.
+                Zorg ervoor dat dit in lijn is met je diepste verlangens en waarden.
+                Als je een duidelijk beeld hebt van wat je wilt, is het makkelijker om gefocust te blijven.
+
               </p>
             </div>
 
             {/*innerlijke staat */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
               <h3 className="text-2xl font-black text-cyan-300 mb-3">
-                Innerlijke staat
+                Kies een goed doel!
               </h3>
               <p>
-                Start met het afstemmen van je gedachten, gevoelens en overtuigingen
-                op de realiteit die je wilt ervaren.
-                Dan belichaam je de persoon die al leeft in die realiteit.
-                Jouw innerlijke staat van zijn trekt een bijpassende realiteit aan.
-                Door je gedachten, gevoelens en overtuigingen
-                in lijn te brengen met je gewenste uitkomst,
-                verschuift je ervaring automatisch mee.
+                Je keuzes moeten gebaseerd zijn op liefde en niet op angst.
+                Denk vooral na over wat je aan anderen kan geven, in plaats van wat je zelf kan krijgen.
+                Connectie met anderen is vaak super belangrijk. Denk na met wie je dit doel wil bereiken.
               </p>
             </div>
-
             {/* Actie */}
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
               <h3 className="text-2xl font-black text-cyan-300 mb-3">
-                Actie verankert de realiteit
+                Wees authentiek en trouw aan jezelf.
               </h3>
               <p>
-                Afstemming zonder actie blijft een innerlijke beweging.
-                Door te handelen vanuit enthousiasme
-                stap je daadwerkelijk de realiteit binnen
-                die al op je wacht.
+                Je hoeft niet te voldoen aan de verwachtingen van anderen.
+                Je hoeft niet te wachten op toestemming of goedkeuring.
+                Zolang je niemand slecht behandelt en gelooft in jezelf, kan je niet fout gaan.
               </p>
             </div>
 
@@ -210,11 +204,9 @@ const WeesZot = () => {
                 Laat de vorm los
               </h3>
               <p>
-                Je mag een duidelijke voorkeur hebben,
+                Je mag een duidelijk doel hebben,
                 maar geen gehechtheid aan hoe of wanneer iets verschijnt.
-                Vertrouwen betekent weten
-                dat het leven je altijd precies brengt
-                wat het meest in lijn is met je groei.
+                Vertrouw dat het leven je altijd precies brengt wat het meest in lijn is met je groei.
               </p>
             </div>
 
