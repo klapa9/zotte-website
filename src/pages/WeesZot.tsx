@@ -7,7 +7,7 @@ import PracticalTip from '@/components/PracticalTip';
 import AudioPlayer from '@/components/AudioPlayer';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import InfiniteSpiralTunnel from "@/components/InfiniteSpiral
+import InfiniteSpiralTunnel from "@/components/InfiniteSpiral";
 
 const WeesZot = () => {
   

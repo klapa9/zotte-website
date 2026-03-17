@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import AudioPlayer from '@/components/AudioPlayer';
+import SubtleFractalBackground from '@/components/SubtleFractalBackground'; 
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -87,28 +88,11 @@ const Index = () => {
 
   return (
     <>
+      <SubtleFractalBackground />
       <CursorStyles />
       <AudioPlayer pageType="index" />
-      <div className="min-h-screen bg-black overflow-hidden relative">
-        {/* Animated background */}
-        <div className="fixed inset-0 bg-gradient-to-br from-purple-900 via-pink-900 to-orange-900">
-          {[...Array(30)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute rounded-full mix-blend-screen opacity-20"
-              style={{
-                width: `${Math.random() * 600 + 100}px`,
-                height: `${Math.random() * 600 + 100}px`,
-                background: `hsl(${Math.random() * 360}, 70%, 60%)`,
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-
-                animation: `float ${Math.random() * 20 + 10}s infinite ease-in-out`,
-                animationDelay: `${Math.random() * 5}s`,
-              }}
-            />
-          ))}
-        </div>
+      <div className="min-h-screen overflow-hidden relative">
+        
 
         {/* Content */}
         <div className="relative z-10">
