@@ -10,9 +10,8 @@ import { Button } from '@/components/ui/button';
 import { ideas } from "../data/ideas";
 
 const OpenJeGeest = () => {
-  const [explosion, setExplosion] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [activeWord, setActiveWord] = useState(0);
+  
+  
   const [selectedIdea, setSelectedIdea] = useState<number | null>(null);
 
   const handleSelect = (index: number) => {
@@ -24,40 +23,54 @@ const OpenJeGeest = () => {
     description: 'Alles is veel zotter dan je denkt!',
   });
 
-  useEffect(() => {
-    const explosionInterval = setInterval(() => {
-      setExplosion(true);
-      setTimeout(() => setExplosion(false), 1000);
-    }, 5000);
+  const [stars, setStars] = useState(
+  Array.from({ length: 40 }, () => ({
+    x: Math.random() * window.innerWidth,
+    y: Math.random() * window.innerHeight,
+    speedX: (Math.random() ) ,
+    speedY: (Math.random() ) ,
+  }))
+);
 
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+useEffect(() => {
+  const animate = () => {
+    setStars((prev) =>
+      prev.map((star) => {
+        let newX = star.x + star.speedX;
+        let newY = star.y + star.speedY;
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      clearInterval(explosionInterval);
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+        // wrap around screen
+        if (newX < 0) newX = window.innerWidth;
+        if (newX > window.innerWidth) newX = 0;
+        if (newY < 0) newY = window.innerHeight;
+        if (newY > window.innerHeight) newY = 0;
+
+        return { ...star, x: newX, y: newY };
+      })
+    );
+
+    requestAnimationFrame(animate);
+  };
+
+  animate();
+}, []);
 
   return (
     <>
       <CursorStyles />
       <AudioPlayer pageType="openjegeest" />
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-800 to-pink-900 overflow-hidden relative">
-      {/* Explosive background particles */}
-      <div className="absolute inset-0">
-        {[...Array(50)].map((_, i) => (
+      {/* background stars */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        {stars.map((star, i) => (
           <div
             key={i}
-            className={`absolute w-1 h-1 bg-white rounded-full ${explosion ? 'animate-explosion' : 'animate-float'}`}
+            className="absolute bg-white rounded-full opacity-70"
             style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDuration: `${Math.random() * 5 + 3}s`,
-              animationDelay: `${Math.random() * 2}s`,
-              background: `hsl(${Math.random() * 60 + 280}, 80%, 70%)`,
+              left: star.x,
+              top: star.y,
+              width: "7px",
+              height: "7px",
             }}
           />
         ))}
@@ -84,7 +97,7 @@ const OpenJeGeest = () => {
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Header */}
         <div className="py-16 px-4 text-center">
-          <h1 className={`text-7xl md:text-9xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 ${explosion ? 'animate-pulse' : ''}`}>
+          <h1 className={`text-7xl md:text-9xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 `}>
             OPEN JE GEEST
           </h1>
           <p className="text-2xl md:text-3xl text-white font-bold">
@@ -233,12 +246,6 @@ const OpenJeGeest = () => {
           10% { opacity: 1; }
           90% { opacity: 1; }
           100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
-        }
-
-        @keyframes explosion {
-          0% { transform: scale(0) rotate(0deg); opacity: 1; }
-          50% { transform: scale(3) rotate(180deg); opacity: 0.8; }
-          100% { transform: scale(0) rotate(360deg); opacity: 0; }
         }
 
         @keyframes expand {

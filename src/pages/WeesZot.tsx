@@ -7,9 +7,10 @@ import PracticalTip from '@/components/PracticalTip';
 import AudioPlayer from '@/components/AudioPlayer';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import InfiniteSpiralTunnel from "@/components/InfiniteSpiral
 
 const WeesZot = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  
   const [showDialog, setShowDialog] = useState(false);
   const [showDialog2, setShowDialog2] = useState(false);
 
@@ -18,47 +19,15 @@ const WeesZot = () => {
     description: 'Ontdek de kracht van het volgen van je enthousiasme en intuïtie.',
   });
 
-  // useEffect(() => {
-  //   const handleMouseMove = (e: MouseEvent) => {
-  //     setMousePosition({ x: e.clientX, y: e.clientY });
-  //   };
-
-  //   window.addEventListener('mousemove', handleMouseMove);
-  //   return () => window.removeEventListener('mousemove', handleMouseMove);
-  // }, []);
-
-  const calculateParallax = (x: number, y: number, depth: number) => {
-    const centerX = window.innerWidth / 2;
-    const centerY = window.innerHeight / 2;
-    const moveX = ((x - centerX) / centerX) * depth;
-    const moveY = ((y - centerY) / centerY) * depth;
-    return { moveX, moveY };
-  };
+  
 
   return (
     <>
+      <InfiniteSpiralTunnel />
       <CursorStyles />
       <AudioPlayer pageType="weeszot" />
-      <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 overflow-hidden relative">
-        {/* Animated background */}
-        <div className="absolute inset-0">
-          {[...Array(15)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute rounded-full mix-blend-screen opacity-15 animate-pulse"
-              style={{
-                width: `${Math.random() * 400 + 100}px`,
-                height: `${Math.random() * 400 + 100}px`,
-                background: `hsl(${Math.random() * 60 + 280}, 70%, 60%)`,
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                animationDuration: `${Math.random() * 8 + 4}s`,
-                animationDelay: `${Math.random() * 3}s`,
-              }}
-            />
-          ))}
-        </div>
-
+      <div className="min-h-screen overflow-hidden relative">
+        
         <div className="relative z-10 min-h-screen flex flex-col">
           {/* Header */}
           <div className="py-16 px-4 text-center">

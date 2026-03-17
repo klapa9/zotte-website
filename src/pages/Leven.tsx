@@ -9,7 +9,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Button } from '@/components/ui/button';
 
 const Leven = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [showDialog, setShowDialog] = useState(false);
   const [showDialog2, setShowDialog2] = useState(false);
 
@@ -18,16 +17,7 @@ const Leven = () => {
     description: 'Verken de fundamentele vragen van het leven: waarom leef je, wat is belangrijk, hoe kan je beter leven?',
   });
 
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
-
+  
   return (
     <>
       <CursorStyles />
@@ -327,6 +317,14 @@ const Leven = () => {
               <p className="mt-3">
                 Deze Eenheid is de onderliggende structuur van alle ervaring. Alles wat wij als gescheiden zien,
                 zijn verschillende uitdrukkingen van dezelfde Oneindige Bron.
+              </p>
+            </div>
+
+            {/* Opvallende quote */}
+            <div className="bg-gradient-to-r from-cyan-400 to-blue-500 text-blue-900 rounded-2xl p-6 border-2 border-white shadow-xl text-center">
+              <p className="text-xl md:text-2xl font-black italic">
+                Jij bent geen persoon die het universum beleeft!<br />
+                Jij bent het universum dat een persoon beleeft!
               </p>
             </div>
 

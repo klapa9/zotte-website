@@ -18,14 +18,7 @@ const ZiekZot = () => {
     description: 'Ziek zijn is echt zot! Ontdek waarom het beter is om gewoon niet zot ziek te zijn.',
   });
 
-  useEffect(() => {
-    const glitchInterval = setInterval(() => {
-      setGlitchMode(true);
-      setTimeout(() => setGlitchMode(false), 200);
-    }, 4000);
-
-    return () => clearInterval(glitchInterval);
-  }, []);
+  
 
   return (
     <>
