@@ -58,7 +58,7 @@ const InfiniteSpiralTunnelDepth = () => {
         ctx.fill();
       }
 
-      angle += 0.002; // langzame rotatie
+      angle += 0.004; // langzame rotatie
       animationFrameId = requestAnimationFrame(draw);
     };
 

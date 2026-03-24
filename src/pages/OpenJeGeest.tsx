@@ -5,9 +5,11 @@ import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
 import AudioPlayer from '@/components/AudioPlayer';
+import Comments from '@/components/Comments';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { ideas } from "../data/ideas";
+
 
 const OpenJeGeest = () => {
   
@@ -75,9 +77,11 @@ useEffect(() => {
           />
         ))}
       </div>
+      
 
       {/* Mind-expanding circles */}
       <div className="absolute inset-0">
+        
         {[...Array(8)].map((_, i) => (
           <div
             key={i}
@@ -103,7 +107,7 @@ useEffect(() => {
           <p className="text-2xl md:text-3xl text-white font-bold">
             De wereld is anders dan je denkt
           </p>
-        </div>
+          
 
         {/* Main Content */}
         <div className="flex-1 px-4 pb-16">
@@ -114,8 +118,11 @@ useEffect(() => {
                 <p className="text-5xl md:text-7xl font-black text-white leading-tight">
                   Alles is veel zotter dan je denkt!
                 </p>
+                
+          
               </div>
             </div>
+          </div>
 
             {/* Open Geest Section */}
             <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-8 md:p-12 transform hover:scale-105 transition-all duration-500">
@@ -138,6 +145,7 @@ useEffect(() => {
                   blijf je vastzitten in dezelfde denkkaders,
                   dezelfde beperkingen, dezelfde realiteit.
                 </p>
+                <Comments postId="open-geest_open-geest" />
               </div>
             </div>
 
@@ -163,6 +171,7 @@ useEffect(() => {
                   Jij bent geen slachtoffer van de realiteit.
                   Jij bent de schepper van je eigen werkelijkheid.
                 </p>
+                <Comments postId="open-geest_Schepper" />
               </div>
             </div>
 
@@ -185,6 +194,7 @@ useEffect(() => {
                   Daarom heb je een open geest nodig. Om je oude overtuigingen los te laten
                   en nieuwe mogelijkheden te omarmen.
                 </p>
+                <Comments postId="open-geest_geloof" />
               </div>
             </div>
 
