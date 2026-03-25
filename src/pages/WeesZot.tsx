@@ -1,16 +1,20 @@
 import { useSeoMeta } from '@unhead/react';
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
 import AudioPlayer from '@/components/AudioPlayer';
+import Comments from '@/components/Comments';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import InfiniteSpiralTunnel from "@/components/InfiniteSpiral";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import InfiniteSpiralTunnel from '@/components/InfiniteSpiral';
 
 const WeesZot = () => {
-  
   const [showDialog, setShowDialog] = useState(false);
   const [showDialog2, setShowDialog2] = useState(false);
 
@@ -19,17 +23,14 @@ const WeesZot = () => {
     description: 'Ontdek de kracht van het volgen van je enthousiasme en intuïtie.',
   });
 
-  
-
   return (
     <>
       <InfiniteSpiralTunnel />
       <CursorStyles />
       <AudioPlayer pageType="weeszot" />
+
       <div className="min-h-screen overflow-hidden relative">
-        
         <div className="relative z-10 min-h-screen flex flex-col">
-          {/* Header */}
           <div className="py-16 px-4 text-center">
             <h1 className="text-6xl md:text-8xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 animate-pulse">
               WEES ZOT!
@@ -39,76 +40,92 @@ const WeesZot = () => {
             </p>
           </div>
 
-          {/* Content Sections */}
           <div className="flex-1 px-4 pb-16">
-            <div className="max-w-6xl mx-auto space-y-16">
+            <div className="max-w-5xl mx-auto space-y-16">
               {/* Enthousiasme Section */}
-              <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20">
-                <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+              <div className="relative rounded-3xl p-8 md:p-12 border border-cyan-300/20 bg-gradient-to-br from-cyan-500/20 via-sky-500/10 to-blue-900/30 backdrop-blur-md shadow-[0_0_40px_rgba(34,211,238,0.12)]">
+                <div className="absolute top-5 right-5 z-20">
+                  <Comments postId="weeszot_enthousiasme" />
+                </div>
+
+                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
                   Volg je enthousiasme
                 </h2>
-                <div className="space-y-4 text-white text-lg md:text-xl">
-                  <p>
-                    Je enthousiasme is je innerlijke kompas dat je naar je bestemming leidt.
-                    Het is een signaal dat je moet volgen, zelfs als het eng of onlogisch lijkt.
-                  </p>
-                  <p>
-                    Als je je enthousiasme volgt, open je de deur naar nieuwe mogelijkheden,
-                    onverwachte kansen, en magische ervaringen. Het is de sleutel tot een
-                    vervuld en betekenisvol leven.
-                  </p>
-                  
-                  <Button
-                    onClick={() => setShowDialog(true)}
-                    className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                  >
-                    💡 Van waar komt je enthousiasme?
-                  </Button>
+
+                <div className="max-w-3xl">
+                  <div className="space-y-4 text-white text-lg md:text-xl">
+                    <p>
+                      Je enthousiasme is je innerlijke kompas dat je naar je bestemming leidt.
+                      Het is een signaal dat je moet volgen, zelfs als het eng of onlogisch lijkt.
+                    </p>
+                    <p>
+                      Als je je enthousiasme volgt, open je de deur naar nieuwe mogelijkheden,
+                      onverwachte kansen, en magische ervaringen. Het is de sleutel tot een
+                      vervuld en betekenisvol leven.
+                    </p>
+
+                    <Button
+                      onClick={() => setShowDialog(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      💡 Van waar komt je enthousiasme?
+                    </Button>
+                  </div>
                 </div>
               </div>
 
-              {/* Dieper Gaan Section */}
-              <div className="bg-black bg-opacity-30 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white border-opacity-20 transform hover:-rotate-1 hover:scale-105 transition-all duration-500 active:scale-95">
-                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 hover:scale-105 hover:rotate-2 transition-all duration-300">
+              {/* Realiteit Section */}
+              <div className="relative rounded-3xl p-8 md:p-12 border border-white/20 bg-black/30 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
+                <div className="absolute top-5 right-5 z-20">
+                  <Comments postId="weeszot_realiteit" />
+                </div>
+
+                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
                   Creëer je eigen realiteit
                 </h2>
-                <div className="space-y-4 text-white text-lg md:text-xl">
-                  <p className="hover:text-indigo-200 transition-colors duration-300">
-                    Om je eigen realiteit te creëren, begin je met het afstemmen van je innerlijke staat op wat je wilt ervaren.
-                    Denk na welke persoon je wilt zijn en belichaam die persoon nu al.
-                    Fake it until you make it. 
-                  </p>
-                  <p className="hover:text-purple-200 transition-colors duration-300">
-                    Er zijn veel zaken die je verhinderen om je realiteit te creëren, zoals angst en afleiding.
-                    Veel obstakels komen als korte termijn plezier of comfort, maar zijn op lange termijn niet in lijn met je groei.
-                  </p>
-                  <p className="hover:text-pink-200 transition-colors duration-300">
-                    Soms moet je ook zaken loslaten die je niet meer dienen, zelfs als ze ooit belangrijk waren.
-                    Dit kan een deel van je identiteit zijn, een gewoonte, een baan, of een overtuiging.
-                  </p>
-                  <Button
-                    onClick={() => setShowDialog2(true)}
-                    className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                  >
-                    💡 Focus!
-                  </Button>
+
+                <div className="max-w-3xl">
+                  <div className="space-y-4 text-white text-lg md:text-xl">
+                    <p className="hover:text-indigo-200 transition-colors duration-300">
+                      Om je eigen realiteit te creëren, begin je met het afstemmen van je innerlijke staat op wat je wilt ervaren.
+                      Denk na welke persoon je wilt zijn en belichaam die persoon nu al.
+                      Fake it until you make it.
+                    </p>
+                    <p className="hover:text-purple-200 transition-colors duration-300">
+                      Er zijn veel zaken die je verhinderen om je realiteit te creëren, zoals angst en afleiding.
+                      Veel obstakels komen als korte termijn plezier of comfort, maar zijn op lange termijn niet in lijn met je groei.
+                    </p>
+                    <p className="hover:text-pink-200 transition-colors duration-300">
+                      Soms moet je ook zaken loslaten die je niet meer dienen, zelfs als ze ooit belangrijk waren.
+                      Dit kan een deel van je identiteit zijn, een gewoonte, een baan, of een overtuiging.
+                    </p>
+
+                    <Button
+                      onClick={() => setShowDialog2(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      💡 Focus!
+                    </Button>
+                  </div>
                 </div>
-              </div>           
+              </div>
 
               <PracticalTip pageType="weeszot" />
 
-              {/* Call to Action */}
-              <div className="text-center py-12">
-                <h2 className="text-3xl md:text-4xl font-black text-white mb-6">
-                  Dus... wees zot!
-                </h2>
-                <p className="text-xl md:text-2xl text-white font-light mb-8">
-                  Wees niet bang om anders te zijn.
-                </p>
-                <div className="inline-block">
-                  <p className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
-                    Volg je passie!
+              {/* CTA */}
+              <div className="relative text-center py-12">
+                <div className="max-w-4xl mx-auto rounded-3xl p-8 md:p-12 border border-yellow-300/20 bg-gradient-to-r from-yellow-500/20 via-orange-500/15 to-pink-500/10 backdrop-blur-md shadow-[0_0_50px_rgba(251,191,36,0.12)]">
+                  <h2 className="text-3xl md:text-4xl font-black text-white mb-6">
+                    Dus... wees zot!
+                  </h2>
+                  <p className="text-xl md:text-2xl text-white font-light mb-8">
+                    Wees niet bang om anders te zijn.
                   </p>
+                  <div className="inline-block">
+                    <p className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-400">
+                      Volg je passie!
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -118,18 +135,19 @@ const WeesZot = () => {
         </div>
       </div>
 
-      {/* Dialog */}
+      {/* Focus dialog */}
       <Dialog open={showDialog2} onOpenChange={setShowDialog2}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
+        <DialogContent className="z-[70] max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
-            <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
+            <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-2">
               Focus!
             </DialogTitle>
           </DialogHeader>
 
+          
+
           <div className="space-y-6 text-lg">
-            {/* Introductie */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30">
               <h3 className="text-2xl font-black text-cyan-300 mb-3">
                 Denk goed na wat je wilt bereiken.
               </h3>
@@ -139,8 +157,7 @@ const WeesZot = () => {
               </p>
             </div>
 
-            {/*innerlijke staat */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30">
               <h3 className="text-2xl font-black text-cyan-300 mb-3">
                 Kies een goed doel!
               </h3>
@@ -150,8 +167,8 @@ const WeesZot = () => {
                 Connectie met anderen is vaak super belangrijk. Denk na met wie je dit doel wil bereiken.
               </p>
             </div>
-            {/* Actie */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30">
               <h3 className="text-2xl font-black text-cyan-300 mb-3">
                 Wees authentiek en trouw aan jezelf.
               </h3>
@@ -162,8 +179,7 @@ const WeesZot = () => {
               </p>
             </div>
 
-            {/* Loslaten */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30">
               <h3 className="text-2xl font-black text-blue-300 mb-3">
                 Laat de vorm los
               </h3>
@@ -174,32 +190,38 @@ const WeesZot = () => {
               </p>
             </div>
 
-            {/* Sluit knop */}
-            <div className="text-center pt-4">
+            <div className="relative text-center pt-4">
               <Button
                 onClick={() => setShowDialog2(false)}
                 className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 Sluiten
               </Button>
+              <div className="flex justify-end mb-4">
+                <Comments postId="weeszot_focus_dialog" />
+              </div>
             </div>
           </div>
         </DialogContent>
       </Dialog>
 
-
-      {/* Dialog */}
+      {/* Enthousiasme dialog */}
       <Dialog open={showDialog} onOpenChange={setShowDialog}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
+        <DialogContent className="z-[70] max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
           <DialogHeader>
-            <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
+            <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-2">
               Van waar komt je enthousiasme?
+              
             </DialogTitle>
           </DialogHeader>
+
+          
+
           <div className="space-y-6 text-lg">
-            {/* Introductie */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-cyan-300 mb-3">Je bent een oneindige ziel.</h3>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">
+                Je bent een oneindige ziel.
+              </h3>
               <p>
                 Je bent een oneindige ziel die jouw bewustzijn ervaart via je menselijk lichaam.
                 Jouw ziel kiest specifieke levensomstandigheden om bepaalde lessen te leren
@@ -207,19 +229,19 @@ const WeesZot = () => {
               </p>
             </div>
 
-            {/* De communicatie */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-blue-300 mb-3">Communicatie</h3>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30">
+              <h3 className="text-2xl font-black text-blue-300 mb-3">
+                Communicatie
+              </h3>
               <p className="mb-4">
                 Je ziel communiceert met jou via gevoelens.
-
                 Enthousiasme is een signaal dat je op het juiste pad zit.
-                
               </p>
 
-              {/* Zeker? */}
               <div className="mb-4 pl-4 border-l-4 border-teal-400">
-                <h4 className="text-xl font-bold text-teal-300 mb-2">Hoe kan je zeker zijn?</h4>
+                <h4 className="text-xl font-bold text-teal-300 mb-2">
+                  Hoe kan je zeker zijn?
+                </h4>
                 <p className="mb-2">
                   Als je enthousiasme gebaseerd is op angst, onzekerheid of
                   sociale druk, is het waarschijnlijk niet de stem van je ziel.
@@ -236,9 +258,10 @@ const WeesZot = () => {
               </div>
             </div>
 
-            {/* Geen Goed of Fout */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400 border-opacity-30">
-              <h3 className="text-2xl font-black text-cyan-300 mb-3">Kiest je ziel altijd het beste?</h3>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30">
+              <h3 className="text-2xl font-black text-cyan-300 mb-3">
+                Kiest je ziel altijd het beste?
+              </h3>
               <p>
                 Je ziel streeft ernaar om te groeien en te evolueren,
                 maar dat betekent niet altijd dat het pad gemakkelijk is.
@@ -247,14 +270,18 @@ const WeesZot = () => {
               </p>
             </div>
 
-            {/* Sluit knop */}
-            <div className="text-center pt-4">
+            <div className="relative text-center pt-4">
               <Button
                 onClick={() => setShowDialog(false)}
                 className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 Sluiten
+                
+                
               </Button>
+              <div className="flex justify-end mb-4">
+                  <Comments postId="weeszot_enthousiasme_dialog" />
+                </div>
             </div>
           </div>
         </DialogContent>

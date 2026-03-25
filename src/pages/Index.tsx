@@ -5,6 +5,10 @@ import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import AudioPlayer from '@/components/AudioPlayer';
 import SubtleFractalBackground from '@/components/SubtleFractalBackground'; 
+import { Link } from "react-router-dom";
+
+
+
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -107,6 +111,7 @@ const Index = () => {
                 <h1 className="text-6xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-600 to-orange-500 leading-tight transform hover:scale-110 transition-transform duration-500">
                   VEEL ZOTTER
                 </h1>
+                
                 <h1 className="text-6xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-orange-500 to-yellow-400 leading-tight transform hover:scale-110 transition-transform duration-500">
                   DAN JE DENKT!
                 </h1>
@@ -136,6 +141,7 @@ const Index = () => {
                   Elke klik brengt je een nieuw idee.
                   Welk idee voelt goed aan?
                 </p>
+                <Link to="/admin">Admin</Link>
                 <div className="inline-block">
                   <p className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 animate-pulse">
                     Luister naar je gevoel!

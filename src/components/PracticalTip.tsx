@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Comments from './Comments';
 
 interface PracticalTipProps {
   pageType: 'weeszot' | 'leven' | 'liefde' | 'ziekzot' | 'openjegeest' | 'geld';
@@ -218,7 +219,10 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
   };
 
   return (
-    <div className={`bg-gradient-to-r ${getGradientColors()} rounded-3xl p-8 md:p-12 mb-12`}>
+    <div className={`relative bg-gradient-to-r ${getGradientColors()} rounded-3xl p-8 md:p-12 mb-12`}>
+      <div className="absolute top-5 right-5 z-20">
+        <Comments postId={pageType} />
+      </div>
       <h2 className="text-3xl md:text-4xl font-black text-white mb-6 transform hover:scale-105 hover:rotate-2 transition-all duration-300 active:scale-95">
         {tipContent.title}
       </h2>
