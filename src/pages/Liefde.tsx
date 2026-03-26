@@ -74,7 +74,7 @@ const Liefde = () => {
               {/* Train jezelf */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-teal-300/20 bg-gradient-to-r from-green-400/80 to-blue-400/80 backdrop-blur-md shadow-[0_0_40px_rgba(45,212,191,0.14)] transform hover:scale-[1.02] transition-all duration-500">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="liefde_train_jezelf" />
+                  <Comments postId="liefde_train_jezelf" sectionTitle="Train de liefde in jezelf." />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-purple-700 mb-6 pr-14">
@@ -110,7 +110,7 @@ const Liefde = () => {
               {/* Heb anderen lief */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-blue-300/20 bg-gradient-to-r from-blue-600/80 to-indigo-600/80 backdrop-blur-md shadow-[0_0_40px_rgba(59,130,246,0.12)] transform hover:scale-[1.02] transition-all duration-500">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="liefde_heb_anderen_lief" />
+                  <Comments postId="liefde_heb_anderen_lief"  sectionTitle="Heb anderen lief."/>
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
@@ -250,7 +250,7 @@ const Liefde = () => {
                 Sluiten
               </Button>
               <div className="flex justify-end mb-4 mt-4">
-                <Comments postId="liefde_zelfliefde_dialog" />
+                <Comments postId="liefde_zelfliefde_dialog" sectionTitle="Zelfliefde" />
               </div>
             </div>
           </div>
@@ -337,7 +337,7 @@ const Liefde = () => {
                 Sluiten
               </Button>
               <div className="flex justify-end mb-4 mt-4">
-                <Comments postId="liefde_dienstbaarheid_dialog" />
+                <Comments postId="liefde_dienstbaarheid_dialog" sectionTitle="Dienstbaarheid" />
               </div>
             </div>
           </div>

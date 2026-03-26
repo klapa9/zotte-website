@@ -122,7 +122,7 @@ const OpenJeGeest = () => {
 
               <div className="relative bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-8 md:p-12 transform hover:scale-[1.02] transition-all duration-500">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="open-geest_open-geest" />
+                  <Comments postId="open-geest_open-geest"  sectionTitle="Open geest"/>
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
@@ -152,7 +152,7 @@ const OpenJeGeest = () => {
 
               <div className="relative bg-white/5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-purple-400/30">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="open-geest_Schepper" />
+                  <Comments postId="open-geest_Schepper" sectionTitle="De schepper van je eigen werkelijkheid" />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-purple-400 mb-6 pr-14">
@@ -183,7 +183,7 @@ const OpenJeGeest = () => {
 
               <div className="relative bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl p-8 md:p-12 transform hover:scale-[1.02] transition-all duration-500">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="open-geest_geloof" />
+                  <Comments postId="open-geest_geloof" sectionTitle="Je geloof bepaalt je limieten." />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-purple-600 mb-6 pr-14">
@@ -223,7 +223,7 @@ const OpenJeGeest = () => {
                       className="absolute top-4 right-4 text-white/70 hover:text-yellow-400 transition"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <Comments postId={`open-geest_idea${index}`} />
+                      <Comments postId={`open-geest_idea${index}`} sectionTitle={idea.title} />
                     </div>
 
                     <h3 className="text-2xl font-black text-yellow-400 mb-3 pr-10">

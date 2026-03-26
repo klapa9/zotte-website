@@ -7,16 +7,18 @@ import {
 } from "@/components/ui/dialog";
 import { MessageCircle } from "lucide-react";
 
-const API_URL = "http://localhost:3001";
+const API_URL = import.meta.env.VITE_API_URL;
 
 type CommentType = {
   id: number;
   content: string;
   userName: string;
   postId: string;
+  sectionTitle?: string | null;
   parentId: number | null;
   likesCount?: number;
   isHidden?: boolean;
+  createdAt?: string;
   replies?: CommentType[];
 };
 
@@ -254,9 +256,10 @@ function CommentItem({
 
 type CommentsProps = {
   postId: string;
+  sectionTitle: string;
 };
 
-export default function Comments({ postId }: CommentsProps) {
+export default function Comments({ postId, sectionTitle }: CommentsProps) {
   const [comments, setComments] = useState<CommentType[]>([]);
   const [userName, setUserName] = useState("");
   const [newPostContent, setNewPostContent] = useState("");
@@ -344,6 +347,7 @@ export default function Comments({ postId }: CommentsProps) {
         content: newPostContent,
         userName,
         postId,
+        sectionTitle,
         parentId: null,
       }),
     });
@@ -356,7 +360,7 @@ export default function Comments({ postId }: CommentsProps) {
     }
 
     setNewPostContent("");
-    fetchComments();
+    await fetchComments();
   };
 
   const handleReplySubmit = async (
@@ -379,6 +383,7 @@ export default function Comments({ postId }: CommentsProps) {
         content: replyContent,
         userName,
         postId,
+        sectionTitle,
         parentId,
       }),
     });
@@ -398,7 +403,8 @@ export default function Comments({ postId }: CommentsProps) {
     setReplyContent("");
     setReplyToId(null);
     setReplyToContent(null);
-    fetchComments();
+
+    await fetchComments();
   };
 
   const cancelReply = () => {
@@ -481,8 +487,8 @@ export default function Comments({ postId }: CommentsProps) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        aria-label="Open reacties"
-        title="Open reacties"
+        aria-label={`Open reacties voor ${sectionTitle}`}
+        title={`Open reacties voor ${sectionTitle}`}
         className="
           inline-flex h-10 w-10 items-center justify-center
           rounded-full border border-white/20
@@ -498,7 +504,8 @@ export default function Comments({ postId }: CommentsProps) {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="z-[120] bg-white text-black max-w-lg max-h-[80vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle>Deel je gedachte</DialogTitle>
+            <DialogTitle>Reacties op: {sectionTitle}</DialogTitle>
+            {/* <p className="text-sm text-slate-500">{postId}</p> */}
           </DialogHeader>
 
           <form onSubmit={handlePostSubmit} className="space-y-4">

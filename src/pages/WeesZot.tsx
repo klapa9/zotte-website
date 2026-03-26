@@ -45,7 +45,7 @@ const WeesZot = () => {
               {/* Enthousiasme Section */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-cyan-300/20 bg-gradient-to-br from-cyan-500/20 via-sky-500/10 to-blue-900/30 backdrop-blur-md shadow-[0_0_40px_rgba(34,211,238,0.12)]">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="weeszot_enthousiasme" />
+                  <Comments postId="weeszot_enthousiasme"  sectionTitle="Volg je enthousiasme"/>
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
@@ -77,7 +77,7 @@ const WeesZot = () => {
               {/* Realiteit Section */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-white/20 bg-black/30 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="weeszot_realiteit" />
+                  <Comments postId="weeszot_realiteit"  sectionTitle="Creëer je eigen realiteit"/>
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
@@ -198,7 +198,7 @@ const WeesZot = () => {
                 Sluiten
               </Button>
               <div className="flex justify-end mb-4">
-                <Comments postId="weeszot_focus_dialog" />
+                <Comments postId="weeszot_focus_dialog"  sectionTitle="Focus"/>
               </div>
             </div>
           </div>
@@ -280,7 +280,7 @@ const WeesZot = () => {
                 
               </Button>
               <div className="flex justify-end mb-4">
-                  <Comments postId="weeszot_enthousiasme_dialog" />
+                  <Comments postId="weeszot_enthousiasme_dialog" sectionTitle="Van waar komt je enthousiasme?" />
                 </div>
             </div>
           </div>

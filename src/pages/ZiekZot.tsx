@@ -97,7 +97,7 @@ const ZiekZot = () => {
               {/* Genees jezelf */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-red-400/30 bg-black/30 backdrop-blur-md shadow-[0_0_40px_rgba(248,113,113,0.10)]">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="ziekzot_genees_jezelf" />
+                  <Comments postId="ziekzot_genees_jezelf" sectionTitle="Genees jezelf!" />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-red-400 mb-6 pr-14">
@@ -140,7 +140,7 @@ const ZiekZot = () => {
               {/* Autonomie */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-pink-300/20 bg-gradient-to-r from-pink-600/80 to-red-600/80 backdrop-blur-md shadow-[0_0_40px_rgba(244,114,182,0.10)] transform hover:scale-[1.02] transition-all duration-500">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="ziekzot_autonomie" />
+                  <Comments postId="ziekzot_autonomie" sectionTitle="Autonomie" />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
@@ -184,7 +184,7 @@ const ZiekZot = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="relative bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-pink-400/30">
                   <div className="absolute top-5 right-5 z-20">
-                    <Comments postId="ziekzot_natuur_geneest" />
+                    <Comments postId="ziekzot_natuur_geneest" sectionTitle="De Natuur Geneest" />
                   </div>
 
                   <h3 className="text-3xl font-black text-pink-400 mb-4 pr-14">
@@ -200,7 +200,7 @@ const ZiekZot = () => {
 
                 <div className="relative bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-purple-400/30">
                   <div className="absolute top-5 right-5 z-20">
-                    <Comments postId="ziekzot_liefde_noodzakelijk" />
+                    <Comments postId="ziekzot_liefde_noodzakelijk" sectionTitle="Liefde is noodzakelijk" />
                   </div>
 
                   <h3 className="text-3xl font-black text-purple-400 mb-4 pr-14">
@@ -219,10 +219,6 @@ const ZiekZot = () => {
 
               {/* Call to Action */}
               <div className="relative text-center py-12">
-                <div className="absolute top-6 right-0 z-20">
-                  <Comments postId="ziekzot_cta" />
-                </div>
-
                 <div className="max-w-4xl mx-auto bg-black/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 shadow-[0_0_50px_rgba(255,255,255,0.06)] transform hover:scale-[1.02] transition-all duration-500">
                   <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
                     Probeer eens 1 of meerdere maaltijden over te slaan.
@@ -337,7 +333,7 @@ const ZiekZot = () => {
                 Sluiten
               </Button>
               <div className="flex justify-end mb-4 mt-4">
-                <Comments postId="ziekzot_mind_body_spirit_dialog" />
+                <Comments postId="ziekzot_mind_body_spirit_dialog"  sectionTitle="Mind, Body & Spirit"/>
               </div>
             </div>
           </div>
@@ -412,7 +408,7 @@ const ZiekZot = () => {
                 Sluiten
               </Button>
               <div className="flex justify-end mb-4 mt-4">
-                <Comments postId="ziekzot_succesvol_vasten_dialog" />
+                <Comments postId="ziekzot_succesvol_vasten_dialog"  sectionTitle="Succesvol Vasten" />
               </div>
             </div>
           </div>

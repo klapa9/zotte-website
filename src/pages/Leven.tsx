@@ -64,7 +64,7 @@ const Leven = () => {
               {/* GOD */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-cyan-400/30 bg-white/5 backdrop-blur-md shadow-[0_0_40px_rgba(34,211,238,0.08)]">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="leven_god" />
+                  <Comments postId="leven_god" sectionTitle="G O D" />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-cyan-400 mb-6 pr-14">
@@ -95,7 +95,7 @@ const Leven = () => {
               {/* Evolutionaire Reis */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-blue-400/30 bg-black/40 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="leven_reis_god" />
+                  <Comments postId="leven_reis_god" sectionTitle="De Evolutionaire Reis van God" />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-blue-400 mb-6 pr-14">
@@ -134,7 +134,7 @@ const Leven = () => {
               {/* Energie */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-cyan-300/20 bg-gradient-to-r from-green-600/80 to-blue-600/80 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="leven_energie" />
+                  <Comments postId="leven_energie" sectionTitle="Alles is energie in beweging." />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
@@ -303,7 +303,7 @@ const Leven = () => {
                 Sluiten
               </Button>
               <div className="flex justify-end mb-4 mt-4">
-                <Comments postId="leven_frequenties_dialog" />
+                <Comments postId="leven_frequenties_dialog" sectionTitle="Frequenties van Bewustzijn" />
               </div>
             </div>
           </div>
@@ -369,7 +369,7 @@ const Leven = () => {
                 Sluiten
               </Button>
               <div className="flex justify-end mb-4 mt-4">
-                <Comments postId="leven_eenheid_dialog" />
+                <Comments postId="leven_eenheid_dialog" sectionTitle="De wet van éénheid" />
               </div>
             </div>
           </div>
