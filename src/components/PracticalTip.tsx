@@ -121,31 +121,22 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
         };
 
       case 'ziekzot':
-        return {
-          title: "🎯 Praktische Tip",
-          content: (
-            <>
-              <p className="hover:text-red-200 transition-colors duration-300">
-                <strong>De natuur kan je genezen.</strong> Je lichaam is een prachtige zelfgenezende machine
-                wanneer je het de juiste omstandigheden geeft. De natuur biedt alles wat je nodig hebt.
-              </p>
-              <p className="hover:text-red-200 transition-colors duration-300">
-                <strong>Onze natuurlijke staat van zijn is zonder voeding in ons lichaam.</strong> 
-                Ons lichaam is perfect ontworpen om periodes zonder voeding te overleven en zelfs te floreren.
-              </p>
-              <p className="hover:text-red-200 transition-colors duration-300">
-                Heb je het te lastig om te vasten? Begin klein. Probeer eerst 12 uur, dan 16 uur.
-                Bouw het langzaam op. Luister naar je lichaam, maar daag het ook uit.
-              </p>
-              <p className="hover:text-red-200 transition-colors duration-300">
-                <strong>Je gedachten beïnvloeden je genezing.</strong> Negatieve gedachten en emoties
-                creëren stress, wat je energie ondermijnt. Cultiveer positieve gedachten,
-                dankbaarheid, en liefde om je te ondersteunen.
-              </p>
-            </>
-          ),
-          link: { to: "/openjegeest", text: "De kracht van je geest? →", color: "red" }
-        };
+  return {
+    title: "🎯 Praktische Tip",
+    content: (
+      <>
+        <p className="hover:text-red-200 transition-colors duration-300">
+          <strong>Probeer eens een 12-uur vastenperiode.</strong> 
+          Bijvoorbeeld van 20:00 tot 08:00, waarbij je enkel water drinkt.
+        </p>
+        <p className="hover:text-red-200 transition-colors duration-300">
+          Vasten geeft je lichaam de kans om te ontgiften en te herstellen.
+          Begin klein, voel wat het met je doet, en bouw eventueel later verder op.
+        </p>
+      </>
+    ),
+    link: { to: "/openjegeest", text: "De kracht van je geest? →", color: "red" }
+  };
 
       case 'openjegeest':
         return {
