@@ -61,10 +61,11 @@ const Leven = () => {
           {/* Main Content */}
           <div className="flex-1 px-4 pb-16">
             <div className="max-w-5xl mx-auto space-y-20">
-              {/* GOD */}
+
+              {/* ABSOLUTE */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-cyan-400/30 bg-white/5 backdrop-blur-md shadow-[0_0_40px_rgba(34,211,238,0.08)]">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="leven_god" sectionTitle="G O D" />
+                  <Comments postId="leven_GOD" sectionTitle="Het Geheel - G O D" />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-cyan-400 mb-6 pr-14">
@@ -74,99 +75,110 @@ const Leven = () => {
                 <div className="max-w-3xl">
                   <div className="space-y-4 text-white text-lg md:text-xl">
                     <p>
-                      Er is 1 oneindig bewustzijn die alles ervaart. Dit heeft vele namen:
-                      God, Allah, het Universum, de Bron, Brahmana, Tao...
-                      Het is de schepper en de schepping. Het is alles wat is, was en zal zijn.
+                      Er is één werkelijkheid die alles omvat. Je kan het God noemen, het Universum,
+                      de Bron, het Geheel,... Het zijn woorden die allemaal proberen te wijzen naar hetzelfde.
                     </p>
                     <p>
-                      Wij zijn een deel van dat bewustzijn.
-                      We zijn oneindige wezens die een fysieke ervaring aangaan op deze planeet.
-                      We zijn hier om te groeien, te ervaren en te leren.
+                      Het is niet iets buiten ons, maar datgene waaruit alles ontstaat én waarin alles bestaat.
+                      Alles wat je ziet, voelt en ervaart is een expressie van dat ene geheel.
                     </p>
                     <p>
-                      Jouw reden om te leven is uniek. Het is jouw persoonlijke missie.
-                      Ontdek wat jou drijft. Wat jou gelukkig maakt.
-                      En leef daarnaar. We zijn hier met een reden.
+                      Jij bent een unieke vorm waarin God zich uitdrukt.
+                      Alles is 1 geheel.
+                      Vanuit dit perspectief is alles compleet. Er ontbreekt niets en alles is perfect.
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Evolutionaire Reis */}
+              {/* RELATIEVE ERVARING */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-blue-400/30 bg-black/40 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="leven_reis_god" sectionTitle="De Evolutionaire Reis van God" />
+                  <Comments postId="leven_mens" sectionTitle="De menselijke ervaring" />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-blue-400 mb-6 pr-14">
-                  De Evolutionaire Reis van God
+                  De Menselijke Ervaring
                 </h2>
 
                 <div className="max-w-3xl">
                   <div className="space-y-4 text-white text-lg md:text-xl">
                     <p>
-                      De evolutionaire reis die God onderneemt, begint met zichzelf te splitsen in
-                      talloze zielen die afzonderlijke ervaringen opdoen. Elke ziel kiest een pad
-                      van groei en bewustzijnsontwikkeling.
+                      Toch ervaren we het leven anders. We leven in een wereld van tegenstellingen:
+                      licht en donker, liefde en angst, succes en verlies.
                     </p>
                     <p>
-                      Een belangrijke stap is vergeten wie hij werkelijk is.
-                      Dit stelt de ziel in staat om volledig op te gaan in haar ervaringen
-                      zonder de beperkingen van haar ware aard.
+                      Hier ontstaat het gevoel van “ik” en “de ander”.
+                      We lijken afgescheiden, kwetsbaar en beperkt.
+                      Deze dualiteit maakt ervaring, groei en keuze mogelijk.
                     </p>
                     <p>
-                      Uiteindelijk zal elke ziel terugkeren tot een geheel, verrijkt met de lessen
-                      en ervaringen die zij heeft opgedaan.
+                      Door te vergeten dat we allemaal één zijn, kunnen we het leven volledig beleven — met alles wat daarbij hoort.
+                      Onze unieke menselijke ervaring is daarom een prachtig geschenk.
                     </p>
-
-                    <div className="mt-6">
-                      <Button
-                        onClick={() => setShowDialog(true)}
-                        className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                      >
-                        ✨ De wet van éénheid
-                      </Button>
-                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Energie */}
+              {/* BALANS */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-cyan-300/20 bg-gradient-to-r from-green-600/80 to-blue-600/80 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="leven_energie" sectionTitle="Alles is energie in beweging." />
+                  <Comments postId="leven_balans" sectionTitle="Balans in het Leven" />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
-                  Alles is energie in beweging.
+                  Balans in het Leven
                 </h2>
 
                 <div className="max-w-3xl">
                   <div className="space-y-4 text-white text-lg md:text-xl">
-                    <p className="hover:text-green-200 transition-colors duration-300">
-                      Er bestaan geen vaste vormen. Er zijn alleen dynamische energievelden die
-                      voortdurend trillen op een bepaalde frequentie.
-                    </p>
-
-                    <p className="hover:text-cyan-200 transition-colors duration-300">
-                      Alles in het universum is in beweging, van de kleinste deeltjes tot de grootste structuren.
-                      De frequentie van de beweging bepaalt hoe bewustzijn de realiteit ervaart.
-                      Een lage frequentie wordt ervaren als zwaarte, materieel, eindig,..
-                      Een hoge frequentie wordt ervaren als immaterieel, licht, oneindig,..
-                    </p>
-
                     <p>
-                      Het verhogen van frequentie wordt gezien als spirituele evolutie.
-                      Als we onze frequentie verhogen, openen we ons voor hogere niveaus van bewustzijn en ervaring.
-                      Dit stelt ons in staat om dieper contact te maken met ons ware zelf en met het universum.
+                      Ons leven speelt zich af tussen twee perspectieven:
+                      de absolute waarheid van eenheid, en de relatieve menselijke ervaring.
                     </p>
+                    <p>
+                      Aan de ene kant is er een diep weten dat alles verbonden is, 
+                      aan de andere kant is er het menselijke:
+                      emoties, keuzes, verantwoordelijkheid en soms ook strijd.
+                    </p>
+                    <p>
+                      De kunst van het leven ligt niet in het kiezen van één van beide,
+                      maar in het leren bewegen tussen die twee.
+                      Voel wat er te voelen valt, maar verlies jezelf er niet in.
+                      Handel bewust, zonder volledig gestuurd te worden door angst of controle.
+                    </p>
+                    <p>
+                      Balans is geen eindpunt dat je bereikt,
+                      maar een voortdurende beweging waarin je telkens opnieuw afstemt.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-                    <Button
-                      onClick={() => setShowDialog2(true)}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                    >
-                      ✨ Spirituele evolutie
-                    </Button>
+              {/* JOUW PAD */}
+              <div className="relative rounded-3xl p-8 md:p-12 border border-purple-400/30 bg-white/5 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
+                <div className="absolute top-5 right-5 z-20">
+                  <Comments postId="leven_pad" sectionTitle="Jouw Pad" />
+                </div>
+
+                <h2 className="text-4xl md:text-5xl font-black text-purple-400 mb-6 pr-14">
+                  Jouw Pad
+                </h2>
+
+                <div className="max-w-3xl">
+                  <div className="space-y-4 text-white text-lg md:text-xl">
+                    <p>
+                      Je bent hier niet zonder reden. Niet om perfect te zijn,
+                      maar om te ervaren, te groeien en te ontdekken wie je bent.
+                    </p>
+                    <p>
+                      Wat jou raakt, wat jou energie geeft en wat jou blijft roepen,
+                      wijst je richting. Dat is jouw pad.
+                    </p>
+                    <p>
+                      Het leven is prachtig:
+                      leef bewust, blijf in beweging en herinner af en toe dat we allemaal 1 zijn.
+                    </p>
                   </div>
                 </div>
               </div>
