@@ -92,7 +92,7 @@ const Liefde = () => {
                 <div className="max-w-3xl space-y-4 text-white text-lg md:text-xl">
                   <p className="hover:text-teal-100 transition-colors duration-300">
                     Jezus bracht het terug tot één duidelijke regel: 
-                    <strong>Hou van anderen zoals jezelf.</strong>
+                    <strong> Hou van anderen zoals jezelf.</strong>
                   </p>
                   <p className="hover:text-teal-100 transition-colors duration-300">
                     Dat klinkt eenvoudig, maar het raakt alles. 
