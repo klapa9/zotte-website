@@ -58,8 +58,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
               </p>
               <p className="hover:text-yellow-200 transition-colors duration-300">
                 <strong>Angst verdwijnt niet door het te ontwijken.</strong> Integendeel - hoe meer je het vermijdt,
-                hoe sterker het wordt. De enige manier om angst te overwinnen is er recht op af te bewegen,
-                zelfs als je trilt en zweet. De angst verdwijnt als je door de waas heen breekt.
+                hoe sterker het wordt. De enige manier om angst te overwinnen is er recht op af te bewegen.
               </p>
               <p className="hover:text-yellow-200 transition-colors duration-300">
                 <strong>Visualiseer je succes.</strong> Stel je voor dat je de angst hebt overwonnen.
@@ -155,28 +154,26 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
           content: (
             <>
               <p className="hover:text-purple-200 transition-colors duration-300">
-                <strong>Je leven is de spiegel van je onderbewustzijn.</strong>
+                <strong>Je leven is de spiegel van je onderbewustzijn. </strong>
                 Alles wat je ervaart - problemen, successen, relaties, gebeurtenissen -
                 is een reflectie van wat diep vanbinnen in je leeft.
               </p>
               <p className="hover:text-purple-200 transition-colors duration-300">
                 Wanneer je herhaaldelijk dezelfde problemen tegenkomt, kijk dan niet
-                naar buiten, maar naar binnen. <strong>Elk probleem kan je inwendig oplossen.</strong>
-                De oplossing zit nooit in de buitenwereld, maar in jouw bewustzijn.
+                naar buiten, maar naar binnen. <strong>Bijna elk probleem kan je inwendig oplossen. </strong>
               </p>
               <p className="hover:text-purple-200 transition-colors duration-300">
-                Dit is de meest krachtige kennis die je kunt bezitten. Je hoeft niet
-                te wachten op externe veranderingen. Verander je innerlijke wereld,
-                en de buitenwereld volgt automatisch.
+                Als je iets wilt bereiken en dit lukt niet hoef je niet te wachten op externe veranderingen. 
+                Verander je innerlijke wereld, je zal nieuwe mogelijkheden aantrekken en nieuwe oplossingen zien.
               </p>
               <p className="hover:text-purple-200 transition-colors duration-300">
-                Werk met je onderbewustzijn: visualisatie, affirmaties, meditatie.
-                Herprogrammeer de diepe lagen die je realiteit creëren.
-                De resultaten zullen je verbazen - het is bijna magisch.
+                Herprogrammeer je jezelf waar nodig. Begin met je gedachten.
+                Je acties en je gewoontes zullen vanzelf veranderen als je je gedachten verandert.
+                Hierdoor zullen de problemen die je ervaart verdwijnen.
               </p>
             </>
           ),
-          link: { to: "/weeszot", text: "Volg je enthousiasme →", color: "purple" }
+          link: { to: "/weeszot", text: "Hoe herprogrammeer je jezelf? →", color: "purple" }
         };
     }
   };
@@ -221,7 +218,7 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
   return (
     <div className={`relative bg-gradient-to-r ${getGradientColors()} rounded-3xl p-8 md:p-12 mb-12`}>
       <div className="absolute top-5 right-5 z-20">
-        <Comments postId={pageType} />
+        <Comments postId={pageType} sectionTitle={tipContent.title} />
       </div>
       <h2 className="text-3xl md:text-4xl font-black text-white mb-6 transform hover:scale-105 hover:rotate-2 transition-all duration-300 active:scale-95">
         {tipContent.title}

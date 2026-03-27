@@ -60,8 +60,11 @@ const WeesZot = () => {
                     </p>
                     <p>
                       Als je je enthousiasme volgt, open je de deur naar nieuwe mogelijkheden,
-                      onverwachte kansen, en magische ervaringen. Het is de sleutel tot een
-                      vervuld en betekenisvol leven.
+                      onverwachte kansen en diepere vervulling. Je doet dingen die je leuk vindt, en dit brengt je in contact met gelijkgestemde mensen en situaties.
+                    </p>
+                    <p>
+                      Je leert je zelf kennen en autheniciteit te omarmen. Je zult merken dat je meer in lijn leeft met wie je werkelijk bent,
+                      en dat je een diepere connectie ervaart met anderen en met het leven zelf.
                     </p>
 
                     <Button
@@ -88,15 +91,18 @@ const WeesZot = () => {
                   <div className="space-y-4 text-white text-lg md:text-xl">
                     <p className="hover:text-indigo-200 transition-colors duration-300">
                       Om je eigen realiteit te creëren, begin je met het afstemmen van je innerlijke staat op wat je wilt ervaren.
-                      Denk na welke persoon je wilt zijn en belichaam die persoon nu al.
-                      Fake it until you make it.
+                      Beslis wat je wilt ervaren op een goed moment in je leven, zonder stress, angst of woede.
+                      Schrijf dit op en onthoud dit als je een moeilijker moment hebt in je leven.
                     </p>
                     <p className="hover:text-purple-200 transition-colors duration-300">
-                      Er zijn veel zaken die je verhinderen om je realiteit te creëren, zoals angst en afleiding.
-                      Veel obstakels komen als korte termijn plezier of comfort, maar zijn op lange termijn niet in lijn met je groei.
+                      Om je ervaring te bereiken begin je met deze persoon nu al te belichamen.
+                      Heb vertrouwen dat je alles kan bereiken wat je wilt bereiken, als je dit echt wilt.
+                      Dus als je een gelukkig leven wilt, leef dan nu al alsof je een gelukkig leven hebt.
+                      Als je een succesvol bedrijf wilt, gedraag je dan nu al als een succesvolle ondernemer.
                     </p>
                     <p className="hover:text-pink-200 transition-colors duration-300">
-                      Soms moet je ook zaken loslaten die je niet meer dienen, zelfs als ze ooit belangrijk waren.
+                      Er zijn veel zaken die je verhinderen om je realiteit te creëren, zoals angst en afleiding.
+                      Vaak moet je de zaken loslaten die je niet meer dienen, zelfs als ze ooit belangrijk waren.
                       Dit kan een deel van je identiteit zijn, een gewoonte, een baan, of een overtuiging.
                     </p>
 
@@ -149,19 +155,19 @@ const WeesZot = () => {
           <div className="space-y-6 text-lg">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30">
               <h3 className="text-2xl font-black text-cyan-300 mb-3">
-                Denk goed na wat je wilt bereiken.
+                Focus!
               </h3>
               <p>
-                Zorg ervoor dat dit in lijn is met je diepste verlangens en waarden.
-                Als je een duidelijk beeld hebt van wat je wilt, is het makkelijker om gefocust te blijven.
+                Wil je een nieuw leven creëren? Focus op wat je wilt en ga er volledig voor!
               </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30">
               <h3 className="text-2xl font-black text-cyan-300 mb-3">
-                Kies een goed doel!
+                Kies een goed doel.
               </h3>
               <p>
+                Kies je doel op een goed moment in je leven en schrijf dit op.
                 Je keuzes moeten gebaseerd zijn op liefde en niet op angst.
                 Denk vooral na over wat je aan anderen kan geven, in plaats van wat je zelf kan krijgen.
                 Connectie met anderen is vaak super belangrijk. Denk na met wie je dit doel wil bereiken.
@@ -177,6 +183,11 @@ const WeesZot = () => {
                 Je hoeft niet te wachten op toestemming of goedkeuring.
                 Zolang je niemand slecht behandelt en gelooft in jezelf, kan je niet fout gaan.
               </p>
+              <p>
+                Als je merkt dat je doel niet meer in lijn is met wie je bent, wees dan niet bang om je doel aan te passen.
+                Je hoeft niet vast te houden aan een doel dat je niet meer dient, zelfs als je hier al veel tijd en energie in hebt gestoken.
+                Volg je enthousiasme en pas je doel aan als dat nodig is.
+              </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30">
@@ -187,6 +198,7 @@ const WeesZot = () => {
                 Je mag een duidelijk doel hebben,
                 maar geen gehechtheid aan hoe of wanneer iets verschijnt.
                 Vertrouw dat het leven je altijd precies brengt wat het meest in lijn is met je groei.
+                Je krijgt misschien niet precies wat je wilt, maar je krijgt altijd wat je nodig hebt.
               </p>
             </div>
 
@@ -220,54 +232,46 @@ const WeesZot = () => {
           <div className="space-y-6 text-lg">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30">
               <h3 className="text-2xl font-black text-cyan-300 mb-3">
-                Je bent een oneindige ziel.
+                Je ware ziel communiceert met jou via enthousiasme
               </h3>
               <p>
-                Je bent een oneindige ziel die jouw bewustzijn ervaart via je menselijk lichaam.
-                Jouw ziel kiest specifieke levensomstandigheden om bepaalde lessen te leren
-                en spiritueel te groeien.
+                Deze communicatie is subtiel en kan gemakkelijk worden overschaduwd door angst, twijfel of sociale conditionering.
+                Maar je leert om deze signalen te herkennen door te oefenen in het volgen van je enthousiasme, zelfs als het eng is.
               </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30">
               <h3 className="text-2xl font-black text-blue-300 mb-3">
-                Communicatie
+                Is enthousiasme altijd goed voor jou?
               </h3>
               <p className="mb-4">
-                Je ziel communiceert met jou via gevoelens.
-                Enthousiasme is een signaal dat je op het juiste pad zit.
-              </p>
-
-              <div className="mb-4 pl-4 border-l-4 border-teal-400">
-                <h4 className="text-xl font-bold text-teal-300 mb-2">
-                  Hoe kan je zeker zijn?
-                </h4>
-                <p className="mb-2">
-                  Als je enthousiasme gebaseerd is op angst, onzekerheid of
-                  sociale druk, is het waarschijnlijk niet de stem van je ziel.
-                  Echte enthousiasme voelt licht, vreugdevol en opwindend,
-                  zelfs als het eng is.
-                </p>
-                <p className="mb-2">
-                  Het is ook een kwestie van vertrouwen hebben.
-                  Door te oefenen in het volgen van je enthousiasme,
-                  ontwikkel je een dieper vertrouwen in je intuïtie.
-                  Na verloop van tijd wordt het duidelijker welke keuzes
-                  in lijn zijn met je ziel.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30">
-              <h3 className="text-2xl font-black text-cyan-300 mb-3">
-                Kiest je ziel altijd het beste?
-              </h3>
-              <p>
                 Je ziel streeft ernaar om te groeien en te evolueren,
                 maar dat betekent niet altijd dat het pad gemakkelijk is.
                 Soms kiest je ziel uitdagingen die pijnlijk lijken,
                 maar die uiteindelijk leiden tot diepere inzichten en groei.
               </p>
+              <p className="mb-4">
+                Het is ook een kwestie van vertrouwen hebben.
+                Door te oefenen in het volgen van je enthousiasme,
+                ontwikkel je een dieper vertrouwen in je intuïtie.
+                Na verloop van tijd wordt het duidelijker welke keuzes
+                in lijn zijn met je ziel.
+              </p>
+
+              <div className="mb-4 pl-4 border-l-4 border-teal-400">
+                <h4 className="text-xl font-bold text-teal-300 mb-2">
+                  Hoe kan je zeker zijn dat je niet goed bezig bent?
+                </h4>
+                <p className="mb-2">
+                  Als je enthousiasme gebaseerd is op angst, onzekerheid of
+                  sociale druk, is het waarschijnlijk niet de stem van je ziel.
+                  Echt enthousiasme voelt licht, vreugdevol en opwindend.
+                </p>
+                <p className="mb-2">
+                  Ook als je anderen kwetst of jezelf kwetst, is het waarschijnlijk niet de stem van je ziel.
+                  Je ziel streeft ernaar om te groeien en te evolueren, maar niet ten koste van anderen of jezelf.
+                </p>
+              </div>
             </div>
 
             <div className="relative text-center pt-4">

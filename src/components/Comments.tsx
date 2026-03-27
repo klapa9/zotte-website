@@ -277,15 +277,27 @@ export default function Comments({ postId, sectionTitle }: CommentsProps) {
 
   const storageKey = useMemo(() => `likedComments:${postId}`, [postId]);
 
-  const fetchComments = async () => {
+const fetchComments = async () => {
+  try {
     const res = await fetch(`${API_URL}/comments?postId=${postId}`, {
       credentials: "include",
       cache: "no-store",
     });
 
     const data = await res.json();
-    setComments(data);
-  };
+
+    if (!res.ok) {
+      console.error("Comments ophalen mislukt:", data);
+      setComments([]);
+      return;
+    }
+
+    setComments(Array.isArray(data) ? data : []);
+  } catch (error) {
+    console.error("Netwerkfout bij comments ophalen:", error);
+    setComments([]);
+  }
+};
 
   useEffect(() => {
     fetchComments();

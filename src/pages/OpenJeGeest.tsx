@@ -150,44 +150,13 @@ const OpenJeGeest = () => {
                 </div>
               </div>
 
-              <div className="relative bg-white/5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-purple-400/30">
-                <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="open-geest_Schepper" sectionTitle="De schepper van je eigen werkelijkheid" />
-                </div>
-
-                <h2 className="text-4xl md:text-5xl font-black text-purple-400 mb-6 pr-14">
-                  Je bent de schepper van je eigen werkelijkheid
-                </h2>
-
-                <div className="max-w-3xl">
-                  <div className="space-y-4 text-white text-lg md:text-xl">
-                    <p>
-                      Jij bepaalt waar je je op focust.
-                      Je gedachten creëren je ervaring.
-                      Wat jij gelooft, wordt jouw waarheid.
-                    </p>
-                    <p>
-                      Dus als je je geest opent voor nieuwe ideëen,
-                      als je bereid bent om anders te denken,
-                      dan verander je niet alleen jezelf,
-                      maar ook de wereld om je heen.
-                    </p>
-                    <p>
-                      Vergeet dus de beperkingen die je jezelf hebt opgelegd.
-                      Jij bent geen slachtoffer van de realiteit.
-                      Jij bent de schepper van je eigen werkelijkheid.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
               <div className="relative bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl p-8 md:p-12 transform hover:scale-[1.02] transition-all duration-500">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="open-geest_geloof" sectionTitle="Je geloof bepaalt je limieten." />
+                  <Comments postId="open-geest_schepper" sectionTitle="De schepper van je eigen werkelijkheid" />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-purple-600 mb-6 pr-14">
-                  Je geloof bepaalt je limieten.
+                  Je bent de schepper van je eigen werkelijkheid
                 </h2>
 
                 <div className="max-w-3xl">
@@ -204,9 +173,11 @@ const OpenJeGeest = () => {
                     <p>
                       Dat is gemakkelijker gezegd dan gedaan, want je moet het{' '}
                       <strong>echt geloven!</strong>
-                      {' '}Daarom heb je een open geest nodig. Om je oude
-                      overtuigingen los te laten en nieuwe mogelijkheden te
-                      omarmen.
+                      {' '}Vergeet dus de beperkingen die je jezelf hebt opgelegd.
+                      
+                      Jij bent geen slachtoffer van de realiteit.
+                      {' '}
+                      <strong>Jij bent de schepper van je eigen werkelijkheid.</strong>{' '}
                     </p>
                   </div>
                 </div>
