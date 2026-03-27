@@ -236,7 +236,7 @@ const WeesZot = () => {
               </h3>
               <p>
                 Deze communicatie is subtiel en kan gemakkelijk worden overschaduwd door angst, twijfel of sociale conditionering.
-                Maar je leert om deze signalen te herkennen door te oefenen in het volgen van je enthousiasme, zelfs als het eng is.
+                Maar je leert om deze signalen te herkennen door te oefenen in het volgen van je enthousiasme.
               </p>
             </div>
 
