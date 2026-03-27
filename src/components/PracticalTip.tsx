@@ -101,20 +101,19 @@ const PracticalTip = ({ pageType }: PracticalTipProps) => {
           content: (
             <>
               <p className="hover:text-green-200 transition-colors duration-300">
-                <strong>Vergeef de fouten van anderen en jezelf. </strong>
-                Door te vergeven bevrijd je jezelf van wrok en negativiteit.
+                <strong>Kies vandaag één daad van liefde. </strong>
+                Maak het concreet.
               </p>
               <p className="hover:text-green-200 transition-colors duration-300">
-                <strong>Je bent het waard om geliefd te worden. </strong>Je kunt anderen niet echt liefhebben
-                als je niet eerst van jezelf houdt.                
+                Luister aandachtig naar iemand, help zonder gevraagd te worden,
+                of geef een compliment.
               </p>
               <p className="hover:text-green-200 transition-colors duration-300">
-                <strong>Hou van anderen als jezelf! </strong>Behandel alle anderen met hetzelfde respect,
-                geduld en vriendelijkheid als je voor jezelf zou willen.
+                <strong>Verwacht niets terug. </strong>
+                Doe het gewoon omdat het goed is.
               </p>
               <p className="hover:text-green-200 transition-colors duration-300">
-                <strong>Wat je geeft, krijg je terug. </strong>
-                Wanneer je liefdevol bent naar anderen, open je jezelf om liefde te ontvangen.
+                Voel dan wat dit doet met jezelf en de ander.
               </p>
             </>
           ),

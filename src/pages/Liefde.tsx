@@ -9,12 +9,13 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Button } from '@/components/ui/button';
 
 const Liefde = () => {
-  const [showDialog, setShowDialog] = useState(false);
+  const [showDialog1, setShowDialog1] = useState(false);
   const [showDialog2, setShowDialog2] = useState(false);
+  const [showDialog3, setShowDialog3] = useState(false);
 
   useSeoMeta({
     title: 'Liefde - De Kracht van het Leven',
-    description: 'Hou van anderen als jezelf',
+    description: 'Heb anderen lief zoals jezelf',
   });
 
   return (
@@ -24,7 +25,7 @@ const Liefde = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-green-900 via-teal-800 to-blue-900 overflow-hidden relative">
         {/* Energy particles */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 pointer-events-none">
           {[...Array(100)].map((_, i) => (
             <div
               key={i}
@@ -40,7 +41,7 @@ const Liefde = () => {
         </div>
 
         {/* Energy waves */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 pointer-events-none">
           {[...Array(5)].map((_, i) => (
             <div
               key={i}
@@ -57,10 +58,17 @@ const Liefde = () => {
           ))}
         </div>
 
+        {/* Soft floating glow orbs */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-20 left-10 w-40 h-40 bg-cyan-400/10 blur-3xl rounded-full animate-floatSlow" />
+          <div className="absolute bottom-24 right-10 w-56 h-56 bg-emerald-300/10 blur-3xl rounded-full animate-floatMedium" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-blue-400/10 blur-3xl rounded-full animate-floatSlow" />
+        </div>
+
         <div className="relative z-10 min-h-screen flex flex-col">
           {/* Header */}
           <div className="py-16 px-4 text-center">
-            <h1 className="text-8xl md:text-9xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-teal-500 to-blue-600">
+            <h1 className="text-8xl md:text-9xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-teal-500 to-blue-600 drop-shadow-[0_0_25px_rgba(45,212,191,0.25)]">
               Liefde
             </h1>
             <p className="text-2xl md:text-3xl text-white font-bold">
@@ -68,79 +76,104 @@ const Liefde = () => {
             </p>
           </div>
 
-          {/* Main Content */}
           <div className="flex-1 px-4 pb-16">
             <div className="max-w-5xl mx-auto space-y-16">
-              {/* Train jezelf */}
-              <div className="relative rounded-3xl p-8 md:p-12 border border-teal-300/20 bg-gradient-to-r from-green-400/80 to-blue-400/80 backdrop-blur-md shadow-[0_0_40px_rgba(45,212,191,0.14)] transform hover:scale-[1.02] transition-all duration-500">
+              {/* BLOK 1 */}
+              <div className="relative rounded-3xl p-8 md:p-12 border border-teal-300/20 bg-gradient-to-r from-green-400/80 to-blue-400/80 backdrop-blur-md shadow-[0_0_40px_rgba(45,212,191,0.14)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
+                <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="liefde_train_jezelf" sectionTitle="Train de liefde in jezelf." />
+                  <Comments postId="liefde_boodschap_jezus" sectionTitle="De boodschap van Jezus" />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-purple-700 mb-6 pr-14">
-                  Train jezelf
+                  De boodschap van Jezus
                 </h2>
 
-                <div className="max-w-3xl">
-                  <div className="space-y-4 text-white text-lg md:text-xl">
-                    <p className="hover:text-teal-200 transition-colors duration-300">
-                      Je kunt jezelf trainen om meer liefde te cultiveren
-                      door dagelijks bewust aandacht te besteden aan je eigen gedachten.
-                    </p>
-                    <p className="hover:text-teal-200 transition-colors duration-300">
-                      De eerste stap is bewustwording. Luister naar je emoties,
-                      de negatieve emoties zeggen je dat je gedachtes hebt die niet in lijn zijn met liefde.
-                      Vraag jezelf af welke gedachten deze emoties veroorzaken.
-                    </p>
-                    <p className="hover:text-teal-200 transition-colors duration-300">
-                      Let dan op jezelf gedurende de dag en merk op wanneer je deze "negatieve" gedachten hebt.
-                      Vervang deze gedachten bewust door liefdevolle en vergevende gedachten.
-                    </p>
-
-                    <Button
-                      onClick={() => setShowDialog(true)}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                    >
-                      ✨ Positieve gedachten!
-                    </Button>
-                  </div>
+                <div className="max-w-3xl space-y-4 text-white text-lg md:text-xl">
+                  <p className="hover:text-teal-100 transition-colors duration-300">
+                    Jezus bracht het terug tot één duidelijke regel: 
+                    <strong>Hou van anderen zoals jezelf.</strong>
+                  </p>
+                  <p className="hover:text-teal-100 transition-colors duration-300">
+                    Dat klinkt eenvoudig, maar het raakt alles. 
+                    Het begint bij jezelf: als je niet van jezelf houdt, hoe kan je dan van anderen houden?
+                    En het strekt zich uit tot iedereen: vrienden, familie, vreemden, zelfs je vijanden.
+                  </p>
+                  <Button
+                    onClick={() => setShowDialog1(true)}
+                    className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(34,211,238,0.45)]"
+                  >
+                    ✨ Dankbaarheid en vergeving
+                  </Button>
                 </div>
               </div>
 
-              {/* Heb anderen lief */}
-              <div className="relative rounded-3xl p-8 md:p-12 border border-blue-300/20 bg-gradient-to-r from-blue-600/80 to-indigo-600/80 backdrop-blur-md shadow-[0_0_40px_rgba(59,130,246,0.12)] transform hover:scale-[1.02] transition-all duration-500">
+              {/* BLOK 2 */}
+              <div className="relative rounded-3xl p-8 md:p-12 border border-cyan-300/20 bg-gradient-to-r from-cyan-500/80 to-blue-500/80 backdrop-blur-md shadow-[0_0_40px_rgba(34,211,238,0.14)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
+                <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="liefde_heb_anderen_lief"  sectionTitle="Heb anderen lief."/>
+                  <Comments postId="liefde_in_jezelf" sectionTitle="Liefde begint in jezelf" />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
-                  Heb anderen lief zoals jezelf.
+                  Liefde begint bij jezelf
                 </h2>
 
-                <div className="max-w-3xl">
-                  <div className="space-y-4 text-white text-lg md:text-xl">
-                    <p>
-                      Als aan Jezus Christus werd gevraagd wat de hoogste wet was, antwoordde hij met het gebod:
-                      "Heb anderen lief zoals jezelf".
-                    </p>
-                    <p>
-                      Deze eenvoudige maar diepgaande uitspraak vat de essentie van liefde samen.
-                      Het betekent ten eerste dat we van onszelf moeten houden en ons eigen welzijn moeten koesteren.
-                      We kunnen anderen niet echt liefhebben als we niet eerst van onszelf houden.
-                    </p>
-                    <p>
-                      Het betekent ook dat we alle anderen behandelen met dezelfde zorg, respect en compassie als we voor onszelf wensen.
-                      Het betekent het erkennen van de goddelijkheid in ieder leven,
-                      omdat we allemaal deel uitmaken van hetzelfde universele bewustzijn.
-                    </p>
+                <div className="max-w-3xl space-y-4 text-white text-lg md:text-xl">
+                  <p className="hover:text-cyan-100 transition-colors duration-300">
+                    Alles begint met hoe je naar jezelf kijkt.
+                    Je gedachten en overtuigingen bepalen hoe je je voelt,
+                    en dat bepaalt weer hoe je reageert naar anderen.
+                  </p>
+                  <p className="hover:text-cyan-100 transition-colors duration-300">
+                    Als je jezelf constant bekritiseert of onder druk zet,
+                    ga je sneller gespannen of negatief reageren.
+                    Door meer bewust te worden van wat er in je hoofd en hart gebeurt,
+                    zal je meer liefde kunnen voelen en uitstralen.
+                  </p>
 
-                    <Button
-                      onClick={() => setShowDialog2(true)}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                    >
-                      ✨ Dienstbaarheid
-                    </Button>
-                  </div>
+                  <Button
+                    onClick={() => setShowDialog2(true)}
+                    className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(34,211,238,0.45)]"
+                  >
+                    ✨ Emoties als signalen
+                  </Button>
+                </div>
+              </div>
+
+              {/* BLOK 3 */}
+              <div className="relative rounded-3xl p-8 md:p-12 border border-blue-300/20 bg-gradient-to-r from-blue-600/80 to-indigo-600/80 backdrop-blur-md shadow-[0_0_40px_rgba(59,130,246,0.12)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
+                <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <div className="absolute top-5 right-5 z-20">
+                  <Comments postId="liefde_anderen" sectionTitle="Heb anderen lief" />
+                </div>
+
+                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
+                  Heb anderen lief
+                </h2>
+
+                <div className="max-w-3xl space-y-4 text-white text-lg md:text-xl">
+                  <p className="hover:text-blue-100 transition-colors duration-300">
+                    Iedereen wil respect, begrip en vriendelijkheid.
+                    Door dat te geven, maak je een groot verschil.
+                  </p>
+                  <p className="hover:text-blue-100 transition-colors duration-300">
+                    Liefde zit vaak in kleine dingen:
+                    luisteren, geduld hebben, iemand helpen,
+                    of gewoon vriendelijk blijven wanneer het moeilijk is.
+                  </p>
+                  <p className="hover:text-blue-100 transition-colors duration-300">
+                    Tegelijk betekent liefde ook dat je de ander niet probeert te controleren.
+                    Je kan iemand niet dwingen om jou lief te hebben.
+                    Soms hoort loslaten daar ook bij.
+                  </p>
+
+                  <Button
+                    onClick={() => setShowDialog3(true)}
+                    className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(34,211,238,0.45)]"
+                  >
+                    ✨ Dienstbaarheid
+                  </Button>
                 </div>
               </div>
 
@@ -148,15 +181,16 @@ const Liefde = () => {
 
               {/* CTA */}
               <div className="relative text-center py-12">
-                <div className="max-w-4xl mx-auto rounded-3xl p-8 md:p-12 border border-teal-300/20 bg-gradient-to-r from-emerald-500/20 via-teal-500/15 to-blue-500/10 backdrop-blur-md shadow-[0_0_50px_rgba(20,184,166,0.12)]">
-                  <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-                    Liefde is een keuze
+                <div className="max-w-4xl mx-auto rounded-3xl p-8 md:p-12 border border-teal-300/20 bg-gradient-to-r from-emerald-500/20 via-teal-500/15 to-blue-500/10 backdrop-blur-md shadow-[0_0_50px_rgba(20,184,166,0.12)] transform hover:scale-[1.01] transition-all duration-500">
+                  <div className="absolute inset-0 rounded-3xl bg-white/5 animate-[pulseGlow_5s_ease-in-out_infinite] pointer-events-none" />
+                  <h2 className="text-4xl md:text-5xl font-black text-white mb-6 relative z-10">
+                    Liefde is alles
                   </h2>
-                  <p className="text-white text-lg md:text-xl mb-8">
-                    Voor jezelf, voor anderen, voor het leven.
+                  <p className="text-white text-lg md:text-xl mb-8 relative z-10">
+                    Niet één keer, maar elke dag opnieuw.
                   </p>
-                  <p className="text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-cyan-300">
-                    Oefen haar elke dag.
+                  <p className="text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-cyan-300 relative z-10">
+                    Hou van anderen zoals jezelf.
                   </p>
                 </div>
               </div>
@@ -176,90 +210,130 @@ const Liefde = () => {
             0% { transform: scale(0.8); opacity: 0.3; }
             100% { transform: scale(1.2); opacity: 0; }
           }
+
+          @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(-18px) translateX(10px); }
+          }
+
+          @keyframes floatMedium {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(16px) translateX(-12px); }
+          }
+
+          @keyframes pulseGlow {
+            0%, 100% { opacity: 0.08; }
+            50% { opacity: 0.18; }
+          }
+
+          .animate-floatSlow {
+            animation: floatSlow 10s ease-in-out infinite;
+          }
+
+          .animate-floatMedium {
+            animation: floatMedium 8s ease-in-out infinite;
+          }
         `}</style>
       </div>
 
-      {/* Zelfliefde dialog */}
-      <Dialog open={showDialog} onOpenChange={setShowDialog}>
-        <DialogContent className="z-[70] max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
+      {/* Dialog 1 */}
+      <Dialog open={showDialog1} onOpenChange={setShowDialog1}>
+        <DialogContent className="z-[70] max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400 shadow-[0_0_40px_rgba(34,211,238,0.25)]">
           <DialogHeader>
-            <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
-              Zelfliefde
+            <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-2">
+              Dankbaarheid en vergeving
             </DialogTitle>
           </DialogHeader>
 
+          <p className="text-cyan-100/80 mb-6 text-base md:text-lg">
+            Deze 2 uitdrukkingen van liefde zijn de gemakkelijkste weg naar innerlijke rust.
+          </p>
+
           <div className="space-y-6 text-lg">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30">
-              <h3 className="text-2xl font-black text-blue-300 mb-3">
-                Emoties zijn de waarheid van onze gedachten
-              </h3>
-              <p className="mb-4">
-                Emoties zijn krachtige signalen die ons vertellen wat we denken en geloven.
-                Wanneer we een liefdevol beeld hebben over de wereld, ervaren we positieve emoties zoals vreugde, vrede en dankbaarheid.
-                Aan de andere kant, wanneer we op een foute manier denken, ervaren we emoties zoals angst, woede en verdriet.
-              </p>
-              <p className="mb-4">
-                Daarom is het belangrijk om bewust te zijn van onze gedachten en deze te sturen in de richting van liefde en positiviteit.
-                Door onze gedachten te veranderen, denk je meer in lijn met de werkelijkheid van liefde en ervaar je meer positieve emoties.
-                De 2 belangrijkste gedachten die je kan cultiveren zijn dankbaarheid en vergiffenis.
+              <h2 className="text-2xl font-black text-blue-300 mb-3">Dankbaarheid</h2>
+              <p>
+                Dankbaarheid helpt je om te zien wat er goed gaat in je leven.
+                Het richt je aandacht op wat je hebt in plaats van wat je mist.
+                Door regelmatig dankbaar te zijn, voel je meer liefde en tevredenheid.
               </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30">
-              <h3 className="text-2xl font-black text-blue-300 mb-3">
-                Dankbaarheid
-              </h3>
-              <p className="mb-4">
-                Dankbaarheid is de emotie die ons verbindt met de overvloed van het universum.
-                Dankbaarheid opent ons hart en trekt meer positieve ervaringen aan.
-              </p>
+              <h2 className="text-2xl font-black text-blue-300 mb-3">Vergeving</h2>
               <p>
-                Door dankbaarheid te cultiveren, erkennen we de zegeningen in ons leven,
-                hoe klein ook, en versterken we onze verbinding met liefde en vreugde.
-              </p>
-              <p>
-                Dankbaarheid helpt ook om onze zelfwaarde te verhogen,
-                omdat we ons bewust worden van de waarde die we in ons leven hebben.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30">
-              <h3 className="text-2xl font-black text-blue-300 mb-3">
-                Vergiffenis
-              </h3>
-              <p className="mb-4">
-                Vergiffenis bevrijdt ons van de last van wrok en negatieve emoties die ons innerlijke vrede ontnemen.
-                Het stelt ons in staat om verder te gaan en ruimte te maken voor liefde en positiviteit in ons leven.
-              </p>
-              <p>
-                Vergiffenis betekent niet dat we de fouten van anderen goedkeuren.
-                Het is proberen te begrijpen dat iedereen fouten maakt en dat we allemaal leren en groeien.
-                Dat jij ook fouten hebt gemaakt en dat je jezelf moet vergeven om verder te kunnen gaan.
-              </p>
-              <p>
-                Door vergiffenis te cultiveren kies je ervoor om los te laten wat je pijn doet,
-                zodat je jezelf geneest en verder kan gaan met je leven.
+                Vergeving helpt je om los te laten wat blijft wegen.
+                Het betekent niet dat je het gedrag van de ander goedkeurt,
+                maar dat je ervoor kiest om het niet langer met je mee te dragen.
+                Door te vergeven, bevrijd je jezelf van wrok en pijn,
+                en maak je ruimte voor meer liefde in je hart.
               </p>
             </div>
 
             <div className="relative text-center pt-4">
               <Button
-                onClick={() => setShowDialog(false)}
-                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                onClick={() => setShowDialog1(false)}
+                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(34,211,238,0.45)]"
               >
                 Sluiten
               </Button>
               <div className="flex justify-end mb-4 mt-4">
-                <Comments postId="liefde_zelfliefde_dialog" sectionTitle="Zelfliefde" />
+                <Comments postId="liefde_dankbaarheid_vergeving_dialog" sectionTitle="Dankbaarheid en vergeving" />
               </div>
             </div>
           </div>
         </DialogContent>
       </Dialog>
 
-      {/* Dienstbaarheid dialog */}
+      {/* Dialog 2 */}
       <Dialog open={showDialog2} onOpenChange={setShowDialog2}>
-        <DialogContent className="z-[70] max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400">
+        <DialogContent className="z-[70] max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400 shadow-[0_0_40px_rgba(34,211,238,0.25)]">
+          <DialogHeader>
+            <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
+              Emoties en gedachten
+            </DialogTitle>
+          </DialogHeader>
+
+          <div className="space-y-6 text-lg">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30">
+              <p>
+                Emoties zijn signalen.
+                Ze tonen hoe het echt met je gaat.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30">
+              <p>
+                Luister naar je emoties, ook de moeilijke. Ze geven je waardevolle informatie over wat er in je leeft.
+                Door ze te herkennen, leer je jezelf beter kennen.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30">
+              <p>
+                Vaak worden emoties veroorzaakt door gedachten die je hebt over jezelf of anderen.
+                Door bewust te worden van deze gedachten, kan je ze uitdagen en veranderen, waardoor je emoties ook kunnen veranderen.
+              </p>
+            </div>
+
+            <div className="relative text-center pt-4">
+              <Button
+                onClick={() => setShowDialog2(false)}
+                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(34,211,238,0.45)]"
+              >
+                Sluiten
+              </Button>
+              <div className="flex justify-end mb-4 mt-4">
+                <Comments postId="liefde_emoties_gedachten_dialog" sectionTitle="Emoties en gedachten" />
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Dialog 3 */}
+      <Dialog open={showDialog3} onOpenChange={setShowDialog3}>
+        <DialogContent className="z-[70] max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-cyan-900 to-blue-900 text-white border-2 border-cyan-400 shadow-[0_0_40px_rgba(34,211,238,0.25)]">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-black text-cyan-400 mb-4">
               Dienstbaarheid
@@ -268,71 +342,41 @@ const Liefde = () => {
 
           <div className="space-y-6 text-lg">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30">
-              <h3 className="text-2xl font-black text-blue-300 mb-3">
-                Karma
-              </h3>
-              <p className="mb-4">
-                Karma is de universele wet van oorzaak en gevolg.
-                Elke actie die je onderneemt, elke gedachte die je denkt,
-                zendt energie uit die uiteindelijk naar je terugkeert.
-              </p>
               <p>
-                Daarom is belangrijk om bewust te zijn van onze intenties en acties.
-                Wat we in de wereld zetten, zal uiteindelijk onze eigen realiteit vormen.
-              </p>
-              <p>
-                Door liefdevolle daden te verrichten, zoals vriendelijkheid, mededogen en hulp aan anderen,
-                creëren we een positieve karmische cyclus die ons helpt om meer liefde en geluk in ons leven aan te trekken.
-              </p>
-              <p>
-                Dit is niet altijd onmiddellijk zichtbaar, maar op de lange termijn
-                zal de energie die je hebt gecreëerd, zich manifesteren in je leven.
+                Wat je geeft aan anderen, komt altijd terug. Je weet nooit precies hoe of wanneer.
+                Door te helpen en vriendelijk te zijn,
+                maak je niet alleen de wereld beter,
+                maar ook je eigen leven.
               </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30">
-              <h3 className="text-2xl font-black text-blue-300 mb-3">
-                Dienstbaarheid
-              </h3>
-              <p className="mb-4">
-                De manier om een positieve karmische cyclus te creëren is door dienstbaarheid aan anderen.
-                Door anderen te helpen en bij te dragen aan hun welzijn,
-                openen we ons hart en versterken we onze verbinding met liefde.
-              </p>
               <p>
-                Als je intentie is om anderen te dienen zonder iets terug te verwachten,
-                zul je merken dat liefde en dankbaarheid vanzelf naar je toe komen.
-              </p>
-              <p>
-                Groei hierin en probeer je tijd en energie te besteden aan het dienen van anderen.
-                Op die manier ervaar je de ware kracht van liefde in actie.
+                Door mensen kwaad te doen, beschadig je niet alleen hen, maar ook jezelf.
+                Vaak zelfs meer dan je denkt.
               </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30">
-              <h3 className="text-2xl font-black text-blue-300 mb-3">
-                Vrije wil
-              </h3>
-              <p className="mb-4">
-                Liefde kan niet worden afgedwongen of opgelegd.
-                Het moet vrijelijk worden gegeven en ontvangen.
-                Wanneer we liefde proberen te forceren, creëren we weerstand en blokkades.
-              </p>
               <p>
-                Echte liefde komt voort uit een plaats van vrijheid en keuze.
-                Het is belangrijk om de vrije wil van anderen te respecteren
-                en liefde te geven zonder verwachtingen of voorwaarden.
+                Respecteer ook de vrijheid van anderen.
+                Liefde kan je niet afdwingen.
+                Soms is loslaten de meest eerlijke vorm van liefde.
               </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30">
               <p>
-                Hoe pijnlijk het ook kan zijn, soms is de beste manier om liefde te tonen
-                door los te laten en de ander de ruimte te geven om hun eigen pad te volgen.
+                Dienstbaarheid is een van de mooiste manieren om liefde te uiten.
+                Het betekent dat je bereid bent om iets te geven zonder iets terug te verwachten.
+                Het is een manier om liefde te laten stromen, zonder voorwaarden.
               </p>
             </div>
 
             <div className="relative text-center pt-4">
               <Button
-                onClick={() => setShowDialog2(false)}
-                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                onClick={() => setShowDialog3(false)}
+                className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(34,211,238,0.45)]"
               >
                 Sluiten
               </Button>
