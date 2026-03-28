@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { ideas } from '../data/ideas';
+import CosmicBackground from '@/components/CosmicBackground';
 
 const OpenJeGeest = () => {
   const [selectedIdea, setSelectedIdea] = useState<number | null>(null);
@@ -27,40 +28,7 @@ const OpenJeGeest = () => {
     description: 'Alles is veel zotter dan je denkt!',
   });
 
-  const [stars, setStars] = useState(
-    Array.from({ length: 40 }, () => ({
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
-      speedX: Math.random(),
-      speedY: Math.random(),
-    }))
-  );
-
-  useEffect(() => {
-    let frameId: number;
-
-    const animate = () => {
-      setStars((prev) =>
-        prev.map((star) => {
-          let newX = star.x + star.speedX;
-          let newY = star.y + star.speedY;
-
-          if (newX < 0) newX = window.innerWidth;
-          if (newX > window.innerWidth) newX = 0;
-          if (newY < 0) newY = window.innerHeight;
-          if (newY > window.innerHeight) newY = 0;
-
-          return { ...star, x: newX, y: newY };
-        })
-      );
-
-      frameId = requestAnimationFrame(animate);
-    };
-
-    frameId = requestAnimationFrame(animate);
-
-    return () => cancelAnimationFrame(frameId);
-  }, []);
+  
 
   return (
     <>
@@ -69,18 +37,7 @@ const OpenJeGeest = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-800 to-pink-900 overflow-hidden relative">
         <div className="fixed inset-0 pointer-events-none z-0">
-          {stars.map((star, i) => (
-            <div
-              key={i}
-              className="absolute bg-white rounded-full opacity-70"
-              style={{
-                left: star.x,
-                top: star.y,
-                width: '7px',
-                height: '7px',
-              }}
-            />
-          ))}
+          <CosmicBackground />
         </div>
 
         <div className="absolute inset-0">
@@ -102,7 +59,7 @@ const OpenJeGeest = () => {
 
         <div className="relative z-10 min-h-screen flex flex-col">
           <div className="py-16 px-4 text-center">
-            <h1 className="text-7xl md:text-9xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600">
+            <h1 className="text-7xl md:text-9xl font-black mb-6 text-transparent bg-clip-text bg-[length:200%_200%] bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-500 animate-gradient-x drop-shadow-[0_0_40px_rgba(236,72,153,0.35)]">
               OPEN JE GEEST
             </h1>
             <p className="text-2xl md:text-3xl text-white font-bold">

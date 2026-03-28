@@ -7,6 +7,7 @@ import AudioPlayer from '@/components/AudioPlayer';
 import Comments from '@/components/Comments';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
+import LevenBackground from '@/components/LevenBackground';
 
 const Leven = () => {
   const [showDialog, setShowDialog] = useState(false);
@@ -23,29 +24,8 @@ const Leven = () => {
       <CursorStyles />
       <AudioPlayer pageType="leven" />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-800 overflow-hidden relative">
-        {/* Floating geometric shapes */}
-        <div className="absolute inset-0">
-          {[...Array(25)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute opacity-10"
-              style={{
-                width: `${Math.random() * 200 + 50}px`,
-                height: `${Math.random() * 200 + 50}px`,
-                background: `linear-gradient(45deg, hsl(${Math.random() * 60 + 200}, 70%, 60%), hsl(${Math.random() * 60 + 180}, 70%, 60%))`,
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                transform: `rotate(${Math.random() * 360}deg)`,
-                clipPath:
-                  Math.random() > 0.5
-                    ? 'polygon(50% 0%, 0% 100%, 100% 100%)'
-                    : 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
-                animation: `float ${Math.random() * 10 + 10}s infinite linear`,
-              }}
-            />
-          ))}
-        </div>
+      <div className="min-h-screen overflow-hidden relative">
+        <LevenBackground />
 
         <div className="relative z-10 min-h-screen flex flex-col">
           {/* Header */}

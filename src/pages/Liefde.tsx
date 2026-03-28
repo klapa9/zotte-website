@@ -7,6 +7,7 @@ import AudioPlayer from '@/components/AudioPlayer';
 import Comments from '@/components/Comments';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
+import LovingBackground from '@/components/LovingBackground';
 
 const Liefde = () => {
   const [showDialog1, setShowDialog1] = useState(false);
@@ -23,47 +24,8 @@ const Liefde = () => {
       <CursorStyles />
       <AudioPlayer pageType="liefde" />
 
-      <div className="min-h-screen bg-gradient-to-br from-green-900 via-teal-800 to-blue-900 overflow-hidden relative">
-        {/* Energy particles */}
-        <div className="absolute inset-0 pointer-events-none">
-          {[...Array(100)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-white rounded-full opacity-20"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                animation: `pulse ${Math.random() * 3 + 2}s infinite`,
-                animationDelay: `${Math.random() * 2}s`,
-              }}
-            />
-          ))}
-        </div>
-
-        {/* Energy waves */}
-        <div className="absolute inset-0 pointer-events-none">
-          {[...Array(5)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute rounded-full border-2 border-white border-opacity-10"
-              style={{
-                width: `${200 + i * 100}%`,
-                height: `${200 + i * 100}%`,
-                top: `${-50 - i * 25}%`,
-                left: `${-50 - i * 25}%`,
-                animation: `expand ${8 + i * 2}s infinite`,
-                animationDelay: `${i * 1.5}s`,
-              }}
-            />
-          ))}
-        </div>
-
-        {/* Soft floating glow orbs */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-20 left-10 w-40 h-40 bg-cyan-400/10 blur-3xl rounded-full animate-floatSlow" />
-          <div className="absolute bottom-24 right-10 w-56 h-56 bg-emerald-300/10 blur-3xl rounded-full animate-floatMedium" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-blue-400/10 blur-3xl rounded-full animate-floatSlow" />
-        </div>
+      <div className="min-h-screen overflow-hidden relative">
+        <LovingBackground />
 
         <div className="relative z-10 min-h-screen flex flex-col">
           {/* Header */}
@@ -199,41 +161,6 @@ const Liefde = () => {
 
           <Navigation />
         </div>
-
-        <style jsx>{`
-          @keyframes pulse {
-            0%, 100% { opacity: 0.2; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(1.5); }
-          }
-
-          @keyframes expand {
-            0% { transform: scale(0.8); opacity: 0.3; }
-            100% { transform: scale(1.2); opacity: 0; }
-          }
-
-          @keyframes floatSlow {
-            0%, 100% { transform: translateY(0px) translateX(0px); }
-            50% { transform: translateY(-18px) translateX(10px); }
-          }
-
-          @keyframes floatMedium {
-            0%, 100% { transform: translateY(0px) translateX(0px); }
-            50% { transform: translateY(16px) translateX(-12px); }
-          }
-
-          @keyframes pulseGlow {
-            0%, 100% { opacity: 0.08; }
-            50% { opacity: 0.18; }
-          }
-
-          .animate-floatSlow {
-            animation: floatSlow 10s ease-in-out infinite;
-          }
-
-          .animate-floatMedium {
-            animation: floatMedium 8s ease-in-out infinite;
-          }
-        `}</style>
       </div>
 
       {/* Dialog 1 */}

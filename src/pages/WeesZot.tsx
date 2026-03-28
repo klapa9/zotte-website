@@ -12,7 +12,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-import InfiniteSpiralTunnel from '@/components/InfiniteSpiral';
+import InfiniteSpiral from '@/components/InfiniteSpiral';
 
 const WeesZot = () => {
   const [showDialog, setShowDialog] = useState(false);
@@ -25,7 +25,7 @@ const WeesZot = () => {
 
   return (
     <>
-      <InfiniteSpiralTunnel />
+      <InfiniteSpiral />
       <CursorStyles />
       <AudioPlayer pageType="weeszot" />
 
