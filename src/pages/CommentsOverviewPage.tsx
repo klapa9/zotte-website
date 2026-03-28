@@ -4,6 +4,8 @@ import CursorStyles from "@/components/CursorStyles";
 import Navigation from "@/components/Navigation";
 import AudioPlayer from "@/components/AudioPlayer";
 import NeonDroom from "@/components/NeonDroom";
+import { useNavigate } from "react-router-dom";
+import { MessageCircleOff } from "lucide-react";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -457,6 +459,7 @@ function CommentCard({
 }
 
 export default function CommentsOverviewPage() {
+  const navigate = useNavigate();
   const [comments, setComments] = useState<CommentType[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -596,6 +599,14 @@ export default function CommentsOverviewPage() {
     setReplyToId(null);
     setReplyToContent(null);
     setReplyContent("");
+  };
+
+  const handleClose = () => {
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate("/");
+    }
   };
 
   const handleReplySubmit = async (
@@ -768,7 +779,9 @@ export default function CommentsOverviewPage() {
             </h1>
             <p className="text-xl md:text-2xl text-white font-bold mb-4">
               Ontdek wat bezoekers overal op de site delen
+              
             </p>
+            
           </div>
 
           <div className="flex-1 px-4 pb-16">
@@ -779,12 +792,17 @@ export default function CommentsOverviewPage() {
                     <label className="block text-white font-bold mb-2">
                       Zoek in reacties
                     </label>
-                    <input
-                      value={search}
-                      onChange={(e) => setSearch(e.target.value)}
-                      placeholder="Zoek op naam, inhoud, pagina of sectie..."
-                      className="w-full rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 outline-none focus:border-cyan-400"
-                    />
+
+                    <div className="flex gap-3">
+                      <input
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        placeholder="Zoek op naam, inhoud, pagina of sectie..."
+                        className="flex-1 rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 outline-none focus:border-cyan-400"
+                      />
+
+                      
+                    </div>
                   </div>
 
                   <div>
@@ -820,6 +838,7 @@ export default function CommentsOverviewPage() {
                       <option value="replies">Meeste replies</option>
                     </select>
                   </div>
+                  
                 </div>
 
                 <div className="mt-4 flex flex-wrap gap-3 text-sm">
@@ -829,6 +848,16 @@ export default function CommentsOverviewPage() {
                   <div className="rounded-full border border-pink-300/30 bg-pink-500/10 px-4 py-2 text-pink-100">
                     Comments totaal: <strong>{totals.comments}</strong>
                   </div>
+                  <button
+                    type="button"
+                    onClick={handleClose}
+                    className="shrink-0 inline-flex items-center gap-2 rounded-2xl border border-pink-300/30 bg-pink-500/10 px-3 py-3 font-bold text-pink-100 transition hover:scale-105 hover:bg-pink-500/20"
+                    aria-label="Sluit reactiespagina"
+                    title="Sluiten"
+                  >
+                    <MessageCircleOff className="h-5 w-5" />
+                    <span className="hidden sm:inline">Alle reacties sluiten</span>
+                  </button>
                 </div>
               </div>
 
