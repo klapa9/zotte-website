@@ -74,7 +74,7 @@ const ZiekZot = () => {
               {/* Zelfherstel */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-red-400/30 bg-black/30 backdrop-blur-md shadow-[0_0_40px_rgba(248,113,113,0.10)]">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="ziekzot_zelfherstel" sectionTitle="Het lichaam wil herstellen" />
+                  <Comments postId="ziekzot" sectionId="blok1" sectionTitle="Het lichaam wil herstellen" />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-red-400 mb-6 pr-14">
@@ -111,7 +111,7 @@ const ZiekZot = () => {
               {/* Fasting */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-pink-300/20 bg-gradient-to-r from-pink-600/80 to-red-600/80 backdrop-blur-md shadow-[0_0_40px_rgba(244,114,182,0.10)] transform hover:scale-[1.02] transition-all duration-500">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="ziekzot_vasten_zoutwater" sectionTitle="Vasten en zout water" />
+                  <Comments postId="ziekzot" sectionId="blok2" sectionTitle="Vasten en zout water" />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
@@ -151,7 +151,7 @@ const ZiekZot = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="relative bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-pink-400/30">
                   <div className="absolute top-5 right-5 z-20">
-                    <Comments postId="ziekzot_natuur_ondersteunt" sectionTitle="De natuur ondersteunt herstel" />
+                    <Comments postId="ziekzot" sectionId="blok3" sectionTitle="De natuur ondersteunt herstel" />
                   </div>
 
                   <h3 className="text-3xl font-black text-pink-400 mb-4 pr-14">
@@ -166,7 +166,7 @@ const ZiekZot = () => {
 
                 <div className="relative bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-purple-400/30">
                   <div className="absolute top-5 right-5 z-20">
-                    <Comments postId="ziekzot_natuurlijke_producten" sectionTitle="Natuurlijke producten" />
+                    <Comments postId="ziekzot" sectionId="blok4" sectionTitle="Natuurlijke producten" />
                   </div>
 
                   <h3 className="text-3xl font-black text-purple-400 mb-4 pr-14">
@@ -248,7 +248,7 @@ const ZiekZot = () => {
                 Sluiten
               </Button>
               <div className="flex justify-end mb-4 mt-4">
-                <Comments postId="ziekzot_lichaam_geest_dialog" sectionTitle="Lichaam en geest" />
+                <Comments postId="ziekzot" sectionId="dialoog1" sectionTitle="Lichaam en geest" />
               </div>
             </div>
           </div>
@@ -344,7 +344,7 @@ const ZiekZot = () => {
                 Sluiten
               </Button>
               <div className="flex justify-end mb-4 mt-4">
-                <Comments postId="ziekzot_bewust_vasten_dialog" sectionTitle="Bewust en veilig vasten" />
+                <Comments postId="ziekzot" sectionId="dialoog2" sectionTitle="Bewust en veilig vasten" />
               </div>
             </div>
           </div>

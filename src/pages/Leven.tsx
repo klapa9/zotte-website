@@ -45,7 +45,11 @@ const Leven = () => {
               {/* ABSOLUTE */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-cyan-400/30 bg-white/5 backdrop-blur-md shadow-[0_0_40px_rgba(34,211,238,0.08)]">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="leven_GOD" sectionTitle="Het Geheel - G O D" />
+                  <Comments 
+                    postId="leven"  
+                    sectionId="blok1"
+                    sectionTitle="Het Geheel - G O D" 
+                  />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-cyan-400 mb-6 pr-14">
@@ -74,7 +78,11 @@ const Leven = () => {
               {/* RELATIEVE ERVARING */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-blue-400/30 bg-black/40 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="leven_mens" sectionTitle="De menselijke ervaring" />
+                  <Comments 
+                    postId="leven" 
+                    sectionId="blok2"
+                    sectionTitle="De menselijke ervaring"
+                  />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-blue-400 mb-6 pr-14">
@@ -103,7 +111,11 @@ const Leven = () => {
               {/* BALANS */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-cyan-300/20 bg-gradient-to-r from-green-600/80 to-blue-600/80 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="leven_balans" sectionTitle="Balans in het Leven" />
+                  <Comments 
+                    postId="leven" 
+                    sectionId="blok3"
+                    sectionTitle="Balans in het Leven" 
+                  />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
@@ -138,7 +150,11 @@ const Leven = () => {
               {/* JOUW PAD */}
               <div className="relative rounded-3xl p-8 md:p-12 border border-purple-400/30 bg-white/5 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="leven_pad" sectionTitle="Jouw Pad" />
+                  <Comments 
+                    postId="leven" 
+                    sectionId="blok4"
+                    sectionTitle="Jouw Pad" 
+                  />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-purple-400 mb-6 pr-14">
@@ -184,14 +200,6 @@ const Leven = () => {
 
           <Navigation />
         </div>
-
-        <style jsx>{`
-          @keyframes float {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-50px) rotate(180deg); }
-            100% { transform: translateY(0px) rotate(360deg); }
-          }
-        `}</style>
       </div>
 
       {/* Spirituele evolutie */}
@@ -295,7 +303,11 @@ const Leven = () => {
                 Sluiten
               </Button>
               <div className="flex justify-end mb-4 mt-4">
-                <Comments postId="leven_frequenties_dialog" sectionTitle="Frequenties van Bewustzijn" />
+                <Comments 
+                  postId="leven"  
+                  sectionId="dialoog5"
+                  sectionTitle="Frequenties van Bewustzijn" 
+                />
               </div>
             </div>
           </div>
@@ -361,7 +373,7 @@ const Leven = () => {
                 Sluiten
               </Button>
               <div className="flex justify-end mb-4 mt-4">
-                <Comments postId="leven_eenheid_dialog" sectionTitle="De wet van éénheid" />
+                <Comments postId="leven" sectionId="dialoog6" sectionTitle="De wet van éénheid" />
               </div>
             </div>
           </div>

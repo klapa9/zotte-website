@@ -44,7 +44,7 @@ const Liefde = () => {
               <div className="relative rounded-3xl p-8 md:p-12 border border-green-300/10 bg-gradient-to-r from-green-400/35 to-blue-400/35 backdrop-blur-md shadow-[0_0_40px_rgba(45,212,191,0.14)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
                 <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="liefde_boodschap_jezus" sectionTitle="De boodschap van Jezus" />
+                  <Comments postId="liefde" sectionId="blok1"  sectionTitle="De boodschap van Jezus" />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-purple-700 mb-6 pr-14">
@@ -74,7 +74,7 @@ const Liefde = () => {
               <div className="relative rounded-3xl p-8 md:p-12 border border-green-300/10 bg-gradient-to-r from-cyan-500/35 to-green-500/35 backdrop-blur-md shadow-[0_0_40px_rgba(34,211,238,0.14)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
                 <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="liefde_in_jezelf" sectionTitle="Liefde begint in jezelf" />
+                  <Comments postId="liefde" sectionId="blok2"   sectionTitle="Liefde begint in jezelf" />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
@@ -107,7 +107,7 @@ const Liefde = () => {
               <div className="relative rounded-3xl p-8 md:p-12 border border-green-300/10 bg-gradient-to-r from-green-600/35 to-indigo-600/35 backdrop-blur-md shadow-[0_0_40px_rgba(59,130,246,0.12)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
                 <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="liefde_anderen" sectionTitle="Heb anderen lief" />
+                  <Comments postId="liefde" sectionId="blok3" sectionTitle="Heb anderen lief" />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
@@ -205,7 +205,7 @@ const Liefde = () => {
                 Sluiten
               </Button>
               <div className="flex justify-end mb-4 mt-4">
-                <Comments postId="liefde_dankbaarheid_vergeving_dialog" sectionTitle="Dankbaarheid en vergeving" />
+                <Comments postId="liefde" sectionId="dialoog1" sectionTitle="Dankbaarheid en vergeving" />
               </div>
             </div>
           </div>
@@ -251,7 +251,7 @@ const Liefde = () => {
                 Sluiten
               </Button>
               <div className="flex justify-end mb-4 mt-4">
-                <Comments postId="liefde_emoties_gedachten_dialog" sectionTitle="Emoties en gedachten" />
+                <Comments postId="liefde" sectionId="dialoog2" sectionTitle="Emoties en gedachten" />
               </div>
             </div>
           </div>
@@ -308,7 +308,7 @@ const Liefde = () => {
                 Sluiten
               </Button>
               <div className="flex justify-end mb-4 mt-4">
-                <Comments postId="liefde_dienstbaarheid_dialog" sectionTitle="Dienstbaarheid" />
+                <Comments postId="liefde" sectionId="dialoog3" sectionTitle="Dienstbaarheid" />
               </div>
             </div>
           </div>

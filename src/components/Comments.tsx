@@ -14,7 +14,10 @@ type CommentType = {
   content: string;
   userName: string;
   postId: string;
+  sectionId: string;
   sectionTitle?: string | null;
+  pageTitle?: string | null;
+  pageUrl?: string | null;
   parentId: number | null;
   likesCount?: number;
   isHidden?: boolean;
@@ -24,8 +27,7 @@ type CommentType = {
 
 type CommentItemProps = {
   comment: CommentType;
-  openReplies: Record<number, boolean>;
-  toggleReplies: (commentId: number) => void;
+  depth?: number;
   replyToId: number | null;
   replyToContent: string | null;
   replyContent: string;
@@ -42,10 +44,22 @@ type CommentItemProps = {
   fetchComments: () => Promise<void>;
 };
 
+function formatDate(date?: string) {
+  if (!date) return null;
+
+  try {
+    return new Intl.DateTimeFormat("nl-BE", {
+      dateStyle: "medium",
+      timeStyle: "short",
+    }).format(new Date(date));
+  } catch {
+    return null;
+  }
+}
+
 function CommentItem({
   comment,
-  openReplies,
-  toggleReplies,
+  depth = 0,
   replyToId,
   replyToContent,
   replyContent,
@@ -61,31 +75,62 @@ function CommentItem({
   isAdmin,
   fetchComments,
 }: CommentItemProps) {
-  const isOpen = openReplies[comment.id] || false;
-  const hasReplies = !!comment.replies?.length;
   const isReplyingHere = replyToId === comment.id;
   const isLiked = !!likedComments[comment.id];
   const likesCount = comment.likesCount ?? 0;
+  const createdLabel = formatDate(comment.createdAt);
+
+  const cardClass = comment.isHidden
+    ? "border-slate-400/30 bg-slate-500/10"
+    : depth === 0
+    ? "border-cyan-300/20 bg-white/10"
+    : "border-white/10 bg-white/5";
 
   return (
     <li
-      className={`border-b pb-3 ${
-        comment.isHidden
-          ? "bg-slate-100 border border-dashed border-slate-400 rounded-md p-3"
-          : ""
-      }`}
+      className={`rounded-2xl border p-4 backdrop-blur-sm shadow-[0_0_24px_rgba(255,255,255,0.04)] ${cardClass}`}
+      style={{ marginLeft: depth > 0 ? `${Math.min(depth, 4) * 18}px` : 0 }}
     >
-      <div className={`text-sm ${comment.isHidden ? "text-slate-500" : ""}`}>
-        <strong>{comment.userName}</strong>:{" "}
-        {comment.isHidden ? "[Verborgen comment] " : ""}
-        {comment.content}
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="font-black text-white">{comment.userName}</span>
+
+            {createdLabel && (
+              <span className="text-xs text-white/50">{createdLabel}</span>
+            )}
+
+            {depth > 0 && (
+              <span className="rounded-full border border-cyan-300/20 bg-cyan-500/10 px-2 py-1 text-[11px] text-cyan-100">
+                Reply
+              </span>
+            )}
+
+            {comment.isHidden && (
+              <span className="rounded-full border border-red-300/20 bg-red-500/10 px-2 py-1 text-[11px] text-red-100">
+                Verborgen
+              </span>
+            )}
+          </div>
+
+          <div
+            className={`mt-2 text-sm leading-6 ${
+              comment.isHidden ? "text-white/50" : "text-white"
+            }`}
+          >
+            {comment.isHidden ? "[Verborgen comment] " : ""}
+            {comment.content}
+          </div>
+
+          {comment.isHidden && isAdmin && (
+            <div className="mt-2 text-xs text-red-300">
+              Deze comment is verborgen voor bezoekers.
+            </div>
+          )}
+        </div>
       </div>
 
-      {comment.isHidden && isAdmin && (
-        <div className="text-xs text-red-500 mt-1">Verborgen voor bezoekers</div>
-      )}
-
-      <div className="flex items-center gap-3 mt-2 flex-wrap">
+      <div className="mt-4 flex flex-wrap items-center gap-3">
         <button
           type="button"
           onClick={() => {
@@ -93,7 +138,7 @@ function CommentItem({
             setReplyToContent(comment.content);
             setReplyContent("");
           }}
-          className="text-sm text-blue-500"
+          className="rounded-full border border-cyan-300/20 bg-cyan-500/10 px-3 py-1.5 text-sm text-cyan-100 transition hover:scale-105 hover:bg-cyan-500/20"
         >
           Reply
         </button>
@@ -101,12 +146,13 @@ function CommentItem({
         <button
           type="button"
           onClick={() => toggleLike(comment.id, isLiked)}
-          className={`text-sm flex items-center gap-1 ${
-            isLiked ? "text-red-500" : "text-gray-500"
+          className={`rounded-full border px-3 py-1.5 text-sm transition hover:scale-105 ${
+            isLiked
+              ? "border-pink-300/20 bg-pink-500/15 text-pink-100"
+              : "border-white/15 bg-white/5 text-white/80"
           }`}
         >
-          <span>{isLiked ? "❤️" : "🤍"}</span>
-          <span>{likesCount}</span>
+          {isLiked ? "❤️" : "🤍"} {likesCount}
         </button>
 
         {isAdmin && (
@@ -132,8 +178,10 @@ function CommentItem({
 
                 await fetchComments();
               }}
-              className={`text-sm ${
-                comment.isHidden ? "text-green-500" : "text-red-400"
+              className={`rounded-full border px-3 py-1.5 text-sm transition hover:scale-105 ${
+                comment.isHidden
+                  ? "border-green-300/20 bg-green-500/10 text-green-100"
+                  : "border-yellow-300/20 bg-yellow-500/10 text-yellow-100"
               }`}
             >
               {comment.isHidden ? "Unhide" : "Hide"}
@@ -156,31 +204,17 @@ function CommentItem({
 
                 await fetchComments();
               }}
-              className="text-sm text-red-500"
+              className="rounded-full border border-red-300/20 bg-red-500/10 px-3 py-1.5 text-sm text-red-100 transition hover:scale-105 hover:bg-red-500/20"
             >
               Delete
             </button>
           </>
         )}
-
-        {hasReplies && (
-          <button
-            type="button"
-            onClick={() => toggleReplies(comment.id)}
-            className="text-sm text-gray-500"
-          >
-            {isOpen
-              ? "− Hide replies"
-              : `+ ${comment.replies!.length} repl${
-                  comment.replies!.length > 1 ? "ies" : "y"
-                }`}
-          </button>
-        )}
       </div>
 
       {isReplyingHere && (
-        <div className="mt-3 ml-4 p-3 rounded-lg bg-gray-100 border">
-          <div className="text-xs text-gray-600 mb-2">
+        <div className="mt-4 rounded-2xl border border-cyan-300/20 bg-cyan-500/10 p-4 backdrop-blur-md">
+          <div className="mb-2 text-xs text-cyan-100/80">
             Replying to: "{replyToContent}"
           </div>
 
@@ -192,7 +226,7 @@ function CommentItem({
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
               placeholder="Jouw naam..."
-              className="w-full p-3 rounded-lg border text-black"
+              className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 outline-none focus:border-cyan-400"
             />
 
             <textarea
@@ -201,13 +235,13 @@ function CommentItem({
               onChange={(e) => setReplyContent(e.target.value)}
               placeholder="Schrijf je reply..."
               rows={4}
-              className="w-full p-3 rounded-lg border text-black"
+              className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 outline-none focus:border-cyan-400"
             />
 
             <div className="flex gap-2">
               <button
                 type="submit"
-                className="bg-purple-600 text-white px-4 py-2 rounded-lg"
+                className="rounded-xl bg-cyan-600 px-4 py-2 font-bold text-white transition hover:scale-105 hover:bg-cyan-700"
               >
                 Reply
               </button>
@@ -215,7 +249,7 @@ function CommentItem({
               <button
                 type="button"
                 onClick={cancelReply}
-                className="bg-gray-300 text-black px-4 py-2 rounded-lg"
+                className="rounded-xl bg-white/15 px-4 py-2 font-bold text-white transition hover:scale-105 hover:bg-white/20"
               >
                 Cancel
               </button>
@@ -224,14 +258,13 @@ function CommentItem({
         </div>
       )}
 
-      {hasReplies && isOpen && (
-        <ul className="ml-4 mt-3 space-y-2">
-          {comment.replies!.map((r) => (
+      {!!comment.replies?.length && (
+        <ul className="mt-4 space-y-3">
+          {comment.replies.map((reply) => (
             <CommentItem
-              key={r.id}
-              comment={r}
-              openReplies={openReplies}
-              toggleReplies={toggleReplies}
+              key={reply.id}
+              comment={reply}
+              depth={depth + 1}
               replyToId={replyToId}
               replyToContent={replyToContent}
               replyContent={replyContent}
@@ -256,52 +289,67 @@ function CommentItem({
 
 type CommentsProps = {
   postId: string;
+  sectionId: string;
   sectionTitle: string;
 };
 
-export default function Comments({ postId, sectionTitle }: CommentsProps) {
+export default function Comments({
+  postId,
+  sectionId,
+  sectionTitle,
+}: CommentsProps) {
   const [comments, setComments] = useState<CommentType[]>([]);
   const [userName, setUserName] = useState("");
   const [newPostContent, setNewPostContent] = useState("");
   const [open, setOpen] = useState(false);
+  const [isComposerOpen, setIsComposerOpen] = useState(false);
 
   const [replyToId, setReplyToId] = useState<number | null>(null);
   const [replyToContent, setReplyToContent] = useState<string | null>(null);
   const [replyContent, setReplyContent] = useState("");
 
-  const [openReplies, setOpenReplies] = useState<Record<number, boolean>>({});
   const [likedComments, setLikedComments] = useState<Record<number, boolean>>(
     {}
   );
   const [isAdmin, setIsAdmin] = useState(false);
 
-  const storageKey = useMemo(() => `likedComments:${postId}`, [postId]);
+  const storageKey = useMemo(
+    () => `likedComments:${postId}:${sectionId}`,
+    [postId, sectionId]
+  );
 
-const fetchComments = async () => {
-  try {
-    const res = await fetch(`${API_URL}/comments?postId=${postId}`, {
-      credentials: "include",
-      cache: "no-store",
-    });
+  const fetchComments = async () => {
+    try {
+      const params = new URLSearchParams({
+        postId,
+        sectionId,
+      });
 
-    const data = await res.json();
+      const res = await fetch(`${API_URL}/comments?${params.toString()}`, {
+        credentials: "include",
+        cache: "no-store",
+      });
 
-    if (!res.ok) {
-      console.error("Comments ophalen mislukt:", data);
+      const data = await res.json();
+
+      if (!res.ok) {
+        console.error("Comments ophalen mislukt:", data);
+        setComments([]);
+        return;
+      }
+
+      setComments(Array.isArray(data) ? data : []);
+    } catch (error) {
+      console.error("Netwerkfout bij comments ophalen:", error);
       setComments([]);
-      return;
     }
-
-    setComments(Array.isArray(data) ? data : []);
-  } catch (error) {
-    console.error("Netwerkfout bij comments ophalen:", error);
-    setComments([]);
-  }
-};
+  };
 
   useEffect(() => {
-    fetchComments();
-  }, [postId, isAdmin]);
+    if (open) {
+      fetchComments();
+    }
+  }, [postId, sectionId, isAdmin, open]);
 
   useEffect(() => {
     const checkAdmin = async () => {
@@ -317,7 +365,9 @@ const fetchComments = async () => {
       }
     };
 
-    checkAdmin();
+    if (open) {
+      checkAdmin();
+    }
   }, [open]);
 
   useEffect(() => {
@@ -342,6 +392,16 @@ const fetchComments = async () => {
     localStorage.setItem(storageKey, JSON.stringify(likedComments));
   }, [likedComments, storageKey]);
 
+  useEffect(() => {
+    if (!open) {
+      setIsComposerOpen(false);
+      setReplyToId(null);
+      setReplyToContent(null);
+      setReplyContent("");
+      setNewPostContent("");
+    }
+  }, [open]);
+
   const handlePostSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -359,6 +419,7 @@ const fetchComments = async () => {
         content: newPostContent,
         userName,
         postId,
+        sectionId,
         sectionTitle,
         parentId: null,
       }),
@@ -372,6 +433,7 @@ const fetchComments = async () => {
     }
 
     setNewPostContent("");
+    setIsComposerOpen(false);
     await fetchComments();
   };
 
@@ -395,6 +457,7 @@ const fetchComments = async () => {
         content: replyContent,
         userName,
         postId,
+        sectionId,
         sectionTitle,
         parentId,
       }),
@@ -407,11 +470,6 @@ const fetchComments = async () => {
       return;
     }
 
-    setOpenReplies((prev) => ({
-      ...prev,
-      [parentId]: true,
-    }));
-
     setReplyContent("");
     setReplyToId(null);
     setReplyToContent(null);
@@ -423,13 +481,6 @@ const fetchComments = async () => {
     setReplyToId(null);
     setReplyToContent(null);
     setReplyContent("");
-  };
-
-  const toggleReplies = (commentId: number) => {
-    setOpenReplies((prev) => ({
-      ...prev,
-      [commentId]: !prev[commentId],
-    }));
   };
 
   const updateLikeCountInTree = (
@@ -514,59 +565,94 @@ const fetchComments = async () => {
       </button>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="z-[120] bg-white text-black max-w-lg max-h-[80vh] overflow-y-auto">
+        <DialogContent className="z-[120] max-w-2xl max-h-[85vh] overflow-y-auto border border-cyan-300/20 bg-gradient-to-br from-cyan-950/95 via-slate-950/95 to-blue-950/95 text-white backdrop-blur-xl">
           <DialogHeader>
-            <DialogTitle>Reacties op: {sectionTitle}</DialogTitle>
-            {/* <p className="text-sm text-slate-500">{postId}</p> */}
+            <DialogTitle className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-pink-300 to-purple-300">
+              Reacties op: {sectionTitle}
+            </DialogTitle>
           </DialogHeader>
 
-          <form onSubmit={handlePostSubmit} className="space-y-4">
-            <input
-              value={userName}
-              onChange={(e) => setUserName(e.target.value)}
-              placeholder="Jouw naam..."
-              className="w-full p-3 rounded-lg border"
-            />
+          <div className="rounded-3xl border border-cyan-300/20 bg-cyan-500/10 p-4 backdrop-blur-md">
+            <h4 className="mb-3 text-sm font-black uppercase tracking-wider text-cyan-100">
+              Nieuwe reactie
+            </h4>
 
-            <textarea
-              value={newPostContent}
-              onChange={(e) => setNewPostContent(e.target.value)}
-              placeholder="Schrijf je gedachte..."
-              rows={5}
-              className="w-full p-3 rounded-lg border"
-            />
+            {!isComposerOpen ? (
+              <button
+                type="button"
+                onClick={() => setIsComposerOpen(true)}
+                className="w-full rounded-full border border-white/20 bg-white/10 px-5 py-3 text-left text-white/70 transition hover:bg-white/15 hover:text-white"
+              >
+                Schrijf een reactie...
+              </button>
+            ) : (
+              <form onSubmit={handlePostSubmit} className="space-y-3">
+                <input
+                  value={userName}
+                  onChange={(e) => setUserName(e.target.value)}
+                  placeholder="Jouw naam..."
+                  className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 outline-none focus:border-cyan-400"
+                />
 
-            <button
-              type="submit"
-              className="bg-purple-600 text-white px-4 py-2 rounded-lg"
-            >
-              Post
-            </button>
-          </form>
+                <textarea
+                  autoFocus
+                  value={newPostContent}
+                  onChange={(e) => setNewPostContent(e.target.value)}
+                  placeholder="Schrijf je gedachte..."
+                  rows={4}
+                  className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 outline-none focus:border-cyan-400"
+                />
 
-          <ul className="space-y-4 mt-6">
-            {comments.map((c) => (
-              <CommentItem
-                key={c.id}
-                comment={c}
-                openReplies={openReplies}
-                toggleReplies={toggleReplies}
-                replyToId={replyToId}
-                replyToContent={replyToContent}
-                replyContent={replyContent}
-                setReplyToId={setReplyToId}
-                setReplyToContent={setReplyToContent}
-                setReplyContent={setReplyContent}
-                userName={userName}
-                setUserName={setUserName}
-                handleReplySubmit={handleReplySubmit}
-                cancelReply={cancelReply}
-                likedComments={likedComments}
-                toggleLike={toggleLike}
-                isAdmin={isAdmin}
-                fetchComments={fetchComments}
-              />
-            ))}
+                <div className="flex gap-2">
+                  <button
+                    type="submit"
+                    className="rounded-xl bg-cyan-600 px-4 py-2 font-bold text-white transition hover:scale-105 hover:bg-cyan-700"
+                  >
+                    Post
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsComposerOpen(false);
+                      setNewPostContent("");
+                    }}
+                    className="rounded-xl bg-white/15 px-4 py-2 font-bold text-white transition hover:scale-105 hover:bg-white/20"
+                  >
+                    Annuleer
+                  </button>
+                </div>
+              </form>
+            )}
+          </div>
+
+          <ul className="mt-6 space-y-4">
+            {comments.length === 0 ? (
+              <li className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/70">
+                Nog geen reacties in deze sectie.
+              </li>
+            ) : (
+              comments.map((c) => (
+                <CommentItem
+                  key={c.id}
+                  comment={c}
+                  replyToId={replyToId}
+                  replyToContent={replyToContent}
+                  replyContent={replyContent}
+                  setReplyToId={setReplyToId}
+                  setReplyToContent={setReplyToContent}
+                  setReplyContent={setReplyContent}
+                  userName={userName}
+                  setUserName={setUserName}
+                  handleReplySubmit={handleReplySubmit}
+                  cancelReply={cancelReply}
+                  likedComments={likedComments}
+                  toggleLike={toggleLike}
+                  isAdmin={isAdmin}
+                  fetchComments={fetchComments}
+                />
+              ))
+            )}
           </ul>
         </DialogContent>
       </Dialog>

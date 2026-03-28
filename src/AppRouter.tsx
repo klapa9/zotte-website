@@ -11,6 +11,7 @@ import ZiekZot from "./pages/ZiekZot";
 import OpenJeGeest from "./pages/OpenJeGeest";
 import Geld from "./pages/Geld";
 import OldIndex from "./pages/Index.old";
+import CommentsOverviewPage from "./pages/CommentsOverviewPage";
 
 export function AppRouter() {
   return (
@@ -25,6 +26,7 @@ export function AppRouter() {
         <Route path="/liefde" element={<Liefde />} />
         <Route path="/ziekzot" element={<ZiekZot />} />
         <Route path="/openjegeest" element={<OpenJeGeest />} />
+        <Route path="/reacties" element={<CommentsOverviewPage />} />
         {/* NIP-19 route for npub1, note1, naddr1, nevent1, nprofile1 */}
         <Route path="/:nip19" element={<NIP19Page />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
