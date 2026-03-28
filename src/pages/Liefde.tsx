@@ -41,7 +41,7 @@ const Liefde = () => {
           <div className="flex-1 px-4 pb-16">
             <div className="max-w-5xl mx-auto space-y-16">
               {/* BLOK 1 */}
-              <div className="relative rounded-3xl p-8 md:p-12 border border-teal-300/20 bg-gradient-to-r from-green-400/80 to-blue-400/80 backdrop-blur-md shadow-[0_0_40px_rgba(45,212,191,0.14)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
+              <div className="relative rounded-3xl p-8 md:p-12 border border-green-300/10 bg-gradient-to-r from-green-400/35 to-blue-400/35 backdrop-blur-md shadow-[0_0_40px_rgba(45,212,191,0.14)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
                 <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 <div className="absolute top-5 right-5 z-20">
                   <Comments postId="liefde_boodschap_jezus" sectionTitle="De boodschap van Jezus" />
@@ -71,7 +71,7 @@ const Liefde = () => {
               </div>
 
               {/* BLOK 2 */}
-              <div className="relative rounded-3xl p-8 md:p-12 border border-cyan-300/20 bg-gradient-to-r from-cyan-500/80 to-blue-500/80 backdrop-blur-md shadow-[0_0_40px_rgba(34,211,238,0.14)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
+              <div className="relative rounded-3xl p-8 md:p-12 border border-green-300/10 bg-gradient-to-r from-cyan-500/35 to-green-500/35 backdrop-blur-md shadow-[0_0_40px_rgba(34,211,238,0.14)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
                 <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 <div className="absolute top-5 right-5 z-20">
                   <Comments postId="liefde_in_jezelf" sectionTitle="Liefde begint in jezelf" />
@@ -104,7 +104,7 @@ const Liefde = () => {
               </div>
 
               {/* BLOK 3 */}
-              <div className="relative rounded-3xl p-8 md:p-12 border border-blue-300/20 bg-gradient-to-r from-blue-600/80 to-indigo-600/80 backdrop-blur-md shadow-[0_0_40px_rgba(59,130,246,0.12)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
+              <div className="relative rounded-3xl p-8 md:p-12 border border-green-300/10 bg-gradient-to-r from-green-600/35 to-indigo-600/35 backdrop-blur-md shadow-[0_0_40px_rgba(59,130,246,0.12)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
                 <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 <div className="absolute top-5 right-5 z-20">
                   <Comments postId="liefde_anderen" sectionTitle="Heb anderen lief" />
