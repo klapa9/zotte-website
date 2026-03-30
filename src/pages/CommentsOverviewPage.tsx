@@ -223,6 +223,23 @@ function buildGroups(comments: CommentType[]): SectionGroup[] {
   return Array.from(map.values());
 }
 
+function buildPageLink(pageUrl: string | null) {
+  if (!pageUrl) return null;
+
+  const clean = pageUrl.split("#")[0].trim();
+  return clean || null;
+}
+
+function buildSectionLink(pageUrl: string | null, sectionId: string) {
+  const pageLink = buildPageLink(pageUrl);
+  const cleanSectionId = sectionId.trim();
+
+  if (!pageLink) return null;
+  if (!cleanSectionId) return pageLink;
+
+  return `${pageLink}#${encodeURIComponent(cleanSectionId)}`;
+}
+
 function CommentCard({
   comment,
   depth = 0,
@@ -486,7 +503,7 @@ export default function CommentsOverviewPage() {
   useSeoMeta({
     title: "Alle reacties - Zottewebsite",
     description:
-      "Overzicht van alle reacties op de verschillende pagina's en secties.",
+      "Overzicht van alle reacties op de verschillende pagina's en paragrafen.",
   });
 
   const fetchComments = async () => {
@@ -812,11 +829,9 @@ export default function CommentsOverviewPage() {
                       <input
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        placeholder="Zoek op naam, inhoud, pagina of sectie..."
+                        placeholder="Zoek op naam, inhoud, pagina of paragraaf..."
                         className="flex-1 rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 outline-none focus:border-cyan-400"
                       />
-
-                      
                     </div>
                   </div>
 
@@ -853,12 +868,11 @@ export default function CommentsOverviewPage() {
                       <option value="replies">Meeste replies</option>
                     </select>
                   </div>
-                  
                 </div>
 
                 <div className="mt-4 flex flex-wrap gap-3 text-sm">
                   <div className="rounded-full border border-cyan-300/30 bg-cyan-500/10 px-4 py-2 text-cyan-100">
-                    Secties: <strong>{totals.sections}</strong>
+                    Paragrafen: <strong>{totals.sections}</strong>
                   </div>
                   <div className="rounded-full border border-pink-300/30 bg-pink-500/10 px-4 py-2 text-pink-100">
                     Comments totaal: <strong>{totals.comments}</strong>
@@ -880,6 +894,11 @@ export default function CommentsOverviewPage() {
                     const groupKey = `${group.postId}__${group.sectionId}`;
                     const postValue = newPosts[groupKey] ?? "";
                     const isExpanded = !!expandedForms[groupKey];
+                    const pageLink = buildPageLink(group.pageUrl);
+                    const sectionLink = buildSectionLink(
+                      group.pageUrl,
+                      group.sectionId
+                    );
 
                     return (
                       <section
@@ -891,37 +910,77 @@ export default function CommentsOverviewPage() {
                             <div className="text-xs font-black uppercase tracking-[0.22em] text-cyan-300">
                               Pagina
                             </div>
-                            <h2 className="mt-2 text-2xl md:text-4xl font-black text-white">
-                              {group.pageTitle}
-                            </h2>
+
+                            {pageLink ? (
+                              <a
+                                href={pageLink}
+                                className="mt-2 inline-flex items-center gap-2 text-2xl md:text-4xl font-black text-white decoration-cyan-400/70 transition hover:text-cyan-300 hover:decoration-cyan-300"
+                              >
+                                <span>{group.pageTitle}</span>
+                                <span className="text-base md:text-lg text-cyan-300/80">
+                                  ↗
+                                </span>
+                              </a>
+                            ) : (
+                              <h2 className="mt-2 text-2xl md:text-4xl font-black text-white">
+                                {group.pageTitle}
+                              </h2>
+                            )}
 
                             <div className="mt-4 text-xs font-black uppercase tracking-[0.22em] text-pink-300">
-                              Sectie
+                              Paragraaf
                             </div>
-                            <h3 className="mt-2 text-xl md:text-2xl font-bold text-white">
-                              {group.sectionTitle}
-                            </h3>
+
+                            {sectionLink ? (
+                              <a
+                                href={sectionLink}
+                                className="mt-2 inline-flex items-center gap-2 text-xl md:text-2xl font-bold text-white decoration-pink-400/70 transition hover:text-pink-300 hover:decoration-pink-300"
+                              >
+                                <span>{group.sectionTitle}</span>
+                                <span className="text-sm text-pink-300/80">
+                                  ↗
+                                </span>
+                              </a>
+                            ) : (
+                              <h3 className="mt-2 text-xl md:text-2xl font-bold text-white">
+                                {group.sectionTitle}
+                              </h3>
+                            )}
 
                             <div className="mt-4 text-sm text-white/70">
                               Top-level comments:{" "}
-                              <strong>{group.comments.length}</strong> · Totaal in
-                              thread: <strong>{countComments(group.comments)}</strong>
+                              <strong>{group.comments.length}</strong> · Totaal
+                              in thread:{" "}
+                              <strong>{countComments(group.comments)}</strong>
                             </div>
                           </div>
 
-                          {group.pageUrl && (
-                            <a
-                              href={group.pageUrl}
-                              className="inline-flex rounded-xl border border-cyan-300/30 bg-cyan-500/10 px-4 py-2 text-sm font-bold text-cyan-100 transition hover:scale-105 hover:bg-cyan-500/20"
-                            >
-                              Bekijk originele pagina
-                            </a>
-                          )}
+                          <div className="flex flex-wrap gap-3">
+                            {pageLink && (
+                              <a
+                                href={pageLink}
+                                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-4 py-2 text-sm font-bold text-white shadow-[0_0_20px_rgba(255,255,255,0.06)] transition hover:scale-105 hover:bg-white/15"
+                              >
+                                <span>📄</span>
+                                <span>Bekijk pagina</span>
+                              </a>
+                            )}
+
+                            {sectionLink && (
+                              <a
+                                href={sectionLink}
+                                className="inline-flex items-center gap-2 rounded-xl border border-cyan-300/40 bg-cyan-500/15 px-4 py-2 text-sm font-bold text-cyan-100 shadow-[0_0_24px_rgba(34,211,238,0.18)] transition hover:scale-105 hover:bg-cyan-500/25"
+                              >
+                                <span>🎯</span>
+                                <span>Bekijk passende paragraaf</span>
+                              </a>
+                            )}
+                          </div>
                         </div>
 
                         <div className="mb-6 rounded-3xl border border-cyan-300/20 bg-cyan-500/10 p-4 backdrop-blur-md">
                           <h4 className="mb-3 text-sm font-black uppercase tracking-wider text-cyan-100">
-                            Nieuwe reactie in deze sectie
+                            Nieuwe reactie in deze paragraaf
                           </h4>
 
                           {!isExpanded ? (

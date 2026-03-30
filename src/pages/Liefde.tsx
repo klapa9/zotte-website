@@ -38,106 +38,113 @@ const Liefde = () => {
             </p>
           </div>
 
+          
           <div className="flex-1 px-4 pb-16">
             <div className="max-w-5xl mx-auto space-y-16">
               {/* BLOK 1 */}
-              <div className="relative rounded-3xl p-8 md:p-12 border border-green-300/10 bg-gradient-to-r from-green-400/35 to-blue-400/35 backdrop-blur-md shadow-[0_0_40px_rgba(45,212,191,0.14)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
-                <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="liefde" sectionId="blok1"  sectionTitle="De boodschap van Jezus" />
-                </div>
+              <section id="blok1" className="scroll-mt-24">
+                <div className="relative rounded-3xl p-8 md:p-12 border border-green-300/10 bg-gradient-to-r from-green-400/35 to-blue-400/35 backdrop-blur-md shadow-[0_0_40px_rgba(45,212,191,0.14)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
+                  <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                  <div className="absolute top-5 right-5 z-20">
+                    <Comments postId="liefde" sectionId="blok1"  sectionTitle="De boodschap van Jezus" />
+                  </div>
 
-                <h2 className="text-4xl md:text-5xl font-black text-purple-700 mb-6 pr-14">
-                  De boodschap van Jezus
-                </h2>
+                  <h2 className="text-4xl md:text-5xl font-black text-purple-700 mb-6 pr-14">
+                    De boodschap van Jezus
+                  </h2>
 
-                <div className="max-w-3xl space-y-4 text-white text-lg md:text-xl">
-                  <p className="hover:text-teal-100 transition-colors duration-300">
-                    Jezus bracht het terug tot één duidelijke regel: 
-                    <strong> Hou van anderen zoals jezelf.</strong>
-                  </p>
-                  <p className="hover:text-teal-100 transition-colors duration-300">
-                    Dat klinkt eenvoudig, maar het raakt alles. 
-                    Het begint bij jezelf: als je niet van jezelf houdt, hoe kan je dan van anderen houden?
-                    En het strekt zich uit tot iedereen: vrienden, familie, vreemden, zelfs je vijanden.
-                  </p>
-                  <Button
-                    onClick={() => setShowDialog1(true)}
-                    className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(34,211,238,0.45)]"
-                  >
-                    ✨ Dankbaarheid en vergeving
-                  </Button>
+                  <div className="max-w-3xl space-y-4 text-white text-lg md:text-xl">
+                    <p className="hover:text-teal-100 transition-colors duration-300">
+                      Jezus bracht het terug tot één duidelijke regel: 
+                      <strong> Hou van anderen zoals jezelf.</strong>
+                    </p>
+                    <p className="hover:text-teal-100 transition-colors duration-300">
+                      Dat klinkt eenvoudig, maar het raakt alles. 
+                      Het begint bij jezelf: als je niet van jezelf houdt, hoe kan je dan van anderen houden?
+                      En het strekt zich uit tot iedereen: vrienden, familie, vreemden, zelfs je vijanden.
+                    </p>
+                    <Button
+                      onClick={() => setShowDialog1(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(34,211,238,0.45)]"
+                    >
+                      ✨ Dankbaarheid en vergeving
+                    </Button>
+                  </div>
                 </div>
-              </div>
+              </section>
 
               {/* BLOK 2 */}
-              <div className="relative rounded-3xl p-8 md:p-12 border border-green-300/10 bg-gradient-to-r from-cyan-500/35 to-green-500/35 backdrop-blur-md shadow-[0_0_40px_rgba(34,211,238,0.14)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
-                <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="liefde" sectionId="blok2"   sectionTitle="Liefde begint in jezelf" />
+              <section id="blok2" className="scroll-mt-24">
+                <div className="relative rounded-3xl p-8 md:p-12 border border-green-300/10 bg-gradient-to-r from-cyan-500/35 to-green-500/35 backdrop-blur-md shadow-[0_0_40px_rgba(34,211,238,0.14)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
+                  <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                  <div className="absolute top-5 right-5 z-20">
+                    <Comments postId="liefde" sectionId="blok2"   sectionTitle="Liefde begint in jezelf" />
+                  </div>
+
+                  <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
+                    Liefde begint bij jezelf
+                  </h2>
+
+                  <div className="max-w-3xl space-y-4 text-white text-lg md:text-xl">
+                    <p className="hover:text-cyan-100 transition-colors duration-300">
+                      Alles begint met hoe je naar jezelf kijkt.
+                      Je gedachten en overtuigingen bepalen hoe je je voelt,
+                      en dat bepaalt weer hoe je reageert naar anderen.
+                    </p>
+                    <p className="hover:text-cyan-100 transition-colors duration-300">
+                      Als je jezelf constant bekritiseert of onder druk zet,
+                      ga je sneller gespannen of negatief reageren.
+                      Door meer bewust te worden van wat er in je hoofd en hart gebeurt,
+                      zal je meer liefde kunnen voelen en uitstralen.
+                    </p>
+
+                    <Button
+                      onClick={() => setShowDialog2(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(34,211,238,0.45)]"
+                    >
+                      ✨ Emoties als signalen
+                    </Button>
+                  </div>
                 </div>
-
-                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
-                  Liefde begint bij jezelf
-                </h2>
-
-                <div className="max-w-3xl space-y-4 text-white text-lg md:text-xl">
-                  <p className="hover:text-cyan-100 transition-colors duration-300">
-                    Alles begint met hoe je naar jezelf kijkt.
-                    Je gedachten en overtuigingen bepalen hoe je je voelt,
-                    en dat bepaalt weer hoe je reageert naar anderen.
-                  </p>
-                  <p className="hover:text-cyan-100 transition-colors duration-300">
-                    Als je jezelf constant bekritiseert of onder druk zet,
-                    ga je sneller gespannen of negatief reageren.
-                    Door meer bewust te worden van wat er in je hoofd en hart gebeurt,
-                    zal je meer liefde kunnen voelen en uitstralen.
-                  </p>
-
-                  <Button
-                    onClick={() => setShowDialog2(true)}
-                    className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(34,211,238,0.45)]"
-                  >
-                    ✨ Emoties als signalen
-                  </Button>
-                </div>
-              </div>
+              </section>
 
               {/* BLOK 3 */}
-              <div className="relative rounded-3xl p-8 md:p-12 border border-green-300/10 bg-gradient-to-r from-green-600/35 to-indigo-600/35 backdrop-blur-md shadow-[0_0_40px_rgba(59,130,246,0.12)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
-                <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="liefde" sectionId="blok3" sectionTitle="Heb anderen lief" />
+              <section id="blok3" className="scroll-mt-24">
+                <div className="relative rounded-3xl p-8 md:p-12 border border-green-300/10 bg-gradient-to-r from-green-600/35 to-indigo-600/35 backdrop-blur-md shadow-[0_0_40px_rgba(59,130,246,0.12)] transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 group">
+                  <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                  <div className="absolute top-5 right-5 z-20">
+                    <Comments postId="liefde" sectionId="blok3" sectionTitle="Heb anderen lief" />
+                  </div>
+
+                  <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
+                    Heb anderen lief
+                  </h2>
+
+                  <div className="max-w-3xl space-y-4 text-white text-lg md:text-xl">
+                    <p className="hover:text-blue-100 transition-colors duration-300">
+                      Iedereen wil respect, begrip en vriendelijkheid.
+                      Door dat te geven, maak je een groot verschil.
+                    </p>
+                    <p className="hover:text-blue-100 transition-colors duration-300">
+                      Liefde zit vaak in kleine dingen:
+                      luisteren, geduld hebben, iemand helpen,
+                      of gewoon vriendelijk blijven wanneer het moeilijk is.
+                    </p>
+                    <p className="hover:text-blue-100 transition-colors duration-300">
+                      Tegelijk betekent liefde ook dat je de ander niet probeert te controleren.
+                      Je kan iemand niet dwingen om jou lief te hebben.
+                      Soms hoort loslaten daar ook bij.
+                    </p>
+
+                    <Button
+                      onClick={() => setShowDialog3(true)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(34,211,238,0.45)]"
+                    >
+                      ✨ Dienstbaarheid
+                    </Button>
+                  </div>
                 </div>
-
-                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
-                  Heb anderen lief
-                </h2>
-
-                <div className="max-w-3xl space-y-4 text-white text-lg md:text-xl">
-                  <p className="hover:text-blue-100 transition-colors duration-300">
-                    Iedereen wil respect, begrip en vriendelijkheid.
-                    Door dat te geven, maak je een groot verschil.
-                  </p>
-                  <p className="hover:text-blue-100 transition-colors duration-300">
-                    Liefde zit vaak in kleine dingen:
-                    luisteren, geduld hebben, iemand helpen,
-                    of gewoon vriendelijk blijven wanneer het moeilijk is.
-                  </p>
-                  <p className="hover:text-blue-100 transition-colors duration-300">
-                    Tegelijk betekent liefde ook dat je de ander niet probeert te controleren.
-                    Je kan iemand niet dwingen om jou lief te hebben.
-                    Soms hoort loslaten daar ook bij.
-                  </p>
-
-                  <Button
-                    onClick={() => setShowDialog3(true)}
-                    className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(34,211,238,0.45)]"
-                  >
-                    ✨ Dienstbaarheid
-                  </Button>
-                </div>
-              </div>
+              </section>
 
               <PracticalTip pageType="liefde" />
 
