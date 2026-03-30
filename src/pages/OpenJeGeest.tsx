@@ -76,40 +76,42 @@ const OpenJeGeest = () => {
                   </p>
                 </div>
               </div>
+              <section id="blok1" className="scroll-mt-24">
+                <div className="relative bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-8 md:p-12 transform hover:scale-[1.02] transition-all duration-500">
+                  <div className="absolute top-5 right-5 z-20">
+                    <Comments postId="openjegeest" sectionId='blok1' sectionTitle="Open geest"/>
+                  </div>
 
-              <div className="relative bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-8 md:p-12 transform hover:scale-[1.02] transition-all duration-500">
-                <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="openjegeest" sectionId='blok1' sectionTitle="Open geest"/>
-                </div>
+                  <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
+                    HEB EEN OPEN GEEST
+                  </h2>
 
-                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
-                  HEB EEN OPEN GEEST
-                </h2>
-
-                <div className="max-w-3xl">
-                  <div className="space-y-4 text-white text-lg md:text-xl">
-                    <p>
-                      Een open geest is niet hetzelfde als een leeg hoofd.
-                      Het is een hoofd dat ruimte maakt voor nieuwe ideëen,
-                      nieuwe perspectieven, nieuwe mogelijkheden.
-                    </p>
-                    <p>
-                      Het betekent dat je bereid bent om je oude overtuigingen
-                      ter discussie te stellen. Dat je durft te zeggen:
-                      "Misschien heb ik het fout. Misschien is er meer."
-                    </p>
-                    <p>
-                      Een open geest is de sleutel tot groei. Zonder openheid
-                      blijf je vastzitten in dezelfde denkkaders,
-                      dezelfde beperkingen, dezelfde realiteit.
-                    </p>
+                  <div className="max-w-3xl">
+                    <div className="space-y-4 text-white text-lg md:text-xl">
+                      <p>
+                        Een open geest is niet hetzelfde als een leeg hoofd.
+                        Het is een hoofd dat ruimte maakt voor nieuwe ideëen,
+                        nieuwe perspectieven, nieuwe mogelijkheden.
+                      </p>
+                      <p>
+                        Het betekent dat je bereid bent om je oude overtuigingen
+                        ter discussie te stellen. Dat je durft te zeggen:
+                        "Misschien heb ik het fout. Misschien is er meer."
+                      </p>
+                      <p>
+                        Een open geest is de sleutel tot groei. Zonder openheid
+                        blijf je vastzitten in dezelfde denkkaders,
+                        dezelfde beperkingen, dezelfde realiteit.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </section>
 
-              <div className="relative bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl p-8 md:p-12 transform hover:scale-[1.02] transition-all duration-500">
-                <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="openjegeest" sectionId="blok2" sectionTitle="De schepper van je eigen werkelijkheid" />
+              <section id="blok2" className="scroll-mt-24">
+                <div className="relative bg-gradient-to-r from-green-400 to-blue-400 rounded-3xl p-8 md:p-12 transform hover:scale-[1.02] transition-all duration-500">
+                  <div className="absolute top-5 right-5 z-20">
+                    <Comments postId="openjegeest" sectionId="blok2" sectionTitle="De schepper van je eigen werkelijkheid" />
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-black text-purple-600 mb-6 pr-14">
@@ -138,29 +140,32 @@ const OpenJeGeest = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+                </div>
+              </section>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {ideas.map((idea, index) => (
-                  <div
-                    key={index}
-                    className="relative bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/20 transform hover:scale-105 hover:rotate-1 transition-all duration-500 cursor-pointer"
-                    onClick={() => handleSelect(index)}
-                  >
+                  <section id={`stuk${index}`} key={index} className="scroll-mt-24">
                     <div
-                      className="absolute top-4 right-4 text-white/70 hover:text-yellow-400 transition"
-                      onClick={(e) => e.stopPropagation()}
+                      key={index}
+                      className="relative bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/20 transform hover:scale-105 hover:rotate-1 transition-all duration-500 cursor-pointer"
+                      onClick={() => handleSelect(index)}
                     >
-                      <Comments postId="openjegeest" sectionId={`stuk${index}`}  sectionTitle={idea.title} />
-                    </div>
+                      <div
+                        className="absolute top-4 right-4 text-white/70 hover:text-yellow-400 transition"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Comments postId="openjegeest" sectionId={`stuk${index}`}  sectionTitle={idea.title} />
+                      </div>
 
-                    <h3 className="text-2xl font-black text-yellow-400 mb-3 pr-10">
-                      {idea.title}
-                    </h3>
-                    <p className="text-white text-base">
-                      {idea.desc}
-                    </p>
-                  </div>
+                      <h3 className="text-2xl font-black text-yellow-400 mb-3 pr-10">
+                        {idea.title}
+                      </h3>
+                      <p className="text-white text-base">
+                        {idea.desc}
+                      </p>
+                    </div>
+                  </section>
                 ))}
               </div>
 

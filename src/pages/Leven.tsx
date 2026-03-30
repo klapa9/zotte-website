@@ -42,142 +42,150 @@ const Leven = () => {
           <div className="flex-1 px-4 pb-16">
             <div className="max-w-5xl mx-auto space-y-20">
 
-              {/* ABSOLUTE */}
-              <div className="relative rounded-3xl p-8 md:p-12 border border-cyan-400/30 bg-white/5 backdrop-blur-md shadow-[0_0_40px_rgba(34,211,238,0.08)]">
-                <div className="absolute top-5 right-5 z-20">
-                  <Comments 
-                    postId="leven"  
-                    sectionId="blok1"
-                    sectionTitle="Het Geheel - G O D" 
-                  />
-                </div>
+              <section id="blok1" className="scroll-mt-24">
+                {/* ABSOLUTE */}
+                <div className="relative rounded-3xl p-8 md:p-12 border border-cyan-400/30 bg-white/5 backdrop-blur-md shadow-[0_0_40px_rgba(34,211,238,0.08)]">
+                  <div className="absolute top-5 right-5 z-20">
+                    <Comments 
+                      postId="leven"  
+                      sectionId="blok1"
+                      sectionTitle="Het Geheel - G O D" 
+                    />
+                  </div>
 
-                <h2 className="text-4xl md:text-5xl font-black text-cyan-400 mb-6 pr-14">
-                  G O D
-                </h2>
+                  <h2 className="text-4xl md:text-5xl font-black text-cyan-400 mb-6 pr-14">
+                    G O D
+                  </h2>
 
-                <div className="max-w-3xl">
-                  <div className="space-y-4 text-white text-lg md:text-xl">
-                    <p>
-                      Er is één werkelijkheid die alles omvat. Je kan het God noemen, het Universum,
-                      de Bron, het Geheel,... Het zijn woorden die allemaal proberen te wijzen naar hetzelfde.
-                    </p>
-                    <p>
-                      Het is niet iets buiten ons, maar datgene waaruit alles ontstaat én waarin alles bestaat.
-                      Alles wat je ziet, voelt en ervaart is een expressie van dat ene geheel.
-                    </p>
-                    <p>
-                      Jij bent een unieke vorm waarin God zich uitdrukt.
-                      Alles is 1 geheel.
-                      Vanuit dit perspectief is alles compleet. Er ontbreekt niets en alles is perfect.
-                    </p>
+                  <div className="max-w-3xl">
+                    <div className="space-y-4 text-white text-lg md:text-xl">
+                      <p>
+                        Er is één werkelijkheid die alles omvat. Je kan het God noemen, het Universum,
+                        de Bron, het Geheel,... Het zijn woorden die allemaal proberen te wijzen naar hetzelfde.
+                      </p>
+                      <p>
+                        Het is niet iets buiten ons, maar datgene waaruit alles ontstaat én waarin alles bestaat.
+                        Alles wat je ziet, voelt en ervaart is een expressie van dat ene geheel.
+                      </p>
+                      <p>
+                        Jij bent een unieke vorm waarin God zich uitdrukt.
+                        Alles is 1 geheel.
+                        Vanuit dit perspectief is alles compleet. Er ontbreekt niets en alles is perfect.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </section>
 
-              {/* RELATIEVE ERVARING */}
-              <div className="relative rounded-3xl p-8 md:p-12 border border-blue-400/30 bg-black/40 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
-                <div className="absolute top-5 right-5 z-20">
-                  <Comments 
-                    postId="leven" 
-                    sectionId="blok2"
-                    sectionTitle="De menselijke ervaring"
-                  />
-                </div>
+              <section id="blok2" className="scroll-mt-24">
+                {/* RELATIEVE ERVARING */}
+                <div className="relative rounded-3xl p-8 md:p-12 border border-blue-400/30 bg-black/40 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
+                  <div className="absolute top-5 right-5 z-20">
+                    <Comments 
+                      postId="leven" 
+                      sectionId="blok2"
+                      sectionTitle="De menselijke ervaring"
+                    />
+                  </div>
 
-                <h2 className="text-4xl md:text-5xl font-black text-blue-400 mb-6 pr-14">
-                  De Menselijke Ervaring
-                </h2>
+                  <h2 className="text-4xl md:text-5xl font-black text-blue-400 mb-6 pr-14">
+                    De Menselijke Ervaring
+                  </h2>
 
-                <div className="max-w-3xl">
-                  <div className="space-y-4 text-white text-lg md:text-xl">
-                    <p>
-                      Toch ervaren we het leven anders. We leven in een wereld van tegenstellingen:
-                      licht en donker, liefde en angst, succes en verlies.
-                    </p>
-                    <p>
-                      Hier ontstaat het gevoel van “ik” en “de ander”.
-                      We lijken afgescheiden, kwetsbaar en beperkt.
-                      Deze dualiteit maakt ervaring, groei en keuze mogelijk.
-                    </p>
-                    <p>
-                      Door te vergeten dat we allemaal één zijn, kunnen we het leven volledig beleven — met alles wat daarbij hoort.
-                      Onze unieke menselijke ervaring is daarom een prachtig geschenk.
-                    </p>
+                  <div className="max-w-3xl">
+                    <div className="space-y-4 text-white text-lg md:text-xl">
+                      <p>
+                        Toch ervaren we het leven anders. We leven in een wereld van tegenstellingen:
+                        licht en donker, liefde en angst, succes en verlies.
+                      </p>
+                      <p>
+                        Hier ontstaat het gevoel van “ik” en “de ander”.
+                        We lijken afgescheiden, kwetsbaar en beperkt.
+                        Deze dualiteit maakt ervaring, groei en keuze mogelijk.
+                      </p>
+                      <p>
+                        Door te vergeten dat we allemaal één zijn, kunnen we het leven volledig beleven — met alles wat daarbij hoort.
+                        Onze unieke menselijke ervaring is daarom een prachtig geschenk.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </section>
 
-              {/* BALANS */}
-              <div className="relative rounded-3xl p-8 md:p-12 border border-cyan-300/20 bg-gradient-to-r from-green-600/80 to-blue-600/80 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
-                <div className="absolute top-5 right-5 z-20">
-                  <Comments 
-                    postId="leven" 
-                    sectionId="blok3"
-                    sectionTitle="Balans in het Leven" 
-                  />
-                </div>
+              <section id="blok3" className="scroll-mt-24">
+                {/* BALANS */}
+                <div className="relative rounded-3xl p-8 md:p-12 border border-cyan-300/20 bg-gradient-to-r from-green-600/80 to-blue-600/80 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
+                  <div className="absolute top-5 right-5 z-20">
+                    <Comments 
+                      postId="leven" 
+                      sectionId="blok3"
+                      sectionTitle="Balans in het Leven" 
+                    />
+                  </div>
 
-                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
-                  Balans in het Leven
-                </h2>
+                  <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
+                    Balans in het Leven
+                  </h2>
 
-                <div className="max-w-3xl">
-                  <div className="space-y-4 text-white text-lg md:text-xl">
-                    <p>
-                      Ons leven speelt zich af tussen twee perspectieven:
-                      de absolute waarheid van eenheid, en de relatieve menselijke ervaring.
-                    </p>
-                    <p>
-                      Aan de ene kant is er een diep weten dat alles verbonden is, 
-                      aan de andere kant is er het menselijke:
-                      emoties, keuzes, verantwoordelijkheid en soms ook strijd.
-                    </p>
-                    <p>
-                      De kunst van het leven ligt niet in het kiezen van één van beide,
-                      maar in het leren bewegen tussen die twee.
-                      Voel wat er te voelen valt, maar verlies jezelf er niet in.
-                      Handel bewust, zonder volledig gestuurd te worden door angst of controle.
-                    </p>
-                    <p>
-                      Balans is geen eindpunt dat je bereikt,
-                      maar een voortdurende beweging waarin je telkens opnieuw afstemt.
-                    </p>
+                  <div className="max-w-3xl">
+                    <div className="space-y-4 text-white text-lg md:text-xl">
+                      <p>
+                        Ons leven speelt zich af tussen twee perspectieven:
+                        de absolute waarheid van eenheid, en de relatieve menselijke ervaring.
+                      </p>
+                      <p>
+                        Aan de ene kant is er een diep weten dat alles verbonden is, 
+                        aan de andere kant is er het menselijke:
+                        emoties, keuzes, verantwoordelijkheid en soms ook strijd.
+                      </p>
+                      <p>
+                        De kunst van het leven ligt niet in het kiezen van één van beide,
+                        maar in het leren bewegen tussen die twee.
+                        Voel wat er te voelen valt, maar verlies jezelf er niet in.
+                        Handel bewust, zonder volledig gestuurd te worden door angst of controle.
+                      </p>
+                      <p>
+                        Balans is geen eindpunt dat je bereikt,
+                        maar een voortdurende beweging waarin je telkens opnieuw afstemt.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </section>
 
-              {/* JOUW PAD */}
-              <div className="relative rounded-3xl p-8 md:p-12 border border-purple-400/30 bg-white/5 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
-                <div className="absolute top-5 right-5 z-20">
-                  <Comments 
-                    postId="leven" 
-                    sectionId="blok4"
-                    sectionTitle="Jouw Pad" 
-                  />
-                </div>
+              <section id="blok4" className="scroll-mt-24">
+                {/* JOUW PAD */}
+                <div className="relative rounded-3xl p-8 md:p-12 border border-purple-400/30 bg-white/5 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
+                  <div className="absolute top-5 right-5 z-20">
+                    <Comments 
+                      postId="leven" 
+                      sectionId="blok4"
+                      sectionTitle="Jouw Pad" 
+                    />
+                  </div>
 
-                <h2 className="text-4xl md:text-5xl font-black text-purple-400 mb-6 pr-14">
-                  Jouw Pad
-                </h2>
+                  <h2 className="text-4xl md:text-5xl font-black text-purple-400 mb-6 pr-14">
+                    Jouw Pad
+                  </h2>
 
-                <div className="max-w-3xl">
-                  <div className="space-y-4 text-white text-lg md:text-xl">
-                    <p>
-                      Je bent hier niet zonder reden. Niet om perfect te zijn,
-                      maar om te ervaren, te groeien en te ontdekken wie je bent.
-                    </p>
-                    <p>
-                      Wat jou raakt, wat jou energie geeft en wat jou blijft roepen,
-                      wijst je richting. Dat is jouw pad.
-                    </p>
-                    <p>
-                      Het leven is prachtig:
-                      leef bewust, blijf in beweging en herinner af en toe dat we allemaal 1 zijn.
-                    </p>
+                  <div className="max-w-3xl">
+                    <div className="space-y-4 text-white text-lg md:text-xl">
+                      <p>
+                        Je bent hier niet zonder reden. Niet om perfect te zijn,
+                        maar om te ervaren, te groeien en te ontdekken wie je bent.
+                      </p>
+                      <p>
+                        Wat jou raakt, wat jou energie geeft en wat jou blijft roepen,
+                        wijst je richting. Dat is jouw pad.
+                      </p>
+                      <p>
+                        Het leven is prachtig:
+                        leef bewust, blijf in beweging en herinner af en toe dat we allemaal 1 zijn.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </section>
 
               <PracticalTip pageType="leven" />
 

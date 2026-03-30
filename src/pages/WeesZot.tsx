@@ -42,79 +42,82 @@ const WeesZot = () => {
 
           <div className="flex-1 px-4 pb-16">
             <div className="max-w-5xl mx-auto space-y-16">
-              {/* Enthousiasme Section */}
-              <div className="relative rounded-3xl p-8 md:p-12 border border-cyan-300/20 bg-gradient-to-br from-cyan-500/20 via-sky-500/10 to-blue-900/30 backdrop-blur-md shadow-[0_0_40px_rgba(34,211,238,0.12)]">
-                <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="weeszot" sectionId='blok1' sectionTitle="Volg je enthousiasme"/>
-                </div>
+              <section id="blok1" className="scroll-mt-24">
+                {/* Enthousiasme Section */}
+                <div className="relative rounded-3xl p-8 md:p-12 border border-cyan-300/20 bg-gradient-to-br from-cyan-500/20 via-sky-500/10 to-blue-900/30 backdrop-blur-md shadow-[0_0_40px_rgba(34,211,238,0.12)]">
+                  <div className="absolute top-5 right-5 z-20">
+                    <Comments postId="weeszot" sectionId='blok1' sectionTitle="Volg je enthousiasme"/>
+                  </div>
 
-                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
-                  Volg je enthousiasme
-                </h2>
+                  <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
+                    Volg je enthousiasme
+                  </h2>
 
-                <div className="max-w-3xl">
-                  <div className="space-y-4 text-white text-lg md:text-xl">
-                    <p>
-                      Je enthousiasme is je innerlijke kompas dat je naar je bestemming leidt.
-                      Het is een signaal dat je moet volgen, zelfs als het eng of onlogisch lijkt.
-                    </p>
-                    <p>
-                      Als je je enthousiasme volgt, open je de deur naar nieuwe mogelijkheden,
-                      onverwachte kansen en diepere vervulling. Je doet dingen die je leuk vindt, en dit brengt je in contact met gelijkgestemde mensen en situaties.
-                    </p>
-                    <p>
-                      Je leert je zelf kennen en autheniciteit te omarmen. Je zult merken dat je meer in lijn leeft met wie je werkelijk bent,
-                      en dat je een diepere connectie ervaart met anderen en met het leven zelf.
-                    </p>
+                  <div className="max-w-3xl">
+                    <div className="space-y-4 text-white text-lg md:text-xl">
+                      <p>
+                        Je enthousiasme is je innerlijke kompas dat je naar je bestemming leidt.
+                        Het is een signaal dat je moet volgen, zelfs als het eng of onlogisch lijkt.
+                      </p>
+                      <p>
+                        Als je je enthousiasme volgt, open je de deur naar nieuwe mogelijkheden,
+                        onverwachte kansen en diepere vervulling. Je doet dingen die je leuk vindt, en dit brengt je in contact met gelijkgestemde mensen en situaties.
+                      </p>
+                      <p>
+                        Je leert je zelf kennen en autheniciteit te omarmen. Je zult merken dat je meer in lijn leeft met wie je werkelijk bent,
+                        en dat je een diepere connectie ervaart met anderen en met het leven zelf.
+                      </p>
 
-                    <Button
-                      onClick={() => setShowDialog(true)}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                    >
-                      💡 Van waar komt je enthousiasme?
-                    </Button>
+                      <Button
+                        onClick={() => setShowDialog(true)}
+                        className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                      >
+                        💡 Van waar komt je enthousiasme?
+                      </Button>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </section>
+              <section id="blok2" className="scroll-mt-24">
+                {/* Realiteit Section */}
+                <div className="relative rounded-3xl p-8 md:p-12 border border-white/20 bg-black/30 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
+                  <div className="absolute top-5 right-5 z-20">
+                    <Comments postId="weeszot" sectionId="blok2" sectionTitle="Creëer je eigen realiteit"/>
+                  </div>
 
-              {/* Realiteit Section */}
-              <div className="relative rounded-3xl p-8 md:p-12 border border-white/20 bg-black/30 backdrop-blur-md transform hover:scale-[1.02] transition-all duration-500">
-                <div className="absolute top-5 right-5 z-20">
-                  <Comments postId="weeszot" sectionId="blok2" sectionTitle="Creëer je eigen realiteit"/>
-                </div>
+                  <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
+                    Creëer je eigen realiteit
+                  </h2>
 
-                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 pr-14">
-                  Creëer je eigen realiteit
-                </h2>
+                  <div className="max-w-3xl">
+                    <div className="space-y-4 text-white text-lg md:text-xl">
+                      <p className="hover:text-indigo-200 transition-colors duration-300">
+                        Om je eigen realiteit te creëren, begin je met het afstemmen van je innerlijke staat op wat je wilt ervaren.
+                        Beslis wat je wilt ervaren op een goed moment in je leven, zonder stress, angst of woede.
+                        Schrijf dit op en onthoud dit als je een moeilijker moment hebt in je leven.
+                      </p>
+                      <p className="hover:text-purple-200 transition-colors duration-300">
+                        Om je ervaring te bereiken begin je met deze persoon nu al te belichamen.
+                        Heb vertrouwen dat je alles kan bereiken wat je wilt bereiken, als je dit echt wilt.
+                        Dus als je een gelukkig leven wilt, leef dan nu al alsof je een gelukkig leven hebt.
+                        Als je een succesvol bedrijf wilt, gedraag je dan nu al als een succesvolle ondernemer.
+                      </p>
+                      <p className="hover:text-pink-200 transition-colors duration-300">
+                        Er zijn veel zaken die je verhinderen om je realiteit te creëren, zoals angst en afleiding.
+                        Vaak moet je de zaken loslaten die je niet meer dienen, zelfs als ze ooit belangrijk waren.
+                        Dit kan een deel van je identiteit zijn, een gewoonte, een baan, of een overtuiging.
+                      </p>
 
-                <div className="max-w-3xl">
-                  <div className="space-y-4 text-white text-lg md:text-xl">
-                    <p className="hover:text-indigo-200 transition-colors duration-300">
-                      Om je eigen realiteit te creëren, begin je met het afstemmen van je innerlijke staat op wat je wilt ervaren.
-                      Beslis wat je wilt ervaren op een goed moment in je leven, zonder stress, angst of woede.
-                      Schrijf dit op en onthoud dit als je een moeilijker moment hebt in je leven.
-                    </p>
-                    <p className="hover:text-purple-200 transition-colors duration-300">
-                      Om je ervaring te bereiken begin je met deze persoon nu al te belichamen.
-                      Heb vertrouwen dat je alles kan bereiken wat je wilt bereiken, als je dit echt wilt.
-                      Dus als je een gelukkig leven wilt, leef dan nu al alsof je een gelukkig leven hebt.
-                      Als je een succesvol bedrijf wilt, gedraag je dan nu al als een succesvolle ondernemer.
-                    </p>
-                    <p className="hover:text-pink-200 transition-colors duration-300">
-                      Er zijn veel zaken die je verhinderen om je realiteit te creëren, zoals angst en afleiding.
-                      Vaak moet je de zaken loslaten die je niet meer dienen, zelfs als ze ooit belangrijk waren.
-                      Dit kan een deel van je identiteit zijn, een gewoonte, een baan, of een overtuiging.
-                    </p>
-
-                    <Button
-                      onClick={() => setShowDialog2(true)}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-                    >
-                      💡 Focus!
-                    </Button>
+                      <Button
+                        onClick={() => setShowDialog2(true)}
+                        className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                      >
+                        💡 Focus!
+                      </Button>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </section>
 
               <PracticalTip pageType="weeszot" />
 
