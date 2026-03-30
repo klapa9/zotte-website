@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 interface AudioPlayerProps {
   pageType?: string;
@@ -11,17 +11,22 @@ let globalPlayerId = 0;
 
 const VOLUME_STORAGE_KEY = "audioVolume";
 const MUTE_STORAGE_KEY = "audioMuted";
+const LONG_PRESS_DURATION = 500;
 
 const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
   const audioRef = useRef<HTMLAudioElement>(null);
+  const mobileControlsRef = useRef<HTMLDivElement>(null);
+  const longPressTimerRef = useRef<number | null>(null);
+  const longPressTriggeredRef = useRef(false);
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [volume, setVolume] = useState(0.3);
   const [isLoaded, setIsLoaded] = useState(false);
   const [prefsLoaded, setPrefsLoaded] = useState(false);
+  const [showMobileSoundControls, setShowMobileSoundControls] = useState(false);
 
-  const getAudioFile = () => {
+  const getAudioFile = useCallback(() => {
     if (audioFile) return audioFile;
 
     switch (pageType) {
@@ -42,7 +47,7 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
       default:
         return "/index.mp3";
     }
-  };
+  }, [audioFile, pageType]);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -84,7 +89,7 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
 
     const currentPlayerId = Date.now();
 
-    if (globalAudioRef && globalPlayerId !== currentPlayerId) {
+    if (globalAudioRef && globalAudioRef !== audio && globalPlayerId !== currentPlayerId) {
       globalAudioRef.pause();
       globalAudioRef.currentTime = 0;
       globalAudioRef = null;
@@ -171,9 +176,41 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
         globalPlayerId = 0;
       }
     };
-  }, [pageType, audioFile, prefsLoaded, isMuted, volume]);
+  }, [getAudioFile, prefsLoaded]);
+
+  useEffect(() => {
+    if (!showMobileSoundControls) return;
+
+    const handleOutsideClick = (event: MouseEvent | TouchEvent) => {
+      const target = event.target as Node;
+      if (mobileControlsRef.current && !mobileControlsRef.current.contains(target)) {
+        setShowMobileSoundControls(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    document.addEventListener("touchstart", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener("touchstart", handleOutsideClick);
+    };
+  }, [showMobileSoundControls]);
+
+  useEffect(() => {
+    return () => {
+      if (longPressTimerRef.current) {
+        window.clearTimeout(longPressTimerRef.current);
+      }
+    };
+  }, []);
 
   const togglePlay = async () => {
+    if (longPressTriggeredRef.current) {
+      longPressTriggeredRef.current = false;
+      return;
+    }
+
     const audio = audioRef.current;
     if (!audio || !isLoaded) return;
 
@@ -244,10 +281,37 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
     }
   };
 
+  const startLongPress = () => {
+    longPressTriggeredRef.current = false;
+
+    if (longPressTimerRef.current) {
+      window.clearTimeout(longPressTimerRef.current);
+    }
+
+    longPressTimerRef.current = window.setTimeout(() => {
+      longPressTriggeredRef.current = true;
+      setShowMobileSoundControls(true);
+    }, LONG_PRESS_DURATION);
+  };
+
+  const cancelLongPress = () => {
+    if (longPressTimerRef.current) {
+      window.clearTimeout(longPressTimerRef.current);
+      longPressTimerRef.current = null;
+    }
+  };
+
+  const volumeSliderBackground = isMuted
+    ? "rgba(255,255,255,0.3)"
+    : `linear-gradient(to right, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.85) ${
+        volume * 100
+      }%, rgba(255,255,255,0.3) ${volume * 100}%, rgba(255,255,255,0.3) 100%)`;
+
   return (
     <>
       <audio ref={audioRef} />
 
+      {/* Desktop */}
       <div className="hidden md:flex fixed top-4 right-4 z-50 bg-black/80 backdrop-blur-md rounded-full p-3 items-center gap-2 shadow-lg border border-white/20">
         <button
           onClick={togglePlay}
@@ -256,12 +320,12 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
           title={isPlaying ? "Pauze" : "Afspelen"}
         >
           {isPlaying ? (
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <rect x="6" y="4" width="4" height="16" />
-              <rect x="14" y="4" width="4" height="16" />
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="6" y="4" width="4" height="16" rx="1" />
+              <rect x="14" y="4" width="4" height="16" rx="1" />
             </svg>
           ) : (
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M8 5v14l11-7z" />
             </svg>
           )}
@@ -277,12 +341,35 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
           title={isMuted ? "Geluid uit" : "Geluid aan"}
         >
           {isMuted ? (
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.87-2.25 1.07V22l-2.5-1.5L5 22v-6.73L4.27 3z" />
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M11 5 6.5 9H4v6h2.5L11 19V5Z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 9l4 4m0-4-4 4"
+              />
             </svg>
           ) : (
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M11 5 6.5 9H4v6h2.5L11 19V5Z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.5 9.5a4 4 0 0 1 0 5"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M18 7a7.5 7.5 0 0 1 0 10"
+              />
             </svg>
           )}
         </button>
@@ -296,15 +383,7 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
             value={isMuted ? 0 : volume}
             onChange={handleVolumeChange}
             className="w-20 h-1 bg-white/30 rounded-lg appearance-none cursor-pointer"
-            style={{
-              background: isMuted
-                ? "rgba(255,255,255,0.3)"
-                : `linear-gradient(to right, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) ${
-                    volume * 100
-                  }%, rgba(255,255,255,0.3) ${
-                    volume * 100
-                  }%, rgba(255,255,255,0.3) 100%)`,
-            }}
+            style={{ background: volumeSliderBackground }}
           />
         </div>
 
@@ -316,41 +395,89 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
         )}
       </div>
 
-      <div className="fixed bottom-20 left-4 z-50 md:hidden flex flex-col gap-3">
+      {/* Mobile */}
+      <div
+        ref={mobileControlsRef}
+        className="fixed bottom-20 left-4 z-50 md:hidden flex flex-col items-start gap-3"
+      >
+        {showMobileSoundControls && (
+          <div className="bg-black/85 backdrop-blur-md rounded-2xl px-3 py-3 flex items-center gap-3 shadow-lg border border-white/20 animate-fade-in-up">
+            <button
+              onClick={toggleMute}
+              className={`w-11 h-11 rounded-full transition-all duration-200 flex items-center justify-center text-white ${
+                isMuted
+                  ? "bg-white/15 hover:bg-white/25"
+                  : "bg-green-500/70 hover:bg-green-500/90"
+              }`}
+              title={isMuted ? "Geluid uit" : "Geluid aan"}
+            >
+              {isMuted ? (
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M11 5 6.5 9H4v6h2.5L11 19V5Z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 9l4 4m0-4-4 4"
+                  />
+                </svg>
+              ) : (
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M11 5 6.5 9H4v6h2.5L11 19V5Z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.5 9.5a4 4 0 0 1 0 5"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M18 7a7.5 7.5 0 0 1 0 10"
+                  />
+                </svg>
+              )}
+            </button>
+
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              value={isMuted ? 0 : volume}
+              onChange={handleVolumeChange}
+              className="w-28 h-1 bg-white/30 rounded-lg appearance-none cursor-pointer"
+              style={{ background: volumeSliderBackground }}
+            />
+          </div>
+        )}
+
         <button
           onClick={togglePlay}
+          onTouchStart={startLongPress}
+          onTouchEnd={cancelLongPress}
+          onTouchCancel={cancelLongPress}
+          onMouseDown={startLongPress}
+          onMouseUp={cancelLongPress}
+          onMouseLeave={cancelLongPress}
           disabled={!isLoaded}
-          className="bg-black/80 backdrop-blur-md rounded-full p-4 flex items-center justify-center text-white shadow-lg border border-white/20 hover:bg-black/90 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="bg-black/80 backdrop-blur-md rounded-full p-4 flex items-center justify-center text-white shadow-lg border border-white/20 hover:bg-black/90 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed select-none touch-manipulation"
           title={isPlaying ? "Pauze" : "Afspelen"}
         >
           {isPlaying ? (
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <rect x="6" y="4" width="4" height="16" />
-              <rect x="14" y="4" width="4" height="16" />
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="6" y="4" width="4" height="16" rx="1" />
+              <rect x="14" y="4" width="4" height="16" rx="1" />
             </svg>
           ) : (
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M8 5v14l11-7z" />
-            </svg>
-          )}
-        </button>
-
-        <button
-          onClick={toggleMute}
-          className={`backdrop-blur-md rounded-full p-4 flex items-center justify-center text-white shadow-lg border border-white/20 transition-all duration-200 ${
-            isMuted
-              ? "bg-black/80 hover:bg-black/90"
-              : "bg-green-500/70 hover:bg-green-500/90"
-          }`}
-          title={isMuted ? "Geluid uit" : "Geluid aan"}
-        >
-          {isMuted ? (
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.87-2.25 1.07V22l-2.5-1.5L5 22v-6.73L4.27 3z" />
-            </svg>
-          ) : (
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
             </svg>
           )}
         </button>
@@ -378,8 +505,23 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
           }
         }
 
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(8px) scale(0.98);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+
         .animate-fade-in {
           animation: fade-in 0.3s ease-out;
+        }
+
+        .animate-fade-in-up {
+          animation: fade-in-up 0.22s ease-out;
         }
       `}</style>
     </>
