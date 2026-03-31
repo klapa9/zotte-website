@@ -483,7 +483,7 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
         </button>
       </div>
 
-      {!isPlaying && isLoaded && (
+      {/* {!isPlaying && isLoaded && (
         <div className="hidden md:flex fixed top-20 left-4 z-40 bg-black/80 backdrop-blur-md rounded-2xl p-4 max-w-xs animate-fade-in">
           <p className="text-white text-sm">
             {isMuted
@@ -491,7 +491,7 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
               : "🎵 Muziek beschikbaar - klik om af te spelen"}
           </p>
         </div>
-      )}
+      )} */}
 
       <style jsx>{`
         @keyframes fade-in {
