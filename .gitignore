@@ -31,3 +31,11 @@ yarn.lock
 .env
 .env.*
 !.env.example
+
+# Local factory tools and secret material
+.factory-tmp/
+.factory-tools/
+.venv/
+venv/
+*.pem
+*.key
