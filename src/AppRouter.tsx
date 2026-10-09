@@ -12,12 +12,25 @@ import OpenJeGeest from "./pages/OpenJeGeest";
 import Geld from "./pages/Geld";
 import OldIndex from "./pages/Index.old";
 import CommentsOverviewPage from "./pages/CommentsOverviewPage";
+import { MicrositeHome, MicrositeArticle, MicrositePreview } from "./pages/Microsite";
+import { micrositeTopics } from "./data/microsite";
 
-export function AppRouter() {
+export const MICROSITE_HOST = "nogzottere.zottewebsite.be";
+
+export function AppRouter({ hostname = window.location.hostname }: { hostname?: string }) {
+  const isMicrosite = hostname.toLowerCase() === MICROSITE_HOST;
+
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Routes>
+      {isMicrosite ? <Routes>
+        <Route path="/" element={<MicrositeHome />} />
+        <Route path="/verlaat-je-lichaam" element={<MicrositeArticle />} />
+        {micrositeTopics.slice(1).map((topic) => (
+          <Route key={topic.slug} path={`/${topic.slug}`} element={<MicrositePreview topic={topic} />} />
+        ))}
+        <Route path="*" element={<MicrositeHome />} />
+      </Routes> : <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/old" element={<OldIndex />} />
         <Route path="/geld" element={<Geld />} />
@@ -32,7 +45,7 @@ export function AppRouter() {
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
         <Route path="/admin" element={<AdminLogin />} />
-      </Routes>
+      </Routes>}
     </BrowserRouter>
   );
 }

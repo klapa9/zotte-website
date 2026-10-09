@@ -1,0 +1,17 @@
+.microsite { position: relative; isolation: isolate; overflow-x: clip; background: radial-gradient(circle at 15% 5%, #17345b 0, transparent 32%), radial-gradient(circle at 90% 55%, #341d52 0, transparent 36%), #080d21; }
+.microsite-orb { position: absolute; z-index: 0; width: min(45rem, 80vw); aspect-ratio: 1; border-radius: 50%; filter: blur(75px); opacity: .25; pointer-events: none; animation: microsite-drift 16s ease-in-out infinite alternate; }
+.microsite-orb-one { top: 12rem; left: -20rem; background: #2abbd7; }
+.microsite-orb-two { top: 45rem; right: -20rem; background: #a945a8; animation-delay: -8s; }
+.microsite-title { background: linear-gradient(110deg, #f9fafb, #8de7f4 52%, #e5a4e7); background-clip: text; color: transparent; }
+.microsite-brand { color: #f8fafc; text-decoration: none; }
+.microsite-brand span { color: #85e7f4; }
+.microsite-panel { border: 1px solid rgba(255,255,255,.16); background: rgba(255,255,255,.075); backdrop-filter: blur(18px); }
+.microsite-nav-link { color: #e2e8f0; transition: background-color .2s, color .2s; }
+.microsite-nav-link:hover, .microsite-nav-link[aria-current="page"] { background: rgba(103,232,249,.18); color: white; }
+.microsite-card { transition: transform .2s, border-color .2s; }
+.microsite-card:hover { transform: translateY(-4px); border-color: rgba(103,232,249,.6); }
+.microsite article p { margin-bottom: 1rem; line-height: 1.8; color: #e2e8f0; }
+.microsite article p:last-child { margin-bottom: 0; }
+.microsite-tip { border-color: rgba(103,232,249,.5); background: rgba(8,145,178,.14); }
+@keyframes microsite-drift { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(8vw,5rem,0) scale(1.15); } }
+@media (prefers-reduced-motion: reduce) { .microsite-orb { animation: none; } .microsite-card, .microsite-nav-link { transition: none; } }

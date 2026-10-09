@@ -493,7 +493,7 @@ const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
         </div>
       )} */}
 
-      <style jsx>{`
+      <style>{`
         @keyframes fade-in {
           from {
             opacity: 0;

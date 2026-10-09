@@ -1,12 +1,14 @@
 import React, { useRef, useEffect } from "react";
 
 const SubtleFractalBackground = () => {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const rotationVelocityRef = useRef(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return;
     const ctx = canvas.getContext("2d");
+    if (!ctx) return;
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;

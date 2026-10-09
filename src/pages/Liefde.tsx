@@ -7,7 +7,7 @@ import AudioPlayer from '@/components/AudioPlayer';
 import Comments from '@/components/Comments';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import LovingBackground from '@/components/LovingBackground';
+import LovingBackground from '@/components/Lovingbackground';
 
 const Liefde = () => {
   const [showDialog1, setShowDialog1] = useState(false);

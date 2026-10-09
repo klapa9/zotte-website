@@ -1,5 +1,5 @@
 import { useSeoMeta } from '@unhead/react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
@@ -191,7 +191,7 @@ const OpenJeGeest = () => {
           <Navigation />
         </div>
 
-        <style jsx>{`
+        <style>{`
           @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0; }
             10% { opacity: 1; }
