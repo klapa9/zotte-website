@@ -33,6 +33,26 @@ describe('microsite host and routes', () => {
     expect(new Set(links.map((link) => link.getAttribute('href'))).size).toBe(6);
   });
 
+  it('provides named landmarks, an operable skip link and a unique indexable head on the entrance', async () => {
+    show(MICROSITE_HOST, '/');
+    const skip = screen.getByRole('link', { name: 'Spring naar inhoud' });
+    expect(skip).toHaveAttribute('href', '#inhoud');
+    skip.focus();
+    expect(skip).toHaveFocus();
+    expect(screen.getByRole('main')).toHaveAttribute('id', 'inhoud');
+    expect(screen.getByRole('main').closest('[lang]')).toHaveAttribute('lang', 'nl');
+    expect(screen.getByRole('navigation', { name: 'Zes onderwerpen' })).toBeInTheDocument();
+    expect(screen.getByRole('banner')).toBeInTheDocument();
+    expect(screen.getByRole('contentinfo')).toBeInTheDocument();
+    for (const link of within(screen.getByRole('navigation', { name: 'Zes onderwerpen' })).getAllByRole('link')) {
+      expect(link).toHaveAccessibleName();
+    }
+    await waitFor(() => expect(document.title).toBe('Nog Zottere | Ontdek zes nieuwe perspectieven'));
+    expect(document.querySelector('meta[name="description"]')).toHaveAttribute('content', expect.stringContaining('zes spirituele onderwerpen'));
+    expect(document.querySelector('meta[property="og:title"]')).toHaveAttribute('content', document.title);
+    expect(document.querySelector('meta[name="robots"]')).toBeNull();
+  });
+
   it('opens the first article by navigation, direct URL and refresh', async () => {
     const view = show(MICROSITE_HOST, '/');
     fireEvent.click(within(screen.getByRole('navigation', { name: 'Zes onderwerpen' })).getByRole('link', { name: /Verlaat je lichaam/ }));
@@ -58,6 +78,9 @@ describe('microsite host and routes', () => {
       ? 'Ontdek buitenlichamelijke ervaringen, bewustzijn voorbij het lichaam en manieren om je eigen ervaring te verkennen.'
       : additionalArticles[topic.slug].description;
     expect(document.querySelector('meta[name="description"]')).toHaveAttribute('content', description);
+    expect(document.querySelector('meta[property="og:title"]')).toHaveAttribute('content', document.title);
+    expect(document.querySelector('meta[property="og:description"]')).toHaveAttribute('content', description);
+    expect(document.querySelector('.microsite')).toHaveAttribute('data-accent', topic.accent);
     firstView.unmount();
 
     show(MICROSITE_HOST, path);
