@@ -1,0 +1,10 @@
+# Deployment van `nogzottere.zottewebsite.be`
+
+De frontend kiest de microsite op basis van de browserhostnaam. Beide hosts moeten daarom **dezelfde build en dezelfde bestaande frontendservice** bereiken. Deze repository bevat geen Caddyfile, Dockerfile of Compose-configuratie; de bestaande VPS-configuratie moet op de beheerlocatie worden aangepast.
+
+1. Maak voor `nogzottere.zottewebsite.be` een A-record naar hetzelfde VPS IPv4-adres als `www.zottewebsite.be`. Voeg alleen een AAAA-record toe als de bestaande VPS via IPv6 bereikbaar is. Controleer de records voordat HTTPS wordt getest.
+2. Voeg `nogzottere.zottewebsite.be` toe aan de bestaande Caddy-site voor `www.zottewebsite.be`, met dezelfde `reverse_proxy`-upstream naar de huidige Docker-frontendservice. Behoud alle bestaande directives en de `www`-host. Als de hosts in aparte Caddy-blokken moeten staan, kopieer dan de bestaande `www`-handler met exact dezelfde upstream. Laat Caddy het TLS-certificaat voor de nieuwe host automatisch beheren.
+3. Zorg dat de bestaande frontendservice bij een onbekend bestandspad de gebouwde `index.html` met HTTP 200 teruggeeft, zodat React Router directe artikel-URLs kan laden. Als Caddy zelf de statische bestanden serveert, plaats `try_files {path} /index.html` vóór `file_server` in de betreffende site. Een `dist/404.html` alleen bewijst deze fallback achter de huidige Docker/Caddy-keten niet.
+4. Controleer na deployment met beide Host-headers of de bestaande homepage op `www.zottewebsite.be`, de microsite-ingang en elk artikel op de nieuwe host laden. Herhaal elke artikel-URL als een verse HTTP-aanvraag en herlaad de pagina in een browser. Controleer dat Caddy voor beide hosts een geldig HTTPS-certificaat levert.
+
+De artikelpaden zijn `/verlaat-je-lichaam`, `/kundalini`, `/gedeelde-werkelijkheid`, `/the-law-of-one`, `/spirituele-evolutie` en `/katalysatoren`. Controleer ook `/leven` op de bestaande `www`-host. De hostselectie is client-side; de HTTP-respons voor een route bevat daarom de SPA-shell en de paginainhoud verschijnt na het laden van JavaScript.
