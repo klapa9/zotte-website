@@ -1,0 +1,119 @@
+{
+  "status": "REPAIR_REQUIRED",
+  "criteria": [
+    {
+      "id": "M1-AC-1",
+      "status": "pass",
+      "evidence": "Hostafhankelijke routetest slaagt; extra test rendert de echte bestaande homepage. Volledige suite: 31/31 geslaagd."
+    },
+    {
+      "id": "M1-AC-2",
+      "status": "pass",
+      "evidence": "Navigatie en directe route voor het eerste artikel slagen in de DOM-test; remount simuleert clientrefresh. Lokale HTTP-aanvraag geeft 200."
+    },
+    {
+      "id": "M1-AC-3",
+      "status": "pass",
+      "evidence": "DOM-test bevestigt precies zes unieke artikelbestemmingen in de micrositenavigatie, zonder hoofdsiteroutes."
+    },
+    {
+      "id": "M1-AC-4",
+      "status": "blocked",
+      "evidence": "Visuele meting op mobiel en breed scherm vereist een werkende browserruntime. CSS is nagekeken, maar Chromium stopt lokaal op `socket() failed: Operation not permitted`. Operator: voer beide viewportcontroles uit in een browseromgeving met sockettoegang."
+    },
+    {
+      "id": "M1-AC-5",
+      "status": "pass",
+      "evidence": "Er staat geen Caddy-configuratie in de repository. De toegestane lokale Host-header-preview geeft voor beide hosts en de relevante paden HTTP 200."
+    },
+    {
+      "id": "M2-AC-1",
+      "status": "pass",
+      "evidence": "Alle zes artikelroutes slagen als directe DOM-route en na remount; de lokale HTTP-preview geeft voor elk pad 200."
+    },
+    {
+      "id": "M2-AC-2",
+      "status": "pass",
+      "evidence": "Routetests bevestigen per artikel één H1 en eigen title-, description- en Open Graph-metadata."
+    },
+    {
+      "id": "M2-AC-3",
+      "status": "blocked",
+      "evidence": "De zes volledige aangeleverde bronteksten ontbreken als vergelijkingsbron; `src/data/ideas.ts` bevat slechts gedeeltelijke verwante tekst. Alle zes huidige artikelen en tips zijn lokaal gelezen. Operator: lever de oorspronkelijke zes teksten aan voor een redactionele vergelijking per onderdeel."
+    },
+    {
+      "id": "M2-AC-4",
+      "status": "blocked",
+      "evidence": "In de huidige artikelen is geen gezondheidswaarschuwing of feitelijk voorbehoud gevonden, maar zonder de volledige bronteksten is ‘niet toegevoegd’ niet onafhankelijk vast te stellen. Operator: vergelijk de zes oorspronkelijke teksten met de huidige artikelen."
+    },
+    {
+      "id": "M2-AC-5",
+      "status": "pass",
+      "evidence": "De navigatie heeft volgens de DOM-test uitsluitend de zes vastgelegde artikelroutes."
+    },
+    {
+      "id": "M3-AC-1",
+      "status": "blocked",
+      "evidence": "CSS bevat breedtebeperkingen en mobiele gridregels; clipping en overflow zijn niet visueel gemeten omdat Chromium lokaal niet start (`socket() failed: Operation not permitted`). Operator: meet mobiel en desktop in een toegankelijke browserruntime."
+    },
+    {
+      "id": "M3-AC-2",
+      "status": "blocked",
+      "evidence": "DOM-tests bevestigen landmarks, linknamen en een focusbare skiplink; CSS definieert `:focus-visible`. Echte toetsenbordbediening en zichtbare focus vereisen de hier ontoegankelijke browserruntime. Operator: doorloop de pagina’s met toetsenbord in een werkende browser."
+    },
+    {
+      "id": "M3-AC-3",
+      "status": "blocked",
+      "evidence": "De CSS schakelt orb-animatie en kaart- en navigatietransities uit bij `prefers-reduced-motion: reduce`. Browsergedrag kon door de Chromium-socketfout niet worden gecontroleerd. Operator: test met reduced motion ingeschakeld in een werkende browser."
+    },
+    {
+      "id": "M3-AC-4",
+      "status": "pass",
+      "evidence": "`public/robots.txt` staat alle paden toe; de DOM-test vindt geen robots-meta en de micrositeroutes vragen geen login."
+    },
+    {
+      "id": "M4-AC-1",
+      "status": "blocked",
+      "evidence": "De lokale hostroutering en beide Host-headers zijn getest. De bestaande Caddy-configuratie is niet beschikbaar in de repository en Docker weigert toegang tot `/var/run/docker.sock`. Operator: controleer op de VPS de Caddy-hostregel, gedeelde frontend-upstream en beide hosts."
+    },
+    {
+      "id": "M4-AC-2",
+      "status": "blocked",
+      "evidence": "Lokaal geven ingang en zes artikelpaden HTTP 200 en slagen de clientroutes na remount. Caddy/Docker-refresh vereist de ontoegankelijke deploymentruntime. Operator: herlaad alle zeven URLs achter de echte Caddy- en Docker-keten."
+    },
+    {
+      "id": "M4-AC-3",
+      "status": "pass",
+      "evidence": "Lokale Host-header-aanvragen voor microsite en www slagen. Live DNS en HTTPS zijn niet getest; dit criterium schrijft bij die situatie lokale validatie en expliciete vermelding voor."
+    },
+    {
+      "id": "M4-AC-4",
+      "status": "pass",
+      "evidence": "Typecheck en build slagen; lint slaagt met drie waarschuwingen; volledige integratiesuite slaagt met 31/31 tests. Er zijn geen dependencies geïnstalleerd."
+    },
+    {
+      "id": "M4-AC-5",
+      "status": "pass",
+      "evidence": "Aanvullende ongemockte tests renderen de bestaande homepage en `/leven`; beide slagen zonder micrositecomponent."
+    },
+    {
+      "id": "M4-AC-6",
+      "status": "pass",
+      "evidence": "`package.json` en `package-lock.json` komen overeen voor naam, versie, alle 58 directe dependencies en 24 devDependencies; lockentries zijn aanwezig."
+    }
+  ],
+  "tests_run": [
+    "TypeScript `tsc --noEmit`: geslaagd; volledige log `.factory-tmp/verify-typecheck.log`.",
+    "ESLint: geslaagd met 0 fouten en 3 waarschuwingen; volledige log `.factory-tmp/verify-lint.log`.",
+    "Vitest met tijdelijke config in `.factory-tmp`: 6 bestanden, 31 tests geslaagd; volledige log `.factory-tmp/verify-vitest-final.log`.",
+    "Vite-build naar `.factory-tmp/verify-dist`: geslaagd; volledige log `.factory-tmp/verify-build.log`.",
+    "Lokale HTTP-preview op OS-poort 45239: 9 Host-header- en padverzoeken gaven 200; volledige log `.factory-tmp/verify-http.log`.",
+    "Chromium-start: mislukt door `socket() failed: Operation not permitted`; log `.factory-tmp/verify-browser-first.err`.",
+    "Docker-toegang: geweigerd voor `/var/run/docker.sock`; log `.factory-tmp/verify-docker.log`."
+  ],
+  "blocking_findings": [
+    "Visuele, toetsenbord- en reduced-motion-acceptatie vraagt een browserruntime met sockettoegang.",
+    "Redactionele behoudscontrole vraagt de zes volledige oorspronkelijke teksten.",
+    "Productieacceptatie achter Caddy/Docker en live HTTPS vraagt toegang tot de deploymentomgeving."
+  ]
+}
