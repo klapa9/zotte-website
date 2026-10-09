@@ -1,0 +1,71 @@
+{
+  "design_id": "e753f81a-9781-4ff1-b18a-5657a034021a",
+  "revision": 3,
+  "status": "approved",
+  "document_hashes": {
+    "RESEARCH.md": "22d7f569b2145c7f90a0b8a94ee376544e8d8a8b4cba2256e53542ef3f629984",
+    "SPEC.md": "bdb1b9d9d67457c9bf8d680ba74b0206da2350e04cb94c58966f31e4e54fdad9",
+    "PLAN.md": "7085939fb0a2cf170a1a72d54233c744a056e142322b931489f82129858d95a2"
+  },
+  "approved_at": "2026-10-09T19:44:14.991085+00:00",
+  "milestones": [
+    {
+      "id": "M1",
+      "title": "Verticale slice: subdomein en eerste artikel",
+      "scope": "Hostgebaseerde microsite-routering, microsite-shell en -ingang, plus volledig artikel Verlaat je lichaam; gebruik dezelfde frontend-build en Docker-service.",
+      "acceptance_criteria": [
+        "Controleer met hostgebaseerde route-/componenttests dat `nogzottere.zottewebsite.be` de microsite-ingang toont en `www` de bestaande homepage toont.",
+        "Controleer directe URL, navigatie en refresh voor het eerste artikel.",
+        "Controleer dat de microsite-navigatie zes onderwerpen bevat en geen hoofdsitelinks.",
+        "Controleer mobiel en breed formaat op leesbaarheid en horizontale overflow.",
+        "Controleer achter de bestaande Caddy-configuratie als die beschikbaar is; anders valideer met lokale Host-header-preview."
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "M2",
+      "title": "Zes artikelen en interne navigatie",
+      "scope": "Voeg de overige vijf artikelen, routes en volledige interne navigatie toe.",
+      "acceptance_criteria": [
+        "Test directe URL en refresh voor alle zes artikelen.",
+        "Controleer één H1 en unieke metadata per pagina.",
+        "Vergelijk alle inhoudelijke onderdelen en tips met de aangeleverde teksten.",
+        "Controleer dat geen feitelijke nuance of gezondheidswaarschuwing is toegevoegd.",
+        "Controleer dat de navigatie alleen de zes artikelroutes bevat."
+      ],
+      "dependencies": [
+        "M1"
+      ]
+    },
+    {
+      "id": "M3",
+      "title": "Responsive en toegankelijkheidsafwerking",
+      "scope": "Werk mobiele navigatie, accenten, metadata, toetsenbordfocus en reduced-motion af.",
+      "acceptance_criteria": [
+        "Controleer mobiel en desktop op clipping, overflow en leesbreedte.",
+        "Controleer toetsenbordbediening, zichtbare focus, landmarks en linknamen.",
+        "Controleer reduced-motion-gedrag.",
+        "Controleer dat pagina’s indexeerbaar blijven en geen robotsblokkade hebben."
+      ],
+      "dependencies": [
+        "M2"
+      ]
+    },
+    {
+      "id": "M4",
+      "title": "Caddy-, Docker- en regressievalidatie",
+      "scope": "Valideer hostroutering en directe routes achter Caddy/Docker en voer beschikbare projectchecks uit.",
+      "acceptance_criteria": [
+        "Controleer dat Caddy de subdomeinhost naar de frontendservice routeert en `www` de huidige site blijft tonen.",
+        "Controleer directe URL en refresh voor de microsite-ingang en alle zes artikelen.",
+        "Als DNS/TLS niet beschikbaar is, voer lokale Host-header-validatie uit en noteer live HTTPS als niet getest.",
+        "Voer typecheck, lint, bestaande tests en build uit met reeds aanwezige dependencies; rapporteer niet-uitgevoerde checks.",
+        "Controleer bestaande homepage en minstens één bestaande inhoudspagina op regressies.",
+        "Controleer `package.json` en `package-lock.json` op consistentie."
+      ],
+      "dependencies": [
+        "M3"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "binding": "2674a2acf033a7a64e922a0732ade5f69fe443cdbaff4e1b8f2fa801123ee21f",
+  "github_repo": "klapa9/zotte-website",
+  "github_visibility": "private",
+  "items": [
+    {
+      "id": "workspace",
+      "label": "Projectbestanden lezen en wijzigen",
+      "reason": "Bouwen en herstellen in de eigen werkmap; geen toegang tot andere projecten of privébestanden."
+    },
+    {
+      "id": "commands",
+      "label": "Bouw- en testcommando’s uitvoeren",
+      "reason": "Binnen de sandbox; lokale dependencies, tijdelijke bestanden en gedeelde factory-toolcache gebruiken. Geen sudo of systeeminstallaties."
+    },
+    {
+      "id": "local_tests",
+      "label": "Lokale testdiensten bereiken",
+      "reason": "De onafhankelijke controle mag localhost bereiken; geen extern internet."
+    },
+    {
+      "id": "wake_lock",
+      "label": "Laptop wakker houden",
+      "reason": "Tijdens wachten en bouwen slaapstand en dekselslaap blokkeren."
+    },
+    {
+      "id": "github",
+      "label": "GitHub-repository aanmaken en commits publiceren",
+      "reason": "Alleen klapa9/zotte-website (private) via de bestaande GitHub-aanmelding."
+    }
+  ],
+  "blockers": [],
+  "preparations": [
+    "Voor bouwen en projectchecks: gebruik de aanwezige Node.js/npm-omgeving en reeds geïnstalleerde projectdependencies; voer geen installaties uit.",
+    "Voor live controle van het subdomein zijn DNS naar de VPS en een bestaande Caddy-configuratie nodig die HTTPS en routing naar de frontendservice afhandelt. Als die buiten de projecttoegang vallen, lever de benodigde instellingen op als handmatige stappen; lokale Host-header-controle blijft mogelijk.",
+    "De bronteksten voor de zes artikelen zijn nodig om de redactionele behoudscriteria te controleren.",
+    "Live DNS-, VPS- en HTTPS-verificatie kan handmatige infrastructuurtoegang vereisen; controleer lokaal met Host-header-preview als die niet beschikbaar is."
+  ],
+  "approved_at": "2026-10-09T19:49:12.525875+00:00"
+}

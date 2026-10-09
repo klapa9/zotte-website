@@ -1,0 +1,133 @@
+{
+  "project_summary": "De definitieve host is `nogzottere.zottewebsite.be` en de reverse proxy is Caddy. De specificatie en uitvoering zijn daarop aangepast: Caddy routeert het subdomein naar dezelfde Docker-frontend, die de microsite op basis van de hostnaam toont. De pagina’s blijven publiek en indexeerbaar. Er zijn geen open keuzes die het bouwplan blokkeren.",
+  "assumptions": [],
+  "requirements": [
+    "# Specificatie — microsite op `nogzottere.zottewebsite.be`\n\n## Doel en scope\n\nMaak een parallel bereikbare microsite op `https://nogzottere.zottewebsite.be` met zes spirituele inhoudspagina’s. De bestaande hoofdnavigatie linkt niet naar de microsite. De microsite heeft een eigen ingang en navigatie met uitsluitend links naar de zes nieuwe pagina’s. Herschrijf de teksten naar de directe, warme toon van de bestaande site. Behoud alle aangeleverde spirituele beweringen en voeg geen feitelijke nuancering of gezondheidswaarschuwingen toe.\n\nIn scope vallen de microsite-ingang, zes artikelen, interne navigatie, visuele vormgeving, responsive gedrag, unieke metadata en hostgebaseerde routing binnen de bestaande frontend.\n\nBuiten scope vallen nieuwe Nostr-functionaliteit, login, reacties, backend, CMS, nieuwe dependencies, frameworkmigratie, inhoudelijke factcheck en aanpassingen aan bestaande pagina-inhoud. De microsite is publiek bereikbaar; het subdomein biedt geen privacy- of toegangsbeveiliging.\n\n## Architectuur en afweging\n\n**Aanbevolen:** behoud de bestaande React 18-, TypeScript-, Vite-, Tailwind CSS 3- en React Router DOM 6-stack. Caddy routeert `nogzottere.zottewebsite.be` naar dezelfde Docker-frontendservice. De frontend selecteert de microsite-routering op basis van de hostnaam; op de bestaande `www`-host blijven de bestaande routes werken. Hierdoor is geen aparte build of service nodig.\n\nEen aparte frontendservice zou meer isolatie geven, maar brengt dubbele build- en deploymentconfiguratie mee. Een pad onder `www` past minder goed bij de gekozen subdomein-URL. Nieuwe router- of UI-libraries en zelfbouw bieden voor zes inhoudspagina’s geen aangetoond voordeel.\n\nCaddy-configuratie en Docker-routing moeten aansluiten op de bestaande deploymentinrichting. DNS voor `nogzottere.zottewebsite.be` moet naar de VPS wijzen en Caddy moet HTTPS voor deze host kunnen afhandelen. Er wordt geen proxy vervangen.\n\n## Informatiearchitectuur\n\nOp het subdomein is `/` de overzichtsingang. De voorgestelde artikelvolgorde loopt van individuele ervaring naar kosmologie en toepassing:\n\n1. Verlaat je lichaam — `/verlaat-je-lichaam`\n2. Kundalini — `/kundalini`\n3. Gedeelde werkelijkheid — `/gedeelde-werkelijkheid`\n4. The Law of One — `/the-law-of-one`\n5. Spirituele evolutie — `/spirituele-evolutie`\n6. Katalysatoren — `/katalysatoren`\n\nDe ingang toont een korte introductie en zes links. Iedere artikelpagina toont de zes onderwerpen, markeert de actieve pagina en biedt vorige/volgende navigatie. De interne navigatie bevat geen links naar de bestaande site.\n\n## Datamodel\n\n```ts\ntype ArticlePage = {\n  slug: string;\n  title: string;\n  subtitle: string;\n  accent: string;\n  sections: Array<{\n    heading: string;\n    paragraphs?: string[];\n    bullets?: string[];\n  }>;\n};\n```\n\nEen vaste lijst van zes artikelen voedt de routes en navigatie. Elk artikel heeft precies één H1, een introductie, inhoudelijke secties en praktische tips waar die zijn aangeleverd.\n\n## Redactionele regels\n\n- Schrijf direct en warm Nederlands, spreek de lezer aan met “je” en gebruik duidelijke tussenkoppen.\n- Behoud de spirituele beweringen, thematische onderdelen en praktische tips uit de aangeleverde teksten.\n- Voeg geen feitelijke nuancering, voorbehoud of gezondheidswaarschuwing toe.\n- Herschik of verkort alleen wanneer de betekenisvolle inhoud behouden blijft.\n- Houd de zes inhoudelijke kernen herkenbaar: buitenlichamelijke ervaring, kundalini, gedeelde werkelijkheid, Law of One, spirituele evolutie en katalysatoren.\n\n## Visuele specificatie\n\nSluit aan op de bestaande uitgesproken stijl: donkere kosmische basis, zachte kleurrijke gloed en abstracte achtergrondbeweging, grote zware koppen met kleurverloop, witte tekst en afgeronde halftransparante panelen. Geef elk artikel een eigen accentkleur binnen de bestaande stijl. Beperk de tekstbreedte voor lange artikelen en maak de hiërarchie tussen titel, introductie, secties en praktische tips duidelijk. De navigatie schaalt naar mobiel zonder horizontale overflow. Decoratieve animatie respecteert `prefers-reduced-motion`.\n\n## Vindbaarheid en kwaliteitseisen\n\nDe pagina’s zijn publiek en indexeerbaar. Er komt geen robotsblokkade of authenticatie. Het ontbreken van een link vanaf de bestaande hoofdnavigatie maakt de URL niet geheim.\n\nAcceptatiecriteria:\n\n- De bestaande hoofdnavigatie linkt niet naar de microsite; controleer bestaande routes.\n- `nogzottere.zottewebsite.be` toont de microsite-ingang; controleer met de gekozen host achter Docker/Caddy.\n- Alle zes artikelroutes werken met directe URL en refresh achter Caddy.\n- De microsite-navigatie bevat precies zes unieke artikelbestemmingen en geen links naar de hoofdsiteroutes.\n- Elke pagina heeft één H1 en unieke metadata; controleer DOM en document head.\n- Alle aangeleverde thema’s en tips blijven behouden, zonder toegevoegde feitelijke nuance of waarschuwingen; controleer met een redactionele checklist per pagina.\n- Geen nieuwe dependency; controleer `package.json` en `package-lock.json`.\n- Mobiel en desktop blijven leesbaar zonder clipping of horizontale overflow.\n- Toetsenbordfocus, semantische landmarks, duidelijke linknamen en reduced-motion-gedrag zijn gecontroleerd.\n- Typecheck, lint, bestaande tests en build zijn uitgevoerd als dependencies beschikbaar zijn; rapporteer resultaten afzonderlijk.\n\n## Risico’s en beheersing\n\n- **DNS en HTTPS:** de DNS-record moet naar de VPS wijzen en Caddy moet een certificaat voor de gekozen host kunnen verkrijgen/aanbieden. Valideer dit vóór live routecontrole.\n- **SPA-fallback:** test directe URLs en refresh achter Caddy; leid productiegedrag niet af uit alleen lokale redirectbestanden.\n- **Hostselectie:** test zowel `nogzottere.zottewebsite.be` als de bestaande `www`-host om regressies te voorkomen.\n- **Styling:** scope nieuwe regels binnen de microsite en controleer bestaande routes op visuele regressies.\n- **Toegankelijkheid en beweging:** controleer contrast, toetsenbordfocus en reduced-motion.\n\n## Uitvoeringsgrenzen\n\nEr zijn geen nieuwe packages, sudo, systeempakketten of aanmeldingen voorzien. De repositorywijziging kan de hostroutering en eventuele bijgehouden Caddy/Docker-configuratie voorbereiden. Live DNS- of VPS-wijzigingen worden alleen uitgevoerd als die infrastructuur onder de projecttoegang valt; anders worden de concrete DNS- en Caddy-stappen bij de oplevering vermeld. Geen externe secrets of privébestanden zijn nodig.",
+    "# Uitvoeringsplan\n\n## Stack en architectuur\n\nGebruik de aanwezige React 18-, TypeScript-, Vite-, Tailwind CSS 3- en React Router DOM 6-stack. Voeg geen dependencies toe. Caddy routeert `nogzottere.zottewebsite.be` naar dezelfde Docker-frontendservice die de bestaande website bedient. De frontend toont op basis van de hostname de microsite-routering; de bestaande `www`-host behoudt zijn huidige routes. De bestaande Caddy-installatie blijft in gebruik.\n\n## Opleveringen\n\n- Microsite-ingang op `/` van `nogzottere.zottewebsite.be`.\n- Zes geredigeerde artikelpagina’s met voorgestelde URLs en volgorde.\n- Microsite-navigatie met uitsluitend de zes artikelbestemmingen.\n- Unieke metadata, eigen kleuraccenten en responsive vormgeving.\n- Gevalideerde hostscheiding tussen het nieuwe subdomein en `www`.\n- Bij deploymentconfiguratie in de repository: minimale Caddy-/Docker-configuratie voor de hostroute. Als DNS- of VPS-configuratie buiten de projecttoegang valt, lever de benodigde instellingen als concrete handmatige stappen op.\n\n## Fasen\n\n1. **Verticale slice:** bouw hostselectie, microsite-layout en -ingang, plus één volledig artikel: Verlaat je lichaam. Doorloop de volledige keten van host en route tot inhoud, styling en directe refresh. Breid pas daarna uit.\n2. **Inhoudsuitbreiding:** voeg de overige vijf artikelen en hun routes toe volgens de vastgelegde volgorde en redactionele regels.\n3. **Afwerking:** voltooi responsive navigatie, kleuraccenten, metadata, toetsenbordfocus en reduced-motion.\n4. **Proxy- en regressievalidatie:** controleer de nieuwe host achter Docker/Caddy, de bestaande `www`-routes, directe URLs en de projectchecks.\n\n## Validatiestrategie en omgeving\n\n- Controleer vooraf de project- en deploymentconfiguratie die voor deze frontend bedoeld is. Identificeer waar DNS en Caddy beheerd worden; gebruik geen niet-benodigde privébestanden of secrets.\n- Test hostselectie: `nogzottere.zottewebsite.be` toont de microsite en `www` toont de bestaande site.\n- Test directe URL en refresh voor ingang en alle zes artikelen achter Docker/Caddy.\n- Controleer navigatiedoelen, metadata en inhoud met route-, DOM- en redactionele checks.\n- Controleer mobiel en desktop, toetsenbordfocus, semantische structuur en reduced-motion.\n- Voer typecheck, lint, bestaande tests en build uit met reeds aanwezige dependencies. Installeer niets; rapporteer niet-uitgevoerde checks afzonderlijk.\n- Houd `package-lock.json` synchroon indien er ondanks het plan toch dependencies veranderen.\n- Als een lokale previewserver nodig is, gebruik poort 0, geef de gekozen poort door aan tests en stop geen andere processen.\n- Voer geen live DNS- of VPS-wijzigingen uit buiten de beschikbare projecttoegang. Rapporteer zulke benodigde handelingen als opleverinstructies.\n\n## Beslisregels voor uitvoering\n\n- Routeer het subdomein naar dezelfde frontendservice als dat binnen de bestaande Caddy/Docker-configuratie past; introduceer geen aparte service zonder concrete technische noodzaak.\n- Beperk hostafhankelijke routering tot de app-routering en laat bestaande `www`-routes ongemoeid.\n- Als de bestaande Caddy-configuratie niet in de projectrepository staat, lever de vereiste hostregel en upstream als handmatige configuratiestap op; vraag niet om VPS-secrets.\n- Als DNS/TLS nog niet beschikbaar is, valideer lokaal met een Host-header-preview en markeer live HTTPS-validatie als niet uitgevoerd.\n- Bij stylingregressie op bestaande pagina’s: scope of vereenvoudig nieuwe stijlen voordat verdere uitbreiding plaatsvindt.\n- Als een test installatie of externe toegang vereist, voer die niet stilzwijgend uit; vermeld de blokkade en de ontbrekende toegang.\n\n## Milestones\n\nDe milestones zijn interne controlepunten van één volledige uitvoering, geen aparte gebruikersgoedkeuringen."
+  ],
+  "acceptance_criteria": [
+    {
+      "id": "M1-AC-1",
+      "description": "Controleer met hostgebaseerde route-/componenttests dat `nogzottere.zottewebsite.be` de microsite-ingang toont en `www` de bestaande homepage toont.",
+      "verification": "Controleer met hostgebaseerde route-/componenttests dat `nogzottere.zottewebsite.be` de microsite-ingang toont en `www` de bestaande homepage toont."
+    },
+    {
+      "id": "M1-AC-2",
+      "description": "Controleer directe URL, navigatie en refresh voor het eerste artikel.",
+      "verification": "Controleer directe URL, navigatie en refresh voor het eerste artikel."
+    },
+    {
+      "id": "M1-AC-3",
+      "description": "Controleer dat de microsite-navigatie zes onderwerpen bevat en geen hoofdsitelinks.",
+      "verification": "Controleer dat de microsite-navigatie zes onderwerpen bevat en geen hoofdsitelinks."
+    },
+    {
+      "id": "M1-AC-4",
+      "description": "Controleer mobiel en breed formaat op leesbaarheid en horizontale overflow.",
+      "verification": "Controleer mobiel en breed formaat op leesbaarheid en horizontale overflow."
+    },
+    {
+      "id": "M1-AC-5",
+      "description": "Controleer achter de bestaande Caddy-configuratie als die beschikbaar is; anders valideer met lokale Host-header-preview.",
+      "verification": "Controleer achter de bestaande Caddy-configuratie als die beschikbaar is; anders valideer met lokale Host-header-preview."
+    },
+    {
+      "id": "M2-AC-1",
+      "description": "Test directe URL en refresh voor alle zes artikelen.",
+      "verification": "Test directe URL en refresh voor alle zes artikelen."
+    },
+    {
+      "id": "M2-AC-2",
+      "description": "Controleer één H1 en unieke metadata per pagina.",
+      "verification": "Controleer één H1 en unieke metadata per pagina."
+    },
+    {
+      "id": "M2-AC-3",
+      "description": "Vergelijk alle inhoudelijke onderdelen en tips met de aangeleverde teksten.",
+      "verification": "Vergelijk alle inhoudelijke onderdelen en tips met de aangeleverde teksten."
+    },
+    {
+      "id": "M2-AC-4",
+      "description": "Controleer dat geen feitelijke nuance of gezondheidswaarschuwing is toegevoegd.",
+      "verification": "Controleer dat geen feitelijke nuance of gezondheidswaarschuwing is toegevoegd."
+    },
+    {
+      "id": "M2-AC-5",
+      "description": "Controleer dat de navigatie alleen de zes artikelroutes bevat.",
+      "verification": "Controleer dat de navigatie alleen de zes artikelroutes bevat."
+    },
+    {
+      "id": "M3-AC-1",
+      "description": "Controleer mobiel en desktop op clipping, overflow en leesbreedte.",
+      "verification": "Controleer mobiel en desktop op clipping, overflow en leesbreedte."
+    },
+    {
+      "id": "M3-AC-2",
+      "description": "Controleer toetsenbordbediening, zichtbare focus, landmarks en linknamen.",
+      "verification": "Controleer toetsenbordbediening, zichtbare focus, landmarks en linknamen."
+    },
+    {
+      "id": "M3-AC-3",
+      "description": "Controleer reduced-motion-gedrag.",
+      "verification": "Controleer reduced-motion-gedrag."
+    },
+    {
+      "id": "M3-AC-4",
+      "description": "Controleer dat pagina’s indexeerbaar blijven en geen robotsblokkade hebben.",
+      "verification": "Controleer dat pagina’s indexeerbaar blijven en geen robotsblokkade hebben."
+    },
+    {
+      "id": "M4-AC-1",
+      "description": "Controleer dat Caddy de subdomeinhost naar de frontendservice routeert en `www` de huidige site blijft tonen.",
+      "verification": "Controleer dat Caddy de subdomeinhost naar de frontendservice routeert en `www` de huidige site blijft tonen."
+    },
+    {
+      "id": "M4-AC-2",
+      "description": "Controleer directe URL en refresh voor de microsite-ingang en alle zes artikelen.",
+      "verification": "Controleer directe URL en refresh voor de microsite-ingang en alle zes artikelen."
+    },
+    {
+      "id": "M4-AC-3",
+      "description": "Als DNS/TLS niet beschikbaar is, voer lokale Host-header-validatie uit en noteer live HTTPS als niet getest.",
+      "verification": "Als DNS/TLS niet beschikbaar is, voer lokale Host-header-validatie uit en noteer live HTTPS als niet getest."
+    },
+    {
+      "id": "M4-AC-4",
+      "description": "Voer typecheck, lint, bestaande tests en build uit met reeds aanwezige dependencies; rapporteer niet-uitgevoerde checks.",
+      "verification": "Voer typecheck, lint, bestaande tests en build uit met reeds aanwezige dependencies; rapporteer niet-uitgevoerde checks."
+    },
+    {
+      "id": "M4-AC-5",
+      "description": "Controleer bestaande homepage en minstens één bestaande inhoudspagina op regressies.",
+      "verification": "Controleer bestaande homepage en minstens één bestaande inhoudspagina op regressies."
+    },
+    {
+      "id": "M4-AC-6",
+      "description": "Controleer `package.json` en `package-lock.json` op consistentie.",
+      "verification": "Controleer `package.json` en `package-lock.json` op consistentie."
+    }
+  ],
+  "implementation_steps": [
+    {
+      "id": "M1",
+      "title": "Verticale slice: subdomein en eerste artikel",
+      "description": "Hostgebaseerde microsite-routering, microsite-shell en -ingang, plus volledig artikel Verlaat je lichaam; gebruik dezelfde frontend-build en Docker-service.\nAfhankelijkheden: Geen"
+    },
+    {
+      "id": "M2",
+      "title": "Zes artikelen en interne navigatie",
+      "description": "Voeg de overige vijf artikelen, routes en volledige interne navigatie toe.\nAfhankelijkheden: M1"
+    },
+    {
+      "id": "M3",
+      "title": "Responsive en toegankelijkheidsafwerking",
+      "description": "Werk mobiele navigatie, accenten, metadata, toetsenbordfocus en reduced-motion af.\nAfhankelijkheden: M2"
+    },
+    {
+      "id": "M4",
+      "title": "Caddy-, Docker- en regressievalidatie",
+      "description": "Valideer hostroutering en directe routes achter Caddy/Docker en voer beschikbare projectchecks uit.\nAfhankelijkheden: M3"
+    }
+  ],
+  "risks": []
+}
