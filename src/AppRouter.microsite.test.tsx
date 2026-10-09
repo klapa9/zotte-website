@@ -3,6 +3,7 @@ import { cleanup, fireEvent, render, screen, waitFor, within } from '@testing-li
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { AppRouter, MICROSITE_HOST } from './AppRouter';
 import { micrositeTopics } from './data/microsite';
+import { additionalArticles } from './data/micrositeArticles';
 
 vi.mock('./pages/Index', () => ({ default: () => <h1>Bestaande homepage</h1> }));
 
@@ -44,5 +45,55 @@ describe('microsite host and routes', () => {
     expect(screen.getByRole('heading', { level: 1, name: 'Verlaat je lichaam' })).toBeInTheDocument();
     expect(screen.getAllByRole('heading', { level: 1 })).toHaveLength(1);
     await waitFor(() => expect(document.title).toBe('Verlaat je lichaam | Nog Zottere'));
+  });
+
+  it.each(micrositeTopics)('opens $title directly and after a refresh with one H1 and unique metadata', async (topic) => {
+    const path = `/${topic.slug}`;
+    const firstView = show(MICROSITE_HOST, path);
+    expect(screen.getAllByRole('heading', { level: 1 })).toHaveLength(1);
+    expect(screen.getByRole('heading', { level: 1, name: topic.title })).toBeInTheDocument();
+    expect(within(screen.getByRole('navigation', { name: 'Zes onderwerpen' })).getByRole('link', { name: new RegExp(topic.title) })).toHaveAttribute('aria-current', 'page');
+    await waitFor(() => expect(document.title).toBe(`${topic.title} | Nog Zottere`));
+    const description = topic.slug === 'verlaat-je-lichaam'
+      ? 'Ontdek buitenlichamelijke ervaringen, bewustzijn voorbij het lichaam en manieren om je eigen ervaring te verkennen.'
+      : additionalArticles[topic.slug].description;
+    expect(document.querySelector('meta[name="description"]')).toHaveAttribute('content', description);
+    firstView.unmount();
+
+    show(MICROSITE_HOST, path);
+    expect(screen.getByRole('heading', { level: 1, name: topic.title })).toBeInTheDocument();
+    expect(screen.getAllByRole('heading', { level: 1 })).toHaveLength(1);
+    expect(within(screen.getByRole('navigation', { name: 'Zes onderwerpen' })).getAllByRole('link')).toHaveLength(6);
+  });
+
+  it.each(micrositeTopics.slice(1))('links $title to its neighbors and renders every planned section', (topic) => {
+    show(MICROSITE_HOST, `/${topic.slug}`);
+    const article = within(screen.getByRole('article'));
+    const content = additionalArticles[topic.slug];
+    expect(article.getAllByRole('heading', { level: 2 })).toHaveLength(content.sections.length);
+    for (const section of content.sections) {
+      expect(article.getByRole('heading', { level: 2, name: section.heading })).toBeInTheDocument();
+      expect(section.paragraphs?.length || section.bullets?.length).toBeGreaterThan(0);
+    }
+    expect(article.getAllByRole('listitem').length).toBeGreaterThan(0);
+    const index = micrositeTopics.findIndex((item) => item.slug === topic.slug);
+    expect(article.getByRole('link', { name: new RegExp(`Vorige: ${micrositeTopics[index - 1].title}`) })).toHaveAttribute('href', `/${micrositeTopics[index - 1].slug}`);
+    if (index < micrositeTopics.length - 1) {
+      expect(article.getByRole('link', { name: new RegExp(`Volgende: ${micrositeTopics[index + 1].title}`) })).toHaveAttribute('href', `/${micrositeTopics[index + 1].slug}`);
+    }
+  });
+
+  it('travels through all six articles with the previous and next links', () => {
+    show(MICROSITE_HOST, '/verlaat-je-lichaam');
+    for (const topic of micrositeTopics.slice(1)) {
+      fireEvent.click(within(screen.getByRole('article')).getByRole('link', { name: new RegExp(`Volgende: ${topic.title}`) }));
+      expect(window.location.pathname).toBe(`/${topic.slug}`);
+      expect(screen.getByRole('heading', { level: 1, name: topic.title })).toBeInTheDocument();
+    }
+    expect(within(screen.getByRole('article')).queryByRole('link', { name: /Volgende:/ })).not.toBeInTheDocument();
+    for (const topic of micrositeTopics.slice(0, -1).reverse()) {
+      fireEvent.click(within(screen.getByRole('article')).getByRole('link', { name: new RegExp(`Vorige: ${topic.title}`) }));
+      expect(window.location.pathname).toBe(`/${topic.slug}`);
+    }
   });
 });

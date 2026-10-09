@@ -12,7 +12,7 @@ import OpenJeGeest from "./pages/OpenJeGeest";
 import Geld from "./pages/Geld";
 import OldIndex from "./pages/Index.old";
 import CommentsOverviewPage from "./pages/CommentsOverviewPage";
-import { MicrositeHome, MicrositeArticle, MicrositePreview } from "./pages/Microsite";
+import { MicrositeHome, MicrositeArticle, MicrositeAdditionalArticle } from "./pages/Microsite";
 import { micrositeTopics } from "./data/microsite";
 
 export const MICROSITE_HOST = "nogzottere.zottewebsite.be";
@@ -27,7 +27,7 @@ export function AppRouter({ hostname = window.location.hostname }: { hostname?: 
         <Route path="/" element={<MicrositeHome />} />
         <Route path="/verlaat-je-lichaam" element={<MicrositeArticle />} />
         {micrositeTopics.slice(1).map((topic) => (
-          <Route key={topic.slug} path={`/${topic.slug}`} element={<MicrositePreview topic={topic} />} />
+          <Route key={topic.slug} path={`/${topic.slug}`} element={<MicrositeAdditionalArticle topic={topic} />} />
         ))}
         <Route path="*" element={<MicrositeHome />} />
       </Routes> : <Routes>

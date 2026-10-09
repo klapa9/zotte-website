@@ -1,6 +1,7 @@
 import { useSeoMeta } from '@unhead/react';
 import { Link, useLocation } from 'react-router-dom';
 import { micrositeTopics, type MicrositeTopic } from '@/data/microsite';
+import { additionalArticles } from '@/data/micrositeArticles';
 import '@/styles/microsite.css';
 
 function MicrositeShell({ children }: { children: React.ReactNode }) {
@@ -113,11 +114,32 @@ export function MicrositeArticle() {
   </MicrositeShell>;
 }
 
-export function MicrositePreview({ topic }: { topic: MicrositeTopic }) {
-  useSeoMeta({ title: `${topic.title} | Nog Zottere`, description: topic.subtitle });
-  return <MicrositeShell><section className="mx-auto max-w-3xl pb-20 pt-12">
-    <p className="mb-4 text-sm font-bold uppercase tracking-widest text-cyan-300">Binnenkort meer</p>
-    <h1 className="microsite-title text-5xl font-black sm:text-7xl">{topic.title}</h1>
-    <p className="mt-7 text-xl text-slate-200">{topic.subtitle}. Dit onderwerp krijgt zijn volledige verhaal in de volgende uitbreiding.</p>
-  </section></MicrositeShell>;
+export function MicrositeAdditionalArticle({ topic }: { topic: MicrositeTopic }) {
+  const article = additionalArticles[topic.slug];
+  const index = micrositeTopics.findIndex((item) => item.slug === topic.slug);
+  const previous = micrositeTopics[index - 1];
+  const next = micrositeTopics[index + 1];
+
+  useSeoMeta({ title: `${topic.title} | Nog Zottere`, description: article.description });
+
+  return <MicrositeShell>
+    <article className="mx-auto max-w-3xl">
+      <header className="pb-9 pt-6 sm:pt-12">
+        <p className="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-cyan-300">0{index + 1} / Bewustzijn</p>
+        <h1 className="microsite-title text-5xl font-black leading-tight sm:text-7xl">{topic.title}</h1>
+        <p className="mt-6 text-xl leading-relaxed text-slate-200 sm:text-2xl">{article.introduction}</p>
+      </header>
+      <div className="space-y-6">
+        {article.sections.map((section) => <section key={section.heading} className={`microsite-panel rounded-3xl p-6 sm:p-9${section.tip ? ' microsite-tip' : ''}`}>
+          <h2 className="mb-4 text-2xl font-black text-cyan-200 sm:text-3xl">{section.heading}</h2>
+          {section.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          {section.bullets && <ul className="list-disc space-y-3 pl-6 text-slate-200">{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>}
+        </section>)}
+      </div>
+      <nav aria-label="Vorige en volgende artikelen" className="mt-10 flex flex-wrap justify-between gap-3 border-t border-white/20 pt-6">
+        {previous && <Link to={`/${previous.slug}`} className="rounded-xl px-4 py-3 font-bold text-cyan-200 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300">← Vorige: {previous.title}</Link>}
+        {next && <Link to={`/${next.slug}`} className="ml-auto rounded-xl px-4 py-3 font-bold text-cyan-200 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300">Volgende: {next.title} →</Link>}
+      </nav>
+    </article>
+  </MicrositeShell>;
 }
