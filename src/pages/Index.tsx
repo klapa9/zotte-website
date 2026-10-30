@@ -1,9 +1,8 @@
 import { useSeoMeta } from '@unhead/react';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
-import AudioPlayer from '@/components/AudioPlayer';
 import SubtleFractalBackground from '@/components/SubtleFractalBackground'; 
 
 
@@ -11,9 +10,8 @@ import SubtleFractalBackground from '@/components/SubtleFractalBackground';
 
 
 const Index = () => {
-  const [scrollY, setScrollY] = useState(0);
   const [isGlitching, setIsGlitching] = useState(false);
-  const [activeSection, setActiveSection] = useState(0);
+  const [activeSection] = useState(0);
 
   useSeoMeta({
     title: 'Wees Zot! - Mindblowing Ideas',
@@ -94,7 +92,7 @@ const Index = () => {
     <>
       <SubtleFractalBackground />
       <CursorStyles />
-      <AudioPlayer pageType="index" />
+
       <div className="min-h-screen overflow-hidden relative">
         
 
@@ -286,7 +284,7 @@ const Index = () => {
         <Navigation />
 
         {/* Custom animations */}
-        <style jsx>{`
+        <style>{`
           @keyframes float {
             0%, 100% { transform: translateY(0px) translateX(0px); }
             25% { transform: translateY(-20px) translateX(10px); }

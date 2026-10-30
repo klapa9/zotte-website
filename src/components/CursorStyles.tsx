@@ -11,7 +11,7 @@ const CursorStyles = ({ children }: CursorStylesProps) => {
     <>
       {children}
 
-      <style jsx global>{`
+      <style>{`
         /* Default cursor for entire document */
         body {
           cursor: default;

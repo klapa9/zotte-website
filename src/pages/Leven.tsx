@@ -3,7 +3,6 @@ import { useState } from 'react';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
-import AudioPlayer from '@/components/AudioPlayer';
 import Comments from '@/components/Comments';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
@@ -22,7 +21,7 @@ const Leven = () => {
   return (
     <>
       <CursorStyles />
-      <AudioPlayer pageType="leven" />
+
 
       <div className="min-h-screen overflow-hidden relative">
         <LevenBackground />

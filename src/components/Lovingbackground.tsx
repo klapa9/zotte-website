@@ -97,7 +97,7 @@ export default function LovingBackground() {
 
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.012),rgba(0,0,0,0.18))]" />
 
-      <style jsx>{`
+      <style>{`
         @keyframes slowRotate {
           0% {
             transform: rotate(0deg) scale(1);

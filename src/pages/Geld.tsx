@@ -1,10 +1,8 @@
 import { useSeoMeta } from '@unhead/react';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
-import AudioPlayer from '@/components/AudioPlayer';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 
@@ -29,7 +27,7 @@ const Geld = () => {
   return (
     <>
       <CursorStyles />
-      <AudioPlayer pageType="geld" />
+
       <div className="min-h-screen bg-gradient-to-br from-orange-900 via-amber-800 to-yellow-700 overflow-hidden relative">
         {/* Animated background */}
         <div className="absolute inset-0">
@@ -214,7 +212,7 @@ const Geld = () => {
         </div>
 
         {/* Custom animations */}
-        <style jsx>{`
+        <style>{`
           @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0; }
             10% { opacity: 1; }

@@ -3,7 +3,6 @@ import { useState } from 'react';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
-import AudioPlayer from '@/components/AudioPlayer';
 import Comments from '@/components/Comments';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
@@ -21,7 +20,7 @@ const ZiekZot = () => {
   return (
     <>
       <CursorStyles />
-      <AudioPlayer pageType="ziekzot" />
+
 
       <div className="min-h-screen bg-gradient-to-br from-red-900 via-pink-800 to-purple-900 overflow-hidden relative">
         {/* Background elements */}

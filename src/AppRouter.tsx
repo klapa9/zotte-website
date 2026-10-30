@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AudioPlayer from "./components/AudioPlayer";
 import { ScrollToTop } from "./components/ScrollToTop";
 import AdminLogin from "@/pages/AdminLogin";
 import Index from "./pages/Index";
@@ -17,6 +18,7 @@ export function AppRouter() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <AudioPlayer />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/old" element={<OldIndex />} />

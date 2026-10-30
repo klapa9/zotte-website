@@ -1,9 +1,8 @@
 import { useSeoMeta } from '@unhead/react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
-import AudioPlayer from '@/components/AudioPlayer';
 import Comments from '@/components/Comments';
 import {
   Dialog,
@@ -33,7 +32,7 @@ const OpenJeGeest = () => {
   return (
     <>
       <CursorStyles />
-      <AudioPlayer pageType="openjegeest" />
+
 
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-800 to-pink-900 overflow-hidden relative">
         <div className="fixed inset-0 pointer-events-none z-0">
@@ -191,7 +190,7 @@ const OpenJeGeest = () => {
           <Navigation />
         </div>
 
-        <style jsx>{`
+        <style>{`
           @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0; }
             10% { opacity: 1; }

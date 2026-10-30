@@ -3,7 +3,6 @@ import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
-import AudioPlayer from '@/components/AudioPlayer';
 
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -56,7 +55,7 @@ const Index = () => {
   return (
     <>
       <CursorStyles />
-      <AudioPlayer pageType="index" />
+
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-800 to-orange-600 overflow-hidden relative">
       {/* Static background elements - no more flickering! */}
       <div className="absolute inset-0">
@@ -249,7 +248,7 @@ const Index = () => {
       </div>
 
       {/* Custom animations */}
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0; }
           10% { opacity: 1; }

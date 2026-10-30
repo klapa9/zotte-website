@@ -2,9 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { useSeoMeta } from "@unhead/react";
 import CursorStyles from "@/components/CursorStyles";
 import Navigation from "@/components/Navigation";
-import AudioPlayer from "@/components/AudioPlayer";
 import NeonDroom from "@/components/NeonDroom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MessageCircleOff } from "lucide-react";
 
 const API_URL = import.meta.env.VITE_API_URL;
@@ -786,7 +785,7 @@ export default function CommentsOverviewPage() {
     <>
       <NeonDroom />
       <CursorStyles />
-      <AudioPlayer pageType="reacties" />
+
 
       <div className="min-h-screen overflow-hidden relative">
         <div className="relative z-10 min-h-screen flex flex-col">
@@ -912,15 +911,15 @@ export default function CommentsOverviewPage() {
                             </div>
 
                             {pageLink ? (
-                              <a
-                                href={pageLink}
+                              <Link
+                                to={pageLink}
                                 className="mt-2 inline-flex items-center gap-2 text-2xl md:text-4xl font-black text-white decoration-cyan-400/70 transition hover:text-cyan-300 hover:decoration-cyan-300"
                               >
                                 <span>{group.pageTitle}</span>
                                 <span className="text-base md:text-lg text-cyan-300/80">
                                   ↗
                                 </span>
-                              </a>
+                              </Link>
                             ) : (
                               <h2 className="mt-2 text-2xl md:text-4xl font-black text-white">
                                 {group.pageTitle}
@@ -932,15 +931,15 @@ export default function CommentsOverviewPage() {
                             </div>
 
                             {sectionLink ? (
-                              <a
-                                href={sectionLink}
+                              <Link
+                                to={sectionLink}
                                 className="mt-2 inline-flex items-center gap-2 text-xl md:text-2xl font-bold text-white decoration-pink-400/70 transition hover:text-pink-300 hover:decoration-pink-300"
                               >
                                 <span>{group.sectionTitle}</span>
                                 <span className="text-sm text-pink-300/80">
                                   ↗
                                 </span>
-                              </a>
+                              </Link>
                             ) : (
                               <h3 className="mt-2 text-xl md:text-2xl font-bold text-white">
                                 {group.sectionTitle}
@@ -957,23 +956,23 @@ export default function CommentsOverviewPage() {
 
                           <div className="flex flex-wrap gap-3">
                             {pageLink && (
-                              <a
-                                href={pageLink}
+                              <Link
+                                to={pageLink}
                                 className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-4 py-2 text-sm font-bold text-white shadow-[0_0_20px_rgba(255,255,255,0.06)] transition hover:scale-105 hover:bg-white/15"
                               >
                                 <span>📄</span>
                                 <span>Bekijk pagina</span>
-                              </a>
+                              </Link>
                             )}
 
                             {sectionLink && (
-                              <a
-                                href={sectionLink}
+                              <Link
+                                to={sectionLink}
                                 className="inline-flex items-center gap-2 rounded-xl border border-cyan-300/40 bg-cyan-500/15 px-4 py-2 text-sm font-bold text-cyan-100 shadow-[0_0_24px_rgba(34,211,238,0.18)] transition hover:scale-105 hover:bg-cyan-500/25"
                               >
                                 <span>🎯</span>
                                 <span>Bekijk passende paragraaf</span>
-                              </a>
+                              </Link>
                             )}
                           </div>
                         </div>

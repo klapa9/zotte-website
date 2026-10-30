@@ -3,7 +3,6 @@ import { useState } from 'react';
 import CursorStyles from '@/components/CursorStyles';
 import Navigation from '@/components/Navigation';
 import PracticalTip from '@/components/PracticalTip';
-import AudioPlayer from '@/components/AudioPlayer';
 import Comments from '@/components/Comments';
 import { Button } from '@/components/ui/button';
 import {
@@ -27,7 +26,7 @@ const WeesZot = () => {
     <>
       <InfiniteSpiral />
       <CursorStyles />
-      <AudioPlayer pageType="weeszot" />
+
 
       <div className="min-h-screen overflow-hidden relative">
         <div className="relative z-10 min-h-screen flex flex-col">

@@ -1,530 +1,152 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { Music2, Pause, Play, SkipBack, SkipForward, Volume2, VolumeX, X } from 'lucide-react';
 
-interface AudioPlayerProps {
-  pageType?: string;
-  audioFile?: string;
+// Same order as the pages, followed by Geld and the shortened comments song.
+const playlist = [
+  { title: 'Angst is verboden', src: '/index.mp3' },
+  { title: 'Open je geest', src: '/Open_Je_Geest_1.mp3' },
+  { title: 'Wees zot', src: '/weeszot.mp3' },
+  { title: 'Leven', src: '/leven4.mp3' },
+  { title: 'Liefde', src: '/liefde.mp3' },
+  { title: 'Ziek zot', src: '/heal2.mp3' },
+  { title: 'Geld', src: '/btc2.mp3' },
+  { title: 'Reacties', src: '/reacties-kort.mp3' },
+];
+
+function savedVolume() {
+  const value = Number(localStorage.getItem('audioVolume') ?? 0.3);
+  return Number.isFinite(value) ? Math.min(1, Math.max(0, value)) : 0.3;
 }
 
-// Global instance tracking to prevent double audio players
-let globalAudioRef: HTMLAudioElement | null = null;
-let globalPlayerId = 0;
+const controlClass = 'flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300 transition-colors';
 
-const VOLUME_STORAGE_KEY = "audioVolume";
-const MUTE_STORAGE_KEY = "audioMuted";
-const LONG_PRESS_DURATION = 500;
-
-const AudioPlayer = ({ pageType, audioFile }: AudioPlayerProps = {}) => {
+const AudioPlayer = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const mobileControlsRef = useRef<HTMLDivElement>(null);
-  const longPressTimerRef = useRef<number | null>(null);
-  const longPressTriggeredRef = useRef(false);
-
+  const playerRef = useRef<HTMLDivElement>(null);
+  // Playback intent is separate from browser playback events: loading and
+  // autoplay rejection must never undo an explicit pause.
+  const shouldPlay = useRef(true);
+  const autoplayBlocked = useRef(false);
+  const [trackIndex, setTrackIndex] = useState(0);
+  const [expanded, setExpanded] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
-  const [volume, setVolume] = useState(0.3);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [prefsLoaded, setPrefsLoaded] = useState(false);
-  const [showMobileSoundControls, setShowMobileSoundControls] = useState(false);
+  const [volume, setVolume] = useState(savedVolume);
+  const [muted, setMuted] = useState(() => localStorage.getItem('audioMuted') === 'true');
+  const [error, setError] = useState(false);
+  const [blocked, setBlocked] = useState(false);
+  const track = playlist[trackIndex];
 
-  const getAudioFile = useCallback(() => {
-    if (audioFile) return audioFile;
-
-    switch (pageType) {
-      case "liefde":
-        return "/liefde.mp3";
-      case "openjegeest":
-        return "/Open_Je_Geest_1.mp3";
-      case "leven":
-        return "/leven4.mp3";
-      case "weeszot":
-        return "/weeszot.mp3";
-      case "geld":
-        return "/btc2.mp3";
-      case "ziekzot":
-        return "/heal2.mp3";
-      case "reacties":
-        return "/reacties.mp3";
-      default:
-        return "/index.mp3";
-    }
-  }, [audioFile, pageType]);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    const savedVolume = localStorage.getItem(VOLUME_STORAGE_KEY);
-    const savedMuted = localStorage.getItem(MUTE_STORAGE_KEY);
-
-    const parsedVolume =
-      savedVolume === null ? 0.3 : Math.min(1, Math.max(0, Number(savedVolume)));
-
-    setVolume(Number.isFinite(parsedVolume) ? parsedVolume : 0.3);
-    setIsMuted(savedMuted === null ? true : savedMuted === "true");
-    setPrefsLoaded(true);
-  }, []);
-
-  useEffect(() => {
-    if (!prefsLoaded || typeof window === "undefined") return;
-    localStorage.setItem(VOLUME_STORAGE_KEY, String(volume));
-  }, [volume, prefsLoaded]);
-
-  useEffect(() => {
-    if (!prefsLoaded || typeof window === "undefined") return;
-    localStorage.setItem(MUTE_STORAGE_KEY, String(isMuted));
-  }, [isMuted, prefsLoaded]);
-
-  useEffect(() => {
+  const play = useCallback(async () => {
     const audio = audioRef.current;
-    if (!audio) return;
-
-    audio.volume = isMuted ? 0 : volume;
-    audio.muted = isMuted;
-  }, [volume, isMuted]);
-
-  useEffect(() => {
-    if (!prefsLoaded) return;
-
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    const currentPlayerId = Date.now();
-
-    if (globalAudioRef && globalAudioRef !== audio && globalPlayerId !== currentPlayerId) {
-      globalAudioRef.pause();
-      globalAudioRef.currentTime = 0;
-      globalAudioRef = null;
-      globalPlayerId = 0;
-    }
-
-    globalAudioRef = audio;
-    globalPlayerId = currentPlayerId;
-
-    const source = getAudioFile();
-
-    audio.autoplay = false;
-    audio.loop = false;
-    audio.preload = "auto";
-    audio.pause();
-    audio.currentTime = 0;
-    audio.src = source;
-    audio.load();
-    audio.volume = isMuted ? 0 : volume;
-    audio.muted = isMuted;
-
-    setIsLoaded(false);
-    setIsPlaying(false);
-
-    const handleCanPlayThrough = () => {
-      setIsLoaded(true);
-    };
-
-    const handlePlay = () => {
-      setIsPlaying(true);
-    };
-
-    const handlePause = () => {
-      setIsPlaying(false);
-    };
-
-    const handleEnded = () => {
-      setIsPlaying(false);
-      audio.pause();
-      audio.currentTime = 0;
-    };
-
-    const handleError = (e: Event) => {
-      console.error("Audio error:", e);
-      setIsLoaded(false);
-      setIsPlaying(false);
-    };
-
-    audio.addEventListener("canplaythrough", handleCanPlayThrough);
-    audio.addEventListener("play", handlePlay);
-    audio.addEventListener("pause", handlePause);
-    audio.addEventListener("ended", handleEnded);
-    audio.addEventListener("error", handleError);
-
-    const autoplayTimeout = window.setTimeout(async () => {
-      if (isMuted) {
-        audio.pause();
-        audio.currentTime = 0;
-        setIsPlaying(false);
-        return;
-      }
-
-      try {
-        await audio.play();
-      } catch (error) {
-        console.log("Autoplay prevented:", error);
-        setIsPlaying(false);
-      }
-    }, 200);
-
-    return () => {
-      window.clearTimeout(autoplayTimeout);
-
-      audio.removeEventListener("canplaythrough", handleCanPlayThrough);
-      audio.removeEventListener("play", handlePlay);
-      audio.removeEventListener("pause", handlePause);
-      audio.removeEventListener("ended", handleEnded);
-      audio.removeEventListener("error", handleError);
-
-      if (globalAudioRef === audio) {
-        audio.pause();
-        audio.currentTime = 0;
-        globalAudioRef = null;
-        globalPlayerId = 0;
-      }
-    };
-  }, [getAudioFile, prefsLoaded]);
-
-  useEffect(() => {
-    if (!showMobileSoundControls) return;
-
-    const handleOutsideClick = (event: MouseEvent | TouchEvent) => {
-      const target = event.target as Node;
-      if (mobileControlsRef.current && !mobileControlsRef.current.contains(target)) {
-        setShowMobileSoundControls(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleOutsideClick);
-    document.addEventListener("touchstart", handleOutsideClick);
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-      document.removeEventListener("touchstart", handleOutsideClick);
-    };
-  }, [showMobileSoundControls]);
-
-  useEffect(() => {
-    return () => {
-      if (longPressTimerRef.current) {
-        window.clearTimeout(longPressTimerRef.current);
-      }
-    };
-  }, []);
-
-  const togglePlay = async () => {
-    if (longPressTriggeredRef.current) {
-      longPressTriggeredRef.current = false;
-      return;
-    }
-
-    const audio = audioRef.current;
-    if (!audio || !isLoaded) return;
-
+    if (!audio || !shouldPlay.current) return;
+    const source = audio.src;
     try {
-      if (isPlaying) {
-        audio.pause();
-        audio.currentTime = 0;
-      } else {
-        if (isMuted) {
-          setIsMuted(false);
-          if (typeof window !== "undefined") {
-            localStorage.setItem(MUTE_STORAGE_KEY, "false");
-          }
-        }
-
-        await audio.play();
-      }
-    } catch (error) {
-      console.error("Play error:", error);
+      await audio.play();
+      if (audio.src !== source) return;
+      if (!shouldPlay.current) audio.pause();
+      autoplayBlocked.current = false;
+      setBlocked(false);
+    } catch (reason) {
+      if (audio.src !== source || !shouldPlay.current) return;
+      autoplayBlocked.current = reason instanceof DOMException && reason.name === 'NotAllowedError';
+      setBlocked(autoplayBlocked.current);
     }
-  };
+  }, []);
 
-  const toggleMute = async () => {
+  useEffect(() => {
     const audio = audioRef.current;
-    const nextMuted = !isMuted;
-
-    setIsMuted(nextMuted);
-
-    if (typeof window !== "undefined") {
-      localStorage.setItem(MUTE_STORAGE_KEY, String(nextMuted));
-    }
-
     if (!audio) return;
+    audio.volume = volume;
+    audio.muted = muted;
+    localStorage.setItem('audioVolume', String(volume));
+    localStorage.setItem('audioMuted', String(muted));
+  }, [volume, muted]);
 
-    if (nextMuted) {
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    setError(false);
+    setIsPlaying(false);
+    audio.src = track.src;
+    audio.load();
+    void play();
+  }, [track.src, play]);
+
+  useEffect(() => {
+    const retry = (event: Event) => {
+      // Player buttons handle their own action, especially pause.
+      if (event.target instanceof Node && playerRef.current?.contains(event.target)) return;
+      if (autoplayBlocked.current && shouldPlay.current) void play();
+    };
+    document.addEventListener('click', retry);
+    document.addEventListener('keydown', retry);
+    return () => {
+      document.removeEventListener('click', retry);
+      document.removeEventListener('keydown', retry);
+    };
+  }, [play]);
+
+  const changeTrack = (offset: number) => {
+    setTrackIndex((index) => (index + offset + playlist.length) % playlist.length);
+  };
+
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (isPlaying) {
+      shouldPlay.current = false;
+      autoplayBlocked.current = false;
+      setBlocked(false);
       audio.pause();
-      audio.currentTime = 0;
-      setIsPlaying(false);
-    } else if (isLoaded) {
-      try {
-        await audio.play();
-      } catch (error) {
-        console.log("Play after unmute prevented:", error);
+    } else {
+      shouldPlay.current = true;
+      if (error) {
+        setError(false);
+        audio.load();
       }
+      void play();
     }
   };
-
-  const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const nextVolume = parseFloat(e.target.value);
-    setVolume(nextVolume);
-
-    if (typeof window !== "undefined") {
-      localStorage.setItem(VOLUME_STORAGE_KEY, String(nextVolume));
-    }
-
-    if (nextVolume > 0 && isMuted) {
-      setIsMuted(false);
-      if (typeof window !== "undefined") {
-        localStorage.setItem(MUTE_STORAGE_KEY, "false");
-      }
-    }
-
-    if (nextVolume === 0 && !isMuted) {
-      setIsMuted(true);
-      if (typeof window !== "undefined") {
-        localStorage.setItem(MUTE_STORAGE_KEY, "true");
-      }
-    }
-  };
-
-  const startLongPress = () => {
-    longPressTriggeredRef.current = false;
-
-    if (longPressTimerRef.current) {
-      window.clearTimeout(longPressTimerRef.current);
-    }
-
-    longPressTimerRef.current = window.setTimeout(() => {
-      longPressTriggeredRef.current = true;
-      setShowMobileSoundControls(true);
-    }, LONG_PRESS_DURATION);
-  };
-
-  const cancelLongPress = () => {
-    if (longPressTimerRef.current) {
-      window.clearTimeout(longPressTimerRef.current);
-      longPressTimerRef.current = null;
-    }
-  };
-
-  const volumeSliderBackground = isMuted
-    ? "rgba(255,255,255,0.3)"
-    : `linear-gradient(to right, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.85) ${
-        volume * 100
-      }%, rgba(255,255,255,0.3) ${volume * 100}%, rgba(255,255,255,0.3) 100%)`;
 
   return (
-    <>
-      <audio ref={audioRef} />
-
-      {/* Desktop */}
-      <div className="hidden md:flex fixed top-4 right-4 z-50 bg-black/80 backdrop-blur-md rounded-full p-3 items-center gap-2 shadow-lg border border-white/20">
-        <button
-          onClick={togglePlay}
-          disabled={!isLoaded}
-          className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-200 flex items-center justify-center text-white disabled:opacity-50 disabled:cursor-not-allowed"
-          title={isPlaying ? "Pauze" : "Afspelen"}
-        >
-          {isPlaying ? (
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="6" y="4" width="4" height="16" rx="1" />
-              <rect x="14" y="4" width="4" height="16" rx="1" />
-            </svg>
-          ) : (
-            <svg className="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          )}
-        </button>
-
-        <button
-          onClick={toggleMute}
-          className={`w-10 h-10 rounded-full transition-all duration-200 flex items-center justify-center text-white ${
-            isMuted
-              ? "bg-white/20 hover:bg-white/30"
-              : "bg-green-500/30 hover:bg-green-500/50"
-          }`}
-          title={isMuted ? "Geluid uit" : "Geluid aan"}
-        >
-          {isMuted ? (
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M11 5 6.5 9H4v6h2.5L11 19V5Z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17 9l4 4m0-4-4 4"
-              />
-            </svg>
-          ) : (
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M11 5 6.5 9H4v6h2.5L11 19V5Z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.5 9.5a4 4 0 0 1 0 5"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M18 7a7.5 7.5 0 0 1 0 10"
-              />
-            </svg>
-          )}
-        </button>
-
-        <div className="flex items-center gap-2">
-          <input
-            type="range"
-            min="0"
-            max="1"
-            step="0.1"
-            value={isMuted ? 0 : volume}
-            onChange={handleVolumeChange}
-            className="w-20 h-1 bg-white/30 rounded-lg appearance-none cursor-pointer"
-            style={{ background: volumeSliderBackground }}
-          />
-        </div>
-
-        {!isLoaded && (
-          <div
-            className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"
-            title="Laden..."
-          />
+    <div ref={playerRef} className="fixed bottom-20 left-4 z-50 max-w-[calc(100vw-2rem)] text-white md:bottom-auto md:left-auto md:right-4 md:top-4">
+      <audio
+        ref={audioRef}
+        preload="auto"
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
+        onEnded={() => { if (shouldPlay.current) changeTrack(1); }}
+        onError={() => { setError(true); setIsPlaying(false); }}
+      />
+      <div className={`border border-white/20 bg-black/85 shadow-lg backdrop-blur-md ${expanded ? 'w-72 max-w-full rounded-2xl p-4' : 'flex items-center gap-1 rounded-full p-2'}`}>
+        {expanded ? (
+          <>
+            <div className="mb-4 flex items-start justify-between gap-3">
+              <div className="min-w-0" aria-live="polite">
+                <p className="text-xs uppercase tracking-widest text-cyan-300">Muziek · {trackIndex + 1}/{playlist.length}</p>
+                <p className="mt-1 break-words font-semibold">{track.title}</p>
+              </div>
+              <button className={controlClass} onClick={() => setExpanded(false)} aria-label="Muziekspeler inklappen"><X size={18} /></button>
+            </div>
+            <div className="flex items-center justify-center gap-4">
+              <button className={controlClass} onClick={() => changeTrack(-1)} aria-label="Vorig lied"><SkipBack size={20} /></button>
+              <button className={`${controlClass} bg-cyan-500/30`} onClick={togglePlay} aria-label={isPlaying ? 'Muziek pauzeren' : 'Muziek afspelen'}>{isPlaying ? <Pause size={22} /> : <Play size={22} />}</button>
+              <button className={controlClass} onClick={() => changeTrack(1)} aria-label="Volgend lied"><SkipForward size={20} /></button>
+            </div>
+            <div className="mt-4 flex items-center gap-3">
+              <button className={controlClass} onClick={() => setMuted(!muted)} aria-label={muted ? 'Geluid aanzetten' : 'Geluid dempen'}>{muted ? <VolumeX size={18} /> : <Volume2 size={18} />}</button>
+              <input aria-label="Muziekvolume" type="range" min="0" max="1" step="0.05" value={volume} onChange={(event) => { setVolume(Number(event.target.value)); setMuted(false); }} className="min-w-0 flex-1 accent-cyan-300" />
+            </div>
+            {(blocked || error) && <p role="status" className="mt-3 text-xs text-white/70">{error ? 'Lied kon niet laden. Probeer opnieuw of kies het volgende lied.' : 'Klik op afspelen om de muziek te starten.'}</p>}
+          </>
+        ) : (
+          <>
+            <button className={controlClass} onClick={() => setExpanded(true)} aria-label="Muziekspeler uitklappen" aria-expanded={false} title="Muziekspeler openen"><Music2 size={22} /></button>
+            <button className={controlClass} onClick={togglePlay} aria-label={isPlaying ? 'Muziek pauzeren' : 'Muziek afspelen'}>{isPlaying ? <Pause size={20} /> : <Play size={20} />}</button>
+          </>
         )}
       </div>
-
-      {/* Mobile */}
-      <div
-        ref={mobileControlsRef}
-        className="fixed bottom-20 left-4 z-50 md:hidden flex flex-col items-start gap-3"
-      >
-        {showMobileSoundControls && (
-          <div className="bg-black/85 backdrop-blur-md rounded-2xl px-3 py-3 flex items-center gap-3 shadow-lg border border-white/20 animate-fade-in-up">
-            <button
-              onClick={toggleMute}
-              className={`w-11 h-11 rounded-full transition-all duration-200 flex items-center justify-center text-white ${
-                isMuted
-                  ? "bg-white/15 hover:bg-white/25"
-                  : "bg-green-500/70 hover:bg-green-500/90"
-              }`}
-              title={isMuted ? "Geluid uit" : "Geluid aan"}
-            >
-              {isMuted ? (
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M11 5 6.5 9H4v6h2.5L11 19V5Z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17 9l4 4m0-4-4 4"
-                  />
-                </svg>
-              ) : (
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M11 5 6.5 9H4v6h2.5L11 19V5Z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.5 9.5a4 4 0 0 1 0 5"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M18 7a7.5 7.5 0 0 1 0 10"
-                  />
-                </svg>
-              )}
-            </button>
-
-            <input
-              type="range"
-              min="0"
-              max="1"
-              step="0.1"
-              value={isMuted ? 0 : volume}
-              onChange={handleVolumeChange}
-              className="w-28 h-1 bg-white/30 rounded-lg appearance-none cursor-pointer"
-              style={{ background: volumeSliderBackground }}
-            />
-          </div>
-        )}
-
-        <button
-          onClick={togglePlay}
-          onTouchStart={startLongPress}
-          onTouchEnd={cancelLongPress}
-          onTouchCancel={cancelLongPress}
-          onMouseDown={startLongPress}
-          onMouseUp={cancelLongPress}
-          onMouseLeave={cancelLongPress}
-          disabled={!isLoaded}
-          className="bg-black/80 backdrop-blur-md rounded-full p-4 flex items-center justify-center text-white shadow-lg border border-white/20 hover:bg-black/90 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed select-none touch-manipulation"
-          title={isPlaying ? "Pauze" : "Afspelen"}
-        >
-          {isPlaying ? (
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="6" y="4" width="4" height="16" rx="1" />
-              <rect x="14" y="4" width="4" height="16" rx="1" />
-            </svg>
-          ) : (
-            <svg className="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          )}
-        </button>
-      </div>
-
-      {/* {!isPlaying && isLoaded && (
-        <div className="hidden md:flex fixed top-20 left-4 z-40 bg-black/80 backdrop-blur-md rounded-2xl p-4 max-w-xs animate-fade-in">
-          <p className="text-white text-sm">
-            {isMuted
-              ? "🔇 Geluid staat uit - klik om muziek te starten"
-              : "🎵 Muziek beschikbaar - klik om af te spelen"}
-          </p>
-        </div>
-      )} */}
-
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(-10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(8px) scale(0.98);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
-        }
-
-        .animate-fade-in {
-          animation: fade-in 0.3s ease-out;
-        }
-
-        .animate-fade-in-up {
-          animation: fade-in-up 0.22s ease-out;
-        }
-      `}</style>
-    </>
+    </div>
   );
 };
 
